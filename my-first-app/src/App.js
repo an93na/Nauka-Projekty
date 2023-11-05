@@ -1,7 +1,11 @@
+import { Com } from "./components/Com";
+
 function App() {
-  return <article>
-    <p>app</p>
-  </article>;
+  return <>
+  <main className="container">
+    <Com />
+  </main>
+  </>
 }
 
 export default App;
