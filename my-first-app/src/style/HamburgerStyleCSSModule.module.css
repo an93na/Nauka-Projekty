@@ -12,9 +12,22 @@ height: 24px;
 display: inline-block;
 position: relative;
 }
+
 .hamburger__inner{
  width: 100%;
  height: 3px;
  background-color: #FFFFFF;
  position: absolute;
+ left: 0;
+ top: 50%;
+ transform: translateY(-50%);
+}
+.hamburger__inner::after, .hamburger__inner::before{
+    content: '';
+    width: 100%;
+    height: 3px;
+    background-color: #FFFFFF;
+    position: absolute;
+    left: 0;
+
 }
