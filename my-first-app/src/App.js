@@ -1,9 +1,9 @@
-import { Com } from "./components/Com";
+import { HamburgerMenu } from "./components/HamburgerMenu";
 
 function App() {
   return <>
   <main className="container">
-    <Com />
+    <HamburgerMenu/>
   </main>
   </>
 }
