@@ -1,12 +1,7 @@
 .hamburger{
-width: 56px;
-height: 50px;
-padding: 10px;
-display: inline-block;
-cursor: pointer;
-background-color: transparent;
-border: 0;
-margin: 0;
+background: #eee;
+position: sticky;
+top: 0;
 }
 .hamburger__box {
 width: 40px;
