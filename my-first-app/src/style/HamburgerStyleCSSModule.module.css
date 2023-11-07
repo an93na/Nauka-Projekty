@@ -3,3 +3,12 @@ background: #eee;
 position: sticky;
 top: 0;
 }
+.hsrodek{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.naglowek{
+    margin: 0;
+    font-size: 25;
+}
