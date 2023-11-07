@@ -1,5 +1,5 @@
 .hamburger{
-background: #eee;
+/* background: #3b3939; */
 position: sticky;
 top: 0;
 }
@@ -11,4 +11,16 @@ top: 0;
 .naglowek{
     margin: 0;
     font-size: 25;
+}
+.btn{
+    background: transparent;
+    border: none;
+    width: fit-content;
+}
+.btnmore{
+    font-size: 90;
+    color: black;
+    position: absolute;
+    top: 20;
+    right: 100;    
 }
