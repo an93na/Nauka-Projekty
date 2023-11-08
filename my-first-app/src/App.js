@@ -1,7 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import { HamburgerMenu } from "./components/HamburgerMenu";
 import { HomePage } from "./HomePage/HomePage";
-import { Com } from "./components/com";
+import { SecondPage } from "./SecondPage/SecondPage";
 
 function App() {
   return (
@@ -10,7 +10,7 @@ function App() {
       <main className="container">
         <Routes>
           <Route path="/" element={<HomePage/>}/>
-          <Route path="com" element={<Com/>}/>
+          <Route path="/second-page" element={<SecondPage/>}/>
           </Routes>{" "}
       </main>
     </>

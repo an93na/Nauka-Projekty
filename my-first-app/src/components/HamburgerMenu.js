@@ -30,8 +30,11 @@ export const HamburgerMenu = () => {
             }}
           >
             <li style={lineItemStyle}>
-              <Link onClick={handleCloseClick} to="/com">
-                Com
+              <Link onClick={handleCloseClick} to="/">
+                Home
+              </Link>
+              <Link onClick={handleCloseClick} to="/second-page">
+                SecondPage
               </Link>
             </li>
           </ul>
