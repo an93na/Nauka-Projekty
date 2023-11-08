@@ -21,7 +21,7 @@ export const HamburgerMenu = () => {
         </button>
       </div>
       <dialog open={open} onClick={handleCloseClick}>
-        <button className={`${classes.btn} ${classes.btnmore}`}>&times</button>
+        <button className={`${classes.btn} ${classes.btnmore}`}></button>
         <article onClick={(e) => e.stopPropagation()}>
           <ul
             style={{
@@ -33,6 +33,8 @@ export const HamburgerMenu = () => {
               <Link onClick={handleCloseClick} to="/">
                 Home
               </Link>
+            </li>
+            <li style={lineItemStyle}>
               <Link onClick={handleCloseClick} to="/second-page">
                 SecondPage
               </Link>
