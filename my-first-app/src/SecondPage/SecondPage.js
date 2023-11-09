@@ -1,5 +1,5 @@
 import React from "react";
-import {classes} from '../style/SecondPageCSS.module.css'
+import classes from '../style/SecondPageCSS.module.css'
 
 export const SecondPage = () => {
   return (
