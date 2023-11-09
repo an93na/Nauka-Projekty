@@ -2,15 +2,23 @@ import React, { useState } from "react";
 import classes from "../style/SecondPageCSS.module.css";
 
 export const SecondPage = () => {
-  const [todo, setTodo] = useState([]);
+  const [todo, setTodo] = useState("");
   const [priority, setPriority] = useState("");
+  const [tabTodo, setTabTodo] = useState([]);
+  console.log(tabTodo);
   return (
     <article>
       <h3>Dodaj zadanie</h3>
-      <form action="" onSubmit={(e) => {
-        e.preventDefault()
-
-      }}>
+      <form
+        action=""
+        onSubmit={(e) => {
+          e.preventDefault();
+          const newTab = { todo, priority };
+          setTabTodo((prev) => [...prev, newTab]);
+          setTodo("");
+          setPriority("");
+        }}
+      >
         <input
           type="text"
           name="zadanie"
@@ -22,6 +30,7 @@ export const SecondPage = () => {
         <select
           name="zadanie"
           id=""
+          value={priority}
           onChange={(e) => setPriority(e.target.value)}
         >
           <option value="" hidden>
