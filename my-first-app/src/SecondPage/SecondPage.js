@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import classes from "../style/SecondPageCSS.module.css";
+import { Zadania } from "./Zadania";
 
 export const SecondPage = () => {
   const [todo, setTodo] = useState("");
@@ -12,7 +13,7 @@ export const SecondPage = () => {
         action=""
         onSubmit={(e) => {
           e.preventDefault();
-          const newTab = { todo, priority };
+          const newTab = { todo, priority, id: Math.random() };
           setTabTodo((prev) => [...prev, newTab]);
           setTodo("");
           setPriority("");
@@ -43,6 +44,7 @@ export const SecondPage = () => {
         </select>
         <button type="submit">Submit</button>
       </form>
+      <Zadania tabTodo={tabTodo} />
     </article>
   );
 };
