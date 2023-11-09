@@ -5,7 +5,6 @@ export const SecondPage = () => {
   const [todo, setTodo] = useState("");
   const [priority, setPriority] = useState("");
   const [tabTodo, setTabTodo] = useState([]);
-  console.log(tabTodo);
   return (
     <article>
       <h3>Dodaj zadanie</h3>
@@ -26,12 +25,14 @@ export const SecondPage = () => {
           placeholder="zadanie"
           value={todo}
           onChange={(e) => setTodo(e.target.value)}
+          required
         />
         <select
           name="zadanie"
           id=""
           value={priority}
           onChange={(e) => setPriority(e.target.value)}
+          required
         >
           <option value="" hidden>
             Wybierz priorytet
