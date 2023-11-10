@@ -2,6 +2,7 @@ import classes from "../style/SecondPageCSS.module.css";
 import { Link, Route, Routes } from "react-router-dom";
 import { DodajZadanie } from "./DodajZadanie";
 import { Zadania } from "./Zadania";
+import { NotFound } from "./NotFound";
 
 export const SecondPage = () => {
   return (
@@ -12,9 +13,10 @@ export const SecondPage = () => {
         <Link to="/lista">Lista</Link>
       </div>
       <Routes>
-        <Route path="/second-page" element={<SecondPage/>}/>
-        <Route path="/add-task" element={<DodajZadanie/>}/>
-        <Route path="/lista" element={<Zadania/>}/>
+        <Route path="/second-page" element={<SecondPage />} />
+        <Route path="/add-task" element={<DodajZadanie />} />
+        <Route path="/lista" element={<Zadania />} />
+        <Route path="*" element={NotFound} />
       </Routes>
     </article>
   );
