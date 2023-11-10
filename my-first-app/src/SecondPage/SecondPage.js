@@ -9,7 +9,7 @@ export const SecondPage = () => {
   const [tabTodo, setTabTodo] = useState([]);
   return (
     <article>
-      <div style={{ display: "flex", gap: 20 }}>
+      <div className={classes.nawi}>
         <Link to="/second-page">Home</Link>
         <Link to="/add-task">Dodaj zadanie</Link>
         <Link to="/lista">Lista</Link>
