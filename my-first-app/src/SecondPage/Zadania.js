@@ -3,7 +3,7 @@ import React from "react";
 export const Zadania = (props) => {
   const { tabTodo } = props;
   return (
-    <article>
+    <div>
       <h3>Zadania</h3>
       <table>
         <thead>
@@ -25,6 +25,6 @@ export const Zadania = (props) => {
           ))}
         </tbody>
       </table>
-    </article>
+    </div>
   );
 };

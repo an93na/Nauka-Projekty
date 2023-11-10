@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import classes from "../style/SecondPageCSS.module.css";
 import { Zadania } from "./Zadania";
+import { Link } from "react-router-dom";
 
 export const SecondPage = () => {
   const [todo, setTodo] = useState("");
@@ -8,6 +9,11 @@ export const SecondPage = () => {
   const [tabTodo, setTabTodo] = useState([]);
   return (
     <article>
+      <div style={{ display: "flex", gap: 20 }}>
+        <Link to="/second-page">Home</Link>
+        <Link to="/add-task">Dodaj zadanie</Link>
+        <Link to="/lista">Lista</Link>
+      </div>
       <h3>Dodaj zadanie</h3>
       <form
         action=""
