@@ -10,21 +10,15 @@ export const SecondPage = () => {
   return (
     <article>
       <div className={classes.nawi}>
-        <Link to="/second-page">Home</Link>
-        <Link to="/add-task">Dodaj zadanie</Link>
-        <Link to="/lista">Lista</Link>
+        <Link to="second-page">Home</Link>
+        <Link to="add-task">Dodaj zadanie</Link>
+        <Link to="lista">Lista</Link>
       </div>
       <Routes>
-        <Route path="/second-page" element={<SecondPage />} />
-        <Route
-          path="/add-task"
-          element={<DodajZadanie tabTodo={tabTodo} setTabTodo={setTabTodo} />}
-        />
-        <Route
-          path="/lista"
-          element={<Zadania tabTodo={tabTodo} setTabTodo={setTabTodo} />}
-        />
-        <Route path="*" element={NotFound} />
+        <Route path="second-page" element={<SecondPage />} />
+        <Route path="add-task" element={<DodajZadanie />} />
+        <Route path="lista" element={<Zadania />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </article>
   );

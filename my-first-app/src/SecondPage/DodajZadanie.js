@@ -1,12 +1,11 @@
 import React, { useState } from "react";
-import { Zadania } from "./Zadania";
 
 export const DodajZadanie = (props) => {
   const { tabTodo, setTabTodo } = props;
   const [todo, setTodo] = useState("");
   const [priority, setPriority] = useState("");
   return (
-    <div>
+    <article>
       <h3>Dodaj zadanie</h3>
       <form
         action=""
@@ -43,7 +42,6 @@ export const DodajZadanie = (props) => {
         </select>
         <button type="submit">Submit</button>
       </form>
-      <Zadania tabTodo={tabTodo} />
-    </div>
+    </article>
   );
 };

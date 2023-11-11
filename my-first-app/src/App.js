@@ -10,7 +10,7 @@ function App() {
       <main className="container">
         <Routes>
           <Route path="/" element={<HomePage/>}/>
-          <Route path="/second-page" element={<SecondPage/>}/>
+          <Route path="/second-page/*" element={<SecondPage/>}/>
           </Routes>{" "}
       </main>
     </>

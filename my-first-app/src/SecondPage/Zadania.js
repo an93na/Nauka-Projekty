@@ -14,7 +14,7 @@ export const Zadania = (props) => {
           </tr>
         </thead>
         <tbody>
-          {tabTodo.map((zad) => (
+          {/* {tabTodo.map((zad) => (
             <tr key={zad.id}>
               <td>{zad.todo}</td>
               <td>{zad.priority}</td>
@@ -22,7 +22,7 @@ export const Zadania = (props) => {
                 <button>DELETE</button>
               </td>
             </tr>
-          ))}
+          ))} */}
         </tbody>
       </table>
     </div>
