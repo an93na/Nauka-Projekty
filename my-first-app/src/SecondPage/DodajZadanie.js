@@ -5,7 +5,7 @@ export const DodajZadanie = (props) => {
   const [todo, setTodo] = useState("");
   const [priority, setPriority] = useState("");
   return (
-    <article>
+    <div>
       <h3>Dodaj zadanie</h3>
       <form
         action=""
@@ -42,6 +42,6 @@ export const DodajZadanie = (props) => {
         </select>
         <button type="submit">Submit</button>
       </form>
-    </article>
+    </div>
   );
 };
