@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 export const DodajZadanie = (props) => {
-  const { tabTodo, setTabTodo } = props;
+  const { setTabTodo } = props;
   const [todo, setTodo] = useState("");
   const [priority, setPriority] = useState("");
   return (
