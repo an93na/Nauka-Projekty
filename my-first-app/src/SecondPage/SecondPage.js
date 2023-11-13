@@ -18,7 +18,7 @@ export const SecondPage = () => {
           path="add-task"
           element={<DodajZadanie setTabTodo={setTabTodo} />}
         />
-        <Route path="lista" element={<Zadania tabTodo={tabTodo} />} />
+        <Route path="lista" element={<Zadania tabTodo={tabTodo} setTabTodo={setTabTodo} />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </article>

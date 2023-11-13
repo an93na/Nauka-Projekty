@@ -1,7 +1,7 @@
 import React from "react";
 
 export const Zadania = (props) => {
-  const { tabTodo } = props;
+  const { tabTodo, setTabTodo } = props;
   return (
     <div>
       <h3>Zadania</h3>
@@ -19,7 +19,16 @@ export const Zadania = (props) => {
               <td>{zad.todo}</td>
               <td>{zad.priority}</td>
               <td>
-                <button>DELETE</button>
+                <button
+                  onClick={() => {
+                    const newTable = tabTodo.filter(
+                      (task) => task.id !== zad.id
+                    );
+                    return setTabTodo(newTable);
+                  }}
+                >
+                  DELETE
+                </button>
               </td>
             </tr>
           ))}
