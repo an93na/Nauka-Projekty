@@ -2,7 +2,6 @@ import classes from "../style/SecondPageCSS.module.css";
 import { Link, Route, Routes } from "react-router-dom";
 import { DodajZadanie } from "./DodajZadanie";
 import { Zadania } from "./Zadania";
-import { NotFound } from "./NotFound";
 import { useState } from "react";
 
 export const SecondPage = () => {
@@ -21,7 +20,6 @@ export const SecondPage = () => {
           element={<DodajZadanie setTabTodo={setTabTodo} />}
         />
         <Route path="lista" element={<Zadania tabTodo={tabTodo} setTabTodo={setTabTodo} />} />
-        <Route path="*" element={<NotFound />} />
       </Routes>
     </article>
   );
