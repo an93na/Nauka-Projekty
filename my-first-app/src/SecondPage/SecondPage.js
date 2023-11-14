@@ -3,18 +3,21 @@ import { Link, Route, Routes } from "react-router-dom";
 import { DodajZadanie } from "./DodajZadanie";
 import { Zadania } from "./Zadania";
 import { useState } from "react";
+import { Home } from "./Home";
 
 export const SecondPage = () => {
   const [tabTodo, setTabTodo] = useState([]);
+
+  console.log(tabTodo)
   return (
     <article>
       <div className={classes.nawi}>
-        <Link to="/second-page">Home</Link>
+        <Link to="home">Home</Link>
         <Link to="add-task">Dodaj zadanie</Link>
         <Link to="lista">Lista</Link>
       </div>
       <Routes>
-        <Route path="/second-page" element={<SecondPage/>}/>
+        <Route path="home" element={<Home/>}/>
         <Route
           path="add-task"
           element={<DodajZadanie setTabTodo={setTabTodo} />}
