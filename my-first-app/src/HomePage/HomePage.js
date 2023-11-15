@@ -3,9 +3,12 @@ import React, { useState } from "react";
 export const HomePage = () => {
   const [read, setRead] = useState("");
   const [isChecked, setIsChecked] = useState(false);
+  const [animal, setAnimal] = useState("kot");
   const artykul = "Lorem ipsum dolor sit amet.";
   const artylulLong =
     "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid est harum, dolore, minima laborum dolorum omnis inventore ipsam iste libero esse molestiae saepe doloribus consequuntur animi mollitia eius? Modi, deleniti. Harum quasi sed dolore minus nobis ducimus accusamus maxime est. Nam sit consequuntur quod. Consequuntur, sequi. Dignissimos, voluptates omnis? Placeat quidem a dignissimos cumque reiciendis quibusdam adipisci eius modi facere.";
+
+  const handleChange = (event) => setAnimal(event.target.value);
   return (
     <article>
       <h3>HomePage</h3>
@@ -46,6 +49,39 @@ export const HomePage = () => {
       ) : (
         <p>Lorem ipsum dolor sit amet.</p>
       )}
+      <label>
+        <input
+          type="radio"
+          name="animal"
+          id=""
+          value="kot"
+          onChange={handleChange}
+          checked={animal === "kot"}
+        />
+        kot
+      </label>
+      <label>
+        <input
+          type="radio"
+          name="animal"
+          id=""
+          value="pies"
+          onChange={handleChange}
+          checked={animal === "pies"}
+        />
+        pies
+      </label>
+      <label>
+        <input
+          type="radio"
+          name="animal"
+          id=""
+          value="both"
+          onChange={handleChange}
+          checked={animal === "both"}
+        />
+        kot i pies
+      </label>
     </article>
   );
 };
