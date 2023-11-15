@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+import CAT from "./assets/cacek.jpg";
+import DOG from "./assets/gacek.jpg";
+import BOTH from "./assets/mapa.png";
 
 export const HomePage = () => {
   const [read, setRead] = useState("");
@@ -82,6 +85,41 @@ export const HomePage = () => {
         />
         kot i pies
       </label>
+      <div>
+        {(animal === "kot" || animal === "both") && (
+          <img
+            style={{
+              width: "200px",
+              border: "1px solid white",
+              borderRadius: 10,
+            }}
+            src={CAT}
+            alt="kot"
+          />
+        )}
+        {(animal === "pies" || animal === "both") && (
+          <img
+            style={{
+              width: "200px",
+              border: "1px solid white",
+              borderRadius: 10,
+            }}
+            src={DOG}
+            alt="pies"
+          />
+        )}
+        {animal === "both" && (
+          <img
+            style={{
+              width: "200px",
+              border: "1px solid white",
+              borderRadius: 10,
+            }}
+            src={BOTH}
+            alt="both"
+          />
+        )}
+      </div>
     </article>
   );
 };
