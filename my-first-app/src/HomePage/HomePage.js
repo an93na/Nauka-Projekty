@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 export const HomePage = () => {
   const [read, setRead] = useState("");
+  const [isChecked, setIsChecked] = useState(false);
   const artykul = "Lorem ipsum dolor sit amet.";
   const artylulLong =
     "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid est harum, dolore, minima laborum dolorum omnis inventore ipsam iste libero esse molestiae saepe doloribus consequuntur animi mollitia eius? Modi, deleniti. Harum quasi sed dolore minus nobis ducimus accusamus maxime est. Nam sit consequuntur quod. Consequuntur, sequi. Dignissimos, voluptates omnis? Placeat quidem a dignissimos cumque reiciendis quibusdam adipisci eius modi facere.";
@@ -27,7 +28,24 @@ export const HomePage = () => {
       </select>
       {read === "less" && <p>{artykul}</p>}
       {read === "more" && <p>{artylulLong}</p>}
-      <p></p>
+      <label>
+        <input
+          type="checkbox"
+          checked={isChecked}
+          onChange={() => setIsChecked((prevState) => !prevState)}
+        />
+        {isChecked ? "Read less" : "Read more"}
+      </label>
+      {isChecked ? (
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis,
+          asperiores magni? Laborum assumenda distinctio ratione mollitia.
+          Eaque, obcaecati. Voluptatum, nobis tenetur sint veritatis quas nisi
+          quis in corporis eligendi vero.
+        </p>
+      ) : (
+        <p>Lorem ipsum dolor sit amet.</p>
+      )}
     </article>
   );
 };
