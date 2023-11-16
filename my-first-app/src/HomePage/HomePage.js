@@ -85,7 +85,7 @@ export const HomePage = () => {
         />
         kot i pies
       </label>
-      <div>
+      <div style={{ display: "flex", gap: 5, flexWrap: "wrap" }}>
         {(animal === "kot" || animal === "both") && (
           <img
             style={{
