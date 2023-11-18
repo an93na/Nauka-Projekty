@@ -13,7 +13,6 @@ export const TopMenu = () => {
         borderRadius: 10,
       }}
     >
-      
       <h3 style={{ marginLeft: 40, marginBottom: 20, color: "black" }}>
         Czytaj bo tego potrzebujesz
       </h3>
@@ -37,24 +36,11 @@ export const TopMenu = () => {
           }}
         >
           <img src={kartki} alt="kartki" style={{ width: "20px" }} />
-          <p style={{ textAlign: "center", margin: "auto", color: "black" }}>
-            kartki
-          </p>
-        </div>
-        <div
-          style={{
-            display: "flex",
-            border: "1px solid black",
-            padding: 10,
-            borderRadius: "10px",
-          }}
-        >
-          <img src={kartki} alt="kartki" style={{ width: "20px" }} />
           <Link
-            to=""
+            to="/"
             style={{ textAlign: "center", margin: "auto", color: "black" }}
           >
-            kartki
+            home
           </Link>
         </div>
         <div
@@ -66,9 +52,12 @@ export const TopMenu = () => {
           }}
         >
           <img src={kartki} alt="kartki" style={{ width: "20px" }} />
-          <p style={{ textAlign: "center", margin: "auto", color: "black" }}>
-            kartki
-          </p>
+          <Link
+            to="books"
+            style={{ textAlign: "center", margin: "auto", color: "black" }}
+          >
+            books
+          </Link>
         </div>
         <div
           style={{
@@ -79,9 +68,12 @@ export const TopMenu = () => {
           }}
         >
           <img src={kartki} alt="kartki" style={{ width: "20px" }} />
-          <p style={{ textAlign: "center", margin: "auto", color: "black" }}>
-            kartki
-          </p>
+          <Link
+            to="broszury"
+            style={{ textAlign: "center", margin: "auto", color: "black" }}
+          >
+            broszury
+          </Link>
         </div>
         <div
           style={{
@@ -92,12 +84,30 @@ export const TopMenu = () => {
           }}
         >
           <img src={kartki} alt="kartki" style={{ width: "20px" }} />
-          <p style={{ textAlign: "center", margin: "auto", color: "black" }}>
+          <Link
+            to="czasopisma"
+            style={{ textAlign: "center", margin: "auto", color: "black" }}
+          >
+            czasopisma
+          </Link>
+        </div>
+        <div
+          style={{
+            display: "flex",
+            border: "1px solid black",
+            padding: 10,
+            borderRadius: "10px",
+          }}
+        >
+          <img src={kartki} alt="kartki" style={{ width: "20px" }} />
+          <Link
+            to="kartki"
+            style={{ textAlign: "center", margin: "auto", color: "black" }}
+          >
             kartki
-          </p>
+          </Link>
         </div>
       </div>
-
     </div>
   );
 };
