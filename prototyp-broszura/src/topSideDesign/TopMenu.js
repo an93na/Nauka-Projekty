@@ -1,5 +1,7 @@
 import React from "react";
 import kartki from "./iconmonstr-layer-multiple-lined-240.png";
+import { Link } from "react-router-dom";
+import { Navigation } from "../Navigation/Navigation";
 
 export const TopMenu = () => {
   return (
@@ -12,6 +14,7 @@ export const TopMenu = () => {
         borderRadius: 10,
       }}
     >
+      
       <h3 style={{ marginLeft: 40, marginBottom: 20, color: "black" }}>
         Czytaj bo tego potrzebujesz
       </h3>
@@ -48,9 +51,12 @@ export const TopMenu = () => {
           }}
         >
           <img src={kartki} alt="kartki" style={{ width: "20px" }} />
-          <p style={{ textAlign: "center", margin: "auto", color: "black" }}>
+          <Link
+            to=""
+            style={{ textAlign: "center", margin: "auto", color: "black" }}
+          >
             kartki
-          </p>
+          </Link>
         </div>
         <div
           style={{
@@ -92,6 +98,7 @@ export const TopMenu = () => {
           </p>
         </div>
       </div>
+
     </div>
   );
 };
