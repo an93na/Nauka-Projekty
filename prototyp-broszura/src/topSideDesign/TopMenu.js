@@ -1,7 +1,6 @@
 import React from "react";
 import kartki from "./iconmonstr-layer-multiple-lined-240.png";
 import { Link } from "react-router-dom";
-import { Navigation } from "../Navigation/Navigation";
 
 export const TopMenu = () => {
   return (
