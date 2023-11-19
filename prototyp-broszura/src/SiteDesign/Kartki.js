@@ -8,6 +8,13 @@ export const Kartki = () => {
       .then((response) => response.json())
       .then((data) => setPosts(data));
   }, []);
+  const wyswietl = (a) => {
+      if(check){
+      return a 
+  }
+  return a.slice(0, 200)
+  }
+
   console.log(posts);
   return (
     <article>
@@ -35,7 +42,8 @@ export const Kartki = () => {
           {posts.map((post) => (
             <tr id={post.id}>
               <td>{post.title}</td>
-              <td>{post.content}</td>
+              <td>{wyswietl(post.content)}
+                </td>
               <td></td>
             </tr>
           ))}
