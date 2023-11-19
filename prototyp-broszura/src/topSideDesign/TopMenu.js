@@ -104,7 +104,7 @@ export const TopMenu = () => {
             to="kartki"
             style={{ textAlign: "center", margin: "auto", color: "black" }}
           >
-            kartki
+            Posty
           </Link>
         </div>
       </div>
