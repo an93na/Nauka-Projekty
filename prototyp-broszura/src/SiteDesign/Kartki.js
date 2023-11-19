@@ -22,8 +22,8 @@ export const Kartki = () => {
       <table>
         <thead>
           <tr>
+            <th></th>
             <th>Title</th>
-            <th>Content</th>
             <th>
               <label>
                 <input
@@ -33,7 +33,7 @@ export const Kartki = () => {
                   checked={check}
                   onChange={() => setCheck((prevState) => !prevState)}
                 />
-                {check ? "less" : "more"}
+                {check ? "Content less" : "Content more"}
               </label>
             </th>
           </tr>
@@ -41,6 +41,7 @@ export const Kartki = () => {
         <tbody>
           {posts.map((post) => (
             <tr id={post.id}>
+              <td>{post.id}</td>
               <td>{post.title}</td>
               <td>{wyswietl(post.content)}
                 </td>
