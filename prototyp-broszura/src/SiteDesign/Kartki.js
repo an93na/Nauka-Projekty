@@ -15,9 +15,17 @@ export const Kartki = () => {
         <tr>
         <th>Title</th>
         <th>Content</th>
-        <th></th>
+        <th>
+        </th>
         </tr>
       </thead>
+      <tbody>
+        {posts.map(post => <tr id={post.id}>
+          <td>{post.title}</td>
+          <td>{post.content}</td>
+          <td></td>
+        </tr>)}
+      </tbody>
     </table>
   </article>;
 };
