@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 
 export const Kartki = () => {
   const [posts, setPosts] = useState([]);
+  const [search, setSearch] = useState("");
   const [check, setCheck] = useState(false);
   useEffect(() => {
     fetch("https://jsonplaceholder.org/posts")
@@ -9,16 +10,22 @@ export const Kartki = () => {
       .then((data) => setPosts(data));
   }, []);
   const wyswietl = (a) => {
-      if(check){
-      return a 
-  }
-  return a.slice(0, 200)
-  }
+    if (check) {
+      return a;
+    }
+    return a.slice(0, 200);
+  };
 
   console.log(posts);
   return (
     <article>
       <h3>Posty</h3>
+      <input
+        type="text"
+        placeholder="search"
+        value={search}
+        onChange={(e) => setSearch(e.target.value)}
+      />
       <table>
         <thead>
           <tr>
@@ -43,8 +50,7 @@ export const Kartki = () => {
             <tr id={post.id}>
               <td>{post.id}</td>
               <td>{post.title}</td>
-              <td>{wyswietl(post.content)}
-                </td>
+              <td>{wyswietl(post.content)}</td>
               <td></td>
             </tr>
           ))}
