@@ -19,7 +19,9 @@ export const Kartki = () => {
   // console.log(posts);
   return (
     <article>
-      <h3>Posty</h3>
+      <div>
+        <h3>Posty</h3>
+        </div>
       <input
         type="text"
         placeholder="search"
@@ -47,7 +49,7 @@ export const Kartki = () => {
         </thead>
         <tbody>
           {postToDisplay.map((post) => (
-            <tr id={post.id}>
+            <tr key={post.id}>
               <td>{post.id}</td>
               <td>{post.title}</td>
               <td>{wyswietl(post.content)}</td>
