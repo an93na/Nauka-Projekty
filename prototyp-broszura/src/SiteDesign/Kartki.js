@@ -15,7 +15,7 @@ export const Kartki = () => {
     }
     return a.slice(0, 200);
   };
-  const postToDisplay = posts.filter((post) => post.title.includes(search));
+  const postToDisplay = posts.filter((post) => post.title.toLowerCase().includes(search));
   // console.log(posts);
   return (
     <article>
@@ -46,7 +46,7 @@ export const Kartki = () => {
           </tr>
         </thead>
         <tbody>
-          {posts.map((post) => (
+          {postToDisplay.map((post) => (
             <tr id={post.id}>
               <td>{post.id}</td>
               <td>{post.title}</td>
