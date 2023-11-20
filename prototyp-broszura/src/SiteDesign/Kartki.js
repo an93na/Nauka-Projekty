@@ -15,13 +15,20 @@ export const Kartki = () => {
     }
     return a.slice(0, 200);
   };
-  const postToDisplay = posts.filter((post) => post.title.toLowerCase().includes(search));
+  const postToDisplay = posts.filter((post) =>
+    post.title.toLowerCase().includes(search)
+  );
   // console.log(posts);
   return (
     <article>
-      <div>
+      <div style={{ display: "flex", gap: 30, alignItems: "flex-start" }}>
         <h3>Posty</h3>
+        <div
+          style={{ border: "1px solid white", borderRadius: 10, padding: 10 }}
+        >
+          Znalezionych postów: 100
         </div>
+      </div>
       <input
         type="text"
         placeholder="search"
