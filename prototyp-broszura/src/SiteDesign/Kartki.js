@@ -15,8 +15,8 @@ export const Kartki = () => {
     }
     return a.slice(0, 200);
   };
-
-  console.log(posts);
+  const postToDisplay = posts.filter((post) => post.title.includes(search));
+  // console.log(posts);
   return (
     <article>
       <h3>Posty</h3>
