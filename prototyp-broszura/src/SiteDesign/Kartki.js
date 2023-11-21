@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { DodajPost } from "./DodajPost";
 
 export const Kartki = () => {
   const [posts, setPosts] = useState([]);
@@ -35,7 +36,8 @@ export const Kartki = () => {
           Znalezionych postów: {postToDisplay.length}
         </div>
       </div>
-      <label>
+      <div style={{padding: 10}}>
+        <label>
         <input
           type="checkbox"
           name=""
@@ -45,6 +47,9 @@ export const Kartki = () => {
         />{" "}
         Dodaj post
       </label>
+      {dodaj && <DodajPost/>}
+      </div>
+      
       <input
         type="text"
         placeholder="search in title"
