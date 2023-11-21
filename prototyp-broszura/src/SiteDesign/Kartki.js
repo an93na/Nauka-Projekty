@@ -26,7 +26,12 @@ export const Kartki = () => {
         <div
           style={{ border: "1px solid white", borderRadius: 10, padding: 10 }}
         >
-          Znalezionych postów: 100
+          Liczba wszystkich postów: {posts.length}
+        </div>
+        <div
+          style={{ border: "1px solid white", borderRadius: 10, padding: 10 }}
+        >
+          Znalezionych postów: {postToDisplay.length}
         </div>
       </div>
       <input
