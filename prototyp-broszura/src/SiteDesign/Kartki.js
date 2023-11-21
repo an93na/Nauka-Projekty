@@ -43,7 +43,7 @@ export const Kartki = () => {
       <table>
         <thead>
           <tr>
-            <th></th>
+            <th>Lp.</th>
             <th>Title</th>
             <th>
               <label>
