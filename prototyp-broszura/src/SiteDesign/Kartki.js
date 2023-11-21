@@ -31,7 +31,7 @@ export const Kartki = () => {
       </div>
       <input
         type="text"
-        placeholder="search"
+        placeholder="search in title"
         value={search}
         onChange={(e) => setSearch(e.target.value)}
       />
