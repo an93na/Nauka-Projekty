@@ -4,6 +4,7 @@ export const Kartki = () => {
   const [posts, setPosts] = useState([]);
   const [search, setSearch] = useState("");
   const [check, setCheck] = useState(false);
+  const [dodaj, setDodaj] = useState(false);
   useEffect(() => {
     fetch("https://jsonplaceholder.org/posts")
       .then((response) => response.json())
@@ -18,7 +19,7 @@ export const Kartki = () => {
   const postToDisplay = posts.filter((post) =>
     post.title.toLowerCase().includes(search.toLowerCase())
   );
-  // console.log(posts);
+  // console.log(dodaj);
   return (
     <article>
       <div style={{ display: "flex", gap: 30, alignItems: "flex-start" }}>
@@ -34,6 +35,16 @@ export const Kartki = () => {
           Znalezionych postów: {postToDisplay.length}
         </div>
       </div>
+      <label>
+        <input
+          type="checkbox"
+          name=""
+          id=""
+          checked={dodaj}
+          onChange={() => setDodaj((prevState) => !prevState)}
+        />{" "}
+        Dodaj post
+      </label>
       <input
         type="text"
         placeholder="search in title"
