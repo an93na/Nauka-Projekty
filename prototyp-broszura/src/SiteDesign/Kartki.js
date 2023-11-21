@@ -47,7 +47,7 @@ export const Kartki = () => {
         />{" "}
         Dodaj post
       </label>
-      {dodaj && <DodajPost/>}
+      {dodaj && <DodajPost posts={posts} setPosts={setPosts}/>}
       </div>
       
       <input

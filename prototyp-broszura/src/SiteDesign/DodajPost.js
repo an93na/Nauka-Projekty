@@ -1,6 +1,7 @@
 import React from 'react'
 
-export const DodajPost = () => {
+export const DodajPost = (props) => {
+    const {posts, setPosts} = props
   return (
     <div>DodajPost</div>
   )
