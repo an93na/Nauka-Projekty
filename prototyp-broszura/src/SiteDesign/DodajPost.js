@@ -8,8 +8,8 @@ export const DodajPost = (props) => {
         e.preventDefault();
       }}
     >
-      <input type="text" placeholder="title" />
-      <input type="text" placeholder="content" />
+      <input type="text" placeholder="title" required/>
+      <input type="text" placeholder="content" required/>
       <button type="submit">Dodaj</button>
     </form>
   );
