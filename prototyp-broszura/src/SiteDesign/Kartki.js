@@ -73,6 +73,7 @@ export const Kartki = () => {
                 {check ? "Content less" : "Content more"}
               </label>
             </th>
+            <th></th>
           </tr>
         </thead>
         <tbody>
@@ -81,7 +82,7 @@ export const Kartki = () => {
               <td>{post.id}</td>
               <td>{post.title}</td>
               <td>{wyswietl(post.content)}</td>
-              <td></td>
+              <td><button>DELETE</button></td>
             </tr>
           ))}
         </tbody>
