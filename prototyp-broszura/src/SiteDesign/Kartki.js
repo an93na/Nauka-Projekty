@@ -36,20 +36,20 @@ export const Kartki = () => {
           Znalezionych postów: {postToDisplay.length}
         </div>
       </div>
-      <div style={{padding: 10}}>
+      <div style={{ padding: 10 }}>
         <label>
-        <input
-          type="checkbox"
-          name=""
-          id=""
-          checked={dodaj}
-          onChange={() => setDodaj((prevState) => !prevState)}
-        />{" "}
-        Dodaj post
-      </label>
-      {dodaj && <DodajPost posts={posts} setPosts={setPosts}/>}
+          <input
+            type="checkbox"
+            name=""
+            id=""
+            checked={dodaj}
+            onChange={() => setDodaj((prevState) => !prevState)}
+          />{" "}
+          Dodaj post
+        </label>
+        {dodaj && <DodajPost setPosts={setPosts} />}
       </div>
-      
+
       <input
         type="text"
         placeholder="search in title"
@@ -82,7 +82,19 @@ export const Kartki = () => {
               <td>{post.id}</td>
               <td>{post.title}</td>
               <td>{wyswietl(post.content)}</td>
-              <td><button onClick={() => {setPosts(posts.filter(postToDelete => postToDelete.id !== post.id ))}}>DELETE</button></td>
+              <td>
+                <button
+                  onClick={() => {
+                    setPosts(
+                      posts.filter(
+                        (postToDelete) => postToDelete.id !== post.id
+                      )
+                    );
+                  }}
+                >
+                  DELETE
+                </button>
+              </td>
             </tr>
           ))}
         </tbody>
