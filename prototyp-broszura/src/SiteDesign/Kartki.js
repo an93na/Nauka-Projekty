@@ -82,7 +82,7 @@ export const Kartki = () => {
               <td>{post.id}</td>
               <td>{post.title}</td>
               <td>{wyswietl(post.content)}</td>
-              <td><button>DELETE</button></td>
+              <td><button onClick={() => {setPosts(posts.filter(postToDelete => postToDelete.id !== post.id ))}}>DELETE</button></td>
             </tr>
           ))}
         </tbody>
