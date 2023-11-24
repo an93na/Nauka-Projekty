@@ -5,7 +5,7 @@ export const Broszury = () => {
   const [klik, setKlik] = useState(false);
   const styleBtn = {
     width: 400,
-    height: 250,
+    height: 150,
     backgroundColor: "palevioletred",
     padding: 20,
     textAlign: "center",
