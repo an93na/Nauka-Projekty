@@ -13,48 +13,49 @@ export const BroszMore = (props) => {
     fontSize: 20,
     fontWeight: "bold",
   };
-  const poziom = <div>
-        <h3>Wybierz poziom:</h3>
-        <div style={{ display: "flex", gap: 20 }}>
-          <button
-            style={styleBtn}
-            value={kliknieto}
-            onClick={() => setKliknieto("podstawowy")}
-          >
-            Podstawowy
-          </button>
-          <button
-            style={styleBtn}
-            value={kliknieto}
-            onClick={() => setKliknieto("średni")}
-          >
-            Średnio Zaawansowany
-          </button>
-          <button
-            style={styleBtn}
-            value={kliknieto}
-            onClick={() => setKliknieto("zaawansowany")}
-          >
-            Zaawansowany
-          </button>
-        </div>
+  const poziom = (
+    <div>
+      <h3>Wybierz poziom:</h3>
+      <div style={{ display: "flex", gap: 20 }}>
+        <button
+          style={styleBtn}
+          value={kliknieto}
+          onClick={() => setKliknieto("podstawowy")}
+        >
+          Podstawowy
+        </button>
+        <button
+          style={styleBtn}
+          value={kliknieto}
+          onClick={() => setKliknieto("średni")}
+        >
+          Średnio Zaawansowany
+        </button>
+        <button
+          style={styleBtn}
+          value={kliknieto}
+          onClick={() => setKliknieto("zaawansowany")}
+        >
+          Zaawansowany
+        </button>
       </div>
+    </div>
+  );
+  const cofnijPoziomy = (
+    <button value={kliknieto} onClick={() => setKliknieto("")}>
+      Cofnij
+    </button>
+  );
   const wyswietl = () => {
     if (kliknieto === "podstawowy") {
-        return <div>
-            <button value={kliknieto} onClick={() => setKliknieto('')}>Cofnij</button>
-        </div>
+      return <div>{cofnijPoziomy}</div>;
     } else if (kliknieto === "średni") {
-        return <p>sr</p>
+      return <div>{cofnijPoziomy}</div>;
     } else if (kliknieto === "zaawansowany") {
-        return <p>za</p>
+      return <div>{cofnijPoziomy}</div>;
     }
     return poziom;
   };
 
-  return (
-    <div>
-      {wyswietl()}
-    </div>
-  );
+  return <div>{wyswietl()}</div>;
 };
