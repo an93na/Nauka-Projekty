@@ -3,6 +3,17 @@ import { BroszMore } from "./BroszMore";
 
 export const Broszury = () => {
   const [klik, setKlik] = useState(false);
+  const styleBtn = {
+    width: 400,
+    height: 250,
+    backgroundColor: "palevioletred",
+    padding: 20,
+    textAlign: "center",
+    borderRadius: "10px",
+    border: "1px solid white",
+    fontSize: 50,
+    fontWeight: "bold",
+  };
   return (
     <article
       style={{
@@ -15,25 +26,13 @@ export const Broszury = () => {
         <BroszMore/>
       ) : (
         <button
-          style={{
-            width: 400,
-            height: 150,
-            backgroundColor: "palevioletred",
-            padding: 20,
-            textAlign: "center",
-            borderRadius: "10px",
-            border: "1px solid white",
-            fontSize: 50,
-            fontWeight: "bold",
-          }}
+          style={styleBtn}
           value={klik}
           onClick={() => setKlik((prev) => !prev)}
         >
           Broszury
         </button>
       )}
-
-      {console.log(klik)}
     </article>
   );
 };
