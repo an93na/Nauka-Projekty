@@ -1,7 +1,9 @@
-import React from 'react'
+import React from "react";
 
 export const Zaawansowany = () => {
   return (
-    <div>Zaawansowany</div>
-  )
-}
+    <div>
+      <h3 style={{color: 'red'}}>Poziom zaawansowany</h3>
+    </div>
+  );
+};
