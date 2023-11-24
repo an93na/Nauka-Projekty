@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+import { Podstawowy } from "./Podstawowy";
+import { SrednioZaawansowany } from "./SrednioZaawansowany";
+import { Zaawansowany } from "./Zaawansowany";
 
 export const BroszMore = (props) => {
   const [kliknieto, setKliknieto] = useState("");
@@ -48,11 +51,26 @@ export const BroszMore = (props) => {
   );
   const wyswietl = () => {
     if (kliknieto === "podstawowy") {
-      return <div>{cofnijPoziomy}</div>;
+      return (
+        <div>
+          {cofnijPoziomy}
+          <Podstawowy />
+        </div>
+      );
     } else if (kliknieto === "średni") {
-      return <div>{cofnijPoziomy}</div>;
+      return (
+        <div>
+          {cofnijPoziomy}
+          <SrednioZaawansowany />
+        </div>
+      );
     } else if (kliknieto === "zaawansowany") {
-      return <div>{cofnijPoziomy}</div>;
+      return (
+        <div>
+          {cofnijPoziomy}
+          <Zaawansowany />
+        </div>
+      );
     }
     return poziom;
   };
