@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { Podstawowy } from "./Podstawowy";
-import { SrednioZaawansowany } from "./SrednioZaawansowany";
-import { Zaawansowany } from "./Zaawansowany";
+import { Podstawowy } from "./Podstawowy/Podstawowy";
+import { SrednioZaawansowany } from "./SrednioZaawansowany/SrednioZaawansowany";
+import { Zaawansowany } from "./Zaawansowany/Zaawansowany";
 
 export const BroszMore = (props) => {
   const [kliknieto, setKliknieto] = useState("");

@@ -1,8 +1,5 @@
 import React, { useState } from "react";
 import { BroszMore } from "./BroszMore";
-import { Route, Routes } from "react-router-dom";
-import { Opis } from "./Opis";
-import { NotFound } from "../NotFound";
 
 export const Broszury = () => {
   const [klik, setKlik] = useState(false);
