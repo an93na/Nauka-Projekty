@@ -18,8 +18,15 @@ export const BroszMore = (props) => {
   };
   const poziom = (
     <div>
-      <h3>Wybierz poziom:</h3>
-      <div style={{ display: "flex", gap: 20 }}>
+      <h3 style={{textAlign: 'center'}}>Wybierz poziom:</h3>
+      <div
+        style={{
+          display: "flex",
+          gap: 20,
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
         <button
           style={styleBtn}
           value={kliknieto}
@@ -45,7 +52,11 @@ export const BroszMore = (props) => {
     </div>
   );
   const cofnijPoziomy = (
-    <button value={kliknieto} onClick={() => setKliknieto("")}>
+    <button
+      style={{ width: "auto" }}
+      value={kliknieto}
+      onClick={() => setKliknieto("")}
+    >
       Cofnij
     </button>
   );

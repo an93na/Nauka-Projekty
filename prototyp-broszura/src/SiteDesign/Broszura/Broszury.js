@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import { BroszMore } from "./BroszMore";
+import { Route, Routes } from "react-router-dom";
+import { Opis } from "./Opis";
+import { NotFound } from "../NotFound";
 
 export const Broszury = () => {
   const [klik, setKlik] = useState(false);
@@ -15,23 +18,25 @@ export const Broszury = () => {
     fontWeight: "bold",
   };
   return (
-    <article
-      style={{
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-      }}
-    >
+    <article>
       {klik ? (
-        <BroszMore/>
+        <BroszMore />
       ) : (
-        <button
-          style={styleBtn}
-          value={klik}
-          onClick={() => setKlik((prev) => !prev)}
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
         >
-          Broszury
-        </button>
+          <button
+            style={styleBtn}
+            value={klik}
+            onClick={() => setKlik((prev) => !prev)}
+          >
+            Broszury
+          </button>
+        </div>
       )}
     </article>
   );
