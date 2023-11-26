@@ -7,6 +7,7 @@ import { PrzykladBtn } from "./PrzykladBtn";
 
 export const BroszMore = (props) => {
   const [kliknieto, setKliknieto] = useState("");
+  const [pokaz, setPokaz] = useState('');
   const styleBtn = {
     width: 200,
     height: 150,
@@ -68,9 +69,11 @@ export const BroszMore = (props) => {
         <div>
           <div style={{ display: "flex", gap: 20 }}>
             {cofnijPoziomy("green")}
-            {<OpisBtn color={"green"} />}
-            {<PrzykladBtn color={"green"} />}
+            {<OpisBtn color={"green"} pokaz={pokaz} setPokaz={setPokaz}/>}
+            {<PrzykladBtn color={"green"} pokaz={pokaz} setPokaz={setPokaz}/>}
           </div>
+          {pokaz === 'opis' && <p>opis</p>}
+          {pokaz === 'przyklad' && <p>przyklad</p>}
           <Podstawowy />
         </div>
       );

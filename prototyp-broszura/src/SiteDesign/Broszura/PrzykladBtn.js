@@ -1,9 +1,14 @@
-import React from 'react'
+import React from "react";
 
 export const PrzykladBtn = (props) => {
-    const {color} = props
+  const { color, pokaz, setPokaz } = props;
   return (
-    <button style={{ backgroundColor: color }}>Przykład</button>
-  )
-}
-;
+    <button
+      style={{ backgroundColor: color }}
+      value={pokaz}
+      onClick={() => setPokaz("przyklad")}
+    >
+      Przykład
+    </button>
+  );
+};
