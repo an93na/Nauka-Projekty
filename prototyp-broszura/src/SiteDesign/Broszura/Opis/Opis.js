@@ -1,6 +1,6 @@
 import React from "react";
-import olowek from './Obrazki/iconmonstr-pencil-lined-240 (1).png'
-import serce from './Obrazki/iconmonstr-heart-plus-lined-240.png'
+import olowek from '../Obrazki/iconmonstr-pencil-lined-240 (1).png'
+import serce from '../Obrazki/iconmonstr-heart-plus-lined-240.png'
 
 export const Opis = () => {
   return (

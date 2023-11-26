@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import { Podstawowy } from "./Podstawowy/Podstawowy";
 import { SrednioZaawansowany } from "./SrednioZaawansowany/SrednioZaawansowany";
 import { Zaawansowany } from "./Zaawansowany/Zaawansowany";
-import { OpisBtn } from "./OpisBtn";
-import { PrzykladBtn } from "./PrzykladBtn";
-import { Opis } from "./Opis";
-import { Przykład } from "./Przykład";
+import { OpisBtn } from "./Opis/OpisBtn";
+import { PrzykladBtn } from "./Przyklad/PrzykladBtn";
+import { Opis } from "./Opis/Opis";
+import { Przykład } from "./Przyklad/Przykład";
 
 export const BroszMore = (props) => {
   const [kliknieto, setKliknieto] = useState("");
