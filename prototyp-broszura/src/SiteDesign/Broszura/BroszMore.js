@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { Podstawowy } from "./Podstawowy/Podstawowy";
 import { SrednioZaawansowany } from "./SrednioZaawansowany/SrednioZaawansowany";
 import { Zaawansowany } from "./Zaawansowany/Zaawansowany";
+import { OpisBtn } from "./OpisBtn";
+import { PrzykladBtn } from "./PrzykladBtn";
 
 export const BroszMore = (props) => {
   const [kliknieto, setKliknieto] = useState("");
@@ -60,20 +62,14 @@ export const BroszMore = (props) => {
       Zmień poziom
     </button>
   );
-  const opis = (color) => (
-    <button style={{ backgroundColor: color }}>Opis</button>
-  );
-  const przyklad = (color) => (
-    <button style={{ backgroundColor: color }}>Przykład</button>
-  );
   const wyswietl = () => {
     if (kliknieto === "podstawowy") {
       return (
         <div>
           <div style={{ display: "flex", gap: 20 }}>
-            {cofnijPoziomy('green')}
-            {opis("green")}
-            {przyklad("green")}
+            {cofnijPoziomy("green")}
+            {<OpisBtn color={"green"} />}
+            {<PrzykladBtn color={"green"} />}
           </div>
           <Podstawowy />
         </div>
