@@ -7,7 +7,8 @@ import { PrzykladBtn } from "./PrzykladBtn";
 
 export const BroszMore = (props) => {
   const [kliknieto, setKliknieto] = useState("");
-  const [pokaz, setPokaz] = useState('');
+  const [pokazOpis, setPokazOpis] = useState(false);
+  const [pokazPrzyklad, setPokazPrzyklad] = useState(false);
   const styleBtn = {
     width: 200,
     height: 150,
@@ -69,11 +70,23 @@ export const BroszMore = (props) => {
         <div>
           <div style={{ display: "flex", gap: 20 }}>
             {cofnijPoziomy("green")}
-            {<OpisBtn color={"green"} pokaz={pokaz} setPokaz={setPokaz}/>}
-            {<PrzykladBtn color={"green"} pokaz={pokaz} setPokaz={setPokaz}/>}
+            {
+              <OpisBtn
+                color={"green"}
+                pokaz={pokazOpis}
+                setPokaz={setPokazOpis}
+              />
+            }
+            {
+              <PrzykladBtn
+                color={"green"}
+                pokaz={pokazPrzyklad}
+                setPokaz={setPokazPrzyklad}
+              />
+            }
           </div>
-          {pokaz === 'opis' && <p>opis</p>}
-          {pokaz === 'przyklad' && <p>przyklad</p>}
+          {pokazOpis === true && <p>opis</p>}
+          {pokazPrzyklad === true && <p>przyklad</p>}
           <Podstawowy />
         </div>
       );
