@@ -51,26 +51,29 @@ export const BroszMore = (props) => {
       </div>
     </div>
   );
-  const cofnijPoziomy = (
+  const cofnijPoziomy = (color) => (
     <button
-      // style={{ width: "auto" }}
       value={kliknieto}
       onClick={() => setKliknieto("")}
+      style={{ backgroundColor: color }}
     >
       Zmień poziom
     </button>
   );
-  const opis = <button //style={{ width: "auto" }}
-  >Opis</button>;
-  const przyklad = <button>Przykład</button>
+  const opis = (color) => (
+    <button style={{ backgroundColor: color }}>Opis</button>
+  );
+  const przyklad = (color) => (
+    <button style={{ backgroundColor: color }}>Przykład</button>
+  );
   const wyswietl = () => {
     if (kliknieto === "podstawowy") {
       return (
         <div>
           <div style={{ display: "flex", gap: 20 }}>
-            {cofnijPoziomy}
-            {opis}
-            {przyklad}
+            {cofnijPoziomy('green')}
+            {opis("green")}
+            {przyklad("green")}
           </div>
           <Podstawowy />
         </div>
