@@ -4,6 +4,8 @@ import { SrednioZaawansowany } from "./SrednioZaawansowany/SrednioZaawansowany";
 import { Zaawansowany } from "./Zaawansowany/Zaawansowany";
 import { OpisBtn } from "./OpisBtn";
 import { PrzykladBtn } from "./PrzykladBtn";
+import { Opis } from "./Opis";
+import { Przykład } from "./Przykład";
 
 export const BroszMore = (props) => {
   const [kliknieto, setKliknieto] = useState("");
@@ -85,8 +87,8 @@ export const BroszMore = (props) => {
               />
             }
           </div>
-          {pokazOpis === true && <p>opis</p>}
-          {pokazPrzyklad === true && <p>przyklad</p>}
+          {pokazOpis === true && <Opis/>}
+          {pokazPrzyklad === true && <Przykład/>}
           <Podstawowy />
         </div>
       );
