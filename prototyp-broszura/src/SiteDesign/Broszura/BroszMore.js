@@ -18,7 +18,7 @@ export const BroszMore = (props) => {
   };
   const poziom = (
     <div>
-      <h3 style={{textAlign: 'center'}}>Wybierz poziom:</h3>
+      <h3 style={{ textAlign: "center" }}>Wybierz poziom:</h3>
       <div
         style={{
           display: "flex",
@@ -53,18 +53,25 @@ export const BroszMore = (props) => {
   );
   const cofnijPoziomy = (
     <button
-      style={{ width: "auto" }}
+      // style={{ width: "auto" }}
       value={kliknieto}
       onClick={() => setKliknieto("")}
     >
-      Cofnij
+      Zmień poziom
     </button>
   );
+  const opis = <button //style={{ width: "auto" }}
+  >Opis</button>;
+  const przyklad = <button>Przykład</button>
   const wyswietl = () => {
     if (kliknieto === "podstawowy") {
       return (
         <div>
-          {cofnijPoziomy}
+          <div style={{ display: "flex", gap: 20 }}>
+            {cofnijPoziomy}
+            {opis}
+            {przyklad}
+          </div>
           <Podstawowy />
         </div>
       );
