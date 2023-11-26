@@ -87,8 +87,8 @@ export const BroszMore = (props) => {
               />
             }
           </div>
-          {pokazOpis === true && <Opis/>}
-          {pokazPrzyklad === true && <Przykład/>}
+          {pokazOpis === true && <Opis />}
+          {pokazPrzyklad === true && <Przykład />}
           <Podstawowy />
         </div>
       );

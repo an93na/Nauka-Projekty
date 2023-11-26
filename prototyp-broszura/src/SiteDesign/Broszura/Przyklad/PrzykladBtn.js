@@ -6,7 +6,7 @@ export const PrzykladBtn = (props) => {
     <button
       style={{ backgroundColor: color }}
       value={pokaz}
-      onClick={() => setPokaz(prev => !prev)}
+      onClick={() => setPokaz((prev) => !prev)}
     >
       {pokaz ? "Schowaj" : "Pokaż"} przykład
     </button>
