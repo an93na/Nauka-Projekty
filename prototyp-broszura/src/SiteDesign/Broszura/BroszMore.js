@@ -120,7 +120,25 @@ export const BroszMore = (props) => {
     } else if (kliknieto === "zaawansowany") {
       return (
         <div>
-          {cofnijPoziomy("red")}
+          <div style={{ display: "flex", gap: 20 }}>
+            {cofnijPoziomy("red")}
+            {
+              <OpisBtn
+                color={"red"}
+                pokaz={pokazOpis}
+                setPokaz={setPokazOpis}
+              />
+            }
+            {
+              <PrzykladBtn
+                color={"red"}
+                pokaz={pokazPrzyklad}
+                setPokaz={setPokazPrzyklad}
+              />
+            }
+          </div>
+          {pokazOpis === true && <Opis />}
+          {pokazPrzyklad === true && <Przykład />}
           <Zaawansowany />
         </div>
       );
