@@ -95,7 +95,7 @@ export const BroszMore = (props) => {
     } else if (kliknieto === "średni") {
       return (
         <div>
-                   <div style={{ display: "flex", gap: 20 }}>
+          <div style={{ display: "flex", gap: 20 }}>
             {cofnijPoziomy("blue")}
             {
               <OpisBtn
@@ -120,7 +120,7 @@ export const BroszMore = (props) => {
     } else if (kliknieto === "zaawansowany") {
       return (
         <div>
-          {cofnijPoziomy('red')}
+          {cofnijPoziomy("red")}
           <Zaawansowany />
         </div>
       );
