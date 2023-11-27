@@ -96,17 +96,17 @@ export const BroszMore = (props) => {
       return (
         <div>
                    <div style={{ display: "flex", gap: 20 }}>
-            {cofnijPoziomy("green")}
+            {cofnijPoziomy("blue")}
             {
               <OpisBtn
-                color={"green"}
+                color={"blue"}
                 pokaz={pokazOpis}
                 setPokaz={setPokazOpis}
               />
             }
             {
               <PrzykladBtn
-                color={"green"}
+                color={"blue"}
                 pokaz={pokazPrzyklad}
                 setPokaz={setPokazPrzyklad}
               />
