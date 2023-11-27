@@ -95,14 +95,32 @@ export const BroszMore = (props) => {
     } else if (kliknieto === "średni") {
       return (
         <div>
-          {cofnijPoziomy}
+                   <div style={{ display: "flex", gap: 20 }}>
+            {cofnijPoziomy("green")}
+            {
+              <OpisBtn
+                color={"green"}
+                pokaz={pokazOpis}
+                setPokaz={setPokazOpis}
+              />
+            }
+            {
+              <PrzykladBtn
+                color={"green"}
+                pokaz={pokazPrzyklad}
+                setPokaz={setPokazPrzyklad}
+              />
+            }
+          </div>
+          {pokazOpis === true && <Opis />}
+          {pokazPrzyklad === true && <Przykład />}
           <SrednioZaawansowany />
         </div>
       );
     } else if (kliknieto === "zaawansowany") {
       return (
         <div>
-          {cofnijPoziomy}
+          {cofnijPoziomy('red')}
           <Zaawansowany />
         </div>
       );
