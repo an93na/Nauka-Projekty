@@ -12,15 +12,16 @@ export const BroszMore = (props) => {
   const [pokazOpis, setPokazOpis] = useState(false);
   const [pokazPrzyklad, setPokazPrzyklad] = useState(false);
   const styleBtn = {
-    width: 200,
-    height: 150,
+    // width: 200,
+    height: 80,
     backgroundColor: "palevioletred",
-    padding: 20,
+    padding: 15,
     textAlign: "center",
     borderRadius: "10px",
     border: "1px solid white",
-    fontSize: 20,
+    // fontSize: 20,
     fontWeight: "bold",
+    margin: 0,
   };
   const poziom = (
     <div>
