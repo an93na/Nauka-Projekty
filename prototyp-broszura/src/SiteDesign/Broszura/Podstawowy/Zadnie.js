@@ -5,6 +5,7 @@ export const Zadnie = () => {
   const [two, setTwo] = useState("");
   const [three, setThree] = useState("");
   const [four, setFour] = useState("");
+  console.log(one)
   return (
     <div>
       <h5>Zadanie</h5>
@@ -18,15 +19,15 @@ export const Zadnie = () => {
           1. Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, est?
         </p>
         <label>
-          <input type="radio" name="pyt1" id="1a" />
+          <input type="radio" name="pyt1" id="1a" value={'a'} onChange={(e) => setOne(e.target.value)} />
           Lorem ipsum dolor sit amet.
         </label>
         <label>
-          <input type="radio" name="pyt1" id="1b" />
+          <input type="radio" name="pyt1" id="1b" value={'b'} onChange={(e) => setOne(e.target.value)}/>
           Lorem ipsum dolor sit, amet consectetur adipisicing.
         </label>
         <label>
-          <input type="radio" name="pyt1" id="1c" />
+          <input type="radio" name="pyt1" id="1c" value={'c'} onChange={(e) => setOne(e.target.value)}/>
           Lorem, ipsum dolor.
         </label>
         <p style={{ marginBottom: 2, marginTop: 10 }}>
