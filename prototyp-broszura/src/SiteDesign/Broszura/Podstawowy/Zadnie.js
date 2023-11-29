@@ -1,6 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 
 export const Zadnie = () => {
+  const [one, setOne] = useState("");
+  const [two, setTwo] = useState("");
+  const [three, setThree] = useState("");
+  const [four, setFour] = useState("");
   return (
     <div>
       <h5>Zadanie</h5>
