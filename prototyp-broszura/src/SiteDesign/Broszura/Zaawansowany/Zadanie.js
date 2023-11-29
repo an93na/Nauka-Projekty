@@ -70,7 +70,7 @@ export const Zadnie = () => {
           <input type="radio" name="pyt4" id="1c" />
           Lorem, ipsum dolor.
         </label>
-        <button style={{ marginTop: "20px", backgroundColor: "green" }}>
+        <button style={{ marginTop: "20px", backgroundColor: "red" }}>
           Zatwierdź
         </button>
       </form>
