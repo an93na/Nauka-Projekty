@@ -26,6 +26,9 @@ export const Zadnie = () => {
           e.preventDefault();
           setPodsumowanieOne(true);
           setResultOne(wynik(one, "a"));
+          setResultTwo(wynik(two, "b"));
+          setResultThree(wynik(three, "c"));
+          setResultFour(wynik(four, "c"));
         }}
       >
         <p style={{ marginBottom: 2, marginTop: 4 }}>
@@ -107,6 +110,7 @@ export const Zadnie = () => {
         {podsumowanieOne === true && two !== "a" && (
           <p>"Your anwswer is not good"</p>
         )}
+        {resultTwo}
         <p style={{ marginBottom: 2, marginTop: 10 }}>
           3. Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, est?
         </p>
@@ -146,6 +150,7 @@ export const Zadnie = () => {
         {podsumowanieOne === true && three !== "b" && (
           <p>"Your anwswer is not good"</p>
         )}
+        {resultThree}
         <p style={{ marginBottom: 2, marginTop: 10 }}>
           4. Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, est?
         </p>
@@ -185,6 +190,7 @@ export const Zadnie = () => {
         {podsumowanieOne === true && four !== "c" && (
           <p>"Your anwswer is not good"</p>
         )}
+        {resultFour}
         <button style={{ marginTop: "20px", backgroundColor: "green" }}>
           Zatwierdź
         </button>
