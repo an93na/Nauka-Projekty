@@ -13,7 +13,7 @@ export const Zadnie = () => {
         action=""
         onSubmit={(e) => {
           e.preventDefault();
-          setPodsumowanieOne(prev => !prev)
+          setPodsumowanieOne((prev) => !prev);
         }}
       >
         <p style={{ marginBottom: 2, marginTop: 4 }}>
@@ -36,7 +36,7 @@ export const Zadnie = () => {
             id="1b"
             value={"b"}
             onChange={(e) => setOne(e.target.value)}
-            />
+          />
           Lorem ipsum dolor sit, amet consectetur adipisicing.
         </label>
         <label>
@@ -46,11 +46,15 @@ export const Zadnie = () => {
             id="1c"
             value={"c"}
             onChange={(e) => setOne(e.target.value)}
-            />
+          />
           Lorem, ipsum dolor.
         </label>
-            {podsumowanieOne === true && one === 'a' && <p>"Your anwswer is good"</p>}
-            {podsumowanieOne === true && one !== 'a' && <p>"Your anwswer is not good"</p>}
+        {podsumowanieOne === true && one === "a" && (
+          <p>"Your anwswer is good"</p>
+        )}
+        {podsumowanieOne === true && one !== "a" && (
+          <p>"Your anwswer is not good"</p>
+        )}
         <p style={{ marginBottom: 2, marginTop: 10 }}>
           2. Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, est?
         </p>
@@ -84,6 +88,12 @@ export const Zadnie = () => {
           />
           Lorem, ipsum dolor.
         </label>
+        {podsumowanieOne === true && two === "a" && (
+          <p>"Your anwswer is good"</p>
+        )}
+        {podsumowanieOne === true && two !== "a" && (
+          <p>"Your anwswer is not good"</p>
+        )}
         <p style={{ marginBottom: 2, marginTop: 10 }}>
           3. Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, est?
         </p>
@@ -117,6 +127,12 @@ export const Zadnie = () => {
           />
           Lorem, ipsum dolor.
         </label>
+        {podsumowanieOne === true && three === "b" && (
+          <p>"Your anwswer is good"</p>
+        )}
+        {podsumowanieOne === true && three !== "b" && (
+          <p>"Your anwswer is not good"</p>
+        )}
         <p style={{ marginBottom: 2, marginTop: 10 }}>
           4. Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, est?
         </p>
@@ -150,6 +166,12 @@ export const Zadnie = () => {
           />
           Lorem, ipsum dolor.
         </label>
+        {podsumowanieOne === true && four === "c" && (
+          <p>"Your anwswer is good"</p>
+        )}
+        {podsumowanieOne === true && four !== "c" && (
+          <p>"Your anwswer is not good"</p>
+        )}
         <button style={{ marginTop: "20px", backgroundColor: "green" }}>
           Zatwierdź
         </button>
