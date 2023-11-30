@@ -6,13 +6,17 @@ export const Zadnie = () => {
   const [three, setThree] = useState("");
   const [four, setFour] = useState("");
   const [podsumowanieOne, setPodsumowanieOne] = useState(false);
-  const [result, setResult] = useState('')
-  const wynik = () => {
-    if(one === 'a'){
-      return <p>Gratulacje!</p>
+  const [resultOne, setResultOne] = useState("");
+  const [resultTwo, setResultTwo] = useState("");
+  const [resultThree, setResultThree] = useState("");
+  const [resultFour, setResultFour] = useState("");
+  const wynik = (value, odp) => {
+    if (value === odp) {
+      return <p>Gratulacje!</p>;
     }
-    return <p>Niestety nie</p>
-  }
+    return <p>Niestety nie</p>;
+  };
+
   return (
     <div>
       <h5>Zadanie</h5>
@@ -21,7 +25,7 @@ export const Zadnie = () => {
         onSubmit={(e) => {
           e.preventDefault();
           setPodsumowanieOne(true);
-          setResult(wynik())
+          setResultOne(wynik(one, "a"));
         }}
       >
         <p style={{ marginBottom: 2, marginTop: 4 }}>
@@ -63,7 +67,7 @@ export const Zadnie = () => {
         {podsumowanieOne === true && one !== "a" && (
           <p>"Your anwswer is not good"</p>
         )}
-        {result}
+        {resultOne}
         <p style={{ marginBottom: 2, marginTop: 10 }}>
           2. Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, est?
         </p>
@@ -192,7 +196,7 @@ export const Zadnie = () => {
               setThree("a");
               setFour("a");
               setPodsumowanieOne(false);
-              setResult('')
+              setResultOne("");
             }}
           >
             Wyczyść
