@@ -13,7 +13,7 @@ export const Zadnie = () => {
         action=""
         onSubmit={(e) => {
           e.preventDefault();
-          setPodsumowanieOne((prev) => !prev);
+          setPodsumowanieOne(true);
         }}
       >
         <p style={{ marginBottom: 2, marginTop: 4 }}>
@@ -175,6 +175,19 @@ export const Zadnie = () => {
         <button style={{ marginTop: "20px", backgroundColor: "green" }}>
           Zatwierdź
         </button>
+        {podsumowanieOne === true && (
+          <button
+            onClick={() => {
+              setOne("a");
+              setTwo("a");
+              setThree("a");
+              setFour("a");
+              setPodsumowanieOne(false);
+            }}
+          >
+            Wyczyść
+          </button>
+        )}
       </form>
     </div>
   );
