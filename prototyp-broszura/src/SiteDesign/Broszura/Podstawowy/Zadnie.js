@@ -5,10 +5,7 @@ export const Zadnie = () => {
   const [two, setTwo] = useState("");
   const [three, setThree] = useState("");
   const [four, setFour] = useState("");
-  console.log(one);
-  console.log("two", two);
-  console.log("three", three);
-  console.log("four", four);
+  const [podsumowanieOne, setPodsumowanieOne] = useState(false);
   return (
     <div>
       <h5>Zadanie</h5>
@@ -16,6 +13,7 @@ export const Zadnie = () => {
         action=""
         onSubmit={(e) => {
           e.preventDefault();
+          setPodsumowanieOne(prev => !prev)
         }}
       >
         <p style={{ marginBottom: 2, marginTop: 4 }}>
@@ -38,7 +36,7 @@ export const Zadnie = () => {
             id="1b"
             value={"b"}
             onChange={(e) => setOne(e.target.value)}
-          />
+            />
           Lorem ipsum dolor sit, amet consectetur adipisicing.
         </label>
         <label>
@@ -48,9 +46,11 @@ export const Zadnie = () => {
             id="1c"
             value={"c"}
             onChange={(e) => setOne(e.target.value)}
-          />
+            />
           Lorem, ipsum dolor.
         </label>
+            {podsumowanieOne === true && one === 'a' && <p>"Your anwswer is good"</p>}
+            {podsumowanieOne === true && one !== 'a' && <p>"Your anwswer is not good"</p>}
         <p style={{ marginBottom: 2, marginTop: 10 }}>
           2. Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, est?
         </p>
