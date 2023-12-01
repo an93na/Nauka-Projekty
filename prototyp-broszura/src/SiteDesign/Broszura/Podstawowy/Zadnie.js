@@ -1,11 +1,11 @@
 import React, { useState } from "react";
+import cat from '../Obrazki/gacek.jpg'
 
 export const Zadnie = () => {
   const [one, setOne] = useState("");
   const [two, setTwo] = useState("");
   const [three, setThree] = useState("");
   const [four, setFour] = useState("");
-  const [podsumowanieOne, setPodsumowanieOne] = useState(false);
   const [resultOne, setResultOne] = useState("");
   const [resultTwo, setResultTwo] = useState("");
   const [resultThree, setResultThree] = useState("");
@@ -20,13 +20,12 @@ export const Zadnie = () => {
   return (
     <div>
       <h5>Zadanie</h5>
-      <div style={{display: 'flex'}}>
+      <div style={{display: 'flex', gap: 30}}>
         <div>
           <form
         action=""
         onSubmit={(e) => {
           e.preventDefault();
-          setPodsumowanieOne(true);
           setResultOne(wynik(one, "a"));
           setResultTwo(wynik(two, "b"));
           setResultThree(wynik(three, "c"));
@@ -174,7 +173,7 @@ export const Zadnie = () => {
         </button>
       </form>
         </div>
-        <img src="" alt="" />
+        <img src={cat} alt='cat' style={{height: '760px', width: '493px'}}/>
       </div>
       
     </div>
