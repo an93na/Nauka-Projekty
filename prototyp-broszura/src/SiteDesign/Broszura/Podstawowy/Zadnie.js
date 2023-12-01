@@ -64,12 +64,6 @@ export const Zadnie = () => {
           />
           Lorem, ipsum dolor.
         </label>
-        {podsumowanieOne === true && one === "a" && (
-          <p>"Your anwswer is good"</p>
-        )}
-        {podsumowanieOne === true && one !== "a" && (
-          <p>"Your anwswer is not good"</p>
-        )}
         {resultOne}
         <p style={{ marginBottom: 2, marginTop: 10 }}>
           2. Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, est?
