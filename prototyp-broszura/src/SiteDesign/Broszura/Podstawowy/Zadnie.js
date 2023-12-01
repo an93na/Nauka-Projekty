@@ -20,7 +20,9 @@ export const Zadnie = () => {
   return (
     <div>
       <h5>Zadanie</h5>
-      <form
+      <div style={{display: 'flex'}}>
+        <div>
+          <form
         action=""
         onSubmit={(e) => {
           e.preventDefault();
@@ -98,12 +100,6 @@ export const Zadnie = () => {
           />
           Lorem, ipsum dolor.
         </label>
-        {podsumowanieOne === true && two === "a" && (
-          <p>"Your anwswer is good"</p>
-        )}
-        {podsumowanieOne === true && two !== "a" && (
-          <p>"Your anwswer is not good"</p>
-        )}
         {resultTwo}
         <p style={{ marginBottom: 2, marginTop: 10 }}>
           3. Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, est?
@@ -138,12 +134,6 @@ export const Zadnie = () => {
           />
           Lorem, ipsum dolor.
         </label>
-        {podsumowanieOne === true && three === "b" && (
-          <p>"Your anwswer is good"</p>
-        )}
-        {podsumowanieOne === true && three !== "b" && (
-          <p>"Your anwswer is not good"</p>
-        )}
         {resultThree}
         <p style={{ marginBottom: 2, marginTop: 10 }}>
           4. Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, est?
@@ -178,31 +168,15 @@ export const Zadnie = () => {
           />
           Lorem, ipsum dolor.
         </label>
-        {podsumowanieOne === true && four === "c" && (
-          <p>"Your anwswer is good"</p>
-        )}
-        {podsumowanieOne === true && four !== "c" && (
-          <p>"Your anwswer is not good"</p>
-        )}
         {resultFour}
         <button style={{ marginTop: "20px", backgroundColor: "green" }}>
           Zatwierdź
         </button>
-        {podsumowanieOne === true && (
-          <button
-            onClick={() => {
-              setOne("a");
-              setTwo("a");
-              setThree("a");
-              setFour("a");
-              setPodsumowanieOne(false);
-              setResultOne("");
-            }}
-          >
-            Wyczyść
-          </button>
-        )}
       </form>
+        </div>
+        <img src="" alt="" />
+      </div>
+      
     </div>
   );
 };
