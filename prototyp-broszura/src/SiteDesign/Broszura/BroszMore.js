@@ -11,7 +11,6 @@ export const BroszMore = () => {
   const [kliknieto, setKliknieto] = useState("");
   const [pokazOpis, setPokazOpis] = useState(false);
   const [pokazPrzyklad, setPokazPrzyklad] = useState(false);
-  const [punkty, setPunkty] = useState(0);
   const styleBtn = {
     height: 80,
     backgroundColor: "palevioletred",

@@ -10,6 +10,8 @@ export const Zadnie = () => {
   const [resultTwo, setResultTwo] = useState("");
   const [resultThree, setResultThree] = useState("");
   const [resultFour, setResultFour] = useState("");
+  const [punkty, setPunkty] = useState(0);
+  
   const wynik = (value, odp) => {
     if (value === odp) {
       return <p>Gratulacje!</p>;
