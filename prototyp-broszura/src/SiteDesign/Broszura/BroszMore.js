@@ -7,19 +7,18 @@ import { PrzykladBtn } from "./Przyklad/PrzykladBtn";
 import { Opis } from "./Opis/Opis";
 import { Przykład } from "./Przyklad/Przykład";
 
-export const BroszMore = (props) => {
+export const BroszMore = () => {
   const [kliknieto, setKliknieto] = useState("");
   const [pokazOpis, setPokazOpis] = useState(false);
   const [pokazPrzyklad, setPokazPrzyklad] = useState(false);
+  const [punkty, setPunkty] = useState(0);
   const styleBtn = {
-    // width: 200,
     height: 80,
     backgroundColor: "palevioletred",
     padding: 15,
     textAlign: "center",
     borderRadius: "10px",
     border: "1px solid white",
-    // fontSize: 20,
     fontWeight: "bold",
     margin: 0,
   };
