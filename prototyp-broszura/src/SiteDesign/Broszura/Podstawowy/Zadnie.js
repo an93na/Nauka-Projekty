@@ -11,14 +11,20 @@ export const Zadnie = () => {
   const [resultThree, setResultThree] = useState("");
   const [resultFour, setResultFour] = useState("");
   const [punkty, setPunkty] = useState(0);
-  
+
   const wynik = (value, odp) => {
     if (value === odp) {
       return <p>Gratulacje!</p>;
     }
     return <p>Niestety nie</p>;
   };
-
+  const podliczPkt = (result) => {
+    let suma = 0;
+    if (wynik() === <p>Gratulacje!</p>) {
+      return suma + 1;
+    }
+    return suma;
+  };
   return (
     <div>
       <h5>Zadanie</h5>
@@ -32,6 +38,10 @@ export const Zadnie = () => {
               setResultTwo(wynik(two, "b"));
               setResultThree(wynik(three, "c"));
               setResultFour(wynik(four, "c"));
+              setPunkty(podliczPkt(resultOne));
+              setPunkty(podliczPkt(resultTwo));
+              setPunkty(podliczPkt(resultThree));
+              setPunkty(podliczPkt(resultFour));
             }}
           >
             <p style={{ marginBottom: 2, marginTop: 4 }}>
@@ -185,6 +195,7 @@ export const Zadnie = () => {
         </div>
         <img src={cat} alt="cat" style={{ height: "760px", width: "493px" }} />
       </div>
+      <p>{punkty}</p>
     </div>
   );
 };
