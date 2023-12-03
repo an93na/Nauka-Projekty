@@ -18,12 +18,12 @@ export const Zadnie = () => {
     }
     return <p>Niestety nie</p>;
   };
-  let suma = 0
+
   const podliczPkt = (value, odp) => {
     if (value === odp) {
-      return suma+1;
+      return punkty+1;
     }
-    return suma;
+    return punkty;
   };
   return (
     <div>
