@@ -11,7 +11,7 @@ export const Zadnie = () => {
   const [resultThree, setResultThree] = useState("");
   const [resultFour, setResultFour] = useState("");
   const [punkty, setPunkty] = useState(0);
-  
+
   const wynik = (value, odp) => {
     if (value === odp) {
       return <p>Gratulacje!</p>;
@@ -21,7 +21,7 @@ export const Zadnie = () => {
 
   const podliczPkt = (value, odp) => {
     if (value === odp) {
-      return punkty+1;
+      return setPunkty(punkty + 1);
     }
     return punkty;
   };
@@ -38,10 +38,10 @@ export const Zadnie = () => {
               setResultTwo(wynik(two, "b"));
               setResultThree(wynik(three, "c"));
               setResultFour(wynik(four, "c"));
-              setPunkty(podliczPkt(one, "a"));
-              setPunkty(podliczPkt(two, "b"));
-              setPunkty(podliczPkt(three, "c"));
-              setPunkty(podliczPkt(four, "c"));
+              podliczPkt(one, "a");
+              podliczPkt(two, "b");
+              podliczPkt(three, "c");
+              podliczPkt(four, "c");
             }}
           >
             <p style={{ marginBottom: 2, marginTop: 4 }}>
