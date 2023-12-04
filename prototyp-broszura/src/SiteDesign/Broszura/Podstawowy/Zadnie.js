@@ -38,7 +38,7 @@ export const Zadnie = () => {
               setResultTwo(wynik(two, "b"));
               setResultThree(wynik(three, "c"));
               setResultFour(wynik(four, "c"));
-              console.log(
+              setPunkty(
                 podliczPkt(one, "a") +
                   podliczPkt(two, "b") +
                   podliczPkt(three, "c") +
