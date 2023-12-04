@@ -21,10 +21,11 @@ export const Zadnie = () => {
 
   const podliczPkt = (value, odp) => {
     if (value === odp) {
-      return setPunkty(punkty + 1);
+      return 1;
     }
-    return punkty;
+    return 0;
   };
+
   return (
     <div>
       <h5>Zadanie</h5>
@@ -38,10 +39,7 @@ export const Zadnie = () => {
               setResultTwo(wynik(two, "b"));
               setResultThree(wynik(three, "c"));
               setResultFour(wynik(four, "c"));
-              podliczPkt(one, "a");
-              podliczPkt(two, "b");
-              podliczPkt(three, "c");
-              podliczPkt(four, "c");
+              setPunkty(() => {});
             }}
           >
             <p style={{ marginBottom: 2, marginTop: 4 }}>
