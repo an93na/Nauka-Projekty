@@ -11,6 +11,7 @@ export const Zadnie = () => {
   const [resultThree, setResultThree] = useState("");
   const [resultFour, setResultFour] = useState("");
   const [punkty, setPunkty] = useState(0);
+  const [klik, setKlik] = useState(false);
 
   const wynik = (value, odp) => {
     if (value === odp) {
@@ -45,6 +46,7 @@ export const Zadnie = () => {
               setResultThree(wynik(three, "c"));
               setResultFour(wynik(four, "c"));
               setPunkty(sumaPkt);
+              setKlik(true);
             }}
           >
             <p style={{ marginBottom: 2, marginTop: 4 }}>
@@ -196,9 +198,15 @@ export const Zadnie = () => {
             </button>
           </form>
         </div>
-        <img src={cat} alt="cat" style={{ height: "760px", width: "493px" }} />
+        <div>
+          <img
+            src={cat}
+            alt="cat"
+            style={{ height: "760px", width: "493px" }}
+          />
+          {klik ? <p>Twój wynik to: {punkty}/4 pkt</p> : <p></p>}
+        </div>
       </div>
-      <p>{punkty}</p>
     </div>
   );
 };
