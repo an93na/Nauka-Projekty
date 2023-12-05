@@ -193,7 +193,7 @@ export const Zadnie = () => {
               Lorem, ipsum dolor.
             </label>
             {resultFour}
-            <button style={{ marginTop: "20px", backgroundColor: "green" }}>
+            <button style={{ marginTop: "20px", backgroundColor: "blue" }}>
               Zatwierdź
             </button>
           </form>
