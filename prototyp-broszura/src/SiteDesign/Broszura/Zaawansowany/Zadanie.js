@@ -199,7 +199,7 @@ export const Zadnie = () => {
               Lorem, ipsum dolor.
             </label>
             {resultFour}
-            { klik ? <p>Twój wynik to: {selectorPkt}/4 pkt</p> : <button style={{ marginTop: "20px", backgroundColor: "red" }}>
+            { klik ? <h4>Twój wynik to: {selectorPkt}/4pkt</h4> : <button style={{ marginTop: "20px", backgroundColor: "red" }}>
               Zatwierdź
             </button>}
           </form>
