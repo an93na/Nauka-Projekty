@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import schemat from "../Obrazki/Zrzut ekranu 2023-12-05 192813.png";
+import { useSelector } from "react-redux";
+import { selectCounterValue } from "../counterSlice";
 
 export const Zadnie = () => {
   const [one, setOne] = useState("");
@@ -12,6 +14,8 @@ export const Zadnie = () => {
   const [resultFour, setResultFour] = useState("");
   const [punkty, setPunkty] = useState(0);
   const [klik, setKlik] = useState(false);
+
+  const selectorPkt = useSelector(selectCounterValue)
 
   const wynik = (value, odp) => {
     if (value === odp) {
@@ -207,6 +211,7 @@ export const Zadnie = () => {
           {klik ? <p>Twój wynik to: {punkty}/4 pkt</p> : <p></p>}
         </div>
       </div>
+      <p>{selectorPkt}</p>
     </div>
   );
 };

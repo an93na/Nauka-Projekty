@@ -8,4 +8,5 @@ const counterSlice = createSlice({
   reducers: {},
 });
 
+export const selectCounterValue = (state) => state.punkty.value
 export default counterSlice.reducer
