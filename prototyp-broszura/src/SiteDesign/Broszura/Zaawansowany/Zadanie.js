@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import schemat from "../Obrazki/Zrzut ekranu 2023-12-05 192813.png";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { selectCounterValue } from "../counterSlice";
 
 export const Zadnie = () => {
@@ -15,7 +15,7 @@ export const Zadnie = () => {
   const [punkty, setPunkty] = useState(0);
   const [klik, setKlik] = useState(false);
 
-  const selectorPkt = useSelector(selectCounterValue)
+  const selectorPkt = useSelector(selectCounterValue);
 
   const wynik = (value, odp) => {
     if (value === odp) {
@@ -36,6 +36,7 @@ export const Zadnie = () => {
     podliczPkt(two, "b") +
     podliczPkt(three, "c") +
     podliczPkt(four, "c");
+  const dispatch = useDispatch();
   return (
     <div>
       <h5>Zadanie</h5>
@@ -51,6 +52,7 @@ export const Zadnie = () => {
               setResultFour(wynik(four, "c"));
               setPunkty(sumaPkt);
               setKlik(true);
+              dispatch(punkty);
             }}
           >
             <p style={{ marginBottom: 2, marginTop: 4 }}>
