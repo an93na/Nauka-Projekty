@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import schemat from "../Obrazki/Zrzut ekranu 2023-12-05 192813.png";
 import { useSelector, useDispatch } from "react-redux";
-import { selectCounterValue } from "../counterSlice";
+import { addPoints, selectCounterValue } from "../counterSlice";
 
 export const Zadnie = () => {
   const [one, setOne] = useState("");
@@ -52,7 +52,7 @@ export const Zadnie = () => {
               setResultFour(wynik(four, "c"));
               setPunkty(sumaPkt);
               setKlik(true);
-              dispatch(punkty);
+              dispatch(addPoints(sumaPkt));
             }}
           >
             <p style={{ marginBottom: 2, marginTop: 4 }}>
