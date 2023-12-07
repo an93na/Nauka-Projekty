@@ -5,8 +5,13 @@ const counterSlice = createSlice({
   initialState: {
     value: 0,
   },
-  reducers: {},
+  reducers: {
+    addPoints: (state, action) => {
+      state.value = state.value + action.payload;
+    },
+  },
 });
 
-export const selectCounterValue = (state) => state.punkty.value
-export default counterSlice.reducer
+export const selectCounterValue = (state) => state.punkty.value;
+export const { addPoints } = counterSlice.actions;
+export default counterSlice.reducer;
