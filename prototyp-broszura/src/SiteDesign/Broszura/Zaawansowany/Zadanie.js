@@ -13,8 +13,9 @@ export const Zadnie = () => {
   const [resultThree, setResultThree] = useState("");
   const [resultFour, setResultFour] = useState("");
   const [klik, setKlik] = useState(false);
-
+  
   const selectorPkt = useSelector(selectCounterValue);
+  const dispatch = useDispatch();
 
   const wynik = (value, odp) => {
     if (value === odp) {
@@ -35,7 +36,18 @@ export const Zadnie = () => {
     podliczPkt(two, "b") +
     podliczPkt(three, "c") +
     podliczPkt(four, "c");
-  const dispatch = useDispatch();
+
+  const napisz = () => {
+    if(sumaPkt <= 1 ){
+      return <p>Twój wynik to {sumaPkt}/4pkt. Musisz jeszcze trochę popracować.</p>
+    }
+    else if(sumaPkt <=2 ){
+      return <p>Twój wynik to {sumaPkt}/4pkt. Poszło Ci całkiem nieźle!</p>
+    }
+    else if(sumaPkt > 2 ){
+      return <p>Twój wynik to {sumaPkt}/4pkt. Brawo świetny wynik!</p>
+    }
+  }
   return (
     <div>
       <h5>Zadanie</h5>
