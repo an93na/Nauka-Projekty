@@ -12,7 +12,6 @@ export const Zadnie = () => {
   const [resultTwo, setResultTwo] = useState("");
   const [resultThree, setResultThree] = useState("");
   const [resultFour, setResultFour] = useState("");
-  const [punkty, setPunkty] = useState(0);
   const [klik, setKlik] = useState(false);
 
   const selectorPkt = useSelector(selectCounterValue);
@@ -50,7 +49,6 @@ export const Zadnie = () => {
               setResultTwo(wynik(two, "b"));
               setResultThree(wynik(three, "c"));
               setResultFour(wynik(four, "c"));
-              setPunkty(sumaPkt);
               setKlik(true);
               dispatch(addPoints(sumaPkt));
             }}
@@ -199,9 +197,13 @@ export const Zadnie = () => {
               Lorem, ipsum dolor.
             </label>
             {resultFour}
-            { klik ? <h4>Twój wynik to: {selectorPkt}/4pkt</h4> : <button style={{ marginTop: "20px", backgroundColor: "red" }}>
-              Zatwierdź
-            </button>}
+            {klik ? (
+              <h4>Twój wynik to: {selectorPkt}/4pkt</h4>
+            ) : (
+              <button style={{ marginTop: "20px", backgroundColor: "red" }}>
+                Zatwierdź
+              </button>
+            )}
           </form>
         </div>
         <div>
@@ -210,7 +212,6 @@ export const Zadnie = () => {
             alt="cat"
             style={{ height: "760px", width: "493px" }}
           />
-          {klik ? <p>Twój wynik to: {punkty}/4 pkt</p> : <p></p>}
         </div>
       </div>
     </div>
