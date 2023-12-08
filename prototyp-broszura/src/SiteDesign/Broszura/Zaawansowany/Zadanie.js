@@ -13,7 +13,7 @@ export const Zadnie = () => {
   const [resultThree, setResultThree] = useState("");
   const [resultFour, setResultFour] = useState("");
   const [klik, setKlik] = useState(false);
-
+  
   const selectorPkt = useSelector(selectCounterValue);
   const dispatch = useDispatch();
 
@@ -38,16 +38,16 @@ export const Zadnie = () => {
     podliczPkt(four, "c");
 
   const napisz = () => {
-    if (sumaPkt <= 1) {
-      return (
-        <p>Twój wynik to {sumaPkt}/4pkt. Musisz jeszcze trochę popracować.</p>
-      );
-    } else if (sumaPkt <= 2) {
-      return <p>Twój wynik to {sumaPkt}/4pkt. Poszło Ci całkiem nieźle!</p>;
-    } else if (sumaPkt > 2) {
-      return <p>Twój wynik to {sumaPkt}/4pkt. Brawo świetny wynik!</p>;
+    if(sumaPkt <= 1 ){
+      return <h4>Musisz jeszcze trochę popracować.</h4>
     }
-  };
+    else if(sumaPkt <=2 ){
+      return <h4>Poszło Ci całkiem nieźle!</h4>
+    }
+    else if(sumaPkt > 2 ){
+      return <h4>Brawo świetny wynik!</h4>
+    }
+  }
   return (
     <div>
       <h5>Zadanie</h5>
@@ -210,7 +210,10 @@ export const Zadnie = () => {
             </label>
             {resultFour}
             {klik ? (
-              <h4>{napisz()}</h4>
+              <div>
+                <h4>Twój wynik to: {selectorPkt}/4pkt</h4>
+                {napisz()}
+              </div>
             ) : (
               <button style={{ marginTop: "20px", backgroundColor: "red" }}>
                 Zatwierdź
@@ -218,11 +221,11 @@ export const Zadnie = () => {
             )}
           </form>
         </div>
-        <img
-          src={schemat}
-          alt="cat"
-          style={{ height: "760px", width: "493px" }}
-        />
+          <img
+            src={schemat}
+            alt="cat"
+            style={{ height: "760px", width: "493px" }}
+          />
       </div>
     </div>
   );
