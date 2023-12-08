@@ -206,13 +206,11 @@ export const Zadnie = () => {
             )}
           </form>
         </div>
-        <div>
           <img
             src={schemat}
             alt="cat"
             style={{ height: "760px", width: "493px" }}
           />
-        </div>
       </div>
     </div>
   );
