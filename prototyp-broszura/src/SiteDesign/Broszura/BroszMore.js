@@ -6,8 +6,8 @@ import { OpisBtn } from "./Opis/OpisBtn";
 import { PrzykladBtn } from "./Przyklad/PrzykladBtn";
 import { Opis } from "./Opis/Opis";
 import { Przykład } from "./Przyklad/Przykład";
-import { useDispatch, useSelector } from "react-redux";
-import { resetState, selectCounterValue } from "./counterSlice";
+import { useDispatch } from "react-redux";
+import { resetState } from "./counterSlice";
 
 export const BroszMore = () => {
   const [kliknieto, setKliknieto] = useState("");
