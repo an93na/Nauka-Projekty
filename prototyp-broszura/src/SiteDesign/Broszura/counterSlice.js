@@ -9,9 +9,12 @@ const counterSlice = createSlice({
     addPoints: (state, action) => {
       state.value = state.value + action.payload;
     },
+    resetState: (state) => {
+      state.value = 0
+    }
   },
 });
 
 export const selectCounterValue = (state) => state.punkty.value;
-export const { addPoints } = counterSlice.actions;
+export const { addPoints, resetState } = counterSlice.actions;
 export default counterSlice.reducer;

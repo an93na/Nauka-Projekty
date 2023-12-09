@@ -6,11 +6,17 @@ import { OpisBtn } from "./Opis/OpisBtn";
 import { PrzykladBtn } from "./Przyklad/PrzykladBtn";
 import { Opis } from "./Opis/Opis";
 import { Przykład } from "./Przyklad/Przykład";
+import { useDispatch, useSelector } from "react-redux";
+import { resetState, selectCounterValue } from "./counterSlice";
 
 export const BroszMore = () => {
   const [kliknieto, setKliknieto] = useState("");
   const [pokazOpis, setPokazOpis] = useState(false);
   const [pokazPrzyklad, setPokazPrzyklad] = useState(false);
+
+  const selectorPkt = useSelector(selectCounterValue);
+  const dispatch = useDispatch();
+
   const styleBtn = {
     height: 80,
     backgroundColor: "palevioletred",
@@ -59,7 +65,10 @@ export const BroszMore = () => {
   const cofnijPoziomy = (color) => (
     <button
       value={kliknieto}
-      onClick={() => setKliknieto("")}
+      onClick={() => {
+        setKliknieto("");
+        dispatch(resetState());
+      }}
       style={{ backgroundColor: color }}
     >
       Zmień poziom
