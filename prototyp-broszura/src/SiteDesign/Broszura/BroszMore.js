@@ -14,7 +14,6 @@ export const BroszMore = () => {
   const [pokazOpis, setPokazOpis] = useState(false);
   const [pokazPrzyklad, setPokazPrzyklad] = useState(false);
 
-  const selectorPkt = useSelector(selectCounterValue);
   const dispatch = useDispatch();
 
   const styleBtn = {
