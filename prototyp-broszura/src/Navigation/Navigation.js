@@ -1,7 +1,7 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 import { SiteDesign } from "../SiteDesign/SiteDesign";
-import { Books } from "../SiteDesign/Books";
+import { Books } from "../SiteDesign/Books/Books";
 import { Broszury } from "../SiteDesign/Broszura/Broszury";
 import { Czasopisma } from "../SiteDesign/Czasopisma";
 import { Kartki } from "../SiteDesign/Kartki";
