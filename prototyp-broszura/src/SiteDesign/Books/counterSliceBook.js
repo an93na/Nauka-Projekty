@@ -11,4 +11,5 @@ const bookSlice = createSlice({
     },
   },
 });
+export const {increment} = bookSlice.actions
 export default bookSlice.reducer;
