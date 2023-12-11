@@ -9,7 +9,10 @@ const bookSlice = createSlice({
     increment: (state, action) => {
       state.value = state.value + action.payload;
     },
+    decrement: (state, action) => {
+      state.value = state.value - action.payload;
+    },
   },
 });
-export const {increment} = bookSlice.actions
+export const { increment, decrement } = bookSlice.actions;
 export default bookSlice.reducer;
