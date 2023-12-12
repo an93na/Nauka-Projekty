@@ -11,10 +11,12 @@ export const Books = () => {
     lat: 54.49,
     lon: 18.56,
   };
-  const openWeatherMapLink = `https://api.openweathermap.org/data/2.5/weather?lat=${coord.lat}&lon=${coord.lon}&appid=${api}`;
+  const city = 'Warszawa'
+  const openWeatherMapLinkGeo = `https://api.openweathermap.org/data/2.5/weather?lat=${coord.lat}&lon=${coord.lon}&appid=${api}`;
+  const openweatherMapLinkCity = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${api}`
   useEffect(()=>{
-    fetch(openWeatherMapLink).then((response) => response.json()).then((data) => setPogoda(data))
-  },[openWeatherMapLink])
+    fetch(openweatherMapLinkCity).then((response) => response.json()).then((data) => setPogoda(data))
+  },[openweatherMapLinkCity])
   
   console.log(pogoda);
   return (
