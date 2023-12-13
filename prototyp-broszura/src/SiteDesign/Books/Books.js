@@ -4,7 +4,7 @@ import { decrement, increment } from "./counterSliceBook";
 import axios from "axios";
 
 export const Books = () => {
-  const [city, setCity] = useState("gdańsk");
+  const [city, setCity] = useState("Kielce");
   const [pogoda, setPogoda] = useState({
     name: "",
     main: { temp: "" },
@@ -35,6 +35,14 @@ export const Books = () => {
     fetchData();
   }, []);
   console.log(pogoda.name);
+
+  const temperatura = (temp) => {
+    if (temp > 0) {
+      return Math.round(temp - 273, 15);
+    }
+    return Math.round(temp + 273, 15);
+  };
+
   return (
     <article>
       <h4>Books</h4>
@@ -50,7 +58,8 @@ export const Books = () => {
             Miasto: <span id="city">{pogoda.name}</span>
           </li>
           <li>
-            Temperatura: <span id="temp">{pogoda.main.temp - 273.15}°C</span>
+            Temperatura:{" "}
+            <span id="temp">{temperatura(pogoda.main.temp)}°C</span>
           </li>
           <li>
             Prędkość wiatru: <span id="temp">{pogoda.wind.speed}m/s</span>
@@ -59,17 +68,19 @@ export const Books = () => {
             Opis pogody: <span id="desc">{pogoda.weather[0].description}</span>
           </li>
           <li>
-            Ikona: <img src={`https://openweathermap.org/img/w/${pogoda.weather[0].icon}.png`} id="icon" alt="icona" style={{backgroundColor: 'rgba(230, 200, 222, 0.4)', borderRadius: '10px', padding: '3px'}} />
+            Ikona:{" "}
+            <img
+              src={`https://openweathermap.org/img/w/${pogoda.weather[0].icon}.png`}
+              id="icon"
+              alt="icona"
+              style={{
+                backgroundColor: "rgba(230, 200, 222, 0.4)",
+                borderRadius: "10px",
+                padding: "3px",
+              }}
+            />
           </li>
         </ul>
-        <table>
-          <thead>
-            <tr>
-              <th></th>
-            </tr>
-          </thead>
-          <tbody></tbody>
-        </table>
       </div>
     </article>
   );
