@@ -8,7 +8,8 @@ export const Books = () => {
   const [pogoda, setPogoda] = useState({
     name: "",
     main: { temp: "" },
-    weather: [{ descrition: "" }],
+    weather: [{ description: "" }],
+    wind: {speed: ''}
   });
   const value = useSelector((state) => state.book.value);
   const dispatch = useDispatch();
@@ -50,6 +51,9 @@ export const Books = () => {
           </li>
           <li>
             Temperatura: <span id="temp">{pogoda.main.temp}°C</span>
+          </li>
+          <li>
+            Prędkość wiatru: <span id="temp">{pogoda.wind.speed}m/s</span>
           </li>
           <li>
             Opis pogody: <span id="desc">{pogoda.weather[0].description}</span>
