@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { decrement, increment } from "./counterSliceBook";
+import axios from "axios";
 
 export const Books = () => {
-  const [pogoda, setPogoda] = useState([])
+  const [city, setCity] = useState("Warszawa");
+  const [pogoda, setPogoda] = useState(null);
   const value = useSelector((state) => state.book.value);
   const dispatch = useDispatch();
   const api = "ac6428ea7fc0ef9caef037d08a02ce91";
@@ -11,14 +13,15 @@ export const Books = () => {
     lat: 54.49,
     lon: 18.56,
   };
-  const city = 'Warszawa'
-  const openWeatherMapLinkGeo = `https://api.openweathermap.org/data/2.5/weather?lat=${coord.lat}&lon=${coord.lon}&appid=${api}`;
-  const openweatherMapLinkCity = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${api}`
-  useEffect(()=>{
-    fetch(openweatherMapLinkCity).then((response) => response.json()).then((data) => setPogoda(data))
-  },[openweatherMapLinkCity])
   
-  console.log(pogoda);
+  const openWeatherMapLinkGeo = `https://api.openweathermap.org/data/2.5/weather?lat=${coord.lat}&lon=${coord.lon}&appid=${api}`;
+  const openweatherMapLinkCity = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${api}&lang=pl`;
+  useEffect(() => {
+    fetch(openweatherMapLinkCity)
+      .then((response) => response.json())
+      .then((data) => setPogoda(data));
+  }, []);
+  // console.log(pogoda.name)
   return (
     <article>
       <h4>Books</h4>
@@ -26,6 +29,29 @@ export const Books = () => {
         <button onClick={() => dispatch(increment(5))}>+5</button>
         <input type="text" readOnly value={value} />
         <button onClick={() => dispatch(decrement(5))}>-5</button>
+      </div>
+      <div>
+        <h2>Pogoda bieżąca</h2>
+        <ul>
+          <li>{/* Miasto: <span id="city">{pogoda.name}</span> */}</li>
+          <li>
+            Temperatura: <span id="temp"></span>
+          </li>
+          <li>
+            Opis pogody: <span id="desc"></span>
+          </li>
+          <li>
+            Ikona: <img src="" id="icon" alt="icona" />
+          </li>
+        </ul>
+        <table>
+          <thead>
+            <tr>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
       </div>
     </article>
   );
