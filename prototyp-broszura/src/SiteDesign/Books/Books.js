@@ -13,13 +13,21 @@ export const Books = () => {
     lat: 54.49,
     lon: 18.56,
   };
-  
   const openWeatherMapLinkGeo = `https://api.openweathermap.org/data/2.5/weather?lat=${coord.lat}&lon=${coord.lon}&appid=${api}`;
   const openweatherMapLinkCity = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${api}&lang=pl`;
+
+  const fetchData = async () => {
+    try {
+      const response = await axios.get(openweatherMapLinkCity);
+      setPogoda(response.data);
+      console.log(response.data); //You can see all the weather data in console log
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
   useEffect(() => {
-    fetch(openweatherMapLinkCity)
-      .then((response) => response.json())
-      .then((data) => setPogoda(data));
+    fetchData();
   }, []);
   // console.log(pogoda.name)
   return (
