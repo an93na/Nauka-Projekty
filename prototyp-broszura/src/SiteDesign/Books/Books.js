@@ -5,7 +5,7 @@ import axios from "axios";
 
 export const Books = () => {
   const [city, setCity] = useState("Warszawa");
-  const [pogoda, setPogoda] = useState(null);
+  const [pogoda, setPogoda] = useState({});
   const value = useSelector((state) => state.book.value);
   const dispatch = useDispatch();
   const api = "ac6428ea7fc0ef9caef037d08a02ce91";
@@ -20,7 +20,7 @@ export const Books = () => {
     try {
       const response = await axios.get(openweatherMapLinkCity);
       setPogoda(response.data);
-      console.log(response.data); //You can see all the weather data in console log
+      console.log(response.data); 
     } catch (error) {
       console.error(error);
     }
@@ -29,7 +29,7 @@ export const Books = () => {
   useEffect(() => {
     fetchData();
   }, []);
-  // console.log(pogoda.name)
+  console.log(pogoda.name)
   return (
     <article>
       <h4>Books</h4>
@@ -41,7 +41,7 @@ export const Books = () => {
       <div>
         <h2>Pogoda bieżąca</h2>
         <ul>
-          <li>{/* Miasto: <span id="city">{pogoda.name}</span> */}</li>
+          <li>Miasto: <span id="city">{pogoda.name}</span></li>
           <li>
             Temperatura: <span id="temp"></span>
           </li>
