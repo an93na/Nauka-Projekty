@@ -4,12 +4,12 @@ import { decrement, increment } from "./counterSliceBook";
 import axios from "axios";
 
 export const Books = () => {
-  const [city, setCity] = useState("Warszawa");
+  const [city, setCity] = useState("gdańsk");
   const [pogoda, setPogoda] = useState({
     name: "",
     main: { temp: "" },
-    weather: [{ description: "" }],
-    wind: {speed: ''}
+    weather: [{ id: "", main: "", description: "", icon: "" }],
+    wind: { speed: "" },
   });
   const value = useSelector((state) => state.book.value);
   const dispatch = useDispatch();
@@ -50,7 +50,7 @@ export const Books = () => {
             Miasto: <span id="city">{pogoda.name}</span>
           </li>
           <li>
-            Temperatura: <span id="temp">{pogoda.main.temp}°C</span>
+            Temperatura: <span id="temp">{pogoda.main.temp - 273.15}°C</span>
           </li>
           <li>
             Prędkość wiatru: <span id="temp">{pogoda.wind.speed}m/s</span>
@@ -59,7 +59,7 @@ export const Books = () => {
             Opis pogody: <span id="desc">{pogoda.weather[0].description}</span>
           </li>
           <li>
-            Ikona: <img src="" id="icon" alt="icona" />
+            Ikona: <img src={`https://openweathermap.org/img/w/${pogoda.weather[0].icon}.png`} id="icon" alt="icona" style={{backgroundColor: 'rgba(230, 200, 222, 0.4)', borderRadius: '10px', padding: '3px'}} />
           </li>
         </ul>
         <table>
