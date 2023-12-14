@@ -13,7 +13,7 @@ export const Books = () => {
   });
   const value = useSelector((state) => state.book.value);
   const dispatch = useDispatch();
-  const api = "ac6428ea7fc0ef9caef037d08a02ce91";
+  const api = ''
   // const coord = {
   //   lat: 54.49,
   //   lon: 18.56,
@@ -81,6 +81,21 @@ export const Books = () => {
             />
           </li>
         </ul>
+      </div>
+      <div>
+        <form action="">
+          <select name="" id="">
+            <option value="" hidden>Wybierz miasto</option>
+            <option value="Warszawa">Warszawa</option>
+            <option value="Kraków">Kraków</option>
+            <option value="Gdańsk">Gdańsk</option>
+            <option value="Łódź">Łódź</option>
+            <option value="Poznań">Poznań</option>
+            <option value="Lublin">Lublin</option>
+            <option value="Kielce">Kielce</option>
+          </select>
+          <button type="submit">Wybierz</button>
+        </form>
       </div>
     </article>
   );
