@@ -65,27 +65,16 @@ export const Books = () => {
           <option value="Warszawa">Warszawa</option>
           <option value="Kraków">Kraków</option>
           <option value="Gdańsk">Gdańsk</option>
-          <option value="Łódź">Łódź</option>
+          <option value="Lodz">Łódź</option>
           <option value="Poznań">Poznań</option>
-          <option value="Lublin">Lublin</option>
+          <option value="Zamosc">Zamość</option>
           <option value="Kielce">Kielce</option>
         </select>
         <ul>
           <li>
             Miasto: <span id="city">{pogoda.name}</span>
-          </li>
+          </li>{" "}
           <li>
-            Temperatura:{" "}
-            <span id="temp">{temperatura(pogoda.main.temp)}°C</span>
-          </li>
-          <li>
-            Prędkość wiatru: <span id="temp">{pogoda.wind.speed}m/s</span>
-          </li>
-          <li>
-            Opis pogody: <span id="desc">{pogoda.weather[0].description}</span>
-          </li>
-          <li>
-            Ikona:{" "}
             <img
               src={`https://openweathermap.org/img/w/${pogoda.weather[0].icon}.png`}
               id="icon"
@@ -96,6 +85,16 @@ export const Books = () => {
                 padding: "3px",
               }}
             />
+          </li>
+          <li>
+            Temperatura:{" "}
+            <span id="temp">{temperatura(pogoda.main.temp)}°C</span>
+          </li>
+          <li>
+            Prędkość wiatru: <span id="temp">{pogoda.wind.speed}m/s</span>
+          </li>
+          <li>
+            Opis pogody: <span id="desc">{pogoda.weather[0].description}</span>
           </li>
         </ul>
       </div>
