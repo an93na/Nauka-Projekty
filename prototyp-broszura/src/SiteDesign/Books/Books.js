@@ -53,6 +53,23 @@ export const Books = () => {
       </div>
       <div>
         <h2>Pogoda bieżąca</h2>
+        <select
+          name=""
+          id=""
+          value={city}
+          onChange={(e) => setCity(e.target.value)}
+        >
+          <option value="" hidden>
+            Wybierz miasto
+          </option>
+          <option value="Warszawa">Warszawa</option>
+          <option value="Kraków">Kraków</option>
+          <option value="Gdańsk">Gdańsk</option>
+          <option value="Łódź">Łódź</option>
+          <option value="Poznań">Poznań</option>
+          <option value="Lublin">Lublin</option>
+          <option value="Kielce">Kielce</option>
+        </select>
         <ul>
           <li>
             Miasto: <span id="city">{pogoda.name}</span>
@@ -81,35 +98,6 @@ export const Books = () => {
             />
           </li>
         </ul>
-      </div>
-      <div>
-        <form
-          action=""
-          onSubmit={(e) => {
-            e.preventDefault();
-            setCity('')
-          }}
-
-        >
-          <select
-            name=""
-            id=""
-            value={city}
-            onChange={(e) => setCity(e.target.value)}
-          >
-            <option value="" hidden>
-              Wybierz miasto
-            </option>
-            <option value="Warszawa">Warszawa</option>
-            <option value="Kraków">Kraków</option>
-            <option value="Gdańsk">Gdańsk</option>
-            <option value="Łódź">Łódź</option>
-            <option value="Poznań">Poznań</option>
-            <option value="Lublin">Lublin</option>
-            <option value="Kielce">Kielce</option>
-          </select>
-          <button type="submit">Wybierz</button>
-        </form>
       </div>
     </article>
   );
