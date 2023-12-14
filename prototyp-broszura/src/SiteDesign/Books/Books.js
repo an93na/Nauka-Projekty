@@ -13,7 +13,7 @@ export const Books = () => {
   });
   const value = useSelector((state) => state.book.value);
   const dispatch = useDispatch();
-  const api = ''
+  const api = "";
   // const coord = {
   //   lat: 54.49,
   //   lon: 18.56,
@@ -33,7 +33,7 @@ export const Books = () => {
 
   useEffect(() => {
     fetchData();
-  }, []);
+  }, [city]);
   console.log(pogoda.name);
 
   const temperatura = (temp) => {
@@ -83,9 +83,23 @@ export const Books = () => {
         </ul>
       </div>
       <div>
-        <form action="">
-          <select name="" id="">
-            <option value="" hidden>Wybierz miasto</option>
+        <form
+          action=""
+          onSubmit={(e) => {
+            e.preventDefault();
+            setCity('')
+          }}
+
+        >
+          <select
+            name=""
+            id=""
+            value={city}
+            onChange={(e) => setCity(e.target.value)}
+          >
+            <option value="" hidden>
+              Wybierz miasto
+            </option>
             <option value="Warszawa">Warszawa</option>
             <option value="Kraków">Kraków</option>
             <option value="Gdańsk">Gdańsk</option>
