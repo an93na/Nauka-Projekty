@@ -42,20 +42,26 @@ export const Books = () => {
     return Math.round(temp + 273, 15);
   };
 
-    // funkcja zwracjąca liczbę z zerem wiodącym
-    function getNumberAsStringWithLeadingZero(value) {
-      if (value <= 9) {
-          return `0${value}`
-      }
-      return `${value}`
+  // funkcja zwracjąca liczbę z zerem wiodącym
+  function getNumberAsStringWithLeadingZero(value) {
+    if (value <= 9) {
+      return `0${value}`;
+    }
+    return `${value}`;
   }
 
   const getDate = (dt) => {
-    const date = new Date(dt* 1000)
-    const year = date.getFullYear()
-  
-  }
+    const date = new Date(dt * 1000);
+    const year = date.getFullYear();
+    const month = getNumberAsStringWithLeadingZero(date.getMonth() + 1);
+    const day = getNumberAsStringWithLeadingZero(date.getDate());
+    const hour = getNumberAsStringWithLeadingZero(date.getHours());
+    const minutes = getNumberAsStringWithLeadingZero(date.getMinutes());
+    const seconds = getNumberAsStringWithLeadingZero(date.getSeconds());
+    return `${year}-${month}-${day} ${hour}:${minutes}:${seconds}`;
+  };
 
+  console.log(getDate(pogoda.dt));
   return (
     <article>
       <h4>Books</h4>
@@ -72,7 +78,6 @@ export const Books = () => {
           value={city}
           onChange={(e) => setCity(e.target.value)}
         >
-       
           <option value="" hidden>
             Wybierz miasto
           </option>
