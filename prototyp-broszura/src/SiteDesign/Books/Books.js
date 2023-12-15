@@ -72,6 +72,7 @@ export const Books = () => {
       </div>
       <div>
         <h2>Pogoda bieżąca</h2>
+
         <select
           name=""
           id=""
@@ -89,6 +90,7 @@ export const Books = () => {
           <option value="Zamosc">Zamość</option>
           <option value="Kielce">Kielce</option>
         </select>
+        <p>{getDate(pogoda.dt)}</p>
         <ul>
           <li>
             Miasto: <span id="city">{pogoda.name}</span>
