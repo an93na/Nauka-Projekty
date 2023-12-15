@@ -42,10 +42,19 @@ export const Books = () => {
     return Math.round(temp + 273, 15);
   };
 
-
+    // funkcja zwracjąca liczbę z zerem wiodącym
+    function getNumberAsStringWithLeadingZero(value) {
+      if (value <= 9) {
+          return `0${value}`
+      }
+      return `${value}`
+  }
 
   const getDate = (dt) => {
-    const date = new Date(dt* 1000)}
+    const date = new Date(dt* 1000)
+    const year = date.getFullYear()
+  
+  }
 
   return (
     <article>
