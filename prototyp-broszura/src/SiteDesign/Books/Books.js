@@ -30,7 +30,6 @@ export const Books = () => {
       console.error(error);
     }
   };
-
   useEffect(() => {
     fetchData();
   }, [city]);
@@ -42,6 +41,11 @@ export const Books = () => {
     }
     return Math.round(temp + 273, 15);
   };
+
+
+
+  const getDate = (dt) => {
+    const date = new Date(dt* 1000)}
 
   return (
     <article>
@@ -59,6 +63,7 @@ export const Books = () => {
           value={city}
           onChange={(e) => setCity(e.target.value)}
         >
+       
           <option value="" hidden>
             Wybierz miasto
           </option>
