@@ -80,7 +80,7 @@ export const Books = () => {
         >
           Pogoda bieżąca
         </h2>
-          <p>Wybierz miasto:</p>
+        <p>Wybierz miasto:</p>
         <select
           name=""
           id=""
@@ -96,11 +96,8 @@ export const Books = () => {
           <option value="Kielce">Kielce</option>
         </select>
         <p>{getDate(pogoda.dt)}</p>
-        <ul>
-          <li>
-            Miasto: <span id="city">{pogoda.name}</span>
-          </li>{" "}
-          <li>
+        <div style={{textAlign: 'center'}}>
+          <p>Miasto: <b>{pogoda.name}</b></p>{" "}
             <img
               src={`https://openweathermap.org/img/w/${pogoda.weather[0].icon}.png`}
               id="icon"
@@ -111,18 +108,17 @@ export const Books = () => {
                 padding: "3px",
               }}
             />
-          </li>
-          <li>
+          <p>
             Temperatura:{" "}
             <span id="temp">{temperatura(pogoda.main.temp)}°C</span>
-          </li>
-          <li>
+          </p>
+          <p>
             Prędkość wiatru: <span id="temp">{pogoda.wind.speed}m/s</span>
-          </li>
-          <li>
+          </p>
+          <p>
             Opis pogody: <span id="desc">{pogoda.weather[0].description}</span>
-          </li>
-        </ul>
+          </p>
+        </div>
       </div>
     </article>
   );
