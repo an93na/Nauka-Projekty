@@ -71,17 +71,22 @@ export const Books = () => {
         <button onClick={() => dispatch(decrement(5))}>-5</button>
       </div>
       <div>
-        <h2>Pogoda bieżąca</h2>
-
+        <h2
+          style={{
+            backgroundColor: "palevioletred",
+            textAlign: "center",
+            padding: "10px",
+          }}
+        >
+          Pogoda bieżąca
+        </h2>
+          <p>Wybierz miasto:</p>
         <select
           name=""
           id=""
           value={city}
           onChange={(e) => setCity(e.target.value)}
         >
-          <option value="" hidden>
-            Wybierz miasto
-          </option>
           <option value="Warszawa">Warszawa</option>
           <option value="Kraków">Kraków</option>
           <option value="Gdańsk">Gdańsk</option>
