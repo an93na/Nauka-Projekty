@@ -96,27 +96,36 @@ export const Books = () => {
           <option value="Kielce">Kielce</option>
         </select>
         <p>{getDate(pogoda.dt)}</p>
-        <div style={{textAlign: 'center'}}>
-          <p>Miasto: <b>{pogoda.name}</b></p>{" "}
-            <img
-              src={`https://openweathermap.org/img/w/${pogoda.weather[0].icon}.png`}
-              id="icon"
-              alt="icona"
-              style={{
-                backgroundColor: "rgba(230, 200, 222, 0.4)",
-                borderRadius: "10px",
-                padding: "3px",
-              }}
-            />
-          <p>
-            Temperatura:{" "}
-            <span id="temp">{temperatura(pogoda.main.temp)}°C</span>
+        <div
+          style={{
+            textAlign: "center",
+            border: "1px solid white",
+            padding: "10px",
+            borderRadius: "10px",
+            width: 410,
+          }}
+        >
+          <p style={{ marginBottom: "15px" }}>
+            Miasto: <b>{pogoda.name}</b>
+          </p>{" "}
+          <img
+            src={`https://openweathermap.org/img/w/${pogoda.weather[0].icon}.png`}
+            id="icon"
+            alt="icona"
+            style={{
+              backgroundColor: "rgba(230, 200, 222, 0.4)",
+              borderRadius: "10px",
+              padding: "3px",
+            }}
+          />
+          <p style={{ marginBottom: "5px" }}>
+            Temperatura: <b>{temperatura(pogoda.main.temp)}°C</b>
           </p>
-          <p>
-            Prędkość wiatru: <span id="temp">{pogoda.wind.speed}m/s</span>
+          <p style={{ marginBottom: "5px" }}>
+            Opis pogody: <b>{pogoda.weather[0].description}</b>
           </p>
-          <p>
-            Opis pogody: <span id="desc">{pogoda.weather[0].description}</span>
+          <p style={{ marginBottom: "5px" }}>
+            Prędkość wiatru: <b>{pogoda.wind.speed}m/s</b>
           </p>
         </div>
       </div>
