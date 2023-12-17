@@ -95,15 +95,6 @@ export const Books = () => {
           <option value="Zamosc">Zamość</option>
           <option value="Kielce">Kielce</option>
         </select>
-        <div>
-
-        <p style={{
-            textAlign: "center",
-            border: "1px solid white",
-            padding: "10px",
-            borderRadius: "10px",
-            width: 410,
-          }}>{getDate(pogoda.dt)}</p>
         <div
           style={{
             textAlign: "center",
@@ -113,29 +104,31 @@ export const Books = () => {
             width: 410,
           }}
         >
-          <p style={{ marginBottom: "15px" }}>
-            Miasto: <b>{pogoda.name}</b>
-          </p>{" "}
-          <img
-            src={`https://openweathermap.org/img/w/${pogoda.weather[0].icon}.png`}
-            id="icon"
-            alt="icona"
-            style={{
-              backgroundColor: "rgba(230, 200, 222, 0.4)",
-              borderRadius: "10px",
-              padding: "3px",
-            }}
-          />
-          <p style={{ marginBottom: "5px" }}>
-            Temperatura: <b>{temperatura(pogoda.main.temp)}°C</b>
-          </p>
-          <p style={{ marginBottom: "5px" }}>
-            Opis pogody: <b>{pogoda.weather[0].description}</b>
-          </p>
-          <p style={{ marginBottom: "5px" }}>
-            Prędkość wiatru: <b>{pogoda.wind.speed}m/s</b>
-          </p>
-        </div>
+          <p>{getDate(pogoda.dt)}</p>
+          <div>
+            <p style={{ marginBottom: "15px" }}>
+              Miasto: <b>{pogoda.name}</b>
+            </p>{" "}
+            <img
+              src={`https://openweathermap.org/img/w/${pogoda.weather[0].icon}.png`}
+              id="icon"
+              alt="icona"
+              style={{
+                backgroundColor: "rgba(230, 200, 222, 0.4)",
+                borderRadius: "10px",
+                padding: "3px",
+              }}
+            />
+            <p style={{ marginBottom: "5px" }}>
+              Temperatura: <b>{temperatura(pogoda.main.temp)}°C</b>
+            </p>
+            <p style={{ marginBottom: "5px" }}>
+              Opis pogody: <b>{pogoda.weather[0].description}</b>
+            </p>
+            <p style={{ marginBottom: "5px" }}>
+              Prędkość wiatru: <b>{pogoda.wind.speed}m/s</b>
+            </p>
+          </div>
         </div>
       </div>
     </article>
