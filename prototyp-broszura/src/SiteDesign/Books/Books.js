@@ -95,6 +95,8 @@ export const Books = () => {
           <option value="Zamosc">Zamość</option>
           <option value="Kielce">Kielce</option>
         </select>
+        <div>
+
         <p style={{
             textAlign: "center",
             border: "1px solid white",
@@ -133,6 +135,7 @@ export const Books = () => {
           <p style={{ marginBottom: "5px" }}>
             Prędkość wiatru: <b>{pogoda.wind.speed}m/s</b>
           </p>
+        </div>
         </div>
       </div>
     </article>
