@@ -95,7 +95,13 @@ export const Books = () => {
           <option value="Zamosc">Zamość</option>
           <option value="Kielce">Kielce</option>
         </select>
-        <p>{getDate(pogoda.dt)}</p>
+        <p style={{
+            textAlign: "center",
+            border: "1px solid white",
+            padding: "10px",
+            borderRadius: "10px",
+            width: 410,
+          }}>{getDate(pogoda.dt)}</p>
         <div
           style={{
             textAlign: "center",
