@@ -3,7 +3,9 @@ import { Srodek } from "./components/Srodek";
 
 function App() {
   return (
-    <div className="container">
+    <div
+      style={{ backgroundColor: "wheat", padding: "20px", borderRadius: 10 }}
+    >
       <Header />
       <Srodek />
     </div>
