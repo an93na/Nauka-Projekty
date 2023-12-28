@@ -1,7 +1,21 @@
-import React from 'react'
+import React from "react";
+import { Wykres } from "./Wykres";
 
 export const Wykresy = () => {
   return (
-    <div>Wykresy</div>
-  )
-}
+    <div
+      style={{
+        display: "flex",
+        gap: 10,
+      }}
+    >
+      <Wykres/>
+      <Wykres/>
+      <Wykres/>
+      <Wykres/>
+      <Wykres/>
+      <Wykres/>
+      <Wykres/>
+    </div>
+  );
+};
