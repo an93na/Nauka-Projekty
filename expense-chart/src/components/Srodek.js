@@ -19,9 +19,9 @@ export const Srodek = () => {
           justifyContent: "space-between",
         }}
       >
-        <p style={{ fontWeight: "bold", fontFamily: "monospace" }}>
+        <h3 style={{ fontWeight: "bold", fontFamily: "monospace" }}>
           Spending - Last 7 days
-        </p>
+        </h3>
       </div>
       <Wykresy />
     </div>
