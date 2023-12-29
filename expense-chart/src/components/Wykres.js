@@ -3,14 +3,18 @@ import React from "react";
 export const Wykres = (props) => {
   const { color, wys, day } = props;
   return (
-    <div>
-      <div
+    <div style={{textAlign: 'center', padding: 5}}>
+      <button
         style={{
+          display: 'block',
           backgroundColor: color,
           height: wys,
           padding: 5,
+          borderRadius: 5,
+          border: 'none',
+          width: '35px'
         }}
-      ></div>
+      ></button>
       {day}
     </div>
   );

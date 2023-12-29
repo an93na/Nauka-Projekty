@@ -9,7 +9,7 @@ export const Wykresy = () => {
         gap: 10,
       }}
     >
-      <Wykres color={'red'} wys={'20px'} day={'Monday'}/>
+      <Wykres color={'red'} wys={'20px'} day={'mon'}/>
       <Wykres/>
       <Wykres/>
       <Wykres/>
