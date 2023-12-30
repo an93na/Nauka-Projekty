@@ -5,7 +5,14 @@ export const Podsumowanie = (props) => {
   return (
     <div style={{ borderTopStyle: "groove", marginTop: 10, padding: 10 }}>
       <p>Total this month</p>
-      <div>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "row",
+          flexWrap: "nowrap",
+          justifyContent: "space-between",
+        }}
+      >
         <h3>${suma}</h3>
         <div>
           <h6>+%</h6>
