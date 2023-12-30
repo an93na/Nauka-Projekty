@@ -1,5 +1,6 @@
 import React from "react";
 import { Wykres } from "./Wykres";
+import { Podsumowanie } from "./Podsumowanie";
 
 export const Wykresy = () => {
   return (
@@ -20,7 +21,7 @@ export const Wykresy = () => {
         <Wykres color={"red"} wys={"45px"} day={"sat"} />
         <Wykres color={"red"} wys={"25px"} day={"sun"} />
       </div>
-      <div style={{ borderTopStyle: "groove", marginTop: 10, padding: 10 }}></div>
+      <Podsumowanie/>
     </div>
   );
 };
