@@ -10,7 +10,7 @@ export const Wykresy = () => {
           display: "flex",
           gap: "auto",
           justifyContent: "center",
-          alignItems: "baseline",
+          alignItems: "flex-end",
         }}
       >
         <Wykres color={"red"} wys={20} day={"mon"} />

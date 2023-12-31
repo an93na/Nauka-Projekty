@@ -17,15 +17,15 @@ export const Podsumowanie = (props) => {
           justifyContent: "space-between",
         }}
       >
-        <h3>${suma}</h3>
+        <h3 style={{marginTop: 0, fontSize: 'xx-large'}}>${suma}</h3>
         <div>
-          <h6 style={{marginBottom: 2}}>+2.4%</h6>
+          <h6 style={{ marginBottom: 2, marginTop: 0 }}>+2.4%</h6>
           <p
             style={{
               fontWeight: "lighter",
               fontFamily: "monospace",
               fontSize: 10,
-              marginTop: 2
+              marginTop: 2,
             }}
           >
             from last month

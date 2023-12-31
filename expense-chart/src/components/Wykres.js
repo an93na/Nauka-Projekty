@@ -16,11 +16,12 @@ export const Wykres = (props) => {
         style={{
           backgroundColor: "black",
           marginBottom: 5,
-          height: 5,
+          height: 10,
           width: 20,
           padding: 5,
           color: "white",
           borderRadius: 5,
+          textAlign: 'center'
         }}
       >
         ${wys}
