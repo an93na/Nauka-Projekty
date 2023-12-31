@@ -12,16 +12,30 @@ export const Wykres = (props) => {
         fontSize: 10,
       }}
     >
+      <div
+        style={{
+          backgroundColor: "black",
+          marginBottom: 5,
+          height: 5,
+          width: 20,
+          padding: 5,
+          color: "white",
+          borderRadius: 5,
+        }}
+      >
+        ${wys}
+      </div>
       <button
         style={{
           display: "block",
           backgroundColor: color,
-          height: wys,
+          height: `${wys}px`,
           padding: 5,
           borderRadius: 5,
           border: "none",
           width: "35px",
         }}
+        onClick={() => console.log("pom")}
       ></button>
       {day}
     </div>
