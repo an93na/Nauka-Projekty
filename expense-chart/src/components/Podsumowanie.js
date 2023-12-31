@@ -19,12 +19,13 @@ export const Podsumowanie = (props) => {
       >
         <h3>${suma}</h3>
         <div>
-          <h6>+%</h6>
+          <h6 style={{marginBottom: 2}}>+2.4%</h6>
           <p
             style={{
               fontWeight: "lighter",
               fontFamily: "monospace",
               fontSize: 10,
+              marginTop: 2
             }}
           >
             from last month

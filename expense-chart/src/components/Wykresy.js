@@ -21,7 +21,7 @@ export const Wykresy = () => {
         <Wykres color={"red"} wys={"45px"} day={"sat"} />
         <Wykres color={"red"} wys={"25px"} day={"sun"} />
       </div>
-      <Podsumowanie/>
+      <Podsumowanie suma={478.33}/>
     </div>
   );
 };
