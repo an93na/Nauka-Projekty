@@ -12,20 +12,24 @@ export const Wykres = (props) => {
         fontSize: 10,
       }}
     >
-      <div
-        style={{
-          backgroundColor: "black",
-          marginBottom: 5,
-          height: 10,
-          width: 20,
-          padding: 5,
-          color: "white",
-          borderRadius: 5,
-          textAlign: 'center'
-        }}
-      >
-        ${wys}
-      </div>
+      {etykieta ? (
+        <div
+          style={{
+            backgroundColor: "black",
+            marginBottom: 5,
+            height: 10,
+            width: 20,
+            padding: 5,
+            color: "white",
+            borderRadius: 5,
+            textAlign: "center",
+          }}
+        >
+          ${wys}
+        </div>
+      ) : (
+        <div></div>
+      )}
       <button
         style={{
           display: "block",
@@ -36,7 +40,7 @@ export const Wykres = (props) => {
           border: "none",
           width: "35px",
         }}
-        onClick={() => console.log("pom")}
+        onClick={() => setEtykieta((prev) => !prev)}
       ></button>
       {day}
     </div>
