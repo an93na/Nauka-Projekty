@@ -1,7 +1,7 @@
 import React from "react";
 
 export const Wykres = (props) => {
-  const { color, wys, day } = props;
+  const { color, wys, day, etykieta, setEtykieta } = props;
   return (
     <div
       style={{
