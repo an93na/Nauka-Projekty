@@ -28,14 +28,16 @@ export const Wykres = (props) => {
           ${wys}
         </div>
       ) : (
-        <div style={{
-          marginBottom: 5,
-          height: 10,
-          width: 20,
-          padding: 5,
-          borderRadius: 5,
-          textAlign: "center",
-        }}></div>
+        <div
+          style={{
+            marginBottom: 5,
+            height: 10,
+            width: 20,
+            padding: 5,
+            borderRadius: 5,
+            textAlign: "center",
+          }}
+        ></div>
       )}
       <button
         style={{
