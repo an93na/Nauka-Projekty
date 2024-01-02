@@ -4,6 +4,13 @@ import { Podsumowanie } from "./Podsumowanie";
 
 export const Wykresy = () => {
   const [etykieta, setEtykieta] = useState(false);
+  const [etykieta1, setEtykieta1] = useState(false);
+  const [etykieta2, setEtykieta2] = useState(false);
+  const [etykieta3, setEtykieta3] = useState(false);
+  const [etykieta4, setEtykieta4] = useState(false);
+  const [etykieta5, setEtykieta5] = useState(false);
+  const [etykieta6, setEtykieta6] = useState(false);
+  const [etykieta7, setEtykieta7] = useState(false);
   return (
     <div>
       <div
