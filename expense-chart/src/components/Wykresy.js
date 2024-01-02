@@ -10,7 +10,7 @@ export const Wykresy = () => {
   const [etykieta4, setEtykieta4] = useState(false);
   const [etykieta5, setEtykieta5] = useState(false);
   const [etykieta6, setEtykieta6] = useState(false);
-  const [etykieta7, setEtykieta7] = useState(false);
+
   return (
     <div>
       <div
@@ -32,43 +32,43 @@ export const Wykresy = () => {
           color={"red"}
           wys={32}
           day={"tue"}
-          etykieta={etykieta}
-          setEtykieta={setEtykieta}
+          etykieta={etykieta1}
+          setEtykieta={setEtykieta1}
         />
         <Wykres
           color={"blue"}
           wys={52}
           day={"wed"}
-          etykieta={etykieta}
-          setEtykieta={setEtykieta}
+          etykieta={etykieta2}
+          setEtykieta={setEtykieta2}
         />
         <Wykres
           color={"red"}
           wys={31}
           day={"thu"}
-          etykieta={etykieta}
-          setEtykieta={setEtykieta}
+          etykieta={etykieta3}
+          setEtykieta={setEtykieta3}
         />
         <Wykres
           color={"red"}
           wys={23}
           day={"fri"}
-          etykieta={etykieta}
-          setEtykieta={setEtykieta}
+          etykieta={etykieta4}
+          setEtykieta={setEtykieta4}
         />
         <Wykres
           color={"red"}
           wys={45}
           day={"sat"}
-          etykieta={etykieta}
-          setEtykieta={setEtykieta}
+          etykieta={etykieta5}
+          setEtykieta={setEtykieta5}
         />
         <Wykres
           color={"red"}
           wys={25}
           day={"sun"}
-          etykieta={etykieta}
-          setEtykieta={setEtykieta}
+          etykieta={etykieta6}
+          setEtykieta={setEtykieta6}
         />
       </div>
       <Podsumowanie suma={478.33} />
