@@ -50,7 +50,7 @@ export const Wykres = (props) => {
           }}
         ></div>
       )}
-      <button
+      <div
         style={{
           display: "block",
           backgroundColor: isHovered ? color : `dark${color}`,
@@ -58,12 +58,12 @@ export const Wykres = (props) => {
           padding: 5,
           borderRadius: 5,
           border: "none",
-          width: "35px",
+          width: "30px",
           cursor: "pointer",
         }}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
-      ></button>
+      ></div>
       {day}
     </div>
   );
