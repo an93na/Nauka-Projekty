@@ -6,10 +6,12 @@ export const Wykres = (props) => {
 
   const handleMouseEnter = () => {
     setIsHovered(true);
+    setEtykieta(true);
   };
 
   const handleMouseLeave = () => {
     setIsHovered(false);
+    setEtykieta(false);
   };
   return (
     <div
@@ -59,7 +61,6 @@ export const Wykres = (props) => {
           width: "35px",
           cursor: "pointer",
         }}
-        onClick={() => setEtykieta((prev) => !prev)}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       ></button>
