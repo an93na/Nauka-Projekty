@@ -1,7 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 
 export const Wykres = (props) => {
   const { color, wys, day, etykieta, setEtykieta } = props;
+  const [isHovered, setIsHovered] = useState(false);
+
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+  };
   return (
     <div
       style={{
@@ -42,14 +51,17 @@ export const Wykres = (props) => {
       <button
         style={{
           display: "block",
-          backgroundColor: color,
+          backgroundColor: isHovered ? color : `dark${color}`,
           height: `${wys}px`,
           padding: 5,
           borderRadius: 5,
           border: "none",
           width: "35px",
+          cursor: "pointer",
         }}
         onClick={() => setEtykieta((prev) => !prev)}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
       ></button>
       {day}
     </div>
