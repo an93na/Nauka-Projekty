@@ -16,9 +16,9 @@ export const Header = () => {
         </p>
         <p style={{ color: "white", fontWeight: "bold" }}>${balance}</p>
       </div>
-    <div style={{padding: 10}}>
-        <div style={{width: '50px', height: '50px', backgroundColor: 'black', borderRadius: '50%'}}></div>
+    <div style={{padding: 10, display: 'flex'}}>
         <div style={{width: '49px', height: '49px', backgroundColor: 'rebeccapurple', border: '1px solid white', borderRadius: '50%'}}></div>
+        <div style={{width: '50px', height: '50px', backgroundColor: 'black', borderRadius: '50%'}}></div>
     </div>
     </div>
   );
