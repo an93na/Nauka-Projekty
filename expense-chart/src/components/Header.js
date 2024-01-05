@@ -15,10 +15,35 @@ export const Header = () => {
       }}
     >
       <div>
-        <p style={{ color: "white", marginTop: 5, fontFamily: "monospace" }}>
-          My balance
-        </p>
-        <p style={{ color: "white", fontWeight: "bold" }}>${balance}</p>
+        <form action="">
+          <p style={{ color: "white", marginTop: 5, fontFamily: "monospace" }}>
+            My balance
+          </p>
+          <input
+            style={{
+              borderRadius: 5,
+              color: "red",
+              fontWeight: "bold",
+              padding: "5px",
+            }}
+            value={balance}
+            onChange={(e) => setBalance(e.target.value)}
+            placeholder="Wpisz swoje środki $"
+          />
+          <button
+            type="submit"
+            style={{
+              marginTop: 5,
+              padding: 10,
+              borderRadius: 5,
+              backgroundColor: "darksalmon",
+              color: "white",
+              border: "none",
+            }}
+          >
+            Zatwierdź
+          </button>
+        </form>
       </div>
       <div style={{ padding: 10, display: "flex" }}>
         <div
