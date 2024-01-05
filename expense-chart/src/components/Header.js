@@ -25,10 +25,10 @@ export const Header = () => {
           style={{
             width: "49px",
             height: "49px",
-            backgroundColor: "rebeccapurple",
             border: "1px solid white",
             borderRadius: "50%",
-            marginRight: "-25px",
+            position: "relative",
+            left: "25px",
           }}
         ></div>
         <div
