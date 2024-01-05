@@ -2,6 +2,16 @@ import React, { useState } from "react";
 
 export const Header = () => {
   const [balance, setBalance] = useState("");
+  const [myBalance, setMyBalance] = useState([]);
+  const [isHovered, setIsHovered] = useState(false);
+
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+  };
   return (
     <div
       style={{
@@ -15,7 +25,15 @@ export const Header = () => {
       }}
     >
       <div>
-        <form action="">
+        <form
+          action=""
+          onSubmit={(e) => {
+            e.preventDefault();
+            setMyBalance((prev) => [...prev, balance]);
+            setBalance("");
+            console.log(myBalance);
+          }}
+        >
           <p style={{ color: "white", marginTop: 5, fontFamily: "monospace" }}>
             My balance
           </p>
@@ -36,10 +54,13 @@ export const Header = () => {
               marginTop: 5,
               padding: 10,
               borderRadius: 5,
-              backgroundColor: "darksalmon",
+              backgroundColor: isHovered ? "salmon" : "darksalmon",
               color: "white",
               border: "none",
+              cursor: "pointer",
             }}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
           >
             Zatwierdź
           </button>
