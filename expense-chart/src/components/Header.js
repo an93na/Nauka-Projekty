@@ -43,6 +43,7 @@ export const Header = () => {
               color: "red",
               fontWeight: "bold",
               padding: "5px",
+              fontFamily: "monospace"
             }}
             value={balance}
             onChange={(e) => setBalance(e.target.value)}
@@ -56,6 +57,7 @@ export const Header = () => {
               borderRadius: 5,
               backgroundColor: isHovered ? "salmon" : "darksalmon",
               color: "white",
+              fontFamily: "monospace",
               border: "none",
               cursor: "pointer",
             }}
