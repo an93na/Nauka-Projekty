@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 export const Header = () => {
   const [balance, setBalance] = useState("");
-  const [myBalance, setMyBalance] = useState([]);
+  const [myBalance, setMyBalance] = useState("");
   const [isHovered, setIsHovered] = useState(false);
 
   const handleMouseEnter = () => {
@@ -29,7 +29,7 @@ export const Header = () => {
           action=""
           onSubmit={(e) => {
             e.preventDefault();
-            setMyBalance((prev) => [...prev, balance]);
+            setMyBalance(balance);
             setBalance("");
             console.log(myBalance);
           }}
@@ -43,7 +43,7 @@ export const Header = () => {
               color: "red",
               fontWeight: "bold",
               padding: "5px",
-              fontFamily: "monospace"
+              fontFamily: "monospace",
             }}
             value={balance}
             onChange={(e) => setBalance(e.target.value)}
@@ -67,6 +67,9 @@ export const Header = () => {
             Zatwierdź
           </button>
         </form>
+        <p style={{ color: "white", marginTop: 15, fontFamily: "monospace" }}>
+          Balance for this month: {Number(myBalance)}
+        </p>
       </div>
       <div style={{ padding: 10, display: "flex" }}>
         <div
