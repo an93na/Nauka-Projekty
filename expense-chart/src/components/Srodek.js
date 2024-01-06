@@ -13,7 +13,12 @@ export const Srodek = () => {
       }}
     >
       <div>
-        <form action="">
+        <form
+          action=""
+          onSubmit={(e) => {
+            e.preventDefault();
+          }}
+        >
           <input type="text" name="" id="" placeholder="wydatek danego dnia" />
           <select name="" id="">
             <option value="" hidden>
@@ -27,6 +32,7 @@ export const Srodek = () => {
             <option value="sat">Saturday</option>
             <option value="sun">Sunday</option>
           </select>
+          <button type="submit">Dodaj</button>
         </form>
       </div>
       <div
