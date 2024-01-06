@@ -68,7 +68,7 @@ export const Header = () => {
           </button>
         </form>
         <p style={{ color: "white", marginTop: 15, fontFamily: "monospace" }}>
-          Balance for this month: {Number(myBalance)}
+          Balance for this month: <b>{Number(myBalance)}$</b>
         </p>
       </div>
       <div style={{ padding: 10, display: "flex" }}>
