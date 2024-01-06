@@ -12,6 +12,23 @@ export const Srodek = () => {
         width: "350px",
       }}
     >
+      <div>
+        <form action="">
+          <input type="text" name="" id="" placeholder="wydatek danego dnia" />
+          <select name="" id="">
+            <option value="" hidden>
+              wybierz dzień
+            </option>
+            <option value="mon">Monday</option>
+            <option value="tue">Tuesday</option>
+            <option value="wed">Wednesday</option>
+            <option value="thu">Thursday</option>
+            <option value="fri">Friday</option>
+            <option value="sat">Saturday</option>
+            <option value="sun">Sunday</option>
+          </select>
+        </form>
+      </div>
       <div
         style={{
           display: "flex",

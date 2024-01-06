@@ -31,7 +31,6 @@ export const Header = () => {
             e.preventDefault();
             setMyBalance(balance);
             setBalance("");
-            console.log(myBalance);
           }}
         >
           <p style={{ color: "white", marginTop: 5, fontFamily: "monospace" }}>
