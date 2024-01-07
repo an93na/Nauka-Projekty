@@ -5,6 +5,15 @@ export const Srodek = () => {
   const [day, setDay] = useState("");
   const [wydatek, setWydatek] = useState("");
   const [wydatekDnia, setWydatekDnia] = useState([]);
+  const [isHovered, setIsHovered] = useState(false);
+
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+  };
   return (
     <div
       style={{
@@ -20,24 +29,40 @@ export const Srodek = () => {
           action=""
           onSubmit={(e) => {
             e.preventDefault();
-            const suma = {day , wydatek}
-            console.log(suma);
+            const suma = { day, wydatek };
+            setWydatekDnia((prev) => [...prev, suma]);
+            setDay("");
+            setWydatek("");
           }}
         >
-          <div style={{display: 'flex', gap:5}}>
+          <div style={{ display: "flex", gap: 5 }}>
             <input
               type="text"
               name=""
               id=""
               placeholder="wydatek danego dnia"
+              style={{
+                marginTop: 5,
+                padding: 5,
+                borderRadius: 5,
+                fontFamily: "monospace",
+              }}
               value={wydatek}
               onChange={(e) => setWydatek(e.target.value)}
+              required
             />
             <select
               name=""
               id=""
+              style={{
+                marginTop: 5,
+                padding: 5,
+                borderRadius: 5,
+                fontFamily: "monospace",
+              }}
               value={day}
               onChange={(e) => setDay(e.target.value)}
+              required
             >
               <option value="" hidden>
                 wybierz dzień
@@ -50,7 +75,23 @@ export const Srodek = () => {
               <option value="sat">Saturday</option>
               <option value="sun">Sunday</option>
             </select>
-            <button type="submit">Dodaj</button>
+            <button
+              type="submit"
+              style={{
+                marginTop: 5,
+                padding: 5,
+                borderRadius: 5,
+                backgroundColor: isHovered ? "salmon" : "darksalmon",
+                color: "white",
+                fontFamily: "monospace",
+                border: "none",
+                cursor: "pointer",
+              }}
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
+            >
+              Dodaj
+            </button>
           </div>
         </form>
       </div>

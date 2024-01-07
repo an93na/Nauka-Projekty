@@ -47,6 +47,7 @@ export const Header = () => {
             value={balance}
             onChange={(e) => setBalance(e.target.value)}
             placeholder="Wpisz swoje środki $"
+            required
           />
           <button
             type="submit"
