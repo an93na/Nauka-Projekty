@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { Wykresy } from "./Wykresy";
 
 export const Srodek = () => {
+  const [day, setDay] = useState("");
+  const [wydatek, setWydatek] = useState('');
+  const [wydatekDnia, setWydatekDnia] = useState([])
   return (
     <div
       style={{
