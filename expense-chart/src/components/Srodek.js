@@ -3,8 +3,8 @@ import { Wykresy } from "./Wykresy";
 
 export const Srodek = () => {
   const [day, setDay] = useState("");
-  const [wydatek, setWydatek] = useState('');
-  const [wydatekDnia, setWydatekDnia] = useState([])
+  const [wydatek, setWydatek] = useState("");
+  const [wydatekDnia, setWydatekDnia] = useState([]);
   return (
     <div
       style={{
@@ -20,22 +20,38 @@ export const Srodek = () => {
           action=""
           onSubmit={(e) => {
             e.preventDefault();
+            const suma = {day , wydatek}
+            console.log(suma);
           }}
         >
-          <input type="text" name="" id="" placeholder="wydatek danego dnia" />
-          <select name="" id="">
-            <option value="" hidden>
-              wybierz dzień
-            </option>
-            <option value="mon">Monday</option>
-            <option value="tue">Tuesday</option>
-            <option value="wed">Wednesday</option>
-            <option value="thu">Thursday</option>
-            <option value="fri">Friday</option>
-            <option value="sat">Saturday</option>
-            <option value="sun">Sunday</option>
-          </select>
-          <button type="submit">Dodaj</button>
+          <div style={{display: 'flex', gap:5}}>
+            <input
+              type="text"
+              name=""
+              id=""
+              placeholder="wydatek danego dnia"
+              value={wydatek}
+              onChange={(e) => setWydatek(e.target.value)}
+            />
+            <select
+              name=""
+              id=""
+              value={day}
+              onChange={(e) => setDay(e.target.value)}
+            >
+              <option value="" hidden>
+                wybierz dzień
+              </option>
+              <option value="mon">Monday</option>
+              <option value="tue">Tuesday</option>
+              <option value="wed">Wednesday</option>
+              <option value="thu">Thursday</option>
+              <option value="fri">Friday</option>
+              <option value="sat">Saturday</option>
+              <option value="sun">Sunday</option>
+            </select>
+            <button type="submit">Dodaj</button>
+          </div>
         </form>
       </div>
       <div
