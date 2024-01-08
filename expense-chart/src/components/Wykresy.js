@@ -14,7 +14,10 @@ export const Wykresy = (props) => {
 
   const day = wydatek.map((day) => day.day);
   const cost = wydatek.map((cost) => cost.wydatek);
-  console.log(cost);
+
+  const monday = day.filter((dzien) => dzien.includes('mon'))
+  console.log(monday)
+  // console.log(cost);
   return (
     <div>
       <div
