@@ -12,6 +12,9 @@ export const Wykresy = (props) => {
   const [etykieta6, setEtykieta6] = useState(false);
   const { wydatek } = props;
 
+  const day = wydatek.map((day) => day.day);
+  const cost = wydatek.map((cost) => cost.wydatek);
+  console.log(cost);
   return (
     <div>
       <div
