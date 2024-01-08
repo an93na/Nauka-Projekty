@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Wykres } from "./Wykres";
 import { Podsumowanie } from "./Podsumowanie";
 
-export const Wykresy = () => {
+export const Wykresy = (props) => {
   const [etykieta, setEtykieta] = useState(false);
   const [etykieta1, setEtykieta1] = useState(false);
   const [etykieta2, setEtykieta2] = useState(false);
@@ -10,6 +10,7 @@ export const Wykresy = () => {
   const [etykieta4, setEtykieta4] = useState(false);
   const [etykieta5, setEtykieta5] = useState(false);
   const [etykieta6, setEtykieta6] = useState(false);
+  const { wydatek } = props;
 
   return (
     <div>

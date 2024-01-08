@@ -14,6 +14,7 @@ export const Srodek = () => {
   const handleMouseLeave = () => {
     setIsHovered(false);
   };
+  // console.log(wydatekDnia)
   return (
     <div
       style={{
@@ -106,7 +107,7 @@ export const Srodek = () => {
           Spending - Last 7 days
         </h3>
       </div>
-      <Wykresy />
+      <Wykresy wydatek={wydatekDnia}/>
     </div>
   );
 };
