@@ -5,6 +5,9 @@ export const Srodek = () => {
   const [day, setDay] = useState("");
   const [wydatek, setWydatek] = useState("");
   const [wydatekDnia, setWydatekDnia] = useState([]);
+  const [pon, setPon]=useState({})
+  const [wto, setWto]=useState({})
+  const [Srod, setSrod]=useState({})
   const [isHovered, setIsHovered] = useState(false);
 
   const handleMouseEnter = () => {
@@ -15,15 +18,16 @@ export const Srodek = () => {
     setIsHovered(false);
   };
   // console.log(wydatekDnia)
+  console.log(pon)
   return (
     <div
-      style={{
-        backgroundColor: "white",
-        marginTop: "10px",
-        padding: "20px",
-        borderRadius: "10px",
-        width: "350px",
-      }}
+    style={{
+      backgroundColor: "white",
+      marginTop: "10px",
+      padding: "20px",
+      borderRadius: "10px",
+      width: "350px",
+    }}
     >
       <div>
         <form
@@ -31,11 +35,21 @@ export const Srodek = () => {
           onSubmit={(e) => {
             e.preventDefault();
             const suma = { day, wydatek };
-            setWydatekDnia((prev) => [...prev, suma]);
+            if(day === 'mon'){
+              setPon(suma)
+            }
+            if(day === 'tue'){
+              setWto(suma)
+            }
+            if(day === 'wed'){
+              setSrod(suma)
+            }
+            // setWydatekDnia((prev) => [...prev, suma]);
             setDay("");
             setWydatek("");
+
           }}
-        >
+          >
           <div style={{ display: "flex", gap: 5 }}>
             <input
               type="text"
