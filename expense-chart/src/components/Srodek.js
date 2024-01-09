@@ -4,7 +4,6 @@ import { Wykresy } from "./Wykresy";
 export const Srodek = () => {
   const [day, setDay] = useState("");
   const [wydatek, setWydatek] = useState("");
-  const [wydatekDnia, setWydatekDnia] = useState([]);
   const [pon, setPon] = useState({});
   const [wto, setWto] = useState({});
   const [srod, setSrod] = useState({});
@@ -21,8 +20,7 @@ export const Srodek = () => {
   const handleMouseLeave = () => {
     setIsHovered(false);
   };
-  // console.log(wydatekDnia)
-  console.log(pon);
+
   return (
     <div
       style={{
@@ -60,8 +58,6 @@ export const Srodek = () => {
             if (day === "sun") {
               setNiedz(suma);
             }
-
-            // setWydatekDnia((prev) => [...prev, suma]);
             setDay("");
             setWydatek("");
           }}
@@ -138,7 +134,6 @@ export const Srodek = () => {
         </h3>
       </div>
       <Wykresy
-        wydatek={wydatekDnia}
         pon={pon}
         wt={wto}
         sr={srod}

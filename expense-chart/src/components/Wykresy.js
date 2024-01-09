@@ -10,15 +10,7 @@ export const Wykresy = (props) => {
   const [etykieta4, setEtykieta4] = useState(false);
   const [etykieta5, setEtykieta5] = useState(false);
   const [etykieta6, setEtykieta6] = useState(false);
-  const { wydatek } = props;
 
-  const day = wydatek.map((day) => day.day);
-  const cost = wydatek.map((cost) => cost.wydatek);
-
-  const monday = wydatek.filter((dzien) => dzien.day.includes("mon"));
-
-  // console.log(monday);
-  // console.log(cost);
   return (
     <div>
       <div
