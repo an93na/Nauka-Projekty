@@ -7,7 +7,7 @@ export const Srodek = () => {
   const [wydatekDnia, setWydatekDnia] = useState([]);
   const [pon, setPon] = useState({});
   const [wto, setWto] = useState({});
-  const [Srod, setSrod] = useState({});
+  const [srod, setSrod] = useState({});
   const [czw, setCzw] = useState({});
   const [pt, setPt] = useState({});
   const [sob, setSob] = useState({});
@@ -137,7 +137,16 @@ export const Srodek = () => {
           Spending - Last 7 days
         </h3>
       </div>
-      <Wykresy wydatek={wydatekDnia} />
+      <Wykresy
+        wydatek={wydatekDnia}
+        pon={pon}
+        wt={wto}
+        sr={srod}
+        czw={czw}
+        pt={pt}
+        sob={sob}
+        ndz={niedz}
+      />
     </div>
   );
 };
