@@ -5,9 +5,13 @@ export const Srodek = () => {
   const [day, setDay] = useState("");
   const [wydatek, setWydatek] = useState("");
   const [wydatekDnia, setWydatekDnia] = useState([]);
-  const [pon, setPon]=useState({})
-  const [wto, setWto]=useState({})
-  const [Srod, setSrod]=useState({})
+  const [pon, setPon] = useState({});
+  const [wto, setWto] = useState({});
+  const [Srod, setSrod] = useState({});
+  const [czw, setCzw] = useState({});
+  const [pt, setPt] = useState({});
+  const [sob, setSob] = useState({});
+  const [niedz, setNiedz] = useState({});
   const [isHovered, setIsHovered] = useState(false);
 
   const handleMouseEnter = () => {
@@ -18,16 +22,16 @@ export const Srodek = () => {
     setIsHovered(false);
   };
   // console.log(wydatekDnia)
-  console.log(pon)
+  console.log(pon);
   return (
     <div
-    style={{
-      backgroundColor: "white",
-      marginTop: "10px",
-      padding: "20px",
-      borderRadius: "10px",
-      width: "350px",
-    }}
+      style={{
+        backgroundColor: "white",
+        marginTop: "10px",
+        padding: "20px",
+        borderRadius: "10px",
+        width: "350px",
+      }}
     >
       <div>
         <form
@@ -35,21 +39,33 @@ export const Srodek = () => {
           onSubmit={(e) => {
             e.preventDefault();
             const suma = { day, wydatek };
-            if(day === 'mon'){
-              setPon(suma)
+            if (day === "mon") {
+              setPon(suma);
             }
-            if(day === 'tue'){
-              setWto(suma)
+            if (day === "tue") {
+              setWto(suma);
             }
-            if(day === 'wed'){
-              setSrod(suma)
+            if (day === "wed") {
+              setSrod(suma);
             }
+            if (day === "thu") {
+              setCzw(suma);
+            }
+            if (day === "fri") {
+              setPt(suma);
+            }
+            if (day === "sat") {
+              setSob(suma);
+            }
+            if (day === "sun") {
+              setNiedz(suma);
+            }
+
             // setWydatekDnia((prev) => [...prev, suma]);
             setDay("");
             setWydatek("");
-
           }}
-          >
+        >
           <div style={{ display: "flex", gap: 5 }}>
             <input
               type="text"
@@ -121,7 +137,7 @@ export const Srodek = () => {
           Spending - Last 7 days
         </h3>
       </div>
-      <Wykresy wydatek={wydatekDnia}/>
+      <Wykresy wydatek={wydatekDnia} />
     </div>
   );
 };
