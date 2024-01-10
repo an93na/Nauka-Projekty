@@ -1,14 +1,12 @@
 import { Header } from "./components/Header";
+import { MyBalance } from "./components/MyBalance";
 import { Srodek } from "./components/Srodek";
 
 function App() {
   return (
-    <div
-      style={{ backgroundColor: "wheat", padding: "20px", borderRadius: 10 }}
-    >
-      <Header />
-      <Srodek />
-    </div>
+<div>
+  <MyBalance/>
+</div>
   );
 }
 
