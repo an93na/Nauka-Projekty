@@ -31,43 +31,43 @@ export const Wykresy = (props) => {
         />
         <Wykres
           color={"red"}
-          wys={32}
-          day={"tue"}
+          wys={Number(wt.wydatek)}
+          day={wt.day}
           etykieta={etykieta1}
           setEtykieta={setEtykieta1}
         />
         <Wykres
           color={"blue"}
-          wys={52}
-          day={"wed"}
+          wys={Number(sr.wydatek)}
+          day={sr.day}
           etykieta={etykieta2}
           setEtykieta={setEtykieta2}
         />
         <Wykres
           color={"red"}
-          wys={31}
-          day={"thu"}
+          wys={Number(czw.wydatek)}
+          day={czw.day}
           etykieta={etykieta3}
           setEtykieta={setEtykieta3}
         />
         <Wykres
           color={"red"}
-          wys={23}
-          day={"fri"}
+          wys={Number(pt.wydatek)}
+          day={pt.day}
           etykieta={etykieta4}
           setEtykieta={setEtykieta4}
         />
         <Wykres
           color={"red"}
-          wys={45}
-          day={"sat"}
+          wys={Number(sob.wydatek)}
+          day={sob.day}
           etykieta={etykieta5}
           setEtykieta={setEtykieta5}
         />
         <Wykres
           color={"red"}
-          wys={25}
-          day={"sun"}
+          wys={Number(ndz.wydatek)}
+          day={ndz.day}
           etykieta={etykieta6}
           setEtykieta={setEtykieta6}
         />
