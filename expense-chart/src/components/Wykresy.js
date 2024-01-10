@@ -24,8 +24,8 @@ export const Wykresy = (props) => {
       >
         <Wykres
           color={"red"}
-          wys={20}
-          day={"mon"}
+          wys={Number(pon.wydatek)}
+          day={pon.day}
           etykieta={etykieta}
           setEtykieta={setEtykieta}
         />
