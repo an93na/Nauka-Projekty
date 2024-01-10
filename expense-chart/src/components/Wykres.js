@@ -13,6 +13,7 @@ export const Wykres = (props) => {
     setIsHovered(false);
     setEtykieta(false);
   };
+
   return (
     <div
       style={{

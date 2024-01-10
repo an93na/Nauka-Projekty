@@ -10,6 +10,7 @@ export const Wykresy = (props) => {
   const [etykieta4, setEtykieta4] = useState(false);
   const [etykieta5, setEtykieta5] = useState(false);
   const [etykieta6, setEtykieta6] = useState(false);
+  const { pon, wt, sr, czw, pt, sob, ndz } = props;
 
   return (
     <div>
