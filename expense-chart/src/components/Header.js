@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 
-export const Header = () => {
-  const [balance, setBalance] = useState("");
-  const [myBalance, setMyBalance] = useState("");
+export const Header = (props) => {
+  const { balance, setBalance, myBalance, setMyBalance } = props;
   const [isHovered, setIsHovered] = useState(false);
 
   const handleMouseEnter = () => {
