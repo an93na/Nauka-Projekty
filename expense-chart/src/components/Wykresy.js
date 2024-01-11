@@ -10,16 +10,8 @@ export const Wykresy = (props) => {
   const [etykieta4, setEtykieta4] = useState(false);
   const [etykieta5, setEtykieta5] = useState(false);
   const [etykieta6, setEtykieta6] = useState(false);
-  const { pon, wt, sr, czw, pt, sob, ndz } = props;
+  const { pon, wt, sr, czw, pt, sob, ndz, sumawydatkow } = props;
 
-  const sumaWydatkow =
-    Number(pon.wydatek) +
-    Number(wt.wydatek) +
-    Number(sr.wydatek) +
-    Number(czw.wydatek) +
-    Number(pt.wydatek) +
-    Number(sob.wydatek) +
-    Number(ndz.wydatek);
   return (
     <div>
       <div
@@ -80,7 +72,7 @@ export const Wykresy = (props) => {
           setEtykieta={setEtykieta6}
         />
       </div>
-      <Podsumowanie suma={sumaWydatkow} />
+      <Podsumowanie suma={sumawydatkow} />
     </div>
   );
 };

@@ -12,6 +12,7 @@ export const Srodek = () => {
   const [sob, setSob] = useState({});
   const [niedz, setNiedz] = useState({});
   const [isHovered, setIsHovered] = useState(false);
+  const [sumawydatkow, setSumaWydatkow] = useState(0);
 
   const handleMouseEnter = () => {
     setIsHovered(true);
@@ -20,7 +21,7 @@ export const Srodek = () => {
   const handleMouseLeave = () => {
     setIsHovered(false);
   };
-
+  console.log(sumawydatkow)
   return (
     <div
       style={{
@@ -60,6 +61,15 @@ export const Srodek = () => {
             }
             setDay("");
             setWydatek("");
+            let zsumuj =
+              Number(pon.wydatek) +
+              Number(wto.wydatek) +
+              Number(srod.wydatek) +
+              Number(czw.wydatek) +
+              Number(pt.wydatek) +
+              Number(sob.wydatek) +
+              Number(niedz.wydatek);
+            setSumaWydatkow(zsumuj);
           }}
         >
           <div style={{ display: "flex", gap: 5 }}>
@@ -141,6 +151,7 @@ export const Srodek = () => {
         pt={pt}
         sob={sob}
         ndz={niedz}
+        sumawydatkow={sumawydatkow}
       />
     </div>
   );
