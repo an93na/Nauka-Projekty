@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 
 export const Podsumowanie = (props) => {
-  const { suma } = props;
+  const { pon, wt, sr, czw, pt, sob, ndz, sumawydatkow, setSumaWydatkow } =
+    props;
   const [isChecked, setIsChecked] = useState(false);
   console.log(isChecked);
   return (
@@ -20,11 +21,23 @@ export const Podsumowanie = (props) => {
         }}
       >
         {isChecked ? (
-          <h3 style={{ marginTop: 0, fontSize: "xx-large" }}>${suma}</h3>
+          <h3 style={{ marginTop: 0, fontSize: "xx-large" }}>
+            ${sumawydatkow}
+          </h3>
         ) : (
           <form
             onSubmit={(e) => {
               e.preventDefault();
+              let zsumuj =
+                Number(pon.wydatek) +
+                Number(wt.wydatek) +
+                Number(sr.wydatek) +
+                Number(czw.wydatek) +
+                Number(pt.wydatek) +
+                Number(sob.wydatek) +
+                Number(ndz.wydatek);
+              setSumaWydatkow(zsumuj);
+              setIsChecked(true);
             }}
           >
             <button type="submit">Pokaż sumę</button>

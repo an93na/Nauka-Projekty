@@ -21,14 +21,7 @@ export const Srodek = () => {
   const handleMouseLeave = () => {
     setIsHovered(false);
   };
-  let zsumuj =
-    Number(pon.wydatek) +
-    Number(wto.wydatek) +
-    Number(srod.wydatek) +
-    Number(czw.wydatek) +
-    Number(pt.wydatek) +
-    Number(sob.wydatek) +
-    Number(niedz.wydatek);
+
   // console.log(sumawydatkow)
   return (
     <div
@@ -69,7 +62,6 @@ export const Srodek = () => {
             }
             setDay("");
             setWydatek("");
-            setSumaWydatkow(zsumuj);
           }}
         >
           <div style={{ display: "flex", gap: 5 }}>
@@ -152,6 +144,7 @@ export const Srodek = () => {
         sob={sob}
         ndz={niedz}
         sumawydatkow={sumawydatkow}
+        setSumaWydatkow={setSumaWydatkow}
       />
     </div>
   );
