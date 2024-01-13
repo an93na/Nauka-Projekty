@@ -85,6 +85,12 @@ export const Podsumowanie = (props) => {
           </p>
         </div>
       </div>
+      <p
+        style={{ fontWeight: "lighter", fontFamily: "monospace", fontSize: 10 }}
+      >
+        Bilans budżet-wydatki
+      </p>
+      <form></form>
     </div>
   );
 };
