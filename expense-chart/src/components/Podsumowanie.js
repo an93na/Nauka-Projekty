@@ -5,8 +5,7 @@ export const Podsumowanie = (props) => {
     props;
   const [isChecked, setIsChecked] = useState(false);
   const [isCheckedBud, setIsCheckedBud] = useState(false);
-  // console.log(isChecked);
-
+  const { myBalance } = props;
   const [isHovered, setIsHovered] = useState(false);
 
   const handleMouseEnter = () => {
@@ -92,35 +91,34 @@ export const Podsumowanie = (props) => {
         Bilans budżet-wydatki
       </p>
       {isCheckedBud ? (
-          <h3 style={{ marginTop: 0, fontSize: "xx-large" }}>
-            ${sumawydatkow}
-          </h3>
-        ) : (
-          <form
-            onSubmit={(e) => {
-              e.preventDefault();
-              setIsCheckedBud(true);
+        <h3 style={{ marginTop: 0, fontSize: "xx-large" }}>${sumawydatkow}</h3>
+      ) : (
+        <form
+          onSubmit={(e) => {
+            e.preventDefault();
+            setIsCheckedBud(true);
+          }}
+        >
+          <button
+            type="submit"
+            style={{
+              marginTop: 5,
+              padding: 10,
+              borderRadius: 5,
+              backgroundColor: isHovered ? "salmon" : "darksalmon",
+              color: "white",
+              fontFamily: "monospace",
+              border: "none",
+              cursor: "pointer",
             }}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
           >
-            <button
-              type="submit"
-              style={{
-                marginTop: 5,
-                padding: 10,
-                borderRadius: 5,
-                backgroundColor: isHovered ? "salmon" : "darksalmon",
-                color: "white",
-                fontFamily: "monospace",
-                border: "none",
-                cursor: "pointer",
-              }}
-              onMouseEnter={handleMouseEnter}
-              onMouseLeave={handleMouseLeave}
-            >
-              Pokaż sumę
-            </button>
-          </form>
-        )}
+            Bilans
+          </button>
+        </form>
+      )}
+      <p>myBalance: {myBalance}</p>
     </div>
   );
 };

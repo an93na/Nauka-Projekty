@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Wykresy } from "./Wykresy";
 
-export const Srodek = () => {
+export const Srodek = (props) => {
   const [day, setDay] = useState("");
   const [wydatek, setWydatek] = useState("");
   const [pon, setPon] = useState({});
@@ -13,7 +13,7 @@ export const Srodek = () => {
   const [niedz, setNiedz] = useState({});
   const [isHovered, setIsHovered] = useState(false);
   const [sumawydatkow, setSumaWydatkow] = useState(0);
-
+  const {balance, myBalance} = props
   const handleMouseEnter = () => {
     setIsHovered(true);
   };
@@ -145,6 +145,7 @@ export const Srodek = () => {
         ndz={niedz}
         sumawydatkow={sumawydatkow}
         setSumaWydatkow={setSumaWydatkow}
+        balance={balance} myBalance={myBalance}
       />
     </div>
   );
