@@ -1,12 +1,22 @@
 import React, { useState } from "react";
 
 export const Podsumowanie = (props) => {
-  const { pon, wt, sr, czw, pt, sob, ndz, sumawydatkow, setSumaWydatkow } =
-    props;
+  const {
+    pon,
+    wt,
+    sr,
+    czw,
+    pt,
+    sob,
+    ndz,
+    sumawydatkow,
+    setSumaWydatkow,
+    myBalance,
+  } = props;
   const [isChecked, setIsChecked] = useState(false);
   const [isCheckedBud, setIsCheckedBud] = useState(false);
-  const { myBalance } = props;
   const [isHovered, setIsHovered] = useState(false);
+  const [bilans, setBilans] = useState(0);
 
   const handleMouseEnter = () => {
     setIsHovered(true);
@@ -91,12 +101,14 @@ export const Podsumowanie = (props) => {
         Bilans budżet-wydatki
       </p>
       {isCheckedBud ? (
-        <h3 style={{ marginTop: 0, fontSize: "xx-large" }}>${sumawydatkow}</h3>
+        <h3 style={{ marginTop: 0, fontSize: "xx-large" }}>${bilans}</h3>
       ) : (
         <form
           onSubmit={(e) => {
             e.preventDefault();
             setIsCheckedBud(true);
+            let oblicz = myBalance - sumawydatkow;
+            setBilans(oblicz);
           }}
         >
           <button
@@ -118,7 +130,6 @@ export const Podsumowanie = (props) => {
           </button>
         </form>
       )}
-      <p>myBalance: {myBalance}</p>
     </div>
   );
 };
