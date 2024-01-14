@@ -4,16 +4,16 @@ import { Wykresy } from "./Wykresy";
 export const Srodek = (props) => {
   const [day, setDay] = useState("");
   const [wydatek, setWydatek] = useState("");
-  const [pon, setPon] = useState({});
-  const [wto, setWto] = useState({});
-  const [srod, setSrod] = useState({});
-  const [czw, setCzw] = useState({});
-  const [pt, setPt] = useState({});
-  const [sob, setSob] = useState({});
-  const [niedz, setNiedz] = useState({});
+  const [pon, setPon] = useState({ day: "", wydatek: 0 });
+  const [wto, setWto] = useState({ day: "", wydatek: 0 });
+  const [srod, setSrod] = useState({ day: "", wydatek: 0 });
+  const [czw, setCzw] = useState({ day: "", wydatek: 0 });
+  const [pt, setPt] = useState({ day: "", wydatek: 0 });
+  const [sob, setSob] = useState({ day: "", wydatek: 0 });
+  const [niedz, setNiedz] = useState({ day: "", wydatek: 0 });
   const [isHovered, setIsHovered] = useState(false);
   const [sumawydatkow, setSumaWydatkow] = useState(0);
-  const {balance, myBalance} = props
+  const { balance, myBalance } = props;
   const handleMouseEnter = () => {
     setIsHovered(true);
   };
@@ -25,8 +25,8 @@ export const Srodek = (props) => {
   // console.log(sumawydatkow)
   return (
     <div
-    style={{
-      backgroundColor: "white",
+      style={{
+        backgroundColor: "white",
         marginTop: "10px",
         padding: "20px",
         borderRadius: "10px",
@@ -145,7 +145,8 @@ export const Srodek = (props) => {
         ndz={niedz}
         sumawydatkow={sumawydatkow}
         setSumaWydatkow={setSumaWydatkow}
-        balance={balance} myBalance={myBalance}
+        balance={balance}
+        myBalance={myBalance}
       />
     </div>
   );
