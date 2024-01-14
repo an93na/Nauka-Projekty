@@ -16,6 +16,7 @@ export const Podsumowanie = (props) => {
   const [isChecked, setIsChecked] = useState(false);
   const [isCheckedBud, setIsCheckedBud] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
+  const [isHovered2, setIsHovered2] = useState(false);
   const [bilans, setBilans] = useState(0);
 
   const handleMouseEnter = () => {
@@ -24,6 +25,13 @@ export const Podsumowanie = (props) => {
 
   const handleMouseLeave = () => {
     setIsHovered(false);
+  };
+  const handleMouseEnter2 = () => {
+    setIsHovered2(true);
+  };
+
+  const handleMouseLeave2 = () => {
+    setIsHovered2(false);
   };
 
   return (
@@ -117,14 +125,14 @@ export const Podsumowanie = (props) => {
               marginTop: 5,
               padding: 10,
               borderRadius: 5,
-              backgroundColor: isHovered ? "salmon" : "darksalmon",
+              backgroundColor: isHovered2 ? "salmon" : "darksalmon",
               color: "white",
               fontFamily: "monospace",
               border: "none",
               cursor: "pointer",
             }}
-            onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}
+            onMouseEnter={handleMouseEnter2}
+            onMouseLeave={handleMouseLeave2}
           >
             Bilans
           </button>
