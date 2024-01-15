@@ -134,6 +134,19 @@ export const Srodek = (props) => {
         <h3 style={{ fontWeight: "bold", fontFamily: "monospace" }}>
           Spending - Last 7 days
         </h3>
+        <button              style={{
+                marginTop: 5,
+                padding: 5,
+                borderRadius: 5,
+                backgroundColor: isHovered ? "salmon" : "darksalmon",
+                color: "white",
+                fontFamily: "monospace",
+                border: "none",
+                cursor: "pointer",
+              }}
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
+            >Reset</button>
       </div>
       <Wykresy
         pon={pon}
