@@ -22,6 +22,7 @@ export const Srodek = (props) => {
     setIsHovered(false);
   };
 
+  let resetState = { day: "", wydatek: 0 };
   // console.log(sumawydatkow)
   return (
     <div
@@ -148,13 +149,13 @@ export const Srodek = (props) => {
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
           onClick={() => {
-            setPon(0);
-            setWto(0);
-            setSrod(0);
-            setCzw(0);
-            setPt(0);
-            setSob(0);
-            setNiedz(0);
+            setPon(resetState);
+            setWto(resetState);
+            setSrod(resetState);
+            setCzw(resetState);
+            setPt(resetState);
+            setSob(resetState);
+            setNiedz(resetState);
           }}
         >
           Reset
