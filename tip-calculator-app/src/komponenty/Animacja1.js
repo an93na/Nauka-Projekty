@@ -3,22 +3,24 @@ import classes from './Animacja1.module.css'
 
 export const Animacja1 = () => {
   return (
-    <div className={classes.container}>
+    <div>
+      <div className={classes.container}>
         <button className={classes.box}>
-            Kwadrat1
+          Kwadrat1
         </button>
         <button className={classes.box}>
-            Kwadrat2
+          Kwadrat2
         </button>
         <button className={classes.box}>
-            Kwadrat3
+          Kwadrat3
         </button>
         <button className={classes.box}>
-            Kwadrat4
+          Kwadrat4
         </button>
-        <div className={classes.obrot}>
-          obracaj w koło
-        </div>
+      </div>
+      <div className={classes.obrot}>
+        zadanie 1
+      </div>
     </div>
   )
 }
