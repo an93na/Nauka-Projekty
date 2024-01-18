@@ -20,13 +20,12 @@
   background-color: blue;
 }
 .obrot{
-  width: 50px;
-  height: 50px;
+  width:40px;
+  height: 40px;
   margin: 40px;
   /* border-radius: 50%; */
   background-color: white;
   color: black;
-  padding: 10px;
   border: none;
   animation: rotateAnimation 5s linear infinite;
   text-align: center;
@@ -43,5 +42,12 @@
 }
 
 .obrot:hover{
-animation: none;
+  animation: none;
+}
+.containerObr {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* height: 100vh; */
+  margin: 40px;
 }

@@ -18,8 +18,15 @@ export const Animacja1 = () => {
           Kwadrat4
         </button>
       </div>
+      <div className={classes.containerObr}>
       <div className={classes.obrot}>
-        zadanie 1
+      </div>
+      <div className={classes.obrot}>
+      </div>
+      <div className={classes.obrot}>
+      </div>
+      <div className={classes.obrot}>
+      </div>
       </div>
     </div>
   )
