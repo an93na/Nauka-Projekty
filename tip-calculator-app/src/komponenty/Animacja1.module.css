@@ -1,5 +1,6 @@
 .container {
   display: flex;
+  gap: 20px;
   justify-content: space-around;
   align-items: center;
   height: 100vh;
@@ -16,4 +17,25 @@
 .box:hover {
   transform: rotate(360deg) scale(1.3);
   background-color: blue;
+}
+.obrot{
+  width: 100px;
+  height: 100px;
+  background-color: palevioletred;
+  color: white;
+  border: none;
+  animation: rotateAnimation 5s linear infinite;
+}
+
+@keyframes rotateAnimation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.obrot:hover{
+animation: none;
 }

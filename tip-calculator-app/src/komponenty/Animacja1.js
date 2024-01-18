@@ -5,17 +5,20 @@ export const Animacja1 = () => {
   return (
     <div className={classes.container}>
         <button className={classes.box}>
-            Kwadrat
+            Kwadrat1
         </button>
         <button className={classes.box}>
-            Kwadrat
+            Kwadrat2
         </button>
         <button className={classes.box}>
-            Kwadrat
+            Kwadrat3
         </button>
         <button className={classes.box}>
-            Kwadrat
+            Kwadrat4
         </button>
+        <div className={classes.obrot}>
+          obracaj w koło
+        </div>
     </div>
   )
 }
