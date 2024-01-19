@@ -1,33 +1,13 @@
 import React from 'react'
+import { Animacja } from './Animacja'
 import classes from '../style/Animacja1.module.css'
 
 export const Animacja1 = () => {
   return (
-    <div>
-      <div className={classes.container}>
-        <button className={classes.box}>
-          Kwadrat1
-        </button>
-        <button className={classes.box}>
-          Kwadrat2
-        </button>
-        <button className={classes.box}>
-          Kwadrat3
-        </button>
-        <button className={classes.box}>
-          Kwadrat4
-        </button>
-      </div>
-      <div className={classes.containerObr}>
-      <div className={classes.obrot}>
-      </div>
-      <div className={classes.obrot}>
-      </div>
-      <div className={classes.obrot}>
-      </div>
-      <div className={classes.obrot}>
-      </div>
-      </div>
+    <div className={classes.container}>
+      <Animacja nazwa="Zadanie1" />
+      <Animacja nazwa="Zadanie2" />
+      <Animacja nazwa="Zadanie3" />
     </div>
   )
 }

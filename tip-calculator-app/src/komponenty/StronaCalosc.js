@@ -7,7 +7,7 @@ export const StronaCalosc = () => {
     return (
         <div>
             {startowa ?
-                <Animacja1 /> : <StronaStartowa setStartowa={setStartowa} startowa={startowa} />}
+                <Animacja1 /> : <StronaStartowa setStartowa={setStartowa} />}
         </div>
     )
 }
