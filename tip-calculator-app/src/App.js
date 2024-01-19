@@ -1,8 +1,8 @@
-import { Animacja1 } from "./komponenty/Animacja1";
+import { StronaCalosc } from "./komponenty/StronaCalosc";
 
 function App() {
   return <div>
-    <Animacja1/>
+    <StronaCalosc/>
   </div>;
 }
 
