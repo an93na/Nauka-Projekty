@@ -5,6 +5,9 @@
   align-items: center;
   /* height: 100vh; */
   margin: 40px;
+  background-color: blueviolet;
+  padding: 10px;
+  border-radius: 10px;
 }
 .box {
   width: 70px;
@@ -15,7 +18,7 @@
   border-radius: 10px;
   text-align: center;
   color: white;
-  border: none;
+  border: 1px solid white;
   text-decoration: none;
   display: flex;
   flex-direction: column;
@@ -81,4 +84,18 @@
 }
 .rocket {
   animation: rotateAnimation 5s linear infinite;
+}
+.paragraf{
+  display: flex;
+  gap: 40px;
+  justify-content: space-around;
+  align-items: center;
+  margin: 40px;
+  color: white;
+  background-color: dimgrey;
+  padding: 10px;
+  border-radius: 10px;
+}
+.btnSub {
+  
 }

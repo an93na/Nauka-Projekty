@@ -14,7 +14,8 @@ export const Animacja1 = () => {
         <Link to="/zad2" className={classes.box}>Zadanie2</Link>
         <Link to="/zad3" className={classes.box}>Zadanie3</Link>
       </nav>
-      <div className={classes.container}>
+
+      <div className={classes.paragraf}>
 
         <Routes>
           <Route path="/" element={<Home />} />
