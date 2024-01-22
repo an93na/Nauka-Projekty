@@ -1,4 +1,5 @@
 import React from 'react'
+import classes from '../style/Animacja1.module.css'
 
 export const Zadanie2 = () => {
     return (
@@ -61,7 +62,7 @@ export const Zadanie2 = () => {
                     <input type="radio" name='pyt5' />
                     oba
                 </label>
-                <button>Zatwierdź</button>
+                <button className={classes.btnSub}>Zatwierdź</button>
             </form>
         </div>
     )

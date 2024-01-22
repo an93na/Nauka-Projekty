@@ -85,7 +85,7 @@
 .rocket {
   animation: rotateAnimation 5s linear infinite;
 }
-.paragraf{
+.paragraf {
   display: flex;
   gap: 40px;
   justify-content: space-around;
@@ -97,5 +97,13 @@
   border-radius: 10px;
 }
 .btnSub {
-  
+  width: 100px;
+  background-color: darkblue;
+  font-family: "monospace";
+  color: white;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 5px;
+  border: none;
+
 }
