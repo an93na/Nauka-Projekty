@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { useState } from 'react'
 import classes from '../style/Animacja1.module.css'
 
 export const Zadanie2 = () => {
+    const [stateForm, setStateForm] = useState(false)
     return (
         <div>
             <h3>
@@ -9,7 +10,10 @@ export const Zadanie2 = () => {
             </h3>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe, quae officia rerum, voluptatem voluptate a placeat eos debitis est tenetur dolore nam dignissimos obcaecati facere? Eligendi dolorem voluptatem ad optio!
                 Quis ipsum ipsam accusantium maxime itaque, excepturi in eius porro, voluptas blanditiis modi amet repellendus facilis sit. Nobis nemo ea suscipit similique numquam! Deleniti blanditiis at, qui dolores obcaecati est!</p>
-            <form style={{ display: 'flex', flexDirection: 'column' }}>
+            <form style={{ display: 'flex', flexDirection: 'column' }} onSubmit={(e) => {
+                e.preventDefault()
+                setStateForm(true)
+            }}>
                 <p>Lorem ipsum dolor sit amet consectetur.</p>
                 <label>
                     <input type="radio" name='pyt1' />
@@ -59,11 +63,13 @@ export const Zadanie2 = () => {
                     pies
                 </label>
                 <label>
-                    <input type="radio" name='pyt5' />
+                    <input type="radio" name='pyt4' />
                     oba
                 </label>
-                <button className={classes.btnSub}>Zatwierdź</button>
+                {stateForm ? <p></p> :
+                    <button className={classes.btnSub}>Zatwierdź</button>}
             </form>
+            {stateForm ? <button className={classes.btnSub} onClick={() => setStateForm(false)}>Wyczyść</button> : <p></p>}
         </div>
     )
 }
