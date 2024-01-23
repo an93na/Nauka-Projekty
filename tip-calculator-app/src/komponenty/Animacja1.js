@@ -10,9 +10,9 @@ export const Animacja1 = () => {
     <div>
       <nav className={classes.container}>
         <Link to="/" className={classes.box}>Home</Link>
-        <Link to="/zad1" className={classes.box}>Zadanie1</Link>
-        <Link to="/zad2" className={classes.box}>Zadanie2</Link>
-        <Link to="/zad3" className={classes.box}>Zadanie3</Link>
+        <Link to="/zad1" className={classes.box}>Opis zadania</Link>
+        <Link to="/zad2" className={classes.box}>Przykład</Link>
+        <Link to="/zad3" className={classes.box}>Zadanie</Link>
       </nav>
 
       <div className={classes.paragraf}>
