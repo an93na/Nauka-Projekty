@@ -3,6 +3,11 @@ import classes from '../style/Animacja1.module.css'
 
 export const Zadanie3 = () => {
     const [stateForm, setStateForm] = useState(false)
+    const [one, setOne] = useState('')
+    const [two, setTwo] = useState('')
+    const [three, setThree] = useState('')
+    const [four, setFour] = useState('')
+    // console.log(one)
     return (
         <div>
             <h3>
@@ -16,15 +21,15 @@ export const Zadanie3 = () => {
             }}>
                 <p>Lorem ipsum dolor sit amet consectetur.</p>
                 <label>
-                    <input type="radio" name='pyt1' />
+                    <input type="radio" name='pyt1' value={'odp1'} onChange={(e) => setOne(e.target.value)} />
                     odp1
                 </label>
                 <label>
-                    <input type="radio" name='pyt1' />
+                    <input type="radio" name='pyt1' value={'odp2'} onChange={(e) => setOne(e.target.value)} />
                     odp2
                 </label>
                 <label>
-                    <input type="radio" name='pyt1' />
+                    <input type="radio" name='pyt1' value={'odp3'} onChange={(e) => setOne(e.target.value)} />
                     odp3
                 </label>
                 <p>Lorem ipsum dolor sit.</p>
