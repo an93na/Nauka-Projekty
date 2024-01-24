@@ -34,41 +34,41 @@ export const Zadanie3 = () => {
                 </label>
                 <p>Lorem ipsum dolor sit.</p>
                 <label>
-                    <input type="radio" name='pyt2' />
+                    <input type="radio" name='pyt2' value={'aa'} onChange={(e) => setTwo(e.target.value)} />
                     aa
                 </label>
                 <label>
-                    <input type="radio" name='pyt2' />
+                    <input type="radio" name='pyt2' value={'bb'} onChange={(e) => setTwo(e.target.value)} />
                     bb
                 </label>
                 <label>
-                    <input type="radio" name='pyt2' />
+                    <input type="radio" name='pyt2' value={'cc'} onChange={(e) => setTwo(e.target.value)} />
                     cc
                 </label>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing.</p>
                 <label>
-                    <input type="radio" name='pyt3' />
+                    <input type="radio" name='pyt3' value={"1"} onChange={(e) => setThree(e.target.value)} />
                     1
                 </label>
                 <label>
-                    <input type="radio" name='pyt3' />
+                    <input type="radio" name='pyt3' value={"2"} onChange={(e) => setThree(e.target.value)} />
                     2
                 </label>
                 <label>
-                    <input type="radio" name='pyt3' />
+                    <input type="radio" name='pyt3' value={"3"} onChange={(e) => setThree(e.target.value)} />
                     3
                 </label>
                 <p>Lorem, ipsum dolor.</p>
                 <label>
-                    <input type="radio" name='pyt4' />
+                    <input type="radio" name='pyt4' value={"kot"} onChange={(e) => setFour(e.target.value)} />
                     kot
                 </label>
                 <label>
-                    <input type="radio" name='pyt4' />
+                    <input type="radio" name='pyt4' value={"pies"} onChange={(e) => setFour(e.target.value)} />
                     pies
                 </label>
                 <label>
-                    <input type="radio" name='pyt4' />
+                    <input type="radio" name='pyt4' value={"oba"} onChange={(e) => setFour(e.target.value)} />
                     oba
                 </label>
                 {stateForm ? <p></p> :
