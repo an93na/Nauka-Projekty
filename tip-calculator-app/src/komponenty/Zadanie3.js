@@ -7,7 +7,43 @@ export const Zadanie3 = () => {
     const [two, setTwo] = useState('');
     const [three, setThree] = useState('');
     const [four, setFour] = useState('');
+    const [pkt, setPkt] = useState(0)
     // console.log(one)
+    const policzPunkty = () => {
+        if(one === 'odp1' && two === 'bb' && three === '3' && four === 'pies'){
+            return setPkt(4)
+        }
+        if(one !=='odp1' && two === 'bb' && three === '3' && four === 'pies'){
+            return setPkt(3)
+        }
+        if(one ==='odp1' && two !== 'bb' && three === '3' && four === 'pies'){
+            return setPkt(3)
+        }
+        if(one ==='odp1' && two === 'bb' && three !== '3' && four === 'pies'){
+            return setPkt(3)
+        }
+        if(one ==='odp1' && two === 'bb' && three === '3' && four !== 'pies'){
+            return setPkt(3)
+        }
+        if(one !=='odp1' && two !== 'bb' && three === '3' && four === 'pies'){
+            return setPkt(2)
+        }
+        if(one !=='odp1' && two === 'bb' && three !== '3' && four === 'pies'){
+            return setPkt(2)
+        }
+        if(one !=='odp1' && two === 'bb' && three === '3' && four !== 'pies'){
+            return setPkt(2)
+        }
+        if(one ==='odp1' && two !== 'bb' && three === '3' && four !== 'pies'){
+            return setPkt(2)
+        }
+        if(one ==='odp1' && two !== 'bb' && three !== '3' && four === 'pies'){
+            return setPkt(2)
+        }
+        if(one ==='odp1' && two === 'bb' && three !== '3' && four !== 'pies'){
+            return setPkt(2)
+        }
+    }
     return (
         <div>
             <h3>
@@ -18,6 +54,7 @@ export const Zadanie3 = () => {
             <form style={{ display: 'flex', flexDirection: 'column' }} onSubmit={(e) => {
                 e.preventDefault();
                 setStateForm(true);
+                policzPunkty()
             }}>
                 <p>Lorem ipsum dolor sit amet consectetur.</p>
                 <label>
@@ -76,6 +113,7 @@ export const Zadanie3 = () => {
             </form>
             {stateForm ? <button className={classes.btnSub} onClick={() =>
                 setStateForm(false)}>Wyczyść</button> : <p></p>}
+                <p>{pkt}</p>
         </div>
     )
 }
