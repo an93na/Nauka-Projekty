@@ -10,38 +10,53 @@ export const Zadanie3 = () => {
     const [pkt, setPkt] = useState(0)
     // console.log(one)
     const policzPunkty = () => {
-        if(one === 'odp1' && two === 'bb' && three === '3' && four === 'pies'){
+        if (one === 'odp1' && two === 'bb' && three === '3' && four === 'pies') {
             return setPkt(4)
         }
-        if(one !=='odp1' && two === 'bb' && three === '3' && four === 'pies'){
+        if (one !== 'odp1' && two === 'bb' && three === '3' && four === 'pies') {
             return setPkt(3)
         }
-        if(one ==='odp1' && two !== 'bb' && three === '3' && four === 'pies'){
+        if (one === 'odp1' && two !== 'bb' && three === '3' && four === 'pies') {
             return setPkt(3)
         }
-        if(one ==='odp1' && two === 'bb' && three !== '3' && four === 'pies'){
+        if (one === 'odp1' && two === 'bb' && three !== '3' && four === 'pies') {
             return setPkt(3)
         }
-        if(one ==='odp1' && two === 'bb' && three === '3' && four !== 'pies'){
+        if (one === 'odp1' && two === 'bb' && three === '3' && four !== 'pies') {
             return setPkt(3)
         }
-        if(one !=='odp1' && two !== 'bb' && three === '3' && four === 'pies'){
+        if (one !== 'odp1' && two !== 'bb' && three === '3' && four === 'pies') {
             return setPkt(2)
         }
-        if(one !=='odp1' && two === 'bb' && three !== '3' && four === 'pies'){
+        if (one !== 'odp1' && two === 'bb' && three !== '3' && four === 'pies') {
             return setPkt(2)
         }
-        if(one !=='odp1' && two === 'bb' && three === '3' && four !== 'pies'){
+        if (one !== 'odp1' && two === 'bb' && three === '3' && four !== 'pies') {
             return setPkt(2)
         }
-        if(one ==='odp1' && two !== 'bb' && three === '3' && four !== 'pies'){
+        if (one === 'odp1' && two !== 'bb' && three === '3' && four !== 'pies') {
             return setPkt(2)
         }
-        if(one ==='odp1' && two !== 'bb' && three !== '3' && four === 'pies'){
+        if (one === 'odp1' && two !== 'bb' && three !== '3' && four === 'pies') {
             return setPkt(2)
         }
-        if(one ==='odp1' && two === 'bb' && three !== '3' && four !== 'pies'){
+        if (one === 'odp1' && two === 'bb' && three !== '3' && four !== 'pies') {
             return setPkt(2)
+        }
+        if (one === 'odp1' && two !== 'bb' && three !== '3' && four !== 'pies') {
+            return setPkt(1)
+        }
+        if (one !== 'odp1' && two === 'bb' && three !== '3' && four !== 'pies') {
+            return setPkt(1)
+        }
+        if (one !== 'odp1' && two !== 'bb' && three === '3' && four !== 'pies') {
+            return setPkt(1)
+        }
+        if (one !== 'odp1' && two !== 'bb' && three !== '3' && four === 'pies') {
+            return setPkt(1)
+        }
+        if (one !== 'odp1' && two !== 'bb' && three !== '3' && four !== 'pies') {
+            return setPkt(0)
         }
     }
     return (
@@ -113,7 +128,7 @@ export const Zadanie3 = () => {
             </form>
             {stateForm ? <button className={classes.btnSub} onClick={() =>
                 setStateForm(false)}>Wyczyść</button> : <p></p>}
-                <p>{pkt}</p>
+            <p>{pkt}</p>
         </div>
     )
 }
