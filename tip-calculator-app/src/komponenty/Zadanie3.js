@@ -106,6 +106,7 @@ export const Zadanie3 = () => {
                     <input type="radio" name='pyt2' value={'cc'} onChange={(e) => setTwo(e.target.value)} />
                     cc
                 </label>
+                {stateForm ? <p>{wyświetlOdp(two, 'bb')}</p> : <></>}
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing.</p>
                 <label>
                     <input type="radio" name='pyt3' value={"1"} onChange={(e) => setThree(e.target.value)} />
@@ -119,6 +120,7 @@ export const Zadanie3 = () => {
                     <input type="radio" name='pyt3' value={"3"} onChange={(e) => setThree(e.target.value)} />
                     3
                 </label>
+                {stateForm ? <p>{wyświetlOdp(three, '3')}</p> : <></>}
                 <p>Lorem, ipsum dolor.</p>
                 <label>
                     <input type="radio" name='pyt4' value={"kot"} onChange={(e) => setFour(e.target.value)} />
@@ -132,6 +134,7 @@ export const Zadanie3 = () => {
                     <input type="radio" name='pyt4' value={"oba"} onChange={(e) => setFour(e.target.value)} />
                     oba
                 </label>
+                {stateForm ? <p>{wyświetlOdp(four, 'pies')}</p> : <></>}
                 {stateForm ? <p></p> :
                     <button className={classes.btnSub}>Zatwierdź</button>}
             </form>
