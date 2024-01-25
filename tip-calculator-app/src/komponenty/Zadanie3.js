@@ -59,6 +59,14 @@ export const Zadanie3 = () => {
             return setPkt(0)
         }
     }
+    const wyświetlOdp = (zad, odp) => {
+        if (zad === odp) {
+            return 'Świetnie!'
+        }
+        else {
+            return 'Niestey nie :('
+        }
+    }
     return (
         <div>
             <h3>
@@ -84,6 +92,7 @@ export const Zadanie3 = () => {
                     <input type="radio" name='pyt1' value={'odp3'} onChange={(e) => setOne(e.target.value)} />
                     odp3
                 </label>
+                {stateForm ? <p>{wyświetlOdp(one, 'odp1')}</p> : <></>}
                 <p>Lorem ipsum dolor sit.</p>
                 <label>
                     <input type="radio" name='pyt2' value={'aa'} onChange={(e) => setTwo(e.target.value)} />
