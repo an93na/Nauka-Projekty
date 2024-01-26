@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import classes from '../style/Animacja1.module.css'
+import { Zadanie4 } from './Zadanie4';
 
 export const Zadanie3 = () => {
     const [stateForm, setStateForm] = useState(false)
@@ -141,6 +142,7 @@ export const Zadanie3 = () => {
             {stateForm ? <button className={classes.btnSub} onClick={() =>
                 setStateForm(false)}>Wyczyść</button> : <p></p>}
             <p>{pkt}</p>
+<Zadanie4/>
         </div>
     )
 }
