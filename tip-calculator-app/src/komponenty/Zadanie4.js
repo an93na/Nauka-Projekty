@@ -1,5 +1,9 @@
 import React from 'react'
 import classes from '../style/Animacja1.module.css'
+import mapa from '../assets/mapa.jpg'
+import olowek from '../assets/ołowek.png'
+import rower from '../assets/rower.png'
+import serce from '../assets/serce.png'
 
 export const Zadanie4 = () => {
     return (
