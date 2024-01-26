@@ -8,28 +8,30 @@ import serce from '../assets/serce.png'
 export const Zadanie4 = () => {
     return (
         <div >
-            <form action="" >
-                <div className={classes.containerObr} style={{ flexWrap: 'wrap', gap: 10 }}>
+            <form action="" className={classes.zad4Form} onSubmit={(e) => {
+                e.preventDefault()
+            }}>
+                <div className={classes.zad4DivNad} >
                     <div className={classes.zad4StyleDiv}>
-                        <img src={mapa} alt="mapa" style={{ width: 100, marginBottom: 5, borderRadius: 5 }} />
-                        <input type="text" style={{ width: 40, borderRadius: 5, padding: 5, textAlign: 'center' }} placeholder='numer' />
+                        <img src={mapa} alt="mapa" className={classes.Zad4img} />
+                        <input type="text" className={classes.Zad4input} placeholder='numer' />
                     </div>
                     <div className={classes.zad4StyleDiv}>
-                        <img src={serce} alt="serce" style={{ width: 100, marginBottom: 5, borderRadius: 5 }} />
-                        <input type="text" style={{ width: 40, borderRadius: 5, padding: 5, textAlign: 'center' }} placeholder='numer' />
-                    </div>
-                </div>
-                <div className={classes.containerObr} style={{ flexWrap: 'wrap', gap: 10 }}>
-                    <div className={classes.zad4StyleDiv}>
-                        <img src={olowek} alt="olowek" style={{ width: 100, marginBottom: 5, borderRadius: 5 }} />
-                        <input type="text" style={{ width: 40, borderRadius: 5, padding: 5, textAlign: 'center' }} placeholder='numer' />
-                    </div>
-                    <div className={classes.zad4StyleDiv}>
-                        <img src={rower} alt="rower" style={{ width: 100, marginBottom: 5, borderRadius: 5 }} />
-                        <input type="text" style={{ width: 40, borderRadius: 5, padding: 5, textAlign: 'center' }} placeholder='numer' />
+                        <img src={serce} alt="serce" className={classes.Zad4img} />
+                        <input type="text" className={classes.Zad4input} placeholder='numer' />
                     </div>
                 </div>
-                <button>Zatwierdź</button>
+                <div className={classes.zad4DivNad} >
+                    <div className={classes.zad4StyleDiv}>
+                        <img src={olowek} alt="olowek" className={classes.Zad4img} />
+                        <input type="text" className={classes.Zad4input} placeholder='numer' />
+                    </div>
+                    <div className={classes.zad4StyleDiv}>
+                        <img src={rower} alt="rower" className={classes.Zad4img} />
+                        <input type="text" className={classes.Zad4input} placeholder='numer' />
+                    </div>
+                </div>
+                <button type="submit" className={classes.btnSub}>Zatwierdź</button>
             </form>
         </div>
     )
