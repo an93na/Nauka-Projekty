@@ -9,25 +9,29 @@ export const Zadanie3 = () => {
     const [four, setFour] = useState('');
     const [submitted, setSubmitted] = useState(false);
     const [correct, setCorrect] = useState(false);
+    const correctAnswers = { one: 'a', two: 'b', three: 'b', four: 'c' };
 
     const handleFormSubmit = (e) => {
         e.preventDefault();
         setStateForm(true);
         setSubmitted(true);
-        if ((one === 'a' && two === 'b' && three === 'b' && four === 'c')) {
-            setCorrect(true)
-        } 
+        if (one === correctAnswers.one && two === correctAnswers.two && three === correctAnswers.three && four === correctAnswers.four) {
+            setCorrect(true);
+        } else {
+            setCorrect(false);
+        }
     };
 
+
     const handleReset = () => {
-        setOne('c');
-        setTwo('c');
-        setThree('c');
-        setFour('c');
+        setOne('');
+        setTwo('');
+        setThree('');
+        setFour('');
         setStateForm(false);
         setSubmitted(false);
     };
-
+    
     return (
         <div>
             <p>II. Przed Wami druga część zadania sprawdzająca Wasz wybór w poprzedniej części.</p>
