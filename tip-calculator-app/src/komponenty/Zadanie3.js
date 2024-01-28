@@ -10,131 +10,128 @@ export const Zadanie3 = () => {
     const [pkt, setPkt] = useState(0)
     // console.log(one)
     const policzPunkty = () => {
-        if (one === 'odp1' && two === 'bb' && three === '3' && four === 'pies') {
+        if (one === 'a' && two === 'b' && three === 'b' && four === 'c') {
             return setPkt(4)
         }
-        if (one !== 'odp1' && two === 'bb' && three === '3' && four === 'pies') {
+        if (one !== 'a' && two === 'b' && three === 'b' && four === 'c') {
             return setPkt(3)
         }
-        if (one === 'odp1' && two !== 'bb' && three === '3' && four === 'pies') {
+        if (one === 'a' && two !== 'b' && three === 'b' && four === 'c') {
             return setPkt(3)
         }
-        if (one === 'odp1' && two === 'bb' && three !== '3' && four === 'pies') {
+        if (one === 'a' && two === 'b' && three !== 'b' && four === 'c') {
             return setPkt(3)
         }
-        if (one === 'odp1' && two === 'bb' && three === '3' && four !== 'pies') {
+        if (one === 'a' && two === 'b' && three === 'b' && four !== 'c') {
             return setPkt(3)
         }
-        if (one !== 'odp1' && two !== 'bb' && three === '3' && four === 'pies') {
+        if (one !== 'a' && two !== 'b' && three === 'b' && four === 'c') {
             return setPkt(2)
         }
-        if (one !== 'odp1' && two === 'bb' && three !== '3' && four === 'pies') {
+        if (one !== 'a' && two === 'b' && three !== 'b' && four === 'c') {
             return setPkt(2)
         }
-        if (one !== 'odp1' && two === 'bb' && three === '3' && four !== 'pies') {
+        if (one !== 'a' && two === 'b' && three === 'b' && four !== 'c') {
             return setPkt(2)
         }
-        if (one === 'odp1' && two !== 'bb' && three === '3' && four !== 'pies') {
+        if (one === 'a' && two !== 'b' && three === 'b' && four !== 'c') {
             return setPkt(2)
         }
-        if (one === 'odp1' && two !== 'bb' && three !== '3' && four === 'pies') {
+        if (one === 'a' && two !== 'b' && three !== 'b' && four === 'c') {
             return setPkt(2)
         }
-        if (one === 'odp1' && two === 'bb' && three !== '3' && four !== 'pies') {
+        if (one === 'a' && two === 'b' && three !== 'b' && four !== 'c') {
             return setPkt(2)
         }
-        if (one === 'odp1' && two !== 'bb' && three !== '3' && four !== 'pies') {
+        if (one === 'a' && two !== 'b' && three !== 'b' && four !== 'c') {
             return setPkt(1)
         }
-        if (one !== 'odp1' && two === 'bb' && three !== '3' && four !== 'pies') {
+        if (one !== 'a' && two === 'b' && three !== 'b' && four !== 'c') {
             return setPkt(1)
         }
-        if (one !== 'odp1' && two !== 'bb' && three === '3' && four !== 'pies') {
+        if (one !== 'a' && two !== 'b' && three === 'b' && four !== 'c') {
             return setPkt(1)
         }
-        if (one !== 'odp1' && two !== 'bb' && three !== '3' && four === 'pies') {
+        if (one !== 'a' && two !== 'b' && three !== 'b' && four === 'c') {
             return setPkt(1)
         }
-        if (one !== 'odp1' && two !== 'bb' && three !== '3' && four !== 'pies') {
+        if (one !== 'a' && two !== 'b' && three !== 'b' && four !== 'c') {
             return setPkt(0)
         }
     }
-    const wyświetlOdp = (zad, odp) => {
+    const wyświetlOdp = (zad, odp, nazwa) => {
         if (zad === odp) {
             return 'Świetnie!'
         }
         else {
-            return 'Niestey nie :('
+            return `Niestey nie :( Odpowiedź to: ${nazwa}`
         }
     }
     return (
         <div>
-            <h3>
-                Zadanie2
-            </h3>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe, quae officia rerum, voluptatem voluptate a placeat eos debitis est tenetur dolore nam dignissimos obcaecati facere? Eligendi dolorem voluptatem ad optio!
-                Quis ipsum ipsam accusantium maxime itaque, excepturi in eius porro, voluptas blanditiis modi amet repellendus facilis sit. Nobis nemo ea suscipit similique numquam! Deleniti blanditiis at, qui dolores obcaecati est!</p>
+            <p>II. Przed Wami druga część zadania sprawdzająca Wasz wybór w poprzedniej części.</p>
+            <p>Zaznacz poprawną odpowieć (jedną).</p>
             <form style={{ display: 'flex', flexDirection: 'column' }} onSubmit={(e) => {
                 e.preventDefault();
                 setStateForm(true);
                 policzPunkty()
             }}>
-                <p>Lorem ipsum dolor sit amet consectetur.</p>
+                <p>1. Koło powstało w:</p>
                 <label>
-                    <input type="radio" name='pyt1' value={'odp1'} onChange={(e) => setOne(e.target.value)} />
-                    odp1
+                    <input type="radio" name='pyt1' value={'a'} onChange={(e) => setOne(e.target.value)} />
+                    Mezopotami lub na Bliskim Wschodzie
                 </label>
                 <label>
-                    <input type="radio" name='pyt1' value={'odp2'} onChange={(e) => setOne(e.target.value)} />
-                    odp2
+                    <input type="radio" name='pyt1' value={'b'} onChange={(e) => setOne(e.target.value)} />
+                    Europie a dokładniej w Polsce na Śląsku
                 </label>
                 <label>
-                    <input type="radio" name='pyt1' value={'odp3'} onChange={(e) => setOne(e.target.value)} />
-                    odp3
+                    <input type="radio" name='pyt1' value={'c'} onChange={(e) => setOne(e.target.value)} />
+                    Chinach
                 </label>
-                {stateForm ? <p>{wyświetlOdp(one, 'odp1')}</p> : <></>}
-                <p>Lorem ipsum dolor sit.</p>
+                {stateForm ? <p>{wyświetlOdp(one, 'a', 'Mezopotami lub na Bliskim Wschodzie')}</p> : <></>}
+                <p>2. John Dunlop w 1888 roku wynalazł:</p>
                 <label>
-                    <input type="radio" name='pyt2' value={'aa'} onChange={(e) => setTwo(e.target.value)} />
-                    aa
-                </label>
-                <label>
-                    <input type="radio" name='pyt2' value={'bb'} onChange={(e) => setTwo(e.target.value)} />
-                    bb
+                    <input type="radio" name='pyt2' value={'a'} onChange={(e) => setTwo(e.target.value)} />
+                    Bryczkę
                 </label>
                 <label>
-                    <input type="radio" name='pyt2' value={'cc'} onChange={(e) => setTwo(e.target.value)} />
-                    cc
-                </label>
-                {stateForm ? <p>{wyświetlOdp(two, 'bb')}</p> : <></>}
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing.</p>
-                <label>
-                    <input type="radio" name='pyt3' value={"1"} onChange={(e) => setThree(e.target.value)} />
-                    1
+                    <input type="radio" name='pyt2' value={'b'} onChange={(e) => setTwo(e.target.value)} />
+                    Opony pneumatyczne
                 </label>
                 <label>
-                    <input type="radio" name='pyt3' value={"2"} onChange={(e) => setThree(e.target.value)} />
-                    2
+                    <input type="radio" name='pyt2' value={'c'} onChange={(e) => setTwo(e.target.value)} />
+                    Traktor
+                </label>
+                {stateForm ? <p>{wyświetlOdp(two, 'b', 'Opony pneumatyczne')}</p> : <></>}
+                <p>3. Wynalazcą maszyny parowej w XVIII wieku był:</p>
+                <label>
+                    <input type="radio" name='pyt3' value={"a"} onChange={(e) => setThree(e.target.value)} />
+                    Nikola Tesla
                 </label>
                 <label>
-                    <input type="radio" name='pyt3' value={"3"} onChange={(e) => setThree(e.target.value)} />
-                    3
-                </label>
-                {stateForm ? <p>{wyświetlOdp(three, '3')}</p> : <></>}
-                <p>Lorem, ipsum dolor.</p>
-                <label>
-                    <input type="radio" name='pyt4' value={"kot"} onChange={(e) => setFour(e.target.value)} />
-                    kot
+                    <input type="radio" name='pyt3' value={"b"} onChange={(e) => setThree(e.target.value)} />
+                    James Watt
                 </label>
                 <label>
-                    <input type="radio" name='pyt4' value={"pies"} onChange={(e) => setFour(e.target.value)} />
-                    pies
+                    <input type="radio" name='pyt3' value={"c"} onChange={(e) => setThree(e.target.value)} />
+                    Alfred Nobel
+                </label>
+                {stateForm ? <p>{wyświetlOdp(three, 'b', 'James Watt')}</p> : <></>}
+                <p>4. Jak nazywał się pierwszy sztuczny satelita Ziemi?</p>
+                <label>
+                    <input type="radio" name='pyt4' value={"a"} onChange={(e) => setFour(e.target.value)} />
+                    Łajka
                 </label>
                 <label>
-                    <input type="radio" name='pyt4' value={"oba"} onChange={(e) => setFour(e.target.value)} />
-                    oba
+                    <input type="radio" name='pyt4' value={"b"} onChange={(e) => setFour(e.target.value)} />
+                    Armstrong
                 </label>
-                {stateForm ? <p>{wyświetlOdp(four, 'pies')}</p> : <></>}
+                <label>
+                    <input type="radio" name='pyt4' value={"c"} onChange={(e) => setFour(e.target.value)} />
+                    Sputnik 1
+                </label>
+                {stateForm ? <p>{wyświetlOdp(four, 'c', 'Sputnik 1')}</p> : <></>}
                 {stateForm ? <p></p> :
                     <button className={classes.btnSub}>Zatwierdź</button>}
             </form>
