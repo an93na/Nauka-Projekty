@@ -4,6 +4,7 @@ import kolo from '../assets/koło.png'
 import pociag from '../assets/pociag.png'
 import car from '../assets/car.png'
 import rakieta from '../assets/rakieta.png'
+import { Zadanie3 } from './Zadanie3'
 
 export const Zadanie4 = () => {
     const [stateForm, setStateForm] = useState(false);
@@ -12,6 +13,8 @@ export const Zadanie4 = () => {
     const [two, setTwo] = useState('');
     const [three, setThree] = useState('');
     const [four, setFour] = useState('');
+    const [nextTask, setNextTask] = useState(false);
+    const [show, setShow] = useState(false)
 
     const sprawdzam = () => {
         if (one === "4" && two === "1" && three === "3" && four === "2") {
@@ -21,16 +24,24 @@ export const Zadanie4 = () => {
     }
     const wynik = (a) => {
         if (a === '1') {
-            return 'Poszło Wam świetnie!'
+            return 'Poszło Wam świetnie! Kliknij przycisk dalej aby zobaczyć kolejną część zadania.'
         }
         else {
             return 'Niestety nie udało się ale spróbuj jeszcze raz (Kliknij przycisk Reset). '
         }
     }
+
+    const checkingTaskForNewTask = (a) => {
+        if (a === '1') {
+            setNextTask(true)
+        }
+    }
+
     const handleSubmit = (e) => {
         e.preventDefault();
         setSubmitted(true);
         setStateForm(true);
+        checkingTaskForNewTask(sprawdzam());
     };
 
     const handleReset = () => {
@@ -40,11 +51,16 @@ export const Zadanie4 = () => {
         setFour('');
         setStateForm(false);
         setSubmitted(false);
+        setNextTask(false)
+        setShow(false)
     };
+    const showTask = () => {
+        setShow(true)
+    }
     return (
         <div>
             <h3>Zadanie</h3>
-            <p>Uporządkuj pojazdy w kolejności chronologicznej (Numery wpisuj liczbą, a nie słownie)</p>
+            <p>I. Uporządkuj pojazdy w kolejności chronologicznej (Numery wpisuj liczbą, a nie słownie)</p>
             <form action="" className={classes.zad4Form} onSubmit={handleSubmit}>
                 <div className={classes.zad4DivNad} >
                     <div className={classes.zad4StyleDiv}>
@@ -72,7 +88,8 @@ export const Zadanie4 = () => {
                 </div>
             </form>
             {stateForm ? <p>{wynik(sprawdzam())}</p> : <></>}
-            {sprawdzam() === '1' && <div></div>}
+            {nextTask && <div className={classes.zad4Form}><button className={classes.btnSub} onClick={showTask}>Dalej</button></div>}
+            {show && <Zadanie3 />}
         </div>
     )
 }
