@@ -3,7 +3,7 @@ import { Link, Route, Routes } from 'react-router-dom'
 import { Home } from './Home'
 import { Zadanie1 } from './Zadanie1'
 import { Zadanie2 } from './Zadanie2'
-import { Zadanie3 } from './Zadanie3'
+import { Zadanie4 } from './Zadanie4'
 
 export const Animacja1 = () => {
   return (
@@ -21,7 +21,7 @@ export const Animacja1 = () => {
           <Route path="/" element={<Home />} />
           <Route path="zad1" element={<Zadanie1 />} />
           <Route path="zad2" element={<Zadanie2 />} />
-          <Route path="zad3" element={<Zadanie3 />} />
+          <Route path="zad3" element={<Zadanie4 />} />
         </Routes>
       </div>
     </div>
