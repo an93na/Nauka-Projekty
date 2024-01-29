@@ -68,7 +68,7 @@
   height: 90vh;
 }
 .boxStartowa {
-  width: 400px;
+  width: 80%;
   height: 120px;
   background-color: blueviolet;
   transition: transform 0.5s ease-in-out;
@@ -153,4 +153,7 @@
 .pHome{
   text-align: justify;
   line-height: 1.5
+}
+.imgPrzyk{
+  width: 100%;
 }
