@@ -1,4 +1,4 @@
-.container {
+.container { 
   display: flex;
   gap: 5px;
   justify-content: space-around;
@@ -9,7 +9,7 @@
   border-radius: 10px;
 }
 .box {
-  width: 70px;
+  width: 70vw;
   height: 60px;
   padding: 10px;
   background-color: blueviolet;
@@ -68,7 +68,7 @@
   height: 90vh;
 }
 .boxStartowa {
-  width: 80%;
+  width: 60%;
   height: 120px;
   background-color: blueviolet;
   transition: transform 0.5s ease-in-out;
