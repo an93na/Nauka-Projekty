@@ -31,7 +31,7 @@ export const Zadanie3 = () => {
         setStateForm(false);
         setSubmitted(false);
     };
-    
+
     return (
         <div>
             <p>II. Przed Tobą druga część zadania sprawdzająca Twój wybór w poprzedniej części.</p>
@@ -39,54 +39,54 @@ export const Zadanie3 = () => {
             <form style={{ display: 'flex', flexDirection: 'column' }} onSubmit={handleFormSubmit}>
                 <p>1. Koło powstało w:</p>
                 <label>
-                    <input type="radio" name='pyt1' value={'a'} onChange={(e) => setOne(e.target.value)} disabled={submitted} required />
+                    <input type="radio" name='pyt1' value={'a'} onChange={(e) => setOne(e.target.value)} disabled={submitted} required checked={one === 'a'} />
                     Mezopotami lub na Bliskim Wschodzie
                 </label>
                 <label>
-                    <input type="radio" name='pyt1' value={'b'} onChange={(e) => setOne(e.target.value)} disabled={submitted}/>
+                    <input type="radio" name='pyt1' value={'b'} onChange={(e) => setOne(e.target.value)} disabled={submitted} checked={one === 'b'} />
                     Europie a dokładniej w Polsce na Śląsku
                 </label>
                 <label>
-                    <input type="radio" name='pyt1' value={'c'} onChange={(e) => setOne(e.target.value)} disabled={submitted} />
+                    <input type="radio" name='pyt1' value={'c'} onChange={(e) => setOne(e.target.value)} disabled={submitted} checked={one === 'c'} />
                     Chinach
                 </label>
                 <p>2. John Dunlop w 1888 roku wynalazł:</p>
                 <label>
-                    <input type="radio" name='pyt2' value={'a'} onChange={(e) => setTwo(e.target.value)} disabled={submitted} required/>
+                    <input type="radio" name='pyt2' value={'a'} onChange={(e) => setTwo(e.target.value)} disabled={submitted} required checked={two === 'a'} />
                     Bryczkę
                 </label>
                 <label>
-                    <input type="radio" name='pyt2' value={'b'} onChange={(e) => setTwo(e.target.value)} disabled={submitted} />
+                    <input type="radio" name='pyt2' value={'b'} onChange={(e) => setTwo(e.target.value)} disabled={submitted} checked={two === 'b'} />
                     Opony pneumatyczne
                 </label>
                 <label>
-                    <input type="radio" name='pyt2' value={'c'} onChange={(e) => setTwo(e.target.value)} disabled={submitted} />
+                    <input type="radio" name='pyt2' value={'c'} onChange={(e) => setTwo(e.target.value)} disabled={submitted} checked={two === 'c'} />
                     Traktor
                 </label>
                 <p>3. Wynalazcą maszyny parowej w XVIII wieku był:</p>
                 <label>
-                    <input type="radio" name='pyt3' value={"a"} onChange={(e) => setThree(e.target.value)} disabled={submitted} required/>
+                    <input type="radio" name='pyt3' value={"a"} onChange={(e) => setThree(e.target.value)} disabled={submitted} required checked={three === 'a'} />
                     Nikola Tesla
                 </label>
                 <label>
-                    <input type="radio" name='pyt3' value={"b"} onChange={(e) => setThree(e.target.value)} disabled={submitted} />
+                    <input type="radio" name='pyt3' value={"b"} onChange={(e) => setThree(e.target.value)} disabled={submitted} checked={three === 'b'} />
                     James Watt
                 </label>
                 <label>
-                    <input type="radio" name='pyt3' value={"c"} onChange={(e) => setThree(e.target.value)} disabled={submitted} />
+                    <input type="radio" name='pyt3' value={"c"} onChange={(e) => setThree(e.target.value)} disabled={submitted} checked={three === 'c'} />
                     Alfred Nobel
                 </label>
                 <p>4. Jak nazywał się pierwszy sztuczny satelita Ziemi?</p>
                 <label>
-                    <input type="radio" name='pyt4' value={"a"} onChange={(e) => setFour(e.target.value)} disabled={submitted} required/>
+                    <input type="radio" name='pyt4' value={"a"} onChange={(e) => setFour(e.target.value)} disabled={submitted} required checked={four === 'a'} />
                     Łajka
                 </label>
                 <label>
-                    <input type="radio" name='pyt4' value={"b"} onChange={(e) => setFour(e.target.value)} disabled={submitted} />
+                    <input type="radio" name='pyt4' value={"b"} onChange={(e) => setFour(e.target.value)} disabled={submitted} checked={four === 'b'} />
                     Armstrong
                 </label>
                 <label>
-                    <input type="radio" name='pyt4' value={"c"} onChange={(e) => setFour(e.target.value)} disabled={submitted} />
+                    <input type="radio" name='pyt4' value={"c"} onChange={(e) => setFour(e.target.value)} disabled={submitted} checked={four === 'c'} />
                     Sputnik 1
                 </label>
                 {!submitted && <button className={classes.btnSub}>Zatwierdź</button>}
