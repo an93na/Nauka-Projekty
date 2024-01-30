@@ -24,7 +24,7 @@ export const Zadanie4 = () => {
     }
     const wynik = (a) => {
         if (a === '1') {
-            return 'Poszło Wam świetnie! Kliknij przycisk dalej aby zobaczyć kolejną część zadania.'
+            return 'Świetnie! Kliknij przycisk dalej aby zobaczyć kolejną część zadania.'
         }
         else {
             return 'Niestety nie udało się ale spróbuj jeszcze raz (Kliknij przycisk Reset). '

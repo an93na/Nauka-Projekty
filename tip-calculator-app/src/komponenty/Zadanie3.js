@@ -34,7 +34,7 @@ export const Zadanie3 = () => {
     
     return (
         <div>
-            <p>II. Przed Wami druga część zadania sprawdzająca Wasz wybór w poprzedniej części.</p>
+            <p>II. Przed Tobą druga część zadania sprawdzająca Twój wybór w poprzedniej części.</p>
             <p>Zaznacz poprawną odpowieć (jedną).</p>
             <form style={{ display: 'flex', flexDirection: 'column' }} onSubmit={handleFormSubmit}>
                 <p>1. Koło powstało w:</p>
