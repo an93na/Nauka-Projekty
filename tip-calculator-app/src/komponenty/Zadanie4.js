@@ -9,8 +9,6 @@ import { useDispatch, useSelector } from 'react-redux'
 import { resetState, wartoscFour, wartoscOne, wartoscThree, wartoscTwo, actionStateForm, actionSubmittted } from './zad1Slice'
 
 export const Zadanie4 = () => {
-    // const [stateForm, setStateForm] = useState(false);
-    // const [submitted, setSubmitted] = useState(false);
     const [nextTask, setNextTask] = useState(false);
     const [show, setShow] = useState(false);
 
@@ -45,8 +43,6 @@ export const Zadanie4 = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // setSubmitted(true);
-        // setStateForm(true);
         checkingTaskForNewTask(sprawdzam());
         dispatch(actionStateForm());
         dispatch(actionSubmittted());
@@ -54,8 +50,6 @@ export const Zadanie4 = () => {
 
     const handleReset = () => {
         dispatch(resetState())
-        // setStateForm(false);
-        // setSubmitted(false);
         setNextTask(false)
         setShow(false)
     };
