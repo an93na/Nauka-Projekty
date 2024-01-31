@@ -6,11 +6,11 @@ import car from '../assets/car.png'
 import rakieta from '../assets/rakieta.png'
 import { Zadanie3 } from './Zadanie3'
 import { useDispatch, useSelector } from 'react-redux'
-import { resetState, wartoscFour, wartoscOne, wartoscThree, wartoscTwo, actionStateForm, actionSubmittted } from './zad1Slice'
+import { resetState, wartoscFour, wartoscOne, wartoscThree, wartoscTwo, actionStateForm, actionSubmittted, actionShowTask, actionNextTask } from './zad1Slice'
 
 export const Zadanie4 = () => {
-    const [nextTask, setNextTask] = useState(false);
-    const [show, setShow] = useState(false);
+    // const [nextTask, setNextTask] = useState(false);
+    // const [show, setShow] = useState(false);
 
     const stateOne = useSelector(state => state.zad1.one)
     const stateTwo = useSelector(state => state.zad1.two)
@@ -18,6 +18,8 @@ export const Zadanie4 = () => {
     const stateFour = useSelector(state => state.zad1.four)
     const submittted = useSelector(state => state.zad1.submit)
     const stateForm = useSelector(state => state.zad1.form)
+    const show = useSelector(state => state.zad1.showTask)
+    const nextTask = useSelector(state => state.zad1.next)
     const dispatch = useDispatch()
 
     const sprawdzam = () => {
@@ -37,26 +39,29 @@ export const Zadanie4 = () => {
 
     const checkingTaskForNewTask = (a) => {
         if (a === '1') {
-            setNextTask(true)
+            // setNextTask(true)
+            dispatch(actionNextTask())
         }
     }
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        checkingTaskForNewTask(sprawdzam());
         dispatch(actionStateForm());
         dispatch(actionSubmittted());
+        checkingTaskForNewTask(sprawdzam());
     };
 
     const handleReset = () => {
         dispatch(resetState())
-        setNextTask(false)
-        setShow(false)
+        // setNextTask(false)
+        // setShow(false)
     };
 
     const showTask = () => {
-        setShow(true)
+        // setShow(true)
+        dispatch(actionShowTask())
     }
+    // console.log(checkingTaskForNewTask(sprawdzam()))
     return (
         <div>
             <h3>Zadanie</h3>
