@@ -1,4 +1,3 @@
-import React, { useState } from 'react'
 import classes from '../style/Animacja1.module.css'
 import kolo from '../assets/koło.png'
 import pociag from '../assets/pociag.png'
@@ -9,9 +8,6 @@ import { useDispatch, useSelector } from 'react-redux'
 import { resetState, wartoscFour, wartoscOne, wartoscThree, wartoscTwo, actionStateForm, actionSubmittted, actionShowTask, actionNextTask } from './zad1Slice'
 
 export const Zadanie4 = () => {
-    // const [nextTask, setNextTask] = useState(false);
-    // const [show, setShow] = useState(false);
-
     const stateOne = useSelector(state => state.zad1.one)
     const stateTwo = useSelector(state => state.zad1.two)
     const stateThree = useSelector(state => state.zad1.three)
@@ -39,7 +35,6 @@ export const Zadanie4 = () => {
 
     const checkingTaskForNewTask = (a) => {
         if (a === '1') {
-            // setNextTask(true)
             dispatch(actionNextTask())
         }
     }
@@ -52,16 +47,12 @@ export const Zadanie4 = () => {
     };
 
     const handleReset = () => {
-        dispatch(resetState())
-        // setNextTask(false)
-        // setShow(false)
+        dispatch(resetState());
     };
 
     const showTask = () => {
-        // setShow(true)
         dispatch(actionShowTask())
     }
-    // console.log(checkingTaskForNewTask(sprawdzam()))
     return (
         <div>
             <h3>Zadanie</h3>
