@@ -6,11 +6,11 @@ import car from '../assets/car.png'
 import rakieta from '../assets/rakieta.png'
 import { Zadanie3 } from './Zadanie3'
 import { useDispatch, useSelector } from 'react-redux'
-import { resetState, wartoscFour, wartoscOne, wartoscThree, wartoscTwo, submittted, stateForm } from './zad1Slice'
+import { resetState, wartoscFour, wartoscOne, wartoscThree, wartoscTwo, actionStateForm, actionSubmittted } from './zad1Slice'
 
 export const Zadanie4 = () => {
-    const [stateForm, setStateForm] = useState(false);
-    const [submitted, setSubmitted] = useState(false);
+    // const [stateForm, setStateForm] = useState(false);
+    // const [submitted, setSubmitted] = useState(false);
     const [nextTask, setNextTask] = useState(false);
     const [show, setShow] = useState(false);
 
@@ -18,8 +18,8 @@ export const Zadanie4 = () => {
     const stateTwo = useSelector(state => state.zad1.two)
     const stateThree = useSelector(state => state.zad1.three)
     const stateFour = useSelector(state => state.zad1.four)
-    // const submitted = useSelector(state => state.zad1.submit)
-    // const stateForm = useSelector(state => state.zad1.form)
+    const submittted = useSelector(state => state.zad1.submit)
+    const stateForm = useSelector(state => state.zad1.form)
     const dispatch = useDispatch()
 
     const sprawdzam = () => {
@@ -45,15 +45,17 @@ export const Zadanie4 = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        setSubmitted(true);
-        setStateForm(true);
+        // setSubmitted(true);
+        // setStateForm(true);
         checkingTaskForNewTask(sprawdzam());
+        dispatch(actionStateForm());
+        dispatch(actionSubmittted());
     };
 
     const handleReset = () => {
         dispatch(resetState())
-        setStateForm(false);
-        setSubmitted(false);
+        // setStateForm(false);
+        // setSubmitted(false);
         setNextTask(false)
         setShow(false)
     };
@@ -69,26 +71,26 @@ export const Zadanie4 = () => {
                 <div className={classes.zad4DivNad} >
                     <div className={classes.zad4StyleDiv}>
                         <img src={rakieta} alt="rakieta" className={classes.Zad4img} />
-                        <input type="text" className={classes.Zad4input} placeholder='numer' required value={stateOne} onChange={(e) => dispatch(wartoscOne(e.target.value))} disabled={submitted} />
+                        <input type="text" className={classes.Zad4input} placeholder='numer' required value={stateOne} onChange={(e) => dispatch(wartoscOne(e.target.value))} disabled={submittted} />
                     </div>
                     <div className={classes.zad4StyleDiv}>
                         <img src={kolo} alt="kolo" className={classes.Zad4img} />
-                        <input type="text" className={classes.Zad4input} placeholder='numer' required value={stateTwo} onChange={(e) => dispatch(wartoscTwo(e.target.value))} disabled={submitted} />
+                        <input type="text" className={classes.Zad4input} placeholder='numer' required value={stateTwo} onChange={(e) => dispatch(wartoscTwo(e.target.value))} disabled={submittted} />
                     </div>
                 </div>
                 <div className={classes.zad4DivNad} >
                     <div className={classes.zad4StyleDiv}>
                         <img src={car} alt="samochod" className={classes.Zad4img} />
-                        <input type="text" className={classes.Zad4input} placeholder='numer' required value={stateThree} onChange={(e) => dispatch(wartoscThree(e.target.value))} disabled={submitted} />
+                        <input type="text" className={classes.Zad4input} placeholder='numer' required value={stateThree} onChange={(e) => dispatch(wartoscThree(e.target.value))} disabled={submittted} />
                     </div>
                     <div className={classes.zad4StyleDiv}>
                         <img src={pociag} alt="pociag" className={classes.Zad4img} />
-                        <input type="text" className={classes.Zad4input} placeholder='numer' required value={stateFour} onChange={(e) => dispatch(wartoscFour(e.target.value))} disabled={submitted} />
+                        <input type="text" className={classes.Zad4input} placeholder='numer' required value={stateFour} onChange={(e) => dispatch(wartoscFour(e.target.value))} disabled={submittted} />
                     </div>
                 </div>
                 <div>
-                    <button type="submit" className={classes.btnSub} disabled={submitted}>Zatwierdź</button>
-                    {submitted && <button type="button" className={classes.btnSub} onClick={handleReset}>Reset</button>}
+                    <button type="submit" className={classes.btnSub} disabled={submittted}>Zatwierdź</button>
+                    {submittted && <button type="button" className={classes.btnSub} onClick={handleReset}>Reset</button>}
                 </div>
             </form>
             {stateForm ? <p>{wynik(sprawdzam())}</p> : <></>}
