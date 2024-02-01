@@ -5,13 +5,10 @@ import { correctActionTrue, correctActionFalse, formAction, restetState } from '
 import { actionSubmittted } from './zad1Slice';
 
 export const Zadanie3 = () => {
-    // const [stateForm, setStateForm] = useState(false)
     const [one, setOne] = useState('');
     const [two, setTwo] = useState('');
     const [three, setThree] = useState('');
     const [four, setFour] = useState('');
-    // const [submitted, setSubmitted] = useState(false);
-    // const [correct, setCorrect] = useState(false);
     const dispatch = useDispatch()
     const stateForm = useSelector(state => state.zad2.form)
     const submitted = useSelector(state => state.zad2.submit)
@@ -21,15 +18,11 @@ export const Zadanie3 = () => {
 
     const handleFormSubmit = (e) => {
         e.preventDefault();
-        // setStateForm(true);
-        // setSubmitted(true);
         dispatch(formAction())
         dispatch(actionSubmittted())
         if (one === correctAnswers.one && two === correctAnswers.two && three === correctAnswers.three && four === correctAnswers.four) {
-            // setCorrect(true);
             dispatch(correctActionTrue())
         } else {
-            // setCorrect(false);
             dispatch(correctActionFalse())
         }
     };
@@ -40,8 +33,6 @@ export const Zadanie3 = () => {
         setTwo('');
         setThree('');
         setFour('');
-        // setStateForm(false);
-        // setSubmitted(false);
         dispatch(restetState())
     };
 
