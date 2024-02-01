@@ -97,7 +97,7 @@ export const Zadanie3 = () => {
             </form>
             {stateForm && <button className={classes.btnSub} onClick={handleReset}>Wyczyść</button>}
             {stateForm && correct === true && <p>Gratulacje! Zadanie zostało rozwiązane poprawnie.</p>}
-            {stateForm && correct === false && <p>Niestety rozwiązanie nie jest poprawne. Spróbuj jeszcze raz.</p>}
+            {stateForm && correct === false && <p>Niestety rozwiązanie nie jest poprawne. Spróbuj jeszcze raz.(Zanim zaczniesz wypełniać na nowo kliknij przycisk "Wyczyść")</p>}
         </div>
     )
 }
