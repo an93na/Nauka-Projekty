@@ -1,24 +1,36 @@
 import React, { useState } from 'react'
 import classes from '../style/Animacja1.module.css'
+import { useDispatch, useSelector } from 'react-redux';
+import { correctActionTrue, correctActionFalse, formAction, restetState } from './zad2Slice';
+import { actionSubmittted } from './zad1Slice';
 
 export const Zadanie3 = () => {
-    const [stateForm, setStateForm] = useState(false)
+    // const [stateForm, setStateForm] = useState(false)
     const [one, setOne] = useState('');
     const [two, setTwo] = useState('');
     const [three, setThree] = useState('');
     const [four, setFour] = useState('');
-    const [submitted, setSubmitted] = useState(false);
-    const [correct, setCorrect] = useState(false);
+    // const [submitted, setSubmitted] = useState(false);
+    // const [correct, setCorrect] = useState(false);
+    const dispatch = useDispatch()
+    const stateForm = useSelector(state => state.zad2.form)
+    const submitted = useSelector(state => state.zad2.submit)
+    const correct = useSelector(state => state.zad2.corect)
+
     const correctAnswers = { one: 'a', two: 'b', three: 'b', four: 'c' };
 
     const handleFormSubmit = (e) => {
         e.preventDefault();
-        setStateForm(true);
-        setSubmitted(true);
+        // setStateForm(true);
+        // setSubmitted(true);
+        dispatch(formAction())
+        dispatch(actionSubmittted())
         if (one === correctAnswers.one && two === correctAnswers.two && three === correctAnswers.three && four === correctAnswers.four) {
-            setCorrect(true);
+            // setCorrect(true);
+            dispatch(correctActionTrue())
         } else {
-            setCorrect(false);
+            // setCorrect(false);
+            dispatch(correctActionFalse())
         }
     };
 
@@ -28,8 +40,9 @@ export const Zadanie3 = () => {
         setTwo('');
         setThree('');
         setFour('');
-        setStateForm(false);
-        setSubmitted(false);
+        // setStateForm(false);
+        // setSubmitted(false);
+        dispatch(restetState())
     };
 
     return (
