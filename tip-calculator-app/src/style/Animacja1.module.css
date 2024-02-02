@@ -3,7 +3,7 @@
   gap: 5px;
   justify-content: space-around;
   align-items: center;
-  margin: 40px;
+  margin: 20px;
   background-color: blueviolet;
   padding: 10px;
   border-radius: 10px;
@@ -30,7 +30,7 @@
 .obrot {
   width: 40px;
   height: 40px;
-  margin: 40px;
+  margin: 20px;
   /* border-radius: 50%; */
   background-color: white;
   color: black;
@@ -89,7 +89,7 @@
   gap: 40px;
   justify-content: space-around;
   align-items: center;
-  margin: 40px;
+  margin: 20px;
   color: white;
   background-color: dimgrey;
   padding: 10px;
