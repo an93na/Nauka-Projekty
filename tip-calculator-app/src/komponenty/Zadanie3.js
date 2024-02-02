@@ -37,7 +37,7 @@ export const Zadanie3 = () => {
     };
 
     return (
-        <div>
+        <div className={classes.pHome}>
             <p>II. Przed Tobą druga część zadania sprawdzająca Twój wybór w poprzedniej części.</p>
             <p>Zaznacz poprawną odpowieć (jedną).</p>
             <form style={{ display: 'flex', flexDirection: 'column' }} onSubmit={handleFormSubmit}>
