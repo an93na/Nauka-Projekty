@@ -100,10 +100,11 @@ export const Zadanie3 = () => {
                 {!submitted && <button className={classes.btnSub}>Zatwierdź</button>}
             </form>
             {stateForm && <button className={classes.btnSub} onClick={handleReset}>Wyczyść</button>}
-            {stateForm && correct === true && <div><p>Gratulacje! Zadanie zostało rozwiązane poprawnie.</p>
-            <button className={classes.btnSub} onClick={newTaskShow}>Dalej</button></div>}
+            {stateForm && correct === true && <div><p>Gratulacje! Kolejna część zadania została rozwiązana poprawnie. </p>
+                <p>Aby przejść do ostatniej części kliknij przycisk Dalej.</p>
+                <button className={classes.btnSub} onClick={newTaskShow}>Dalej</button></div>}
             {stateForm && correct === false && <p>Niestety rozwiązanie nie jest poprawne. Spróbuj jeszcze raz.</p>}
-            {continueTask && <Zadanie5/>}
+            {continueTask && <Zadanie5 />}
         </div>
     )
 }
