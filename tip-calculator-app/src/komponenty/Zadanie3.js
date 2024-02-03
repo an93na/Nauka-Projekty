@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import classes from '../style/Animacja1.module.css'
 import { useDispatch, useSelector } from 'react-redux';
-import { correctActionTrue, correctActionFalse, formAction, restetState, submitAction } from './zad2Slice';
+import { correctActionTrue, correctActionFalse, formAction, showNextTask, restetState, submitAction } from './zad2Slice';
 
 export const Zadanie3 = () => {
     const [one, setOne] = useState('');
@@ -12,6 +12,7 @@ export const Zadanie3 = () => {
     const stateForm = useSelector(state => state.zad2.form)
     const submitted = useSelector(state => state.zad2.submit)
     const correct = useSelector(state => state.zad2.corect)
+    const continueTask = useSelector(state => state.zad2.next)
 
     const correctAnswers = { one: 'a', two: 'b', three: 'b', four: 'c' };
 
@@ -34,7 +35,10 @@ export const Zadanie3 = () => {
         setFour('');
         dispatch(restetState())
     };
-
+    console.log(continueTask)
+    const newTaskShow = () => {
+        dispatch(showNextTask())
+    }
     return (
         <div className={classes.pHome}>
             <p>II. Przed Tobą druga część zadania sprawdzająca Twój wybór w poprzedniej części.</p>
@@ -95,7 +99,8 @@ export const Zadanie3 = () => {
                 {!submitted && <button className={classes.btnSub}>Zatwierdź</button>}
             </form>
             {stateForm && <button className={classes.btnSub} onClick={handleReset}>Wyczyść</button>}
-            {stateForm && correct === true && <p>Gratulacje! Zadanie zostało rozwiązane poprawnie.</p>}
+            {stateForm && correct === true && <div><p>Gratulacje! Zadanie zostało rozwiązane poprawnie.</p>
+            <button className={classes.btnSub} onClick={newTaskShow}>Dalej</button></div>}
             {stateForm && correct === false && <p>Niestety rozwiązanie nie jest poprawne. Spróbuj jeszcze raz.</p>}
         </div>
     )
