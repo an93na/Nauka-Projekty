@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import classes from '../style/Animacja1.module.css'
 import { useDispatch, useSelector } from 'react-redux';
 import { correctActionTrue, correctActionFalse, formAction, showNextTask, restetState, submitAction } from './zad2Slice';
+import { Zadanie5 } from './Zadanie5';
 
 export const Zadanie3 = () => {
     const [one, setOne] = useState('');
@@ -35,7 +36,7 @@ export const Zadanie3 = () => {
         setFour('');
         dispatch(restetState())
     };
-    console.log(continueTask)
+    // console.log(continueTask)
     const newTaskShow = () => {
         dispatch(showNextTask())
     }
@@ -102,6 +103,7 @@ export const Zadanie3 = () => {
             {stateForm && correct === true && <div><p>Gratulacje! Zadanie zostało rozwiązane poprawnie.</p>
             <button className={classes.btnSub} onClick={newTaskShow}>Dalej</button></div>}
             {stateForm && correct === false && <p>Niestety rozwiązanie nie jest poprawne. Spróbuj jeszcze raz.</p>}
+            {continueTask && <Zadanie5/>}
         </div>
     )
 }
