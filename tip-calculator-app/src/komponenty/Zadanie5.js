@@ -6,11 +6,35 @@ export const Zadanie5 = () => {
         <div>
             <p>III. Przed Tobą ostania część zadania.</p>
             <p>Dopasuj nazwę do elementu:</p>
-            <form action="" className={classes.zad4Form} >
-            <select name="" id="">
-                <option value="" hidden>Wybierz</option>
-                <option value=""></option>
-            </select>
+            <form action="" className={classes.zad5Form} >
+                <div>
+                    <img src="" alt="" />
+                    <select name="" id="">
+                        <option value="" hidden>Wybierz</option>
+                        <option value=""></option>
+                    </select>
+                </div>
+                <div>
+                    <img src="" alt="" />
+                    <select name="" id="">
+                        <option value="" hidden>Wybierz</option>
+                        <option value=""></option>
+                    </select>
+                </div>
+                <div>
+                    <img src="" alt="" />
+                    <select name="" id="">
+                        <option value="" hidden>Wybierz</option>
+                        <option value=""></option>
+                    </select>
+                </div>
+                <div>
+                    <img src="" alt="" />
+                    <select name="" id="">
+                        <option value="" hidden>Wybierz</option>
+                        <option value=""></option>
+                    </select>
+                </div>
             </form>
         </div>
     )

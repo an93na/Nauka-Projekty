@@ -1,4 +1,4 @@
-.container { 
+.container {
   display: flex;
   gap: 5px;
   justify-content: space-around;
@@ -150,10 +150,21 @@
 .Zad4input:hover {
   border: 1px solid rgb(143, 240, 255);
 }
-.pHome{
+.pHome {
   text-align: justify;
-  line-height: 1.5
+  line-height: 1.5;
 }
-.imgPrzyk{
+.imgPrzyk {
   width: 100%;
+}
+
+.zad5Form {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  flex-wrap: wrap;
+  align-content: center;
+  gap: 5px;
 }
