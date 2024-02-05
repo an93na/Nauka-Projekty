@@ -3,5 +3,10 @@ import { createSlice } from "@reduxjs/toolkit"
 const initialState = {}
 
 export const zad3Slice = createSlice({
-    initialState: initialState
+    name: 'zadanie3',
+    initialState: initialState,
+    reducers: {}
 })
+
+export const {} = zad3Slice.actions
+export default zad3Slice.reducer
