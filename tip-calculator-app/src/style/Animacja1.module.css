@@ -168,3 +168,22 @@
   align-content: center;
   gap: 5px;
 }
+
+  .zad5StyleDiv {
+    border: 1px solid white;
+    padding: 15px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .zad5StyleDiv:hover {
+    border: 1px solid rgb(143, 240, 255);
+  }
+  .Zad5img {
+    width: 100px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+  }

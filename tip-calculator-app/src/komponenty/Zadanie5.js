@@ -15,9 +15,9 @@ export const Zadanie5 = () => {
                         <option value=""></option>
                     </select>
                 </div>
-                <div className={classes.zad4StyleDiv}>
+                <div className={classes.zad5StyleDiv}>
                     <p>żarówka</p>
-                    <img src={zarowka} alt="zarowka" className={classes.Zad4img} />
+                    <img src={zarowka} alt="zarowka" className={classes.Zad5img} />
                     <select name="" id="">
                         <option value="" hidden>Wybierz</option>
                         <option value="1">Thomas Edison</option>
