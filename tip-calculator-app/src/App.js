@@ -1,4 +1,3 @@
-import { Animacja } from "./komponenty/Animacja";
 import { StronaCalosc } from "./komponenty/StronaCalosc";
 
 function App() {

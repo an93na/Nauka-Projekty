@@ -12,9 +12,9 @@ export const Zadanie5 = () => {
             <p>Dopasuj naukowca do odkrycia:</p>
             <form action="" className={classes.zad5Form} >
                 <div className={classes.zad5StyleDiv}>
-                    <p>żarówka</p>
+                    <p className={classes.p5}>żarówka</p>
                     <img src={zarowka} alt="zarowka" className={classes.Zad5img} />
-                    <select name="" id="">
+                    <select name="" id="" style={{width: 168}}>
                         <option value="" hidden>Wybierz</option>
                         <option value="1">Thomas Edison</option>
                         <option value="2">Ignacy Łukasiewicz</option>
@@ -23,9 +23,9 @@ export const Zadanie5 = () => {
                     </select>
                 </div>
                 <div className={classes.zad5StyleDiv}>
-                    <p>teoria heliocentryczna</p>
+                    <p className={classes.p5}>teoria heliocentryczna</p>
                     <img src={helio} alt="teoria heliocentryczna" className={classes.Zad5img} />
-                    <select name="" id="">
+                    <select name="" id="" style={{width: 168}}>
                         <option value="" hidden>Wybierz</option>
                         <option value="1">Neil Armstrong</option>
                         <option value="2">Mikołaj Kopernik</option>
@@ -34,9 +34,9 @@ export const Zadanie5 = () => {
                     </select>
                 </div>
                 <div className={classes.zad5StyleDiv}>
-                    <p>zjawisko grawitacji</p>
+                    <p className={classes.p5}>zjawisko grawitacji</p>
                     <img src={grawitacja} alt="grawitacja" className={classes.Zad5img} />
-                    <select name="" id="">
+                    <select name="" id="" style={{width: 168}}>
                         <option value="" hidden>Wybierz</option>
                         <option value="1">Maria Skłodowska-Curie</option>
                         <option value="2">Isaac Newton</option>
@@ -45,9 +45,9 @@ export const Zadanie5 = () => {
                     </select>
                 </div>
                 <div className={classes.zad5StyleDiv}>
-                    <p>prawo wyporu</p>
+                    <p className={classes.p5}>prawo wyporu</p>
                     <img src={wypor} alt="prawo wyporu" className={classes.Zad5img} />
-                    <select name="" id="">
+                    <select name="" id="" style={{width: 168}}>
                         <option value="" hidden>Wybierz</option>
                         <option value="1">Galileusz</option>
                         <option value="2">Charles Darwin</option>
