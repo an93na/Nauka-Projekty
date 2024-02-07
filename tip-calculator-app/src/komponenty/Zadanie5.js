@@ -1,6 +1,9 @@
 import React from 'react'
 import classes from '../style/Animacja1.module.css'
-import zarowka from '../assets/zarowka.png'
+import zarowka from '../assets/zarowka.jpg'
+import wypor from '../assets/wypor.jpg'
+import grawitacja from '../assets/grawitacja.jpg'
+import helio from '../assets/helio.jpg'
 
 export const Zadanie5 = () => {
     return (
@@ -21,7 +24,7 @@ export const Zadanie5 = () => {
                 </div>
                 <div className={classes.zad5StyleDiv}>
                     <p>teoria heliocentryczna</p>
-                    <img src={zarowka} alt="zarowka" className={classes.Zad5img} />
+                    <img src={helio} alt="teoria heliocentryczna" className={classes.Zad5img} />
                     <select name="" id="">
                         <option value="" hidden>Wybierz</option>
                         <option value="1">Neil Armstrong</option>
@@ -32,7 +35,7 @@ export const Zadanie5 = () => {
                 </div>
                 <div className={classes.zad5StyleDiv}>
                     <p>zjawisko grawitacji</p>
-                    <img src={zarowka} alt="zarowka" className={classes.Zad5img} />
+                    <img src={grawitacja} alt="grawitacja" className={classes.Zad5img} />
                     <select name="" id="">
                         <option value="" hidden>Wybierz</option>
                         <option value="1">Maria Skłodowska-Curie</option>
@@ -43,7 +46,7 @@ export const Zadanie5 = () => {
                 </div>
                 <div className={classes.zad5StyleDiv}>
                     <p>prawo wyporu</p>
-                    <img src={zarowka} alt="zarowka" className={classes.Zad5img} />
+                    <img src={wypor} alt="prawo wyporu" className={classes.Zad5img} />
                     <select name="" id="">
                         <option value="" hidden>Wybierz</option>
                         <option value="1">Galileusz</option>
