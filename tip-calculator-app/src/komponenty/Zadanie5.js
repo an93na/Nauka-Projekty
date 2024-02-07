@@ -10,7 +10,8 @@ export const Zadanie5 = () => {
         <div>
             <p>III. Przed Tobą ostania część zadania.</p>
             <p>Dopasuj naukowca do odkrycia:</p>
-            <form action="" className={classes.zad5Form} >
+            <form action=""  >
+                <div className={classes.zad5Form}>
                 <div className={classes.zad5StyleDiv}>
                     <p className={classes.p5}>żarówka</p>
                     <img src={zarowka} alt="zarowka" className={classes.Zad5img} />
@@ -55,7 +56,8 @@ export const Zadanie5 = () => {
                         <option value="4">Archimedes</option>
                     </select>
                 </div>
-
+                </div>
+                <button className={classes.btnSub}>Sprawdź</button>
             </form>
         </div>
     )
