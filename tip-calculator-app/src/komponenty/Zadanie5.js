@@ -6,11 +6,14 @@ import grawitacja from '../assets/grawitacja.jpg'
 import helio from '../assets/helio.jpg'
 
 export const Zadanie5 = () => {
+    const handleSubmit = (e) => {
+        e.preventDefault();
+    };
     return (
         <div>
             <p>III. Przed Tobą ostania część zadania.</p>
             <p>Dopasuj naukowca do odkrycia:</p>
-            <form action=""  >
+            <form action="" onSubmit={handleSubmit} >
                 <div className={classes.zad5Form}>
                 <div className={classes.zad5StyleDiv}>
                     <p className={classes.p5}>żarówka</p>
@@ -57,7 +60,9 @@ export const Zadanie5 = () => {
                     </select>
                 </div>
                 </div>
-                <button className={classes.btnSub}>Sprawdź</button>
+                <div style={{display: 'flex', alignContent: 'center', justifyContent: 'center'}}>
+                <button className={classes.btnSub} style={{marginTop:20}}>Sprawdź</button>
+                </div>
             </form>
         </div>
     )

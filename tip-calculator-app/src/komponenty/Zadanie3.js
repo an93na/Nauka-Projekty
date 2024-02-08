@@ -97,12 +97,18 @@ export const Zadanie3 = () => {
                     <input type="radio" name='pyt4' value={"c"} onChange={(e) => setFour(e.target.value)} disabled={submitted} checked={four === 'c'} />
                     Sputnik 1
                 </label>
-                {!submitted && <button className={classes.btnSub}>Zatwierdź</button>}
+                <div style={{ display: 'flex', alignContent: 'center', justifyContent: 'center' }}>
+                    {!submitted && <button className={classes.btnSub}>Zatwierdź</button>}
+                </div>
             </form>
-            {stateForm && <button className={classes.btnSub} onClick={handleReset}>Wyczyść</button>}
-            {stateForm && correct === true && <div><p>Gratulacje! Kolejna część zadania została rozwiązana poprawnie. </p>
+            {stateForm && <div style={{ display: 'flex', alignContent: 'center', justifyContent: 'center' }}><button className={classes.btnSub} onClick={handleReset}>Wyczyść</button></div>}
+            {stateForm && correct === true && <div>
+                <p>Gratulacje! Kolejna część zadania została rozwiązana poprawnie. </p>
                 <p>Aby przejść do ostatniej części kliknij przycisk Dalej.</p>
-                <button className={classes.btnSub} onClick={newTaskShow}>Dalej</button></div>}
+                <div style={{ display: 'flex', alignContent: 'center', justifyContent: 'center' }}>
+                    <button className={classes.btnSub} onClick={newTaskShow}>Dalej</button>
+                </div>
+            </div>}
             {stateForm && correct === false && <p>Niestety rozwiązanie nie jest poprawne. Spróbuj jeszcze raz.</p>}
             {continueTask && <Zadanie5 />}
         </div>
