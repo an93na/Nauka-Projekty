@@ -14,6 +14,7 @@ export const Zadanie5 = () => {
     const stateFour = useSelector(state => state.zad3.fourZd);
     const stateForm = useSelector(state => state.zad3.form);
     const submittted = useSelector(state => state.zad3.submit);
+    const correct = useSelector(state => state.zad3.correct)
     const dispatch = useDispatch();
 
     const handleSubmit = (e) => {
@@ -25,10 +26,10 @@ export const Zadanie5 = () => {
     const handleReset = () => {
         dispatch(resetState());
     };
-    // console.log(stateOne)
-    // console.log(stateTwo)
-    // console.log(stateThree)
-    // console.log(stateFour)
+
+    const correctAnswers = { one: 'a', two: 'b', three: 'b', four: 'c' };
+
+    console.log(correct)
     return (
         <div>
             <p>III. Przed Tobą ostania część zadania.</p>
@@ -85,7 +86,7 @@ export const Zadanie5 = () => {
                     {submittted && <button type="button" className={classes.btnSub} onClick={handleReset} style={{ marginTop: 15 }}>Resetuj</button>}
                 </div>
             </form>
-            {stateForm ? <div><button>Wyczyść</button></div> : <></>}
+            {stateForm ? <p>Wyczyść</p> : <></>}
         </div>
     )
 }
