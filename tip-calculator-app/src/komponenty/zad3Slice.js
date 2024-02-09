@@ -26,5 +26,5 @@ export const zad3Slice = createSlice({
     }
 })
 
-export const { one, two, three, four, formState, submitAction, resetState } = zad3Slice.actions
+export const { one, two, three, four, formState, submitAction,corectActionF, corectActionT ,resetState } = zad3Slice.actions
 export default zad3Slice.reducer
