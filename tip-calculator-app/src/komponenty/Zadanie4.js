@@ -6,6 +6,8 @@ import rakieta from '../assets/rakieta.png'
 import { Zadanie3 } from './Zadanie3'
 import { useDispatch, useSelector } from 'react-redux'
 import { resetState, wartoscFour, wartoscOne, wartoscThree, wartoscTwo, actionStateForm, actionSubmittted, actionShowTask, actionNextTask } from './zad1Slice'
+import { restetState as reset2 } from './zad2Slice'
+import { resetState as reset3 } from './zad3Slice'
 
 export const Zadanie4 = () => {
     const stateOne = useSelector(state => state.zad1.one)
@@ -48,6 +50,8 @@ export const Zadanie4 = () => {
 
     const handleReset = () => {
         dispatch(resetState());
+        dispatch(reset2());
+        dispatch(reset3());
     };
 
     const showTask = () => {

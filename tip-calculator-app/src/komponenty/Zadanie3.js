@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import classes from '../style/Animacja1.module.css'
 import { useDispatch, useSelector } from 'react-redux';
 import { correctActionTrue, correctActionFalse, formAction, showNextTask, restetState, submitAction } from './zad2Slice';
+import { resetState as reset2 } from './zad3Slice';
 import { Zadanie5 } from './Zadanie5';
 
 export const Zadanie3 = () => {
@@ -35,6 +36,7 @@ export const Zadanie3 = () => {
         setThree('');
         setFour('');
         dispatch(restetState())
+        dispatch(reset2())
     };
     // console.log(continueTask)
     const newTaskShow = () => {

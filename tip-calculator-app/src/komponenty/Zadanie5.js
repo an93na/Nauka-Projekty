@@ -34,12 +34,6 @@ export const Zadanie5 = () => {
         dispatch(resetState());
     };
 
-
-    // console.log(correct)
-    // console.log(stateOne)
-    // console.log(stateTwo)
-    // console.log(stateThree)
-    // console.log(stateFour)
     return (
         <div>
             <p>III. Przed Tobą ostania część zadania.</p>
