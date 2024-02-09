@@ -19,7 +19,7 @@ export const Zadanie2 = () => {
             </div>
             <p className={classes.pHome}>Część 3 zadania</p>
             <div>
-                <p className={classes.pHome}>W tej części zadania należy dopasować naukowca do jego odkrycia. Imię i nazwisko wybieramy z rozwijalnej listy pod wynalazkiem.</p>
+                <p className={classes.pHome}>W tej części zadania należy dopasować naukowca do jego odkrycia. Imię i nazwisko wybieramy z rozwijalnej listy pod wynalazkiem/odkryciem.</p>
             </div>
         </div>
     )

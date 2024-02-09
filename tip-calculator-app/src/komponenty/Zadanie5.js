@@ -96,7 +96,8 @@ export const Zadanie5 = () => {
                     {submittted && <button type="button" className={classes.btnSub} onClick={handleReset} style={{ marginTop: 15 }}>Resetuj</button>}
                 </div>
             </form>
-            {stateForm ? <p>Wyczyść</p> : <></>}
+            {stateForm && correct === true  && <p>Graulacje! Twoje zadanie zostało rozwiązane porawnie!</p>}
+            {stateForm && correct === false  && <p>Niestety Twoje rozwiązanie nie jest porawne. Spróbuj jeszcze raz </p>}
         </div>
     )
 }
