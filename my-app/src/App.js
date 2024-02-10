@@ -1,6 +1,10 @@
+import { StronaStartowa } from "./components/StronaStartowa";
+
 function App() {
   return (
-    <div></div>
+    <div>
+      <StronaStartowa/>
+    </div>
   );
 }
 

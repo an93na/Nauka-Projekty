@@ -1,0 +1,20 @@
+.startowa{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+.btnStart{
+background-color: blueviolet;
+border: 1px solid blueviolet;
+border-radius: 5px;
+padding: 10px;
+color: white;
+font-weight: bold;
+}
+.btnStart:hover{
+background-color: darkmagenta;
+cursor: pointer;
+font-weight: bold;
+}
