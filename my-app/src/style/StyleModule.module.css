@@ -23,3 +23,8 @@ cursor: pointer;
 font-weight: bold;
 transform: rotate(360deg) scale(1.3);
 }
+.imgStart{
+    width: 40vh;
+    height: 50vh;
+    border-radius: 15px;
+}
