@@ -1,70 +1,49 @@
-# Getting Started with Create React App
+# Projekt do którego można trafić po przeczytaniu CV
+Główny cel to stworzenie projektu, który wyróżniał by się spośród innych. 
+- Ponieważ mam jakieś umiejętności ale nie mogę ich dalej rozwijać bo potrzebuje pracy w której będę mieć motywację i chęć do dalszego działania.
+- Bardzo podoba mi się to co robię i chciałabym się dalej rozwijać
+- Mam nadzieję, że inność tej aplikacji wywoła uśmiech na twarzy rekrutera.
+- Plik w sumie jest dla mnie żebym nie musiała szukać tych komend za każdym razem. Bo pamiętać je pamiętam ale zawsze można zrobić literówkę dlatego lepiej skopiować :D 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Setup aplikacji
+Przy pomocy strony: 
+"https://create-react-app.dev/docs/getting-started/"
 
-## Available Scripts
+wpisane komendy: 
+npx create-react-app my-app
+cd my-app
+npm start 
+ostatnią komendą uruchamia się aplikacja na porcie "http://localhost:3000/"
 
-In the project directory, you can run:
+## Instalacja react-router-dom i redux
 
-### `npm start`
+npm install @reduxjs/toolkit react-redux react-router-dom
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+domumentacja: 
+https://redux.js.org/tutorials/quick-start
+ 
+## Instalacja Styli picocss 
+(tutaj raczej z niej nie korzytam ale czasem potrzebuje i przyda się)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+w terminalu:
+npm install @picocss/pico
 
-### `npm test`
+w index.js
+import "@picocss/pico";
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Setup react-router-dom react-redux 
 
-### `npm run build`
+W index.js dodatkowo trzeba zrobić 
+Setup react-router-dom dlatego naleczy otoczyć komponent App 
+<BrowserRouter>
+        <App />
+</BrowserRouter>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Setup reduxa w pliku index.js import Provider i otoczenie komponentów
+<BrowserRouter>
+      <Provider store={store}>
+        <App />
+      </Provider>
+    </BrowserRouter>
+Provider posiada propsa którym jest store dlatego trzeba go stworzyć
+### CDN ...
