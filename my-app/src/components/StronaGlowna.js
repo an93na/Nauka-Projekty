@@ -6,6 +6,9 @@ export const StronaGlowna = () => {
     <div>
       <nav>
         <Link to='/'>Home</Link>
+        <Link to='/opis'>Opis</Link>
+        <Link to='/przyklad'>Przykład</Link>
+        <Link to='/zadanie'>Zadanie</Link>
       </nav>
     </div>
   )
