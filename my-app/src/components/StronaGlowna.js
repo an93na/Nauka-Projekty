@@ -4,11 +4,12 @@ import { Home } from './Home'
 import { Opis } from './Opis'
 import { Przyklad } from './Przyklad'
 import { Zadanie } from './Zadanie'
+import classes from '../style/StyleModule.module.css'
 
 export const StronaGlowna = () => {
   return (
     <div>
-      <nav>
+      <nav  className={classes.pasekLinkow}>
         <Link to='/'>Home</Link>
         <Link to='/opis'>Opis</Link>
         <Link to='/przyklad'>Przykład</Link>
