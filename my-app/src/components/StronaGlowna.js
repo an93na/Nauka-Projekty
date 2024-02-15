@@ -11,9 +11,9 @@ export const StronaGlowna = () => {
     <div>
       <nav  className={classes.pasekLinkow}>
         <Link to='/' className={classes.kafelek}>Home</Link>
-        <Link to='/opis'>Opis</Link>
-        <Link to='/przyklad'>Przykład</Link>
-        <Link to='/zadanie'>Zadanie</Link>
+        <Link to='/opis'  className={classes.kafelek}>Opis</Link>
+        <Link to='/przyklad' className={classes.kafelek}>Przykład</Link>
+        <Link to='/zadanie'  className={classes.kafelek}>Zadanie</Link>
       </nav>
       <div>
         <Routes>
