@@ -10,7 +10,7 @@ export const StronaGlowna = () => {
   return (
     <div>
       <nav  className={classes.pasekLinkow}>
-        <Link to='/'>Home</Link>
+        <Link to='/' className={classes.kafelek}>Home</Link>
         <Link to='/opis'>Opis</Link>
         <Link to='/przyklad'>Przykład</Link>
         <Link to='/zadanie'>Zadanie</Link>
