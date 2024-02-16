@@ -18,9 +18,9 @@ export const StronaGlowna = () => {
       <div>
         <Routes>
           <Route path='/' element={<Home/>}/>
-          <Route path='/' element={<Opis/>}/>
-          <Route path='/' element={<Przyklad/>}/>
-          <Route path='/' element={<Zadanie/>}/>
+          <Route path='/opis' element={<Opis/>}/>
+          <Route path='/przyklad' element={<Przyklad/>}/>
+          <Route path='/zadanie' element={<Zadanie/>}/>
         </Routes>
       </div>
     </div>

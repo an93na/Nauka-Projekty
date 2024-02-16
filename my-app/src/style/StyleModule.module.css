@@ -48,4 +48,9 @@
   height: 57px;
   text-align: center;
   align-items: center;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
 }
