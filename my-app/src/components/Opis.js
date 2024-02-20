@@ -1,5 +1,6 @@
 import React from 'react'
 import classes from '../style/StyleModule.module.css'
+import opis from '../assets/opis.jpg'
 
 export const Opis = () => {
   return (
