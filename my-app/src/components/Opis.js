@@ -13,7 +13,9 @@ export const Opis = () => {
         <p>Druga część to test złożony z pytań jednokrotnego wyboru</p>
         <p>Natomiast trzecia część ostatnia to też pytania jednokrotnego wyboru. </p>
         <p>Nie pozostaje mi nic innego jak życzyć powodzenia! </p>
+      <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignContent: 'center', alignItems: 'center'}}>
       <img src={opis} alt="opis" className={classes.imgOpis}/>
+      </div>
       </div>
     </div>
   )
