@@ -93,6 +93,11 @@
   height: 60vh;
   border-radius: 15px;
 }
+.imgPrzyklad3 {
+  width: 40vh;
+  height: 50vh;
+  border-radius: 15px;
+}
 
 .divPrzyklad{
   display: flex;
