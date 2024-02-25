@@ -93,3 +93,11 @@
   height: 60vh;
   border-radius: 15px;
 }
+
+.divPrzyklad{
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
