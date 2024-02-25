@@ -15,7 +15,9 @@ export const Przyklad = () => {
       </div>
       <p>Po wpisaniu numerków klikamy przycisk Zatwierdź i jeśli jest dobrze do przechodzimy do drugiego zadania</p>
       <p>Część 2 zadania</p>
+      <div className={classes.divPrzyklad}>
       <img src={przyklad2} alt="przyklad1" className={classes.imgPrzyklad} />
+      </div>
       <p>W tej części wybieramy jedną prawidłową odpowiedź. A następnie klikamy przycisk Zatwierdź. Jeśli odpowiedzi są prawidłowe to przechodzimy do ostatniego zadania</p>
     </div>
   )
