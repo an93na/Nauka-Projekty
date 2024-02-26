@@ -24,7 +24,7 @@ export const Przyklad = () => {
       <div className={classes.divPrzyklad}>
       <img src={przyklad3} alt="przyklad1" className={classes.imgPrzyklad3} />
       </div>
-      <p>W tej części wybieramy jedną prawidłową odpowiedź z rozwijanej listy. Następnie klikamy przycisk Zatwierdź. Jeśli odpowiedzi są prawidłowe to udało Ci się ukończyć całe zadanie.</p>
+      <p>W tej części wybieramy jedną prawidłową odpowiedź z rozwijanej listy. Następnie klikamy przycisk Sprawdź. Jeśli odpowiedzi są prawidłowe to udało Ci się ukończyć całe zadanie.</p>
       <p>Jeśli gdzieś się pomylisz lub chcesz spróbować jeszcze raz to kliknij przycisk Reset albo wyczyść, po sekcji ktorą chcesz poprawić</p>
     </div>
   )
