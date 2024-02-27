@@ -14,22 +14,22 @@ export const Zadanie1 = () => {
                 <div className={classes.zadDiv}>
                     <h5>Szybkie podejmowanie decyzji</h5>
                     <img src={z1a} alt="szybkie podejmowanie decyzji" className={classes.imgZad1} />
-                    <input type="text" />
+                    <input type="text" className={classes.pZad1}/>
                 </div>
                 <div className={classes.zadDiv}>
                     <h5>Szybkie podejmowanie decyzji</h5>
                     <img src={z1a} alt="szybkie podejmowanie decyzji" className={classes.imgZad1} />
-                    <input type="text" />
+                    <input type="text" className={classes.pZad1} />
                 </div>
                 <div className={classes.zadDiv}>
                     <h5>Szybkie podejmowanie decyzji</h5>
                     <img src={z1a} alt="szybkie podejmowanie decyzji" className={classes.imgZad1} />
-                    <input type="text" />
+                    <input type="text" className={classes.pZad1}/>
                 </div>
                 <div className={classes.zadDiv}>
                     <h5>Szybkie podejmowanie decyzji</h5>
                     <img src={z1a} alt="szybkie podejmowanie decyzji" className={classes.imgZad1} />
-                    <input type="text" />
+                    <input type="text" className={classes.pZad1}/>
                 </div>
             </div>
         </div>
