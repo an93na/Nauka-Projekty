@@ -111,3 +111,17 @@
   margin-bottom: 5px;
   line-height: 1.5;
 }
+.zadDiv{
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid white;
+  padding: 10px;
+  border-radius: 10px;
+  width: 40%;
+}
+.imgZad1{
+  width: 50%;
+}
