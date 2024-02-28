@@ -121,10 +121,13 @@
   padding: 10px;
   border-radius: 10px;
   width: 40%;
+  height: 100%;
   text-align: center;
 }
 .imgZad1 {
-  width: 50%;
+  width: 40%;
+  height: 70%;
+  border-radius: 5px;
 }
 .pZad1 {
   width: 30%;
