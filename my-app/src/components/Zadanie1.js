@@ -6,11 +6,14 @@ import z1d from '../assets/zad1d.jpg'
 import classes from '../style/StyleModule.module.css'
 
 export const Zadanie1 = () => {
+    const onSubmit = (e) => {
+        e.preventDefault()
+    }
     return (
         <div>
             <p>Część I</p>
             <p>W CV w umiejętnościach miękkich wymieniłam trzy najważniejsze cechy jakie posiadam. Twoim zadaniem jest uporządkować je w tej samej kolejności. Słusznie zauważyłeś, że tam były trzy cechy, a tu jest cztery. Ta czwarta to bonus i powinna się znaleźć na końcu.</p>
-            <form action="" style={{textAlign: 'center'}}>
+            <form action="" style={{textAlign: 'center'}} onSubmit={onSubmit}>
                 <div style={{ display: 'flex', flexWrap: 'wrap', alignContent: 'center', justifyContent: 'center', alignItems: 'center' }}>
                     <div className={classes.zadDiv} style={{ height: '40vh' }}>
                         <h5>praca zespołowa</h5>
