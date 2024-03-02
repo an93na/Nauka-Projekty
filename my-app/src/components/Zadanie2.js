@@ -6,75 +6,73 @@ export const Zadanie2 = () => {
         <div>
             <p>Część II</p>
             <p>W tym zadaniu należy wybrać jedną prawidłową odpowiedź. Nie ma łatwo ponieważ tutaj zakresem wiedzy jest całe moje CV.</p>
-            <form action="" style={{display: 'flex', flexDirection: 'column'}}>
+            <form action="" style={{ display: 'flex', flexDirection: 'column' }}>
                 <p>1) Ile umiejętności technicznych wymieniłam?</p>
                 <label>
-                    <input type='radio' /> 1
+                    <input type='radio' name='1' /> 1
                 </label>
                 <label>
-                    <input type='radio' /> 2
+                    <input type='radio' name='1' /> 2
                 </label>
                 <label>
-                    <input type='radio' /> 3
+                    <input type='radio' name='1' /> 3
                 </label>
                 <label>
-                    <input type='radio' /> 4
+                    <input type='radio' name='1' /> 4
                 </label>
                 <p>2) Jakie jest moje wykształcenie?</p>
                 <label>
-                    <input type='radio' /> inżynier
+                    <input type='radio' name='2' /> inżynier
                 </label>
                 <label>
-                    <input type='radio' /> magister
+                    <input type='radio' name='2' /> magister
                 </label>
                 <label>
-                    <input type='radio' /> magister inżynier
+                    <input type='radio' name='2' /> magister inżynier
                 </label>
                 <label>
-                    <input type='radio' /> doktor
+                    <input type='radio' name='2' /> doktor
                 </label>
                 <p>3) Jaki kierunek studiowałam jako ostatni?</p>
                 <label>
-                    <input type='radio' /> Nawigacja Morska
+                    <input type='radio' name='3' /> Nawigacja Morska
                 </label>
                 <label>
-                    <input type='radio' /> Hydrografia
+                    <input type='radio' name='3' /> Hydrografia
                 </label>
                 <label>
-                    <input type='radio' /> Technologie Kosmiczne i Satelitarne
+                    <input type='radio' name='3' /> Technologie Kosmiczne i Satelitarne
                 </label>
                 <label>
-                    <input type='radio' /> Informatyka
+                    <input type='radio' name='3' /> Informatyka
                 </label>
                 <p>4) W którym roku uczestniczyłam w kursie Front-end developer?</p>
                 <label>
-                    <input type='radio' /> 2020/2021
+                    <input type='radio' name='4' /> 2020/2021
                 </label>
                 <label>
-                    <input type='radio' /> 2021/2022
+                    <input type='radio' name='4' /> 2021/2022
                 </label>
                 <label>
-                    <input type='radio' /> 2022/2023
+                    <input type='radio' name='4' /> 2022/2023
                 </label>
                 <label>
-                    <input type='radio' /> 2023/2024
+                    <input type='radio' name='4' /> 2023/2024
                 </label>
                 <p>5) Jakim jezyku obcy oprócz angielskiego wspominam w CV?</p>
                 <label>
-                    <input type='radio' /> niemiecki
+                    <input type='radio' name='5' /> niemiecki
                 </label>
                 <label>
-                    <input type='radio' /> rosyjski
+                    <input type='radio' name='5' /> rosyjski
                 </label>
                 <label>
-                    <input type='radio' /> francuski
+                    <input type='radio' name='5' /> francuski
                 </label>
                 <label>
-                    <input type='radio' /> hiszpański
+                    <input type='radio' name='5' /> hiszpański
                 </label>
-                <div>
                     <button type='submit' className={classes.btnZ1}>Zatwierdź</button>
-                </div>
             </form>
         </div>
     )
