@@ -6,7 +6,7 @@ export const Zadanie2 = () => {
         <div>
             <p>Część II</p>
             <p>W tym zadaniu należy wybrać jedną prawidłową odpowiedź. Nie ma łatwo ponieważ tutaj zakresem wiedzy jest całe moje CV.</p>
-            <form action="">
+            <form action="" style={{display: 'flex', flexDirection: 'column'}}>
                 <p>1) Ile umiejętności technicznych wymieniłam?</p>
                 <label>
                     <input type='radio' /> 1
