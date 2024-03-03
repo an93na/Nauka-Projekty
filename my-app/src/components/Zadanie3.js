@@ -1,4 +1,5 @@
 import React from 'react'
+import classes from '../style/StyleModule.module.css'
 
 export const Zadanie3 = () => {
   return (
@@ -48,7 +49,7 @@ export const Zadanie3 = () => {
             </select>
           </div>
         </div>
-        <button>Zatwierdź</button>
+        <button className={classes.btnZ1}>Zatwierdź</button>
       </form>
     </div>
   )
