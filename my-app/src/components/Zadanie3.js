@@ -1,5 +1,9 @@
 import React from 'react'
 import classes from '../style/StyleModule.module.css'
+import frameImg from '../assets/zad3a.jpg'
+import angImg from '../assets/zad3b.jpg'
+import mgrImg from '../assets/zad3c.jpg'
+import workImg from '../assets/zad3d.jpg'
 
 export const Zadanie3 = () => {
   return (
