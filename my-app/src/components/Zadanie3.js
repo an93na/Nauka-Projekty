@@ -10,11 +10,11 @@ export const Zadanie3 = () => {
     <div>
       <p>Część III</p>
       <p>Dopasuj nazwy do umiejętności</p>
-      <form action="" style={{textAlign: 'center'}}>
-        <div style={{display: 'flex', flexDirection: 'row', gap: '5px', flexWrap: 'wrap'}}>
+      <form action="" style={{ textAlign: 'center' }}>
+        <div style={{ display: 'flex', flexDirection: 'row', gap: '5px', flexWrap: 'wrap' }}>
           <div className={classes.divZad3}>
             <p>Framework</p>
-            <img src="" alt="" />
+            <img src={frameImg} alt="framework" className={classes.imgZad3} />
             <select name="" id="">
               <option value="" hidden>Wybierz</option>
               <option value="1">React</option>
@@ -24,7 +24,7 @@ export const Zadanie3 = () => {
           </div>
           <div className={classes.divZad3}>
             <p>Angielski</p>
-            <img src="" alt="" />
+            <img src={angImg} alt="angielski" className={classes.imgZad3} />
             <select name="" id="">
               <option value="" hidden>Wybierz</option>
               <option value="1">A1/A2</option>
@@ -34,7 +34,7 @@ export const Zadanie3 = () => {
           </div>
           <div className={classes.divZad3}>
             <p>Magister(ile?)</p>
-            <img src="" alt="" />
+            <img src={mgrImg} alt="magister" className={classes.imgZad3} />
             <select name="" id="">
               <option value="" hidden>Wybierz</option>
               <option value="1">0</option>
@@ -44,7 +44,7 @@ export const Zadanie3 = () => {
           </div>
           <div className={classes.divZad3}>
             <p>Praca obecna</p>
-            <img src="" alt="" />
+            <img src={workImg} alt="praca obecna" className={classes.imgZad3} />
             <select name="" id="">
               <option value="" hidden>Wybierz</option>
               <option value="1">Marynarz</option>
