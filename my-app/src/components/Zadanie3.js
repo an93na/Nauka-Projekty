@@ -7,8 +7,8 @@ export const Zadanie3 = () => {
       <p>Część III</p>
       <p>Dopasuj nazwy do umiejętności</p>
       <form action="" style={{textAlign: 'center'}}>
-        <div style={{display: 'flex', flexDirection: 'row', gap: '5px'}}>
-          <div>
+        <div style={{display: 'flex', flexDirection: 'row', gap: '5px', flexWrap: 'wrap'}}>
+          <div className={classes.divZad3}>
             <p>Framework</p>
             <img src="" alt="" />
             <select name="" id="">
@@ -18,7 +18,7 @@ export const Zadanie3 = () => {
               <option value="3">Django</option>
             </select>
           </div>
-          <div>
+          <div className={classes.divZad3}>
             <p>Angielski</p>
             <img src="" alt="" />
             <select name="" id="">
@@ -28,7 +28,7 @@ export const Zadanie3 = () => {
               <option value="3">C1/C2</option>
             </select>
           </div>
-          <div>
+          <div className={classes.divZad3}>
             <p>Magister(ile?)</p>
             <img src="" alt="" />
             <select name="" id="">
@@ -38,7 +38,7 @@ export const Zadanie3 = () => {
               <option value="3">2</option>
             </select>
           </div>
-          <div>
+          <div className={classes.divZad3}>
             <p>Praca obecna</p>
             <img src="" alt="" />
             <select name="" id="">
