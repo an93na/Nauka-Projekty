@@ -13,7 +13,7 @@ export const Zadanie3 = () => {
       <form action="" style={{ textAlign: 'center' }}>
         <div style={{ display: 'flex', flexDirection: 'row', gap: '5px', flexWrap: 'wrap', alignContent: 'center', justifyContent: 'center', alignItems: 'center' }}>
           <div className={classes.divZad3}>
-            <p>Framework</p>
+            <h4>Framework</h4>
             <img src={frameImg} alt="framework" className={classes.imgZad3} />
             <select name="" id="">
               <option value="" hidden>Wybierz</option>
@@ -23,7 +23,7 @@ export const Zadanie3 = () => {
             </select>
           </div>
           <div className={classes.divZad3}>
-            <p>Angielski</p>
+            <h4>Angielski</h4>
             <img src={angImg} alt="angielski" className={classes.imgZad3} />
             <select name="" id="">
               <option value="" hidden>Wybierz</option>
@@ -33,7 +33,7 @@ export const Zadanie3 = () => {
             </select>
           </div>
           <div className={classes.divZad3}>
-            <p>Magister(ile?)</p>
+            <h4>Magister(ile?)</h4>
             <img src={mgrImg} alt="magister" className={classes.imgZad3} />
             <select name="" id="">
               <option value="" hidden>Wybierz</option>
@@ -43,7 +43,7 @@ export const Zadanie3 = () => {
             </select>
           </div>
           <div className={classes.divZad3}>
-            <p>Praca obecna</p>
+            <h4>Praca obecna</h4>
             <img src={workImg} alt="praca obecna" className={classes.imgZad3} />
             <select name="" id="">
               <option value="" hidden>Wybierz</option>
