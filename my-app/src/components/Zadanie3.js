@@ -11,7 +11,7 @@ export const Zadanie3 = () => {
       <p>Część III</p>
       <p>Dopasuj nazwy do umiejętności</p>
       <form action="" style={{ textAlign: 'center' }}>
-        <div style={{ display: 'flex', flexDirection: 'row', gap: '5px', flexWrap: 'wrap' }}>
+        <div style={{ display: 'flex', flexDirection: 'row', gap: '5px', flexWrap: 'wrap', alignContent: 'center', justifyContent: 'center', alignItems: 'center' }}>
           <div className={classes.divZad3}>
             <p>Framework</p>
             <img src={frameImg} alt="framework" className={classes.imgZad3} />
