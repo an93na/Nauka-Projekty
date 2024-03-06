@@ -7,124 +7,123 @@ export const Zadanie4 = () => {
       <p>Krzyżówka</p>
       <form action="">
         <div style={{ display: 'flex', flexDirection: 'row', width: '100%' }}>
-          <div style={{ display: 'flex', flexDirection: 'column' }}>
-            <input type="text" />
-            <input type="text" />
-            <input type="text" />
-            <input type="text" />
-            <input type="text" />
-            <input type="text" />
-            <input type="text" />
-            <input type="text" />
-            <input type="text" />
-            <input type="text" />
-            <input type="text" />
+          <div style={{ display: 'flex', flexDirection: 'column', width: '50%' }}>
+            <input type="text" className={classes.krzyz}/>
+            <input type="text" className={classes.krzyz}/>
+            <input type="text" className={classes.krzyz}/>
+            <input type="text" className={classes.krzyz}/>
+            <input type="text" className={classes.krzyz}/>
+            <input type="text" className={classes.krzyz}/>
+            <input type="text" className={classes.krzyz}/>
+            <input type="text" className={classes.krzyz}/>
+            <input type="text" className={classes.krzyz}/>
+            <input type="text" className={classes.krzyz}/>
+            <input type="text" className={classes.krzyz}/>
           </div>
-          <div style={{ display: 'flex', flexDirection: 'column' }}>
-            <input type="text" />
-            <input type="text" />
-            <input type="text" />
-            <input type="text" />
-            <input type="text" />
-            <input type="text" />
-            <input type="text" />
-            <input type="text" />
-            <input type="text" />
-            <input type="text" />
-            <input type="text" />
+          <div style={{ display: 'flex', flexDirection: 'column', width: '50%'}}>
+            <input type="text" className={classes.krzyz}/>
+            <input type="text" className={classes.krzyz}/>
+            <input type="text" className={classes.krzyz}/>
+            <input type="text" className={classes.krzyz}/>
+            <input type="text" className={classes.krzyz}/>
+            <input type="text" className={classes.krzyz}/>
+            <input type="text" className={classes.krzyz}/>
+            <input type="text" className={classes.krzyz}/>
+            <input type="text" className={classes.krzyz}/>
+            <input type="text" className={classes.krzyz}/>
+            <input type="text" className={classes.krzyz}/>
           </div>
-          <div style={{ display: 'flex', flexDirection: 'column' }}>
-            <input type="text" />
-            <input type="text" />
-            <input type="text" />
-            <input type="text" />
-            <input type="text" />
-            <input type="text" />
-            <input type="text" />
-            <input type="text" />
-            <input type="text" />
-            <input type="text" />
-            <input type="text" />
+          <div style={{ display: 'flex', flexDirection: 'column', width: '50%' }}>
+            <input type="text" className={classes.krzyz}/>
+            <input type="text" className={classes.krzyz}/>
+            <input type="text" className={classes.krzyz}/>
+            <input type="text" className={classes.krzyz}/>
+            <input type="text" className={classes.krzyz}/>
+            <input type="text" className={classes.krzyz}/>
+            <input type="text" className={classes.krzyz}/>
+            <input type="text" className={classes.krzyz}/>
+            <input type="text" className={classes.krzyz}/>
+            <input type="text" className={classes.krzyz}/>
+            <input type="text" className={classes.krzyz}/>
           </div>
-          <div style={{ display: 'flex', flexDirection: 'column' }}>
-            <input type="text" />
-            <input type="text" />
-            <input type="text" />
-            <input type="text" />
-            <input type="text" />
-            <input type="text" />
-            <input type="text" />
-            <input type="text" />
-            <input type="text" />
-            <input type="text" />
-            <input type="text" />
+          <div style={{ display: 'flex', flexDirection: 'column', width: '50%' }}>
+            <input type="text" className={classes.krzyz}/>
+            <input type="text" className={classes.krzyz}/>
+            <input type="text" className={classes.krzyz}/>
+            <input type="text" className={classes.krzyz}/>
+            <input type="text" className={classes.krzyz}/>
+            <input type="text" className={classes.krzyz}/>
+            <input type="text" className={classes.krzyz}/>
+            <input type="text" className={classes.krzyz}/>
+            <input type="text" className={classes.krzyz}/>
+            <input type="text" className={classes.krzyz}/>
+            <input type="text" className={classes.krzyz}/>
           </div>
-          <div style={{ display: 'flex', flexDirection: 'column' }}>
-            <input type="text" />
-            <input type="text" />
-            <input type="text" />
-            <input type="text" />
-            <input type="text" />
-            <input type="text" />
-            <input type="text" />
-            <input type="text" />
-            <input type="text" />
-            <input type="text" />
-            <input type="text" />
+          <div style={{ display: 'flex', flexDirection: 'column', width: '50%' }}>
+            <input type="text" className={classes.krzyz}/>
+            <input type="text" className={classes.krzyz}/>
+            <input type="text" className={classes.krzyz}/>
+            <input type="text" className={classes.krzyz}/>
+            <input type="text" className={classes.krzyz}/>
+            <input type="text" className={classes.krzyz}/>
+            <input type="text" className={classes.krzyz}/>
+            <input type="text" className={classes.krzyz}/>
+            <input type="text" className={classes.krzyz}/>
+            <input type="text" className={classes.krzyz}/>
+            <input type="text" className={classes.krzyz}/>
           </div>
-          <div style={{ display: 'flex', flexDirection: 'column' }}>
-            <input type="text" />
-            <input type="text" />
-            <input type="text" />
-            <input type="text" />
-            <input type="text" />
-            <input type="text" />
-            <input type="text" />
-            <input type="text" />
-            <input type="text" />
-            <input type="text" />
-            <input type="text" />
+          <div style={{ display: 'flex', flexDirection: 'column', width: '50%' }}>
+            <input type="text" className={classes.krzyz}/>
+            <input type="text" className={classes.krzyz}/>
+            <input type="text" className={classes.krzyz}/>
+            <input type="text" className={classes.krzyz}/>
+            <input type="text" className={classes.krzyz}/>
+            <input type="text" className={classes.krzyz}/>
+            <input type="text" className={classes.krzyz}/>
+            <input type="text" className={classes.krzyz}/>
+            <input type="text" className={classes.krzyz}/>
+            <input type="text" className={classes.krzyz}/>
+            <input type="text" className={classes.krzyz}/>
           </div>
-          <div style={{ display: 'flex', flexDirection: 'column' }}>
-            <input type="text" />
-            <input type="text" />
-            <input type="text" />
-            <input type="text" />
-            <input type="text" />
-            <input type="text" />
-            <input type="text" />
-            <input type="text" />
-            <input type="text" />
-            <input type="text" />
-            <input type="text" />
+          <div style={{ display: 'flex', flexDirection: 'column', width: '50%' }}>
+            <input type="text" className={classes.krzyz}/>
+            <input type="text" className={classes.krzyz}/>
+            <input type="text" className={classes.krzyz}/>
+            <input type="text" className={classes.krzyz}/>
+            <input type="text" className={classes.krzyz}/>
+            <input type="text" className={classes.krzyz}/>
+            <input type="text" className={classes.krzyz}/>
+            <input type="text" className={classes.krzyz}/>
+            <input type="text" className={classes.krzyz}/>
+            <input type="text" className={classes.krzyz}/>
+            <input type="text" className={classes.krzyz}/>
           </div>
-          <div style={{ display: 'flex', flexDirection: 'column' }}>
-            <input type="text" />
-            <input type="text" />
-            <input type="text" />
-            <input type="text" />
-            <input type="text" />
-            <input type="text" />
-            <input type="text" />
-            <input type="text" />
-            <input type="text" />
-            <input type="text" />
-            <input type="text" />
+          <div style={{ display: 'flex', flexDirection: 'column', width: '50%' }}>
+            <input type="text" className={classes.krzyz}/>
+            <input type="text" className={classes.krzyz}/>
+            <input type="text" className={classes.krzyz}/>
+            <input type="text" className={classes.krzyz}/>
+            <input type="text" className={classes.krzyz}/>
+            <input type="text" className={classes.krzyz}/>
+            <input type="text" className={classes.krzyz}/>
+            <input type="text" className={classes.krzyz}/>
+            <input type="text" className={classes.krzyz}/>
+            <input type="text" className={classes.krzyz}/>
+            <input type="text" className={classes.krzyz}/>
           </div>
-          <div style={{ display: 'flex', flexDirection: 'column' }}>
-            <input type="text" />
-            <input type="text" />
-            <input type="text" />
-            <input type="text" />
-            <input type="text" />
-            <input type="text" />
-            <input type="text" />
-            <input type="text" />
-            <input type="text" />
-            <input type="text" />
-            <input type="text" />
+          <div style={{ display: 'flex', flexDirection: 'column', width: '50%'}}>
+            <input type="text" className={classes.krzyz}/>
+            <input type="text" className={classes.krzyz}/>
+            <input type="text" className={classes.krzyz}/>
+            <input type="text" className={classes.krzyz}/>
+            <input type="text" className={classes.krzyz}/>
+            <input type="text" className={classes.krzyz}/>
+            <input type="text" className={classes.krzyz}/>
+            <input type="text" className={classes.krzyz}/>
+            <input type="text" className={classes.krzyz}/>
+            <input type="text" className={classes.krzyz}/>
+            <input type="text" className={classes.krzyz}/>
           </div>
-
         </div>
       </form>
     </div>
