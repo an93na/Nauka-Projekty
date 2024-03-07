@@ -20,8 +20,9 @@ export const Zadanie4 = () => {
         </div>
         <div style={{ display: 'flex', flexDirection: 'row', width: '100%' }}>
           <div className={classes.krzyz} ></div>
-          <input type="text" className={classes.krzyz} />
-          <input type="text" className={classes.krzyz} />
+          <div className={classes.krzyz} ></div>
+          <div className={classes.krzyz} ></div>
+
           <input type="text" className={classes.krzyz} />
           <input type="text" className={classes.krzyz} />
           <input type="text" className={classes.krzyz} />
