@@ -12,7 +12,6 @@ export const Zadanie = () => {
       <Zadanie1 />
       <Zadanie2 />
       <Zadanie3 />
-      <Zadanie4 />
     </div>
   )
 }
