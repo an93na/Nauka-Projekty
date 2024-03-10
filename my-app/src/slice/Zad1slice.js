@@ -16,9 +16,10 @@ export const Zad1Slice = createSlice({
         odpTwo: (state, action) => { state.two = action.payload },
         odpThree: (state, action) => { state.three = action.payload },
         odpFour: (state, action) => { state.four = action.payload },
-        actionSubmit: (state) => { state.submit = true }
+        actionSubmit: (state) => { state.submit = true },
+        resetState: () => { return initialState }
     }
 })
 
-export const { odpOne, odpTwo, odpThree, odpFour, actionSubmit } = Zad1Slice.actions
+export const { odpOne, odpTwo, odpThree, odpFour, actionSubmit, resetState } = Zad1Slice.actions
 export default Zad1Slice.reducer
