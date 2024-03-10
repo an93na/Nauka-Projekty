@@ -7,7 +7,12 @@ import classes from '../style/StyleModule.module.css'
 import { UseSelector, useDispatch, useSelector } from 'react-redux'
 export const Zadanie1 = () => {
     const valueOne = useSelector(state => state.zad1.one)
+    const valueTwo = useSelector(state => state.zad1.two)
+    const valueThree = useSelector(state => state.zad1.three)
+    const valueFour = useSelector(state => state.zad1.four)
+    const valueSubmit = useSelector(state => state.zad1.submit)
     const dispatch = useDispatch()
+
     const onSubmit = (e) => {
         e.preventDefault()
     }
@@ -15,7 +20,7 @@ export const Zadanie1 = () => {
         <div>
             <p>Część I</p>
             <p>W CV w umiejętnościach miękkich wymieniłam trzy najważniejsze cechy jakie posiadam. Twoim zadaniem jest uporządkować je w tej samej kolejności. Słusznie zauważyłeś, że tam były trzy cechy, a tu jest cztery. Ta czwarta to bonus i powinna się znaleźć na końcu.</p>
-            <form action="" style={{textAlign: 'center'}} onSubmit={onSubmit}>
+            <form action="" style={{ textAlign: 'center' }} onSubmit={onSubmit}>
                 <div style={{ display: 'flex', flexWrap: 'wrap', alignContent: 'center', justifyContent: 'center', alignItems: 'center' }}>
                     <div className={classes.zadDiv} style={{ height: '40vh' }}>
                         <h5>praca zespołowa</h5>
@@ -38,7 +43,7 @@ export const Zadanie1 = () => {
                         <input type="text" className={classes.pZad1} />
                     </div>
                 </div>
-                <button type='submit'className={classes.btnZ1}>Zatwierdź</button>
+                <button type='submit' className={classes.btnZ1}>Zatwierdź</button>
             </form>
         </div>
     )
