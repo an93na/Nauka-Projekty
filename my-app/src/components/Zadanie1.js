@@ -5,7 +5,7 @@ import z1c from '../assets/zad1c.jpg'
 import z1d from '../assets/zad1d.jpg'
 import classes from '../style/StyleModule.module.css'
 import { UseSelector, useDispatch, useSelector } from 'react-redux'
-import { odpOne } from '../slice/Zad1slice'
+import { odpFour, odpOne, odpThree, odpTwo } from '../slice/Zad1slice'
 export const Zadanie1 = () => {
     const valueOne = useSelector(state => state.zad1.one)
     const valueTwo = useSelector(state => state.zad1.two)
@@ -31,17 +31,17 @@ export const Zadanie1 = () => {
                     <div className={classes.zadDiv} style={{ height: '40vh' }}>
                         <h5>komunikatywność i zaangażowanie</h5>
                         <img src={z1b} alt="szybkie podejmowanie decyzji" className={classes.imgZad1} />
-                        <input type="text" className={classes.pZad1} />
+                        <input type="text" className={classes.pZad1} value={valueTwo} onChange={(e) => dispatch(odpTwo(e.target.value))}/>
                     </div>
                     <div className={classes.zadDiv} style={{ height: '40vh' }}>
                         <h5>szybkie podejmowanie decyzji</h5>
                         <img src={z1c} alt="szybkie podejmowanie decyzji" className={classes.imgZad1} />
-                        <input type="text" className={classes.pZad1} />
+                        <input type="text" className={classes.pZad1} value={valueThree} onChange={(e) => dispatch(odpThree(e.target.value))}/>
                     </div>
                     <div className={classes.zadDiv} style={{ height: '40vh' }}>
                         <h5>kreatywność i analityczne myślenie</h5>
                         <img src={z1d} alt="szybkie podejmowanie decyzji" className={classes.imgZad1} />
-                        <input type="text" className={classes.pZad1} />
+                        <input type="text" className={classes.pZad1} value={valueFour} onChange={(e) => dispatch(odpFour(e.target.value))}/>
                     </div>
                 </div>
                 <button type='submit' className={classes.btnZ1}>Zatwierdź</button>
