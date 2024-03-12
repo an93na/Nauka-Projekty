@@ -5,7 +5,7 @@ import z1c from '../assets/zad1c.jpg'
 import z1d from '../assets/zad1d.jpg'
 import classes from '../style/StyleModule.module.css'
 import { UseSelector, useDispatch, useSelector } from 'react-redux'
-import { actionSubmit, odpFour, odpOne, odpThree, odpTwo } from '../slice/Zad1slice'
+import { actionSubmit, actionSubmitted, odpFour, odpOne, odpThree, odpTwo } from '../slice/Zad1slice'
 export const Zadanie1 = () => {
     const valueOne = useSelector(state => state.zad1.one)
     const valueTwo = useSelector(state => state.zad1.two)
@@ -17,6 +17,7 @@ export const Zadanie1 = () => {
     const onSubmit = (e) => {
         e.preventDefault()
         dispatch(actionSubmit())
+        dispatch(actionSubmitted())
     }
     return (
         <div>
