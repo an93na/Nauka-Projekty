@@ -16,6 +16,7 @@ export const Zadanie1 = () => {
 
     const onSubmit = (e) => {
         e.preventDefault()
+        dispatch(actionSubmit())
     }
     return (
         <div>
@@ -44,7 +45,7 @@ export const Zadanie1 = () => {
                         <input type="text" className={classes.pZad1} value={valueFour} onChange={(e) => dispatch(odpFour(e.target.value))}/>
                     </div>
                 </div>
-                <button type='submit' className={classes.btnZ1} onClick={() => dispatch(actionSubmit())}>Zatwierdź</button>
+                <button type='submit' className={classes.btnZ1}>Zatwierdź</button>
             </form>
         </div>
     )
