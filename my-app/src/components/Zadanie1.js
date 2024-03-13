@@ -15,7 +15,7 @@ export const Zadanie1 = () => {
     const dispatch = useDispatch()
 
     const odpowiedzi = () => {
-        if(valueOne === 1 && valueTwo === 4 && valueThree === 3 && valueFour === 2){
+        if(valueOne === '1' && valueTwo === '4' && valueThree === '3' && valueFour === '2'){
             return '1'
         }
         return '0'
