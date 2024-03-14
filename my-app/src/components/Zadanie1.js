@@ -15,16 +15,26 @@ export const Zadanie1 = () => {
     const dispatch = useDispatch()
 
     const odpowiedzi = () => {
-        if(valueOne === '1' && valueTwo === '4' && valueThree === '3' && valueFour === '2'){
+        if (valueOne === '1' && valueTwo === '4' && valueThree === '3' && valueFour === '2') {
             return '1'
         }
         return '0'
+    }
+
+    const napiszWiadomosc = (a) => {
+        if (a === '1') {
+            return "Świetnie! Kliknij przycisk Dalej aby zobaczyć kolejną część zadania"
+        }
+        else {
+            return "Niestety nie udało się ale spróbuj jeszcze raz (Kliknij przycisk Reset aby zresetować sekcje)"
+        }
     }
 
     const onSubmit = (e) => {
         e.preventDefault()
         dispatch(actionSubmit())
         dispatch(actionSubmitted())
+
     }
     console.log(odpowiedzi())
     return (
@@ -36,22 +46,22 @@ export const Zadanie1 = () => {
                     <div className={classes.zadDiv} style={{ height: '40vh' }}>
                         <h5>praca zespołowa</h5>
                         <img src={z1a} alt="szybkie podejmowanie decyzji" className={classes.imgZad1} />
-                        <input type="text" className={classes.pZad1} value={valueOne} onChange={(e) => dispatch(odpOne(e.target.value))}/>
+                        <input type="text" className={classes.pZad1} value={valueOne} onChange={(e) => dispatch(odpOne(e.target.value))} />
                     </div>
                     <div className={classes.zadDiv} style={{ height: '40vh' }}>
                         <h5>komunikatywność i zaangażowanie</h5>
                         <img src={z1b} alt="szybkie podejmowanie decyzji" className={classes.imgZad1} />
-                        <input type="text" className={classes.pZad1} value={valueTwo} onChange={(e) => dispatch(odpTwo(e.target.value))}/>
+                        <input type="text" className={classes.pZad1} value={valueTwo} onChange={(e) => dispatch(odpTwo(e.target.value))} />
                     </div>
                     <div className={classes.zadDiv} style={{ height: '40vh' }}>
                         <h5>szybkie podejmowanie decyzji</h5>
                         <img src={z1c} alt="szybkie podejmowanie decyzji" className={classes.imgZad1} />
-                        <input type="text" className={classes.pZad1} value={valueThree} onChange={(e) => dispatch(odpThree(e.target.value))}/>
+                        <input type="text" className={classes.pZad1} value={valueThree} onChange={(e) => dispatch(odpThree(e.target.value))} />
                     </div>
                     <div className={classes.zadDiv} style={{ height: '40vh' }}>
                         <h5>kreatywność i analityczne myślenie</h5>
                         <img src={z1d} alt="szybkie podejmowanie decyzji" className={classes.imgZad1} />
-                        <input type="text" className={classes.pZad1} value={valueFour} onChange={(e) => dispatch(odpFour(e.target.value))}/>
+                        <input type="text" className={classes.pZad1} value={valueFour} onChange={(e) => dispatch(odpFour(e.target.value))} />
                     </div>
                 </div>
                 <button type='submit' className={classes.btnZ1}>Zatwierdź</button>
