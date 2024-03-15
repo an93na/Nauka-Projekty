@@ -66,10 +66,9 @@ export const Zadanie1 = () => {
                 </div>
                 <div>
                     {
-                        
+                        valueSubmit ?
+                            <button className={classes.btnZ1} style={{ marginLeft: '5px' }}>Reset</button> : <button type='submit' className={classes.btnZ1}>Zatwierdź</button>
                     }
-                <button type='submit' className={classes.btnZ1}>Zatwierdź</button>
-                <button className={classes.btnZ1} style={{marginLeft: '5px'}}>Reset</button>
                 </div>
             </form>
             {valueSubmit ? <p>{napiszWiadomosc(odpowiedzi())}</p> : <></>}
