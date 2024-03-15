@@ -64,7 +64,13 @@ export const Zadanie1 = () => {
                         <input type="text" className={classes.pZad1} value={valueFour} onChange={(e) => dispatch(odpFour(e.target.value))} />
                     </div>
                 </div>
+                <div>
+                    {
+                        
+                    }
                 <button type='submit' className={classes.btnZ1}>Zatwierdź</button>
+                <button className={classes.btnZ1} style={{marginLeft: '5px'}}>Reset</button>
+                </div>
             </form>
             {valueSubmit ? <p>{napiszWiadomosc(odpowiedzi())}</p> : <></>}
         </div>
