@@ -12,6 +12,7 @@ export const Zadanie1 = () => {
     const valueThree = useSelector(state => state.zad1.three)
     const valueFour = useSelector(state => state.zad1.four)
     const valueSubmit = useSelector(state => state.zad1.submit)
+    const valueSubmitted = useSelector(state => state.zad1.submitted)
     const dispatch = useDispatch()
 
     const odpowiedzi = () => {
@@ -46,26 +47,26 @@ export const Zadanie1 = () => {
                     <div className={classes.zadDiv} style={{ height: '40vh' }}>
                         <h5>praca zespołowa</h5>
                         <img src={z1a} alt="szybkie podejmowanie decyzji" className={classes.imgZad1} />
-                        <input type="text" className={classes.pZad1} value={valueOne} onChange={(e) => dispatch(odpOne(e.target.value))} />
+                        <input type="text" className={classes.pZad1} value={valueOne} onChange={(e) => dispatch(odpOne(e.target.value))} disabled={valueSubmitted} />
                     </div>
                     <div className={classes.zadDiv} style={{ height: '40vh' }}>
                         <h5>komunikatywność i zaangażowanie</h5>
                         <img src={z1b} alt="szybkie podejmowanie decyzji" className={classes.imgZad1} />
-                        <input type="text" className={classes.pZad1} value={valueTwo} onChange={(e) => dispatch(odpTwo(e.target.value))} />
+                        <input type="text" className={classes.pZad1} value={valueTwo} onChange={(e) => dispatch(odpTwo(e.target.value))} disabled={valueSubmitted} />
                     </div>
                     <div className={classes.zadDiv} style={{ height: '40vh' }}>
                         <h5>szybkie podejmowanie decyzji</h5>
                         <img src={z1c} alt="szybkie podejmowanie decyzji" className={classes.imgZad1} />
-                        <input type="text" className={classes.pZad1} value={valueThree} onChange={(e) => dispatch(odpThree(e.target.value))} />
+                        <input type="text" className={classes.pZad1} value={valueThree} onChange={(e) => dispatch(odpThree(e.target.value))} disabled={valueSubmitted} />
                     </div>
                     <div className={classes.zadDiv} style={{ height: '40vh' }}>
                         <h5>kreatywność i analityczne myślenie</h5>
                         <img src={z1d} alt="szybkie podejmowanie decyzji" className={classes.imgZad1} />
-                        <input type="text" className={classes.pZad1} value={valueFour} onChange={(e) => dispatch(odpFour(e.target.value))} />
+                        <input type="text" className={classes.pZad1} value={valueFour} onChange={(e) => dispatch(odpFour(e.target.value))} disabled={valueSubmitted} />
                     </div>
                 </div>
                 <div>
-                    <button type='submit' className={classes.btnZ1}>Zatwierdź</button>
+                    <button type='submit' className={classes.btnZ1} disabled={valueSubmitted}>Zatwierdź</button>
                     {
                         valueSubmit ? <button className={classes.btnZ1} style={{ marginLeft: '5px' }} onClick={() => dispatch(resetState())}>Reset</button> : <></>
                     }
