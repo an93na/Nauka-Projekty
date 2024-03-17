@@ -5,7 +5,7 @@ import z1c from '../assets/zad1c.jpg'
 import z1d from '../assets/zad1d.jpg'
 import classes from '../style/StyleModule.module.css'
 import { useDispatch, useSelector } from 'react-redux'
-import { actionSubmit, actionSubmitted, odpFour, odpOne, odpThree, odpTwo, resetState } from '../slice/Zad1slice'
+import { actionNextTask, actionSubmit, actionSubmitted, odpFour, odpOne, odpThree, odpTwo, resetState } from '../slice/Zad1slice'
 export const Zadanie1 = () => {
     const valueOne = useSelector(state => state.zad1.one)
     const valueTwo = useSelector(state => state.zad1.two)
@@ -13,6 +13,8 @@ export const Zadanie1 = () => {
     const valueFour = useSelector(state => state.zad1.four)
     const valueSubmit = useSelector(state => state.zad1.submit)
     const valueSubmitted = useSelector(state => state.zad1.submitted)
+    const valueNextTask = useSelector(state => state.zad1.nextTask)
+    const valueShowNextTask = useSelector(state => state.zad1.showTask)
     const dispatch = useDispatch()
 
     const odpowiedzi = () => {
@@ -30,14 +32,21 @@ export const Zadanie1 = () => {
             return "Niestety nie udało się ale spróbuj jeszcze raz (Kliknij przycisk Reset aby zresetować sekcje)"
         }
     }
+    const isTaskRight = (a) => {
+        if (a === '1') {
+            dispatch(actionNextTask())
+        }
+    }
 
     const onSubmit = (e) => {
         e.preventDefault()
         dispatch(actionSubmit())
         dispatch(actionSubmitted())
-
+        isTaskRight(odpowiedzi())
     }
     console.log(odpowiedzi())
+
+
     return (
         <div>
             <p>Część I</p>
@@ -72,7 +81,10 @@ export const Zadanie1 = () => {
                     }
                 </div>
             </form>
+            <div style={{textAlign: 'center'}}>
             {valueSubmit ? <p>{napiszWiadomosc(odpowiedzi())}</p> : <></>}
+            {valueNextTask  && <button className={classes.btnZ1}>Dalej</button>}
+            </div>
         </div>
     )
 }
