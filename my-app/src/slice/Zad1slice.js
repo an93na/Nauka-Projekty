@@ -6,7 +6,9 @@ const initialState = {
     three: '',
     four: '',
     submit: false,
-    submitted: false
+    submitted: false,
+    nextTask: false,
+    showTask: false
 }
 
 export const Zad1Slice = createSlice({
@@ -19,6 +21,8 @@ export const Zad1Slice = createSlice({
         odpFour: (state, action) => { state.four = action.payload },
         actionSubmit: (state) => { state.submit = true },
         actionSubmitted: (state) => {state.submitted = true},
+        actionNextTask: (state) => {state.nextTask = true},
+        actionShowNextTask: (state) => {state.showTask = true},
         resetState: () => { return initialState }
     }
 })
