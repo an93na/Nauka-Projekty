@@ -20,12 +20,12 @@ export const Zad1Slice = createSlice({
         odpThree: (state, action) => { state.three = action.payload },
         odpFour: (state, action) => { state.four = action.payload },
         actionSubmit: (state) => { state.submit = true },
-        actionSubmitted: (state) => {state.submitted = true},
-        actionNextTask: (state) => {state.nextTask = true},
-        actionShowNextTask: (state) => {state.showTask = true},
+        actionSubmitted: (state) => { state.submitted = true },
+        actionNextTask: (state) => { state.nextTask = true },
+        actionShowNextTask: (state) => { state.showTask = true },
         resetState: () => { return initialState }
     }
 })
 
-export const { odpOne, odpTwo, odpThree, odpFour, actionSubmit, actionSubmitted, resetState } = Zad1Slice.actions
+export const { odpOne, odpTwo, odpThree, odpFour, actionSubmit, actionSubmitted, actionNextTask, actionShowNextTask, resetState } = Zad1Slice.actions
 export default Zad1Slice.reducer
