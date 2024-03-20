@@ -12,7 +12,13 @@ const initialState = {
 export const zad2Slice = createSlice({
     name: 'zadanie2',
     initialState: initialState,
-    reducers: {}
+    reducers: {
+        one: (state, action) => {state.one = action.payload},
+        two: (state, action) => {state.two = action.payload},
+        three: (state, action) => {state.three = action.payload},
+        four: (state, action) => {state.four = action.payload},
+        five: (state, action) => {state.five = action.payload},
+    }
 })
 
 export default zad2Slice.reducer
