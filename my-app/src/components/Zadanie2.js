@@ -6,6 +6,8 @@ export const Zadanie2 = () => {
     const oneValue = UseSelector(state => state.zad2.one);
     const twoValue = useSelector(state => state.zad2.two);
     const threeValue = useSelector(state => state.zad2.three);
+    const fourValue = useSelector(state => state.zad2.four);
+    const fiveValue = useSelector(state => state.zad2.five);
     return (
         <div>
             <p>Część II</p>
