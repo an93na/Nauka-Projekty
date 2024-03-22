@@ -16,16 +16,16 @@ export const Zadanie2 = () => {
                 <div style={{ display: 'flex', flexDirection: 'column', textAlign: 'left' }}>
                     <p>1) Ile umiejętności technicznych wymieniłam?</p>
                     <label>
-                        <input type='radio' name='1' /> 1
+                        <input type='radio' name='1' value={'1'} /> 1
                     </label>
                     <label>
-                        <input type='radio' name='1' /> 2
+                        <input type='radio' name='1' value={'2'} /> 2
                     </label>
                     <label>
-                        <input type='radio' name='1' /> 3
+                        <input type='radio' name='1' value={'3'} /> 3
                     </label>
                     <label>
-                        <input type='radio' name='1' /> 4
+                        <input type='radio' name='1' value={'4'} /> 4
                     </label>
                     <p>2) Jakie jest moje wykształcenie?</p>
                     <label>
