@@ -29,29 +29,29 @@ export const Zadanie2 = () => {
                     </label>
                     <p>2) Jakie jest moje wykształcenie?</p>
                     <label>
-                        <input type='radio' name='2' /> inżynier
+                        <input type='radio' name='2' value={'1'} /> inżynier
                     </label>
                     <label>
-                        <input type='radio' name='2' /> magister
+                        <input type='radio' name='2' value={'2'} /> magister
                     </label>
                     <label>
-                        <input type='radio' name='2' /> magister inżynier
+                        <input type='radio' name='2' value={'3'} /> magister inżynier
                     </label>
                     <label>
-                        <input type='radio' name='2' /> doktor
+                        <input type='radio' name='2' value={'4'} /> doktor
                     </label>
                     <p>3) Jaki kierunek studiowałam jako ostatni?</p>
                     <label>
-                        <input type='radio' name='3' /> Nawigacja Morska
+                        <input type='radio' name='3' value={'1'} /> Nawigacja Morska
                     </label>
                     <label>
-                        <input type='radio' name='3' /> Hydrografia
+                        <input type='radio' name='3' value={'2'} /> Hydrografia
                     </label>
                     <label>
-                        <input type='radio' name='3' /> Technologie Kosmiczne i Satelitarne
+                        <input type='radio' name='3' value={'3'} /> Technologie Kosmiczne i Satelitarne
                     </label>
                     <label>
-                        <input type='radio' name='3' /> Informatyka
+                        <input type='radio' name='3' value={'4'} /> Informatyka
                     </label>
                     <p>4) W którym roku uczestniczyłam w kursie Front-end developer?</p>
                     <label>
