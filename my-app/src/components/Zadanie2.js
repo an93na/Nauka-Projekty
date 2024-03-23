@@ -55,29 +55,29 @@ export const Zadanie2 = () => {
                     </label>
                     <p>4) W którym roku uczestniczyłam w kursie Front-end developer?</p>
                     <label>
-                        <input type='radio' name='4' /> 2020/2021
+                        <input type='radio' name='4' value={'1'} /> 2020/2021
                     </label>
                     <label>
-                        <input type='radio' name='4' /> 2021/2022
+                        <input type='radio' name='4' value={'2'} /> 2021/2022
                     </label>
                     <label>
-                        <input type='radio' name='4' /> 2022/2023
+                        <input type='radio' name='4' value={'3'} /> 2022/2023
                     </label>
                     <label>
-                        <input type='radio' name='4' /> 2023/2024
+                        <input type='radio' name='4' value={'4'} /> 2023/2024
                     </label>
                     <p>5) Jakim jezyku obcy oprócz angielskiego wspominam w CV?</p>
                     <label>
-                        <input type='radio' name='5' /> niemiecki
+                        <input type='radio' name='5' value={'1'} /> niemiecki
                     </label>
                     <label>
-                        <input type='radio' name='5' /> rosyjski
+                        <input type='radio' name='5' value={'2'} /> rosyjski
                     </label>
                     <label>
-                        <input type='radio' name='5' /> francuski
+                        <input type='radio' name='5' value={'3'} /> francuski
                     </label>
                     <label>
-                        <input type='radio' name='5' /> hiszpański
+                        <input type='radio' name='5' value={'4'} /> hiszpański
                     </label>
                 </div>
                 <button type='submit' className={classes.btnZ1}>Zatwierdź</button>
