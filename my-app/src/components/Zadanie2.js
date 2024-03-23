@@ -1,13 +1,15 @@
 import React from 'react'
 import classes from '../style/StyleModule.module.css'
-import { UseSelector, useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
+import { one } from '../slice/Zad2slice';
 
 export const Zadanie2 = () => {
-    const oneValue = UseSelector(state => state.zad2.one);
+    const oneValue = useSelector(state => state.zad2.one);
     const twoValue = useSelector(state => state.zad2.two);
     const threeValue = useSelector(state => state.zad2.three);
     const fourValue = useSelector(state => state.zad2.four);
     const fiveValue = useSelector(state => state.zad2.five);
+    const dispatch = useDispatch()
     return (
         <div>
             <p>Część II</p>
@@ -16,16 +18,16 @@ export const Zadanie2 = () => {
                 <div style={{ display: 'flex', flexDirection: 'column', textAlign: 'left' }}>
                     <p>1) Ile umiejętności technicznych wymieniłam?</p>
                     <label>
-                        <input type='radio' name='1' value={'1'} /> 1
+                        <input type='radio' name='1' value={'1'} onChange={(e)=> dispatch(one(e.target.value))}/> 1
                     </label>
                     <label>
-                        <input type='radio' name='1' value={'2'} /> 2
+                        <input type='radio' name='1' value={'2'} onChange={(e)=> dispatch(one(e.target.value))}/> 2
                     </label>
                     <label>
-                        <input type='radio' name='1' value={'3'} /> 3
+                        <input type='radio' name='1' value={'3'} onChange={(e)=> dispatch(one(e.target.value))}/> 3
                     </label>
                     <label>
-                        <input type='radio' name='1' value={'4'} /> 4
+                        <input type='radio' name='1' value={'4'} onChange={(e)=> dispatch(one(e.target.value))}/> 4
                     </label>
                     <p>2) Jakie jest moje wykształcenie?</p>
                     <label>
