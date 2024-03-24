@@ -1,7 +1,7 @@
 import React from 'react'
 import classes from '../style/StyleModule.module.css'
 import { useDispatch, useSelector } from 'react-redux'
-import { one, two } from '../slice/Zad2slice';
+import { one, three, two } from '../slice/Zad2slice';
 
 export const Zadanie2 = () => {
     const oneValue = useSelector(state => state.zad2.one);
@@ -44,16 +44,16 @@ export const Zadanie2 = () => {
                     </label>
                     <p>3) Jaki kierunek studiowałam jako ostatni?</p>
                     <label>
-                        <input type='radio' name='3' value={'1'} /> Nawigacja Morska
+                        <input type='radio' name='3' value={'1'} onChange={(e) => dispatch(three(e.target.value))} /> Nawigacja Morska
                     </label>
                     <label>
-                        <input type='radio' name='3' value={'2'} /> Hydrografia
+                        <input type='radio' name='3' value={'2'} onChange={(e) => dispatch(three(e.target.value))} /> Hydrografia
                     </label>
                     <label>
-                        <input type='radio' name='3' value={'3'} /> Technologie Kosmiczne i Satelitarne
+                        <input type='radio' name='3' value={'3'} onChange={(e) => dispatch(three(e.target.value))} /> Technologie Kosmiczne i Satelitarne
                     </label>
                     <label>
-                        <input type='radio' name='3' value={'4'} /> Informatyka
+                        <input type='radio' name='3' value={'4'} onChange={(e) => dispatch(three(e.target.value))} /> Informatyka
                     </label>
                     <p>4) W którym roku uczestniczyłam w kursie Front-end developer?</p>
                     <label>
