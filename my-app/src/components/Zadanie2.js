@@ -1,7 +1,7 @@
 import React from 'react'
 import classes from '../style/StyleModule.module.css'
 import { useDispatch, useSelector } from 'react-redux'
-import { one } from '../slice/Zad2slice';
+import { one, two } from '../slice/Zad2slice';
 
 export const Zadanie2 = () => {
     const oneValue = useSelector(state => state.zad2.one);
@@ -18,29 +18,29 @@ export const Zadanie2 = () => {
                 <div style={{ display: 'flex', flexDirection: 'column', textAlign: 'left' }}>
                     <p>1) Ile umiejętności technicznych wymieniłam?</p>
                     <label>
-                        <input type='radio' name='1' value={'1'} onChange={(e)=> dispatch(one(e.target.value))}/> 1
+                        <input type='radio' name='1' value={'1'} onChange={(e) => dispatch(one(e.target.value))} /> 1
                     </label>
                     <label>
-                        <input type='radio' name='1' value={'2'} onChange={(e)=> dispatch(one(e.target.value))}/> 2
+                        <input type='radio' name='1' value={'2'} onChange={(e) => dispatch(one(e.target.value))} /> 2
                     </label>
                     <label>
-                        <input type='radio' name='1' value={'3'} onChange={(e)=> dispatch(one(e.target.value))}/> 3
+                        <input type='radio' name='1' value={'3'} onChange={(e) => dispatch(one(e.target.value))} /> 3
                     </label>
                     <label>
-                        <input type='radio' name='1' value={'4'} onChange={(e)=> dispatch(one(e.target.value))}/> 4
+                        <input type='radio' name='1' value={'4'} onChange={(e) => dispatch(one(e.target.value))} /> 4
                     </label>
                     <p>2) Jakie jest moje wykształcenie?</p>
                     <label>
-                        <input type='radio' name='2' value={'1'} /> inżynier
+                        <input type='radio' name='2' value={'1'} onChange={(e) => dispatch(two(e.target.value))} /> inżynier
                     </label>
                     <label>
-                        <input type='radio' name='2' value={'2'} /> magister
+                        <input type='radio' name='2' value={'2'} onChange={(e) => dispatch(two(e.target.value))} /> magister
                     </label>
                     <label>
-                        <input type='radio' name='2' value={'3'} /> magister inżynier
+                        <input type='radio' name='2' value={'3'} onChange={(e) => dispatch(two(e.target.value))} /> magister inżynier
                     </label>
                     <label>
-                        <input type='radio' name='2' value={'4'} /> doktor
+                        <input type='radio' name='2' value={'4'} onChange={(e) => dispatch(two(e.target.value))} /> doktor
                     </label>
                     <p>3) Jaki kierunek studiowałam jako ostatni?</p>
                     <label>
