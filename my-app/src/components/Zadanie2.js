@@ -1,7 +1,7 @@
 import React from 'react'
 import classes from '../style/StyleModule.module.css'
 import { useDispatch, useSelector } from 'react-redux'
-import { one, three, two } from '../slice/Zad2slice';
+import { four, one, three, two } from '../slice/Zad2slice';
 
 export const Zadanie2 = () => {
     const oneValue = useSelector(state => state.zad2.one);
@@ -57,16 +57,16 @@ export const Zadanie2 = () => {
                     </label>
                     <p>4) W którym roku uczestniczyłam w kursie Front-end developer?</p>
                     <label>
-                        <input type='radio' name='4' value={'1'} /> 2020/2021
+                        <input type='radio' name='4' value={'1'} onChange={(e) => dispatch(four(e.target.value))}/> 2020/2021
                     </label>
                     <label>
-                        <input type='radio' name='4' value={'2'} /> 2021/2022
+                        <input type='radio' name='4' value={'2'} onChange={(e) => dispatch(four(e.target.value))}/> 2021/2022
                     </label>
                     <label>
-                        <input type='radio' name='4' value={'3'} /> 2022/2023
+                        <input type='radio' name='4' value={'3'} onChange={(e) => dispatch(four(e.target.value))}/> 2022/2023
                     </label>
                     <label>
-                        <input type='radio' name='4' value={'4'} /> 2023/2024
+                        <input type='radio' name='4' value={'4'} onChange={(e) => dispatch(four(e.target.value))}/> 2023/2024
                     </label>
                     <p>5) Jakim jezyku obcy oprócz angielskiego wspominam w CV?</p>
                     <label>
