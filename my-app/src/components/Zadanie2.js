@@ -10,11 +10,14 @@ export const Zadanie2 = () => {
     const fourValue = useSelector(state => state.zad2.four);
     const fiveValue = useSelector(state => state.zad2.five);
     const dispatch = useDispatch()
+
+    const onSubmit = (e) => {e.preventDefault()}
+
     return (
         <div>
             <p>Część II</p>
             <p>W tym zadaniu należy wybrać jedną prawidłową odpowiedź. Nie ma łatwo ponieważ tutaj zakresem wiedzy jest całe moje CV.</p>
-            <form action="" style={{ textAlign: 'center' }}>
+            <form action="" style={{ textAlign: 'center' }} onSubmit={onSubmit}>
                 <div style={{ display: 'flex', flexDirection: 'column', textAlign: 'left' }}>
                     <p>1) Ile umiejętności technicznych wymieniłam?</p>
                     <label>
