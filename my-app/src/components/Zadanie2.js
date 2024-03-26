@@ -9,9 +9,13 @@ export const Zadanie2 = () => {
     const threeValue = useSelector(state => state.zad2.three);
     const fourValue = useSelector(state => state.zad2.four);
     const fiveValue = useSelector(state => state.zad2.five);
-    const dispatch = useDispatch()
+    const dispatch = useDispatch();
+    
 
-    const onSubmit = (e) => {e.preventDefault()}
+    const onSubmit = (e) => {
+        e.preventDefault()
+
+    }
 
     return (
         <div>
