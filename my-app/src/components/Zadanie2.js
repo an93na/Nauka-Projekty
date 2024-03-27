@@ -12,10 +12,19 @@ export const Zadanie2 = () => {
     const valueSubmit = useSelector(state => state.zad2.submit)
     const dispatch = useDispatch();
 
+    const odpowiedz = () => {
+        if(oneValue === '1' && twoValue === '2' && threeValue === '2' && fourValue === '2' && fiveValue === '4'){
+            return '1'
+        }
+        else {
+            return '0'
+        }
+    }
 
     const onSubmit = (e) => {
         e.preventDefault()
         dispatch(submit())
+        odpowiedz()
     }
 
     return (
