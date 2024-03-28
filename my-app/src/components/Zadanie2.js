@@ -13,7 +13,7 @@ export const Zadanie2 = () => {
     const dispatch = useDispatch();
 
     const odpowiedz = () => {
-        if(oneValue === '1' && twoValue === '2' && threeValue === '2' && fourValue === '2' && fiveValue === '4'){
+        if (oneValue === '1' && twoValue === '2' && threeValue === '2' && fourValue === '2' && fiveValue === '4') {
             return '1'
         }
         else {
@@ -23,10 +23,10 @@ export const Zadanie2 = () => {
 
     const napisz = (a) => {
         if (a === '1') {
-            return <p>Gratulacje!</p>
+            return "Gratulacje!"
         }
         else {
-            <p>Niestety spróbuj jeszcze raz</p>
+            return "Niestety spróbuj jeszcze raz"
         }
     }
 
@@ -110,7 +110,7 @@ export const Zadanie2 = () => {
                 </div>
                 <button type='submit' className={classes.btnZ1}>Zatwierdź</button>
             </form>
-            {valueSubmit ? <>{napisz(odpowiedz())}</>: <></>}
+            {valueSubmit ? <p>{napisz(odpowiedz())}</p> : <></>}
         </div>
     )
 }
