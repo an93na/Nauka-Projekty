@@ -21,12 +21,21 @@ export const Zadanie2 = () => {
         }
     }
 
+    const napisz = (a) => {
+        if (a === '1') {
+            return <p>Gratulacje!</p>
+        }
+        else {
+            <p>Niestety spróbuj jeszcze raz</p>
+        }
+    }
+
     const onSubmit = (e) => {
         e.preventDefault()
         dispatch(submit())
         odpowiedz()
     }
-
+    console.log(odpowiedz())
     return (
         <div>
             <p>Część II</p>
@@ -101,6 +110,7 @@ export const Zadanie2 = () => {
                 </div>
                 <button type='submit' className={classes.btnZ1}>Zatwierdź</button>
             </form>
+            {valueSubmit ? <>{napisz(odpowiedz())}</>: <></>}
         </div>
     )
 }
