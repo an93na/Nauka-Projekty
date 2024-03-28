@@ -1,7 +1,7 @@
 import React from 'react'
 import classes from '../style/StyleModule.module.css'
 import { useDispatch, useSelector } from 'react-redux'
-import { five, four, one, submit, three, two } from '../slice/Zad2slice';
+import { actionSubmitted, five, four, one, submit, three, two } from '../slice/Zad2slice';
 
 export const Zadanie2 = () => {
     const oneValue = useSelector(state => state.zad2.one);
@@ -10,6 +10,7 @@ export const Zadanie2 = () => {
     const fourValue = useSelector(state => state.zad2.four);
     const fiveValue = useSelector(state => state.zad2.five);
     const valueSubmit = useSelector(state => state.zad2.submit)
+    const isSubmitted = useSelector(state => state.zad2.submitted)
     const dispatch = useDispatch();
 
     const odpowiedz = () => {
@@ -33,6 +34,7 @@ export const Zadanie2 = () => {
     const onSubmit = (e) => {
         e.preventDefault()
         dispatch(submit())
+        dispatch(actionSubmitted())
         odpowiedz()
     }
     console.log(odpowiedz())

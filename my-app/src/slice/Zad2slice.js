@@ -6,7 +6,8 @@ const initialState = {
     three: '',
     four: '',
     five: '',
-    submit: false
+    submit: false,
+    submitted: false
 }
 
 export const zad2Slice = createSlice({
@@ -18,9 +19,10 @@ export const zad2Slice = createSlice({
         three: (state, action) => { state.three = action.payload },
         four: (state, action) => { state.four = action.payload },
         five: (state, action) => { state.five = action.payload },
-        submit: (state) => { state.submit = true }
+        submit: (state) => { state.submit = true },
+        actionSubmitted: (state) => { state.submitted = true }
     }
 })
 
-export const { one, two, three, four, five, submit } = zad2Slice.actions
+export const { one, two, three, four, five, submit, actionSubmitted } = zad2Slice.actions
 export default zad2Slice.reducer
