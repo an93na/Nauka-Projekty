@@ -46,71 +46,71 @@ export const Zadanie2 = () => {
                 <div style={{ display: 'flex', flexDirection: 'column', textAlign: 'left' }}>
                     <p>1) Ile umiejętności technicznych wymieniłam?</p>
                     <label>
-                        <input type='radio' name='1' value={'1'} onChange={(e) => dispatch(one(e.target.value))} /> 1
+                        <input type='radio' name='1' value={'1'} onChange={(e) => dispatch(one(e.target.value))} disabled={isSubmitted} /> 1
                     </label>
                     <label>
-                        <input type='radio' name='1' value={'2'} onChange={(e) => dispatch(one(e.target.value))} /> 2
+                        <input type='radio' name='1' value={'2'} onChange={(e) => dispatch(one(e.target.value))} disabled={isSubmitted} /> 2
                     </label>
                     <label>
-                        <input type='radio' name='1' value={'3'} onChange={(e) => dispatch(one(e.target.value))} /> 3
+                        <input type='radio' name='1' value={'3'} onChange={(e) => dispatch(one(e.target.value))} disabled={isSubmitted} /> 3
                     </label>
                     <label>
-                        <input type='radio' name='1' value={'4'} onChange={(e) => dispatch(one(e.target.value))} /> 4
+                        <input type='radio' name='1' value={'4'} onChange={(e) => dispatch(one(e.target.value))} disabled={isSubmitted} /> 4
                     </label>
                     <p>2) Jakie jest moje wykształcenie?</p>
                     <label>
-                        <input type='radio' name='2' value={'1'} onChange={(e) => dispatch(two(e.target.value))} /> inżynier
+                        <input type='radio' name='2' value={'1'} onChange={(e) => dispatch(two(e.target.value))} disabled={isSubmitted} /> inżynier
                     </label>
                     <label>
-                        <input type='radio' name='2' value={'2'} onChange={(e) => dispatch(two(e.target.value))} /> magister
+                        <input type='radio' name='2' value={'2'} onChange={(e) => dispatch(two(e.target.value))} disabled={isSubmitted} /> magister
                     </label>
                     <label>
-                        <input type='radio' name='2' value={'3'} onChange={(e) => dispatch(two(e.target.value))} /> magister inżynier
+                        <input type='radio' name='2' value={'3'} onChange={(e) => dispatch(two(e.target.value))} disabled={isSubmitted} /> magister inżynier
                     </label>
                     <label>
-                        <input type='radio' name='2' value={'4'} onChange={(e) => dispatch(two(e.target.value))} /> doktor
+                        <input type='radio' name='2' value={'4'} onChange={(e) => dispatch(two(e.target.value))} disabled={isSubmitted} /> doktor
                     </label>
                     <p>3) Jaki kierunek studiowałam jako ostatni?</p>
                     <label>
-                        <input type='radio' name='3' value={'1'} onChange={(e) => dispatch(three(e.target.value))} /> Nawigacja Morska
+                        <input type='radio' name='3' value={'1'} onChange={(e) => dispatch(three(e.target.value))} disabled={isSubmitted} /> Nawigacja Morska
                     </label>
                     <label>
-                        <input type='radio' name='3' value={'2'} onChange={(e) => dispatch(three(e.target.value))} /> Hydrografia
+                        <input type='radio' name='3' value={'2'} onChange={(e) => dispatch(three(e.target.value))} disabled={isSubmitted} /> Hydrografia
                     </label>
                     <label>
-                        <input type='radio' name='3' value={'3'} onChange={(e) => dispatch(three(e.target.value))} /> Technologie Kosmiczne i Satelitarne
+                        <input type='radio' name='3' value={'3'} onChange={(e) => dispatch(three(e.target.value))} disabled={isSubmitted} /> Technologie Kosmiczne i Satelitarne
                     </label>
                     <label>
-                        <input type='radio' name='3' value={'4'} onChange={(e) => dispatch(three(e.target.value))} /> Informatyka
+                        <input type='radio' name='3' value={'4'} onChange={(e) => dispatch(three(e.target.value))} disabled={isSubmitted} /> Informatyka
                     </label>
                     <p>4) W którym roku uczestniczyłam w kursie Front-end developer?</p>
                     <label>
-                        <input type='radio' name='4' value={'1'} onChange={(e) => dispatch(four(e.target.value))} /> 2020/2021
+                        <input type='radio' name='4' value={'1'} onChange={(e) => dispatch(four(e.target.value))} disabled={isSubmitted} /> 2020/2021
                     </label>
                     <label>
-                        <input type='radio' name='4' value={'2'} onChange={(e) => dispatch(four(e.target.value))} /> 2021/2022
+                        <input type='radio' name='4' value={'2'} onChange={(e) => dispatch(four(e.target.value))} disabled={isSubmitted} /> 2021/2022
                     </label>
                     <label>
-                        <input type='radio' name='4' value={'3'} onChange={(e) => dispatch(four(e.target.value))} /> 2022/2023
+                        <input type='radio' name='4' value={'3'} onChange={(e) => dispatch(four(e.target.value))} disabled={isSubmitted} /> 2022/2023
                     </label>
                     <label>
-                        <input type='radio' name='4' value={'4'} onChange={(e) => dispatch(four(e.target.value))} /> 2023/2024
+                        <input type='radio' name='4' value={'4'} onChange={(e) => dispatch(four(e.target.value))} disabled={isSubmitted} /> 2023/2024
                     </label>
                     <p>5) Jakim jezyku obcy oprócz angielskiego wspominam w CV?</p>
                     <label>
-                        <input type='radio' name='5' value={'1'} onChange={(e) => dispatch(five(e.target.value))} /> niemiecki
+                        <input type='radio' name='5' value={'1'} onChange={(e) => dispatch(five(e.target.value))} disabled={isSubmitted} /> niemiecki
                     </label>
                     <label>
-                        <input type='radio' name='5' value={'2'} onChange={(e) => dispatch(five(e.target.value))} /> rosyjski
+                        <input type='radio' name='5' value={'2'} onChange={(e) => dispatch(five(e.target.value))} disabled={isSubmitted} /> rosyjski
                     </label>
                     <label>
-                        <input type='radio' name='5' value={'3'} onChange={(e) => dispatch(five(e.target.value))} /> francuski
+                        <input type='radio' name='5' value={'3'} onChange={(e) => dispatch(five(e.target.value))} disabled={isSubmitted} /> francuski
                     </label>
                     <label>
-                        <input type='radio' name='5' value={'4'} onChange={(e) => dispatch(five(e.target.value))} /> hiszpański
+                        <input type='radio' name='5' value={'4'} onChange={(e) => dispatch(five(e.target.value))} disabled={isSubmitted} /> hiszpański
                     </label>
                 </div>
-                <button type='submit' className={classes.btnZ1}>Zatwierdź</button>
+                <button type='submit' className={classes.btnZ1} disabled={isSubmitted} >Zatwierdź</button>
             </form>
             {valueSubmit ? <p>{napisz(odpowiedz())}</p> : <></>}
         </div>
