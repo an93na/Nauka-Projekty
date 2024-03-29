@@ -1,7 +1,7 @@
 import React from 'react'
 import classes from '../style/StyleModule.module.css'
 import { useDispatch, useSelector } from 'react-redux'
-import { actionSubmitted, five, four, one, submit, three, two } from '../slice/Zad2slice';
+import { actionSubmitted, five, four, one, resetState, submit, three, two } from '../slice/Zad2slice';
 
 export const Zadanie2 = () => {
     const oneValue = useSelector(state => state.zad2.one);
@@ -113,6 +113,7 @@ export const Zadanie2 = () => {
                 <button type='submit' className={classes.btnZ1} disabled={isSubmitted} >Zatwierdź</button>
             </form>
             {valueSubmit ? <p>{napisz(odpowiedz())}</p> : <></>}
+            {valueSubmit ? <button className={classes.btnZ1} onClick={() => dispatch(resetState())}>Reset</button>: <></>}
         </div>
     )
 }
