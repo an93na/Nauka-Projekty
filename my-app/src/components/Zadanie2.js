@@ -126,7 +126,7 @@ export const Zadanie2 = () => {
             </form>
             <div style={{textAlign: 'center'}}>
             {valueSubmit ? <p>{napisz(odpowiedz())}</p> : <></>}
-            {isNextTask ? <button>Dalej</button>: <></>}
+            {isNextTask ? <button className={classes.btnZ1} >Dalej</button>: <></>}
             </div>
         </div>
     )
