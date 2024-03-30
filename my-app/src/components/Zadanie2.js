@@ -31,6 +31,9 @@ export const Zadanie2 = () => {
         }
     }
 
+    const isTaskRight = () => {
+        
+    }
     const onSubmit = (e) => {
         e.preventDefault()
         dispatch(submit())
@@ -110,10 +113,13 @@ export const Zadanie2 = () => {
                         <input type='radio' name='5' value={'4'} onChange={(e) => dispatch(five(e.target.value))} disabled={isSubmitted} /> hiszpański
                     </label>
                 </div>
-                <button type='submit' className={classes.btnZ1} disabled={isSubmitted} >Zatwierdź</button>
+                <div>
+                    <button type='submit' className={classes.btnZ1} disabled={isSubmitted} >Zatwierdź</button>
+                    {valueSubmit ? <button className={classes.btnZ1} style={{marginLeft: '5px'}} onClick={() => dispatch(resetState())}>Reset</button> : <></>}
+                </div>
             </form>
             {valueSubmit ? <p>{napisz(odpowiedz())}</p> : <></>}
-            {valueSubmit ? <button className={classes.btnZ1} onClick={() => dispatch(resetState())}>Reset</button>: <></>}
+
         </div>
     )
 }
