@@ -1,7 +1,7 @@
 import React from 'react'
 import classes from '../style/StyleModule.module.css'
 import { useDispatch, useSelector } from 'react-redux'
-import { actionSubmitted, five, four, one, resetState, submit, three, two } from '../slice/Zad2slice';
+import { actionSubmitted, five, four, nextTask, one, resetState, submit, three, two } from '../slice/Zad2slice';
 
 export const Zadanie2 = () => {
     const oneValue = useSelector(state => state.zad2.one);
@@ -9,8 +9,9 @@ export const Zadanie2 = () => {
     const threeValue = useSelector(state => state.zad2.three);
     const fourValue = useSelector(state => state.zad2.four);
     const fiveValue = useSelector(state => state.zad2.five);
-    const valueSubmit = useSelector(state => state.zad2.submit)
-    const isSubmitted = useSelector(state => state.zad2.submitted)
+    const valueSubmit = useSelector(state => state.zad2.submit);
+    const isSubmitted = useSelector(state => state.zad2.submitted);
+    const isNextTask = useSelector(state => state.zad2.nextTask)
     const dispatch = useDispatch();
 
     const odpowiedz = () => {
@@ -31,15 +32,20 @@ export const Zadanie2 = () => {
         }
     }
 
-    const isTaskRight = () => {
-        
+    const isTaskRight = (a) => {
+        if (a === '1') {
+            dispatch(nextTask())
+        }
     }
+
     const onSubmit = (e) => {
         e.preventDefault()
         dispatch(submit())
         dispatch(actionSubmitted())
         odpowiedz()
+        isTaskRight(odpowiedz())
     }
+
     console.log(odpowiedz())
     return (
         <div>
@@ -115,11 +121,13 @@ export const Zadanie2 = () => {
                 </div>
                 <div>
                     <button type='submit' className={classes.btnZ1} disabled={isSubmitted} >Zatwierdź</button>
-                    {valueSubmit ? <button className={classes.btnZ1} style={{marginLeft: '5px'}} onClick={() => dispatch(resetState())}>Reset</button> : <></>}
+                    {valueSubmit ? <button className={classes.btnZ1} style={{ marginLeft: '5px' }} onClick={() => dispatch(resetState())}>Reset</button> : <></>}
                 </div>
             </form>
+            <div style={{textAlign: 'center'}}>
             {valueSubmit ? <p>{napisz(odpowiedz())}</p> : <></>}
-
+            {isNextTask ? <button>Dalej</button>: <></>}
+            </div>
         </div>
     )
 }
