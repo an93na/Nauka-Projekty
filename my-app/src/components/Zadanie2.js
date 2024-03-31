@@ -52,6 +52,14 @@ export const Zadanie2 = () => {
         isTaskRight(odpowiedz())
     }
 
+    const handleReset = () => {
+        // setOneValue('')
+        // setTwoValue('')
+        // setThreeValue('')
+        // setFourValue('')
+        // setFiveValue('')
+        dispatch(resetState())
+    }
     console.log(odpowiedz())
     return (
         <div>
@@ -127,7 +135,7 @@ export const Zadanie2 = () => {
                 </div>
                 <div>
                     <button type='submit' className={classes.btnZ1} disabled={isSubmitted} >Zatwierdź</button>
-                    {valueSubmit ? <button className={classes.btnZ1} style={{ marginLeft: '5px' }} onClick={() => dispatch(resetState())}>Reset</button> : <></>}
+                    {valueSubmit ? <button className={classes.btnZ1} style={{ marginLeft: '5px' }} onClick={handleReset}>Reset</button> : <></>}
                 </div>
             </form>
             <div style={{ textAlign: 'center' }}>
