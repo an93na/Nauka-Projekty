@@ -1,14 +1,9 @@
 import React, { useState } from 'react'
 import classes from '../style/StyleModule.module.css'
 import { useDispatch, useSelector } from 'react-redux'
-import { actionSubmitted, five, four, nextTask, one, resetState, submit, three, two } from '../slice/Zad2slice';
+import { actionSubmitted, nextTask, resetState, submit } from '../slice/Zad2slice';
 
 export const Zadanie2 = () => {
-    // const oneValue = useSelector(state => state.zad2.one);
-    // const twoValue = useSelector(state => state.zad2.two);
-    // const threeValue = useSelector(state => state.zad2.three);
-    // const fourValue = useSelector(state => state.zad2.four);
-    // const fiveValue = useSelector(state => state.zad2.five);
     const valueSubmit = useSelector(state => state.zad2.submit);
     const isSubmitted = useSelector(state => state.zad2.submitted);
     const isNextTask = useSelector(state => state.zad2.nextTask)
@@ -21,7 +16,7 @@ export const Zadanie2 = () => {
     const dispatch = useDispatch();
 
     const odpowiedz = () => {
-        if (oneValue === '1' && twoValue === '2' && threeValue === '2' && fourValue === '2' && fiveValue === '4') {
+        if (oneValue === '4' && twoValue === '3' && threeValue === '3' && fourValue === '4' && fiveValue === '2') {
             return '1'
         }
         else {
