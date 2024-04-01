@@ -19,5 +19,5 @@ export const zad2Slice = createSlice({
     }
 })
 
-export const { one, two, three, four, five, submit, actionSubmitted, resetState, nextTask } = zad2Slice.actions
+export const { submit, actionSubmitted, resetState, nextTask, showNextTask } = zad2Slice.actions
 export default zad2Slice.reducer

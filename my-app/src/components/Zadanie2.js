@@ -1,12 +1,13 @@
 import React, { useState } from 'react'
 import classes from '../style/StyleModule.module.css'
 import { useDispatch, useSelector } from 'react-redux'
-import { actionSubmitted, nextTask, resetState, submit } from '../slice/Zad2slice';
+import { actionSubmitted, nextTask, resetState, submit, showNextTask } from '../slice/Zad2slice';
 
 export const Zadanie2 = () => {
     const valueSubmit = useSelector(state => state.zad2.submit);
     const isSubmitted = useSelector(state => state.zad2.submitted);
-    const isNextTask = useSelector(state => state.zad2.nextTask)
+    const isNextTask = useSelector(state => state.zad2.nextTask);
+    const isShowNewTask = useSelector(state => state.zad2.showNextTask)
     const [oneValue, setOneValue] = useState('')
     const [twoValue, setTwoValue] = useState('')
     const [threeValue, setThreeValue] = useState('')
@@ -48,14 +49,9 @@ export const Zadanie2 = () => {
     }
 
     const handleReset = () => {
-        // setOneValue('')
-        // setTwoValue('')
-        // setThreeValue('')
-        // setFourValue('')
-        // setFiveValue('')
         dispatch(resetState())
     }
-    console.log(odpowiedz())
+    // console.log(odpowiedz())
     return (
         <div>
             <p>Część II</p>
@@ -135,7 +131,8 @@ export const Zadanie2 = () => {
             </form>
             <div style={{ textAlign: 'center' }}>
                 {valueSubmit ? <p>{napisz(odpowiedz())}</p> : <></>}
-                {isNextTask ? <button className={classes.btnZ1} >Dalej</button> : <></>}
+                {isNextTask ? <button className={classes.btnZ1} onClick={() => dispatch(showNextTask())} >Dalej</button> : <></>}
+                {}
             </div>
         </div>
     )
