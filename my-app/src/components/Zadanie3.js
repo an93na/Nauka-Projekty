@@ -11,11 +11,13 @@ export const Zadanie3 = () => {
   const valueTwo = useSelector(state => state.zad3.two);
   const valueThree = useSelector(state => state.zad3.three);
   const valueFour = useSelector(state => state.zad3.four);
+  const valueSubmit = useSelector(state => state.zad3.submit);
+  const valueRight = useSelector(state => state.zad3.right);
   const dispach = useDispatch();
 
   const onSubmit = (e) => {
     e.preventDefault()
-}
+  }
   return (
     <div>
       <p>Część III</p>
@@ -25,7 +27,7 @@ export const Zadanie3 = () => {
           <div className={classes.divZad3}>
             <h4>Framework</h4>
             <img src={frameImg} alt="framework" className={classes.imgZad3} />
-            <select name="" id="">
+            <select name="" id="" value={valueOne}> 
               <option value="" hidden>Wybierz</option>
               <option value="1">React</option>
               <option value="2">Angular</option>
@@ -35,7 +37,7 @@ export const Zadanie3 = () => {
           <div className={classes.divZad3}>
             <h4>Angielski</h4>
             <img src={angImg} alt="angielski" className={classes.imgZad3} />
-            <select name="" id="">
+            <select name="" id="" value={valueTwo}>
               <option value="" hidden>Wybierz</option>
               <option value="1">A1/A2</option>
               <option value="2">B1/B2</option>
@@ -45,7 +47,7 @@ export const Zadanie3 = () => {
           <div className={classes.divZad3}>
             <h4>Magister(ile?)</h4>
             <img src={mgrImg} alt="magister" className={classes.imgZad3} />
-            <select name="" id="">
+            <select name="" id="" value={valueThree}>
               <option value="" hidden>Wybierz</option>
               <option value="1">0</option>
               <option value="2">1</option>
@@ -55,7 +57,7 @@ export const Zadanie3 = () => {
           <div className={classes.divZad3}>
             <h4>Praca obecna</h4>
             <img src={workImg} alt="praca obecna" className={classes.imgZad3} />
-            <select name="" id="">
+            <select name="" id="" value={valueFour}>
               <option value="" hidden>Wybierz</option>
               <option value="1">Marynarz</option>
               <option value="2">Edukator</option>
