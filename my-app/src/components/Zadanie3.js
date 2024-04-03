@@ -4,13 +4,23 @@ import frameImg from '../assets/zad3a.jpg'
 import angImg from '../assets/zad3b.jpg'
 import mgrImg from '../assets/zad3c.jpg'
 import workImg from '../assets/zad3d.jpg'
+import { useDispatch, useSelector } from 'react-redux'
 
 export const Zadanie3 = () => {
+  const valueOne = useSelector(state => state.zad3.one);
+  const valueTwo = useSelector(state => state.zad3.two);
+  const valueThree = useSelector(state => state.zad3.three);
+  const valueFour = useSelector(state => state.zad3.four);
+  const dispach = useDispatch();
+
+  const onSubmit = (e) => {
+    e.preventDefault()
+}
   return (
     <div>
       <p>Część III</p>
       <p>Dopasuj nazwy do umiejętności</p>
-      <form action="" style={{ textAlign: 'center' }}>
+      <form action="" style={{ textAlign: 'center' }} onSubmit={onSubmit}>
         <div style={{ display: 'flex', flexDirection: 'row', gap: '5px', flexWrap: 'wrap', alignContent: 'center', justifyContent: 'center', alignItems: 'center' }}>
           <div className={classes.divZad3}>
             <h4>Framework</h4>
