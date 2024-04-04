@@ -27,7 +27,7 @@ export const Zadanie3 = () => {
           <div className={classes.divZad3}>
             <h4>Framework</h4>
             <img src={frameImg} alt="framework" className={classes.imgZad3} />
-            <select name="" id="" value={valueOne}> 
+            <select name="" id="" value={valueOne} onChange={(e) => dispach()}> 
               <option value="" hidden>Wybierz</option>
               <option value="1">React</option>
               <option value="2">Angular</option>
