@@ -5,7 +5,7 @@ import angImg from '../assets/zad3b.jpg'
 import mgrImg from '../assets/zad3c.jpg'
 import workImg from '../assets/zad3d.jpg'
 import { useDispatch, useSelector } from 'react-redux'
-import { actionFour, actionOne, actionThree, actionTwo } from '../slice/Zad3slice'
+import { actionFour, actionOne, actionSubmit, actionThree, actionTwo } from '../slice/Zad3slice'
 
 export const Zadanie3 = () => {
   const valueOne = useSelector(state => state.zad3.one);
@@ -17,7 +17,8 @@ export const Zadanie3 = () => {
   const dispach = useDispatch();
 
   const onSubmit = (e) => {
-    e.preventDefault()
+    e.preventDefault();
+    dispach(actionSubmit());
   }
   return (
     <div>
