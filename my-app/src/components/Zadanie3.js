@@ -5,7 +5,7 @@ import angImg from '../assets/zad3b.jpg'
 import mgrImg from '../assets/zad3c.jpg'
 import workImg from '../assets/zad3d.jpg'
 import { useDispatch, useSelector } from 'react-redux'
-import { actionFour, actionOne, actionSubmit, actionThree, actionTwo } from '../slice/Zad3slice'
+import { actionFour, actionOne, actionSubmit, actionSubmitted, actionThree, actionTwo } from '../slice/Zad3slice'
 
 export const Zadanie3 = () => {
   const valueOne = useSelector(state => state.zad3.one);
@@ -14,11 +14,13 @@ export const Zadanie3 = () => {
   const valueFour = useSelector(state => state.zad3.four);
   const valueSubmit = useSelector(state => state.zad3.submit);
   const valueRight = useSelector(state => state.zad3.right);
+  const valueSubmitted = useSelector(state => state.zad3.submitted)
   const dispach = useDispatch();
 
   const onSubmit = (e) => {
     e.preventDefault();
     dispach(actionSubmit());
+    dispach(actionSubmitted)
   }
   return (
     <div>
@@ -29,7 +31,7 @@ export const Zadanie3 = () => {
           <div className={classes.divZad3}>
             <h4>Framework</h4>
             <img src={frameImg} alt="framework" className={classes.imgZad3} />
-            <select name="" id="" value={valueOne} onChange={(e) => dispach(actionOne(e.target.value))}>
+            <select name="" id="" value={valueOne} onChange={(e) => dispach(actionOne(e.target.value))} disabled={valueSubmitted}>
               <option value="" hidden>Wybierz</option>
               <option value="1">React</option>
               <option value="2">Angular</option>
