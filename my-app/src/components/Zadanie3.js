@@ -20,7 +20,7 @@ export const Zadanie3 = () => {
   const onSubmit = (e) => {
     e.preventDefault();
     dispach(actionSubmit());
-    dispach(actionSubmitted)
+    dispach(actionSubmitted())
   }
   return (
     <div>
@@ -41,7 +41,7 @@ export const Zadanie3 = () => {
           <div className={classes.divZad3}>
             <h4>Angielski</h4>
             <img src={angImg} alt="angielski" className={classes.imgZad3} />
-            <select name="" id="" value={valueTwo} onChange={(e) => dispach(actionTwo(e.target.value))}>
+            <select name="" id="" value={valueTwo} onChange={(e) => dispach(actionTwo(e.target.value))} disabled={valueSubmitted}>
               <option value="" hidden>Wybierz</option>
               <option value="1">A1/A2</option>
               <option value="2">B1/B2</option>
@@ -51,7 +51,7 @@ export const Zadanie3 = () => {
           <div className={classes.divZad3}>
             <h4>Magister(ile?)</h4>
             <img src={mgrImg} alt="magister" className={classes.imgZad3} />
-            <select name="" id="" value={valueThree} onChange={(e) => dispach(actionThree(e.target.value))}>
+            <select name="" id="" value={valueThree} onChange={(e) => dispach(actionThree(e.target.value))} disabled={valueSubmitted}>
               <option value="" hidden>Wybierz</option>
               <option value="1">0</option>
               <option value="2">1</option>
@@ -61,7 +61,7 @@ export const Zadanie3 = () => {
           <div className={classes.divZad3}>
             <h4>Praca obecna</h4>
             <img src={workImg} alt="praca obecna" className={classes.imgZad3} />
-            <select name="" id="" value={valueFour} onChange={(e) => dispach(actionFour(e.target.value))}>
+            <select name="" id="" value={valueFour} onChange={(e) => dispach(actionFour(e.target.value))} disabled={valueSubmitted}>
               <option value="" hidden>Wybierz</option>
               <option value="1">Marynarz</option>
               <option value="2">Edukator</option>
