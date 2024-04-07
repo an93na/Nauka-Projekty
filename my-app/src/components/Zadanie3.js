@@ -70,6 +70,7 @@ export const Zadanie3 = () => {
           </div>
         </div>
         <button className={classes.btnZ1}>Zatwierdź</button>
+        {valueSubmit ? <button className={classes.btnZ1}>Reset</button> : <></>}
       </form>
     </div>
   )
