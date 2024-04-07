@@ -5,7 +5,7 @@ import angImg from '../assets/zad3b.jpg'
 import mgrImg from '../assets/zad3c.jpg'
 import workImg from '../assets/zad3d.jpg'
 import { useDispatch, useSelector } from 'react-redux'
-import { actionFour, actionOne, actionSubmit, actionSubmitted, actionThree, actionTwo } from '../slice/Zad3slice'
+import { actionFour, actionOne, actionSubmit, actionSubmitted, actionThree, actionTwo, resetState } from '../slice/Zad3slice'
 
 export const Zadanie3 = () => {
   const valueOne = useSelector(state => state.zad3.one);
@@ -70,7 +70,7 @@ export const Zadanie3 = () => {
           </div>
         </div>
         <button className={classes.btnZ1}>Zatwierdź</button>
-        {valueSubmit ? <button className={classes.btnZ1}>Reset</button> : <></>}
+        {valueSubmit ? <button className={classes.btnZ1} style={{ marginLeft: '5px' }} onClick={() => dispach(resetState())}>Reset</button> : <></>}
       </form>
     </div>
   )
