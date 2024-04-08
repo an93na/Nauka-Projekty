@@ -5,7 +5,7 @@ import angImg from '../assets/zad3b.jpg'
 import mgrImg from '../assets/zad3c.jpg'
 import workImg from '../assets/zad3d.jpg'
 import { useDispatch, useSelector } from 'react-redux'
-import { actionFour, actionOne, actionSubmit, actionSubmitted, actionThree, actionTwo, resetState } from '../slice/Zad3slice'
+import { actionFour, actionOne, actionRight, actionSubmit, actionSubmitted, actionThree, actionTwo, resetState } from '../slice/Zad3slice'
 
 export const Zadanie3 = () => {
   const valueOne = useSelector(state => state.zad3.one);
@@ -15,7 +15,7 @@ export const Zadanie3 = () => {
   const valueSubmit = useSelector(state => state.zad3.submit);
   const valueRight = useSelector(state => state.zad3.right);
   const valueSubmitted = useSelector(state => state.zad3.submitted)
-  const dispach = useDispatch();
+  const dispatch = useDispatch();
 
   const answer = () => {
     if (valueOne === '1' && valueTwo === '2' && valueThree === '3' && valueFour === '2') {
@@ -25,10 +25,17 @@ export const Zadanie3 = () => {
       return '0'
   }
   }
+
+  const isTaskRight = (a) => {
+    if (a === '1') {
+        dispatch(actionRight())
+    }
+}
+
   const onSubmit = (e) => {
     e.preventDefault();
-    dispach(actionSubmit());
-    dispach(actionSubmitted())
+    dispatch(actionSubmit());
+    dispatch(actionSubmitted())
   }
   return (
     <div>
@@ -39,7 +46,7 @@ export const Zadanie3 = () => {
           <div className={classes.divZad3}>
             <h4>Framework</h4>
             <img src={frameImg} alt="framework" className={classes.imgZad3} />
-            <select name="" id="" value={valueOne} onChange={(e) => dispach(actionOne(e.target.value))} disabled={valueSubmitted}>
+            <select name="" id="" value={valueOne} onChange={(e) => dispatch(actionOne(e.target.value))} disabled={valueSubmitted}>
               <option value="" hidden>Wybierz</option>
               <option value="1">React</option>
               <option value="2">Angular</option>
@@ -49,7 +56,7 @@ export const Zadanie3 = () => {
           <div className={classes.divZad3}>
             <h4>Angielski</h4>
             <img src={angImg} alt="angielski" className={classes.imgZad3} />
-            <select name="" id="" value={valueTwo} onChange={(e) => dispach(actionTwo(e.target.value))} disabled={valueSubmitted}>
+            <select name="" id="" value={valueTwo} onChange={(e) => dispatch(actionTwo(e.target.value))} disabled={valueSubmitted}>
               <option value="" hidden>Wybierz</option>
               <option value="1">A1/A2</option>
               <option value="2">B1/B2</option>
@@ -59,7 +66,7 @@ export const Zadanie3 = () => {
           <div className={classes.divZad3}>
             <h4>Magister(ile?)</h4>
             <img src={mgrImg} alt="magister" className={classes.imgZad3} />
-            <select name="" id="" value={valueThree} onChange={(e) => dispach(actionThree(e.target.value))} disabled={valueSubmitted}>
+            <select name="" id="" value={valueThree} onChange={(e) => dispatch(actionThree(e.target.value))} disabled={valueSubmitted}>
               <option value="" hidden>Wybierz</option>
               <option value="1">0</option>
               <option value="2">1</option>
@@ -69,7 +76,7 @@ export const Zadanie3 = () => {
           <div className={classes.divZad3}>
             <h4>Praca obecna</h4>
             <img src={workImg} alt="praca obecna" className={classes.imgZad3} />
-            <select name="" id="" value={valueFour} onChange={(e) => dispach(actionFour(e.target.value))} disabled={valueSubmitted}>
+            <select name="" id="" value={valueFour} onChange={(e) => dispatch(actionFour(e.target.value))} disabled={valueSubmitted}>
               <option value="" hidden>Wybierz</option>
               <option value="1">Marynarz</option>
               <option value="2">Edukator</option>
@@ -78,7 +85,7 @@ export const Zadanie3 = () => {
           </div>
         </div>
         <button className={classes.btnZ1}>Zatwierdź</button>
-        {valueSubmit ? <button className={classes.btnZ1} style={{ marginLeft: '5px' }} onClick={() => dispach(resetState())}>Reset</button> : <></>}
+        {valueSubmit ? <button className={classes.btnZ1} style={{ marginLeft: '5px' }} onClick={() => dispatch(resetState())}>Reset</button> : <></>}
       </form>
     </div>
   )
