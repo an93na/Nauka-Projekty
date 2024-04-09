@@ -26,6 +26,10 @@ export const Zadanie3 = () => {
   }
   }
 
+  const napisz = () => {
+    
+  }
+
   const isTaskRight = (a) => {
     if (a === '1') {
         dispatch(actionRight())
