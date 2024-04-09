@@ -26,9 +26,15 @@ export const Zadanie3 = () => {
   }
   }
 
-  const napisz = () => {
-    
-  }
+  
+  const napisz = (a) => {
+    if (a === '1') {
+        return "Gratulacje!"
+    }
+    else {
+        return "Niestety spróbuj jeszcze raz"
+    }
+}
 
   const isTaskRight = (a) => {
     if (a === '1') {
