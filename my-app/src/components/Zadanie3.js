@@ -96,6 +96,7 @@ export const Zadanie3 = () => {
         </div>
         <button className={classes.btnZ1}>Zatwierdź</button>
         {valueSubmit ? <button className={classes.btnZ1} style={{ marginLeft: '5px' }} onClick={() => dispatch(resetState())}>Reset</button> : <></>}
+        {valueSubmit ? <p>{napisz(answer())}</p>:<p></p>}
       </form>
     </div>
   )
