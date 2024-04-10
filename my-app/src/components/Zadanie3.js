@@ -20,32 +20,33 @@ export const Zadanie3 = () => {
   const answer = () => {
     if (valueOne === '1' && valueTwo === '2' && valueThree === '3' && valueFour === '2') {
       return '1'
-  }
-  else {
-      return '0'
-  }
-  }
-
-  
-  const napisz = (a) => {
-    if (a === '1') {
-        return "Gratulacje!"
     }
     else {
-        return "Niestety spróbuj jeszcze raz"
+      return '0'
     }
-}
+  }
+
+
+  const napisz = (a) => {
+    if (a === '1') {
+      return "Gratulacje!"
+    }
+    else {
+      return "Niestety spróbuj jeszcze raz"
+    }
+  }
 
   const isTaskRight = (a) => {
     if (a === '1') {
-        dispatch(actionRight())
+      dispatch(actionRight())
     }
-}
+  }
 
   const onSubmit = (e) => {
     e.preventDefault();
     dispatch(actionSubmit());
-    dispatch(actionSubmitted())
+    dispatch(actionSubmitted());
+    isTaskRight(answer())
   }
   return (
     <div>
@@ -96,7 +97,8 @@ export const Zadanie3 = () => {
         </div>
         <button className={classes.btnZ1}>Zatwierdź</button>
         {valueSubmit ? <button className={classes.btnZ1} style={{ marginLeft: '5px' }} onClick={() => dispatch(resetState())}>Reset</button> : <></>}
-        {valueSubmit ? <p>{napisz(answer())}</p>:<p></p>}
+        {valueSubmit ? <p>{napisz(answer())}</p> : <p></p>}
+        {valueRight ? <button>sss</button> : <></>}
       </form>
     </div>
   )
