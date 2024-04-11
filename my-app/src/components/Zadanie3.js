@@ -5,7 +5,7 @@ import angImg from '../assets/zad3b.jpg'
 import mgrImg from '../assets/zad3c.jpg'
 import workImg from '../assets/zad3d.jpg'
 import { useDispatch, useSelector } from 'react-redux'
-import { actionFour, actionOne, actionRight, actionSubmit, actionSubmitted, actionThree, actionTwo, resetState } from '../slice/Zad3slice'
+import { actionFour, actionNext, actionOne, actionRight, actionSubmit, actionSubmitted, actionThree, actionTwo, resetState } from '../slice/Zad3slice'
 
 export const Zadanie3 = () => {
   const valueOne = useSelector(state => state.zad3.one);
@@ -14,7 +14,8 @@ export const Zadanie3 = () => {
   const valueFour = useSelector(state => state.zad3.four);
   const valueSubmit = useSelector(state => state.zad3.submit);
   const valueRight = useSelector(state => state.zad3.right);
-  const valueSubmitted = useSelector(state => state.zad3.submitted)
+  const valueSubmitted = useSelector(state => state.zad3.submitted);
+  const valueNext = useSelector(state => state.zad3.next)
   const dispatch = useDispatch();
 
   const answer = () => {
@@ -98,7 +99,8 @@ export const Zadanie3 = () => {
         <button className={classes.btnZ1}>Zatwierdź</button>
         {valueSubmit ? <button className={classes.btnZ1} style={{ marginLeft: '5px' }} onClick={() => dispatch(resetState())}>Reset</button> : <></>}
         {valueSubmit ? <p>{napisz(answer())}</p> : <p></p>}
-        {valueRight ? <button className={classes.btnZ1}>Dalej</button> : <></>}
+        {valueRight ? <button className={classes.btnZ1} onClick={() => dispatch(actionNext())}>Dalej</button> : <></>}
+        {valueNext ? <p>To</p>:<></>}
       </form>
     </div>
   )

@@ -9,7 +9,8 @@ const initialState = {
     four: '',
     submit: false,
     right: false,
-    submitted: false
+    submitted: false,
+    next: false
 }
 
 export const Zad3Slice = createSlice({
@@ -23,9 +24,10 @@ export const Zad3Slice = createSlice({
         actionSubmit: (state) => { state.submit = true },
         actionRight: (state) => { state.right = true },
         actionSubmitted: (state) => { state.submitted = true },
+        actionNext: (state) => { state.next = true },
         resetState: () => { return initialState }
     }
 })
 
-export const { actionOne, actionTwo, actionThree, actionFour, actionRight, actionSubmit, actionSubmitted, resetState } = Zad3Slice.actions
+export const { actionOne, actionTwo, actionThree, actionFour, actionRight, actionSubmit, actionSubmitted, actionNext, resetState } = Zad3Slice.actions
 export default Zad3Slice.reducer
