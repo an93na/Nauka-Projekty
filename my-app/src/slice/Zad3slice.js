@@ -1,6 +1,4 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { submit } from "./Zad2slice";
-
 
 const initialState = {
     one: '',
