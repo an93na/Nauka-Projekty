@@ -51,7 +51,6 @@ export const Zadanie2 = () => {
     const handleReset = () => {
         dispatch(resetState())
     }
-    // console.log(odpowiedz())
     return (
         <div>
             <p>Część II</p>
