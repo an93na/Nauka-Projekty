@@ -10,7 +10,7 @@ export const Zadanie = () => {
     <div className={classes.sekcja}>
       <h3>Zadanie</h3>
       <Zadanie1 />
-      <Zadanie2 />
+      {/* <Zadanie2 /> */}
       <Zadanie3 />
     </div>
   )

@@ -6,6 +6,7 @@ import z1d from '../assets/zad1d.jpg'
 import classes from '../style/StyleModule.module.css'
 import { useDispatch, useSelector } from 'react-redux'
 import { actionNextTask, actionSubmit, actionSubmitted, odpFour, odpOne, odpThree, odpTwo, actionShowNextTask ,resetState } from '../slice/Zad1slice'
+import { Zadanie2 } from './Zadanie2'
 export const Zadanie1 = () => {
     const valueOne = useSelector(state => state.zad1.one)
     const valueTwo = useSelector(state => state.zad1.two)
@@ -84,6 +85,7 @@ export const Zadanie1 = () => {
             <div style={{textAlign: 'center'}}>
             {valueSubmit ? <p>{napiszWiadomosc(odpowiedzi())}</p> : <></>}
             {valueNextTask  && <button className={classes.btnZ1} onClick={() => dispatch(actionShowNextTask())}>Dalej</button>}
+            {valueShowNextTask && <Zadanie2 />}
             </div>
         </div>
     )

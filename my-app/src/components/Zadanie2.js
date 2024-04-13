@@ -52,7 +52,7 @@ export const Zadanie2 = () => {
         dispatch(resetState())
     }
     return (
-        <div>
+        <div style={{textAlign: 'left'}}>
             <p>Część II</p>
             <p>W tym zadaniu należy wybrać jedną prawidłową odpowiedź. Nie ma łatwo ponieważ tutaj zakresem wiedzy jest całe moje CV.</p>
             <form action="" style={{ textAlign: 'center' }} onSubmit={onSubmit}>
