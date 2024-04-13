@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import classes from '../style/StyleModule.module.css'
 import { useDispatch, useSelector } from 'react-redux'
 import { actionSubmitted, nextTask, resetState, submit, showNextTask } from '../slice/Zad2slice';
+import { Zadanie3 } from './Zadanie3';
 
 export const Zadanie2 = () => {
     const valueSubmit = useSelector(state => state.zad2.submit);
@@ -52,7 +53,7 @@ export const Zadanie2 = () => {
         dispatch(resetState())
     }
     return (
-        <div style={{textAlign: 'left'}}>
+        <div style={{ textAlign: 'left' }}>
             <p>Część II</p>
             <p>W tym zadaniu należy wybrać jedną prawidłową odpowiedź. Nie ma łatwo ponieważ tutaj zakresem wiedzy jest całe moje CV.</p>
             <form action="" style={{ textAlign: 'center' }} onSubmit={onSubmit}>
@@ -131,7 +132,7 @@ export const Zadanie2 = () => {
             <div style={{ textAlign: 'center' }}>
                 {valueSubmit ? <p>{napisz(odpowiedz())}</p> : <></>}
                 {isNextTask ? <button className={classes.btnZ1} onClick={() => dispatch(showNextTask())} >Dalej</button> : <></>}
-                {}
+                {isShowNewTask && <Zadanie3 />}
             </div>
         </div>
     )
