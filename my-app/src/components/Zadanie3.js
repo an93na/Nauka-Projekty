@@ -100,7 +100,7 @@ export const Zadanie3 = () => {
         {valueSubmit ? <button className={classes.btnZ1} style={{ marginLeft: '5px' }} onClick={() => dispatch(resetState())}>Reset</button> : <></>}
         {valueSubmit ? <p>{napisz(answer())}</p> : <p></p>}
         {valueRight ? <button className={classes.btnZ1} onClick={() => dispatch(actionNext())}>Dalej</button> : <></>}
-        {valueNext ? <p>To</p>:<></>}
+        {valueNext ? <p>To już koniec zadań. Gratulacje! Myślę, że jesteś gotowy. Teraz możesz wziąć telefon i zaprosić mnie na rozmowę :D</p> : <></>}
       </form>
     </div>
   )
