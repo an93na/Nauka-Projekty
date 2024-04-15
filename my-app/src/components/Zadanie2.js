@@ -26,15 +26,6 @@ export const Zadanie2 = () => {
         }
     }
 
-    const napisz = (a) => {
-        if (a === '1') {
-            return "Gratulacje!"
-        }
-        else {
-            return "Niestety spróbuj jeszcze raz"
-        }
-    }
-
     const isTaskRight = (a) => {
         if (a === '1') {
             dispatch(nextTask())
@@ -130,7 +121,8 @@ export const Zadanie2 = () => {
                 </div>
             </form>
             <div style={{ textAlign: 'center' }}>
-                {valueSubmit ? <p>{napisz(odpowiedz())}</p> : <></>}
+                {valueSubmit && isNextTask === true && <p>Gratulacje!</p>}
+                {valueSubmit && isNextTask === false && <p>Niestety spróbuj jeszcze raz</p>}
                 {isNextTask ? <button className={classes.btnZ1} onClick={() => dispatch(showNextTask())} >Dalej</button> : <></>}
                 {isShowNewTask && <Zadanie3 />}
             </div>
