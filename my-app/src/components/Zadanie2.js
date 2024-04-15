@@ -121,8 +121,8 @@ export const Zadanie2 = () => {
                 </div>
             </form>
             <div style={{ textAlign: 'center' }}>
-                {valueSubmit && isNextTask === true && <p>Gratulacje!</p>}
-                {valueSubmit && isNextTask === false && <p>Niestety spróbuj jeszcze raz</p>}
+                {valueSubmit && isNextTask === true && <p>Gratulacje! Kliknij przycisk Dalej aby zobaczyć kolejną część zadania.</p>}
+                {valueSubmit && isNextTask === false && <p>Niestety spróbuj jeszcze raz.</p>}
                 {isNextTask ? <button className={classes.btnZ1} onClick={() => dispatch(showNextTask())} >Dalej</button> : <></>}
                 {isShowNewTask && <Zadanie3 />}
             </div>
