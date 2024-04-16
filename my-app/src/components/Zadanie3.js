@@ -4,6 +4,8 @@ import frameImg from '../assets/zad3a.jpg'
 import angImg from '../assets/zad3b.jpg'
 import mgrImg from '../assets/zad3c.jpg'
 import workImg from '../assets/zad3d.jpg'
+import endImg from '../assets/rekruter.jpg'
+
 import { useDispatch, useSelector } from 'react-redux'
 import { actionFour, actionNext, actionOne, actionRight, actionSubmit, actionSubmitted, actionThree, actionTwo, resetState } from '../slice/Zad3slice'
 
@@ -100,7 +102,10 @@ export const Zadanie3 = () => {
         {valueSubmit ? <button className={classes.btnZ1} style={{ marginLeft: '5px' }} onClick={() => dispatch(resetState())}>Reset</button> : <></>}
         {valueSubmit ? <p>{napisz(answer())}</p> : <p></p>}
         {valueRight ? <button className={classes.btnZ1} onClick={() => dispatch(actionNext())}>Dalej</button> : <></>}
-        {valueNext ? <p>To już koniec zadań. Gratulacje! Myślę, że jesteś gotowy. Teraz możesz wziąć telefon i zaprosić mnie na rozmowę :D</p> : <></>}
+        {valueNext ? <div>
+          <p>To już koniec zadań. Gratulacje! Myślę, że jesteś gotowy. Teraz możesz wziąć telefon i zaprosić mnie na rozmowę :D</p>
+          <img src={endImg} alt="" />
+          </div> : <></>}
       </form>
     </div>
   )
