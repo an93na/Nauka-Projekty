@@ -32,6 +32,11 @@ box-sizing: border-box;
   height: 50vh;
   border-radius: 15px;
 }
+.imgEnd {
+  width: 40vh;
+  height: 40vh;
+  border-radius: 15px;
+}
 .pasekLinkow {
   display: flex;
   flex-direction: row;

@@ -103,8 +103,9 @@ export const Zadanie3 = () => {
         {valueSubmit ? <p>{napisz(answer())}</p> : <p></p>}
         {valueRight ? <button className={classes.btnZ1} onClick={() => dispatch(actionNext())}>Dalej</button> : <></>}
         {valueNext ? <div>
-          <p>To już koniec zadań. Gratulacje! Myślę, że jesteś gotowy. Teraz możesz wziąć telefon i zaprosić mnie na rozmowę :D</p>
-          <img src={endImg} alt="" />
+          <p>To już koniec zadań. Gratulacje! Myślę, że jesteś gotowy. </p>
+          <p>Teraz możesz wziąć telefon i zaprosić mnie na rozmowę :D</p>
+          <img src={endImg} alt="" className={classes.imgEnd}/>
           </div> : <></>}
       </form>
     </div>
