@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import classes from '../style/StyleModule.module.css'
 import { useDispatch, useSelector } from 'react-redux'
 import { actionSubmitted, nextTask, resetState, submit, showNextTask } from '../slice/Zad2slice';
+import { resetState as reset3 } from '../slice/Zad3slice';
 import { Zadanie3 } from './Zadanie3';
 
 export const Zadanie2 = () => {
@@ -41,7 +42,8 @@ export const Zadanie2 = () => {
     }
 
     const handleReset = () => {
-        dispatch(resetState())
+        dispatch(resetState());
+        dispatch(reset3())
     }
     return (
         <div style={{ textAlign: 'left' }}>
