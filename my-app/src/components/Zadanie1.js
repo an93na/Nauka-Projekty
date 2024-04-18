@@ -48,8 +48,10 @@ export const Zadanie1 = () => {
         dispatch(actionSubmitted())
         isTaskRight(odpowiedzi())
     }
-    // console.log(odpowiedzi())
 
+    const reset = () => {
+        
+    }
 
     return (
         <div>
