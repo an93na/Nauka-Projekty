@@ -50,7 +50,9 @@ export const Zadanie1 = () => {
     }
 
     const reset = () => {
-        
+        dispatch(resetState());
+        dispatch(reset2());
+        dispatch(reset3());
     }
 
     return (
@@ -83,7 +85,7 @@ export const Zadanie1 = () => {
                 <div>
                     <button type='submit' className={classes.btnZ1} disabled={valueSubmitted}>Zatwierdź</button>
                     {
-                        valueSubmit ? <button className={classes.btnZ1} style={{ marginLeft: '5px' }} onClick={() => dispatch(resetState())}>Reset</button> : <></>
+                        valueSubmit ? <button className={classes.btnZ1} style={{ marginLeft: '5px' }} onClick={reset}>Reset</button> : <></>
                     }
                 </div>
             </form>
