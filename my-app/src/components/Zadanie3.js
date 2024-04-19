@@ -105,8 +105,8 @@ export const Zadanie3 = () => {
         {valueNext ? <div>
           <p>To już koniec zadań. Gratulacje! Myślę, że jesteś gotowy. </p>
           <p>Teraz możesz wziąć telefon i zaprosić mnie na rozmowę :D</p>
-          <img src={endImg} alt="" className={classes.imgEnd}/>
-          </div> : <></>}
+          <img src={endImg} alt="" className={classes.imgEnd} />
+        </div> : <></>}
       </form>
     </div>
   )

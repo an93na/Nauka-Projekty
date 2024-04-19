@@ -3,7 +3,7 @@ import classes from '../style/StyleModule.module.css'
 
 export const Zadanie4 = () => {
   return (
-    <div style={{marginRight: '5px'}}>
+    <div style={{ marginRight: '5px' }}>
       <p>Krzyżówka</p>
       <form action="">
         <div style={{ display: 'flex', flexDirection: 'row', width: '100%' }}>
