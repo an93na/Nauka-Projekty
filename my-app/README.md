@@ -46,4 +46,15 @@ Setup reduxa w pliku index.js import Provider i otoczenie komponentów
       </Provider>
     </BrowserRouter>
 Provider posiada propsa którym jest store dlatego trzeba go stworzyć
+
+# Firebase sprawdzenie czy jest się zalogowanym
+
+# Sprawdzenie listy projektów
+firebase projects:list
+
+# Inicjowanie projektu firebase
+firebase init
+
+# 
+
 ### CDN ...
