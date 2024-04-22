@@ -1,9 +1,7 @@
 import React from 'react'
 
-
-
-
 export const Klasy = () => {
+
     class Osoba {
         constructor(firstNameVal, LastNameVal) {
             this.firstName = firstNameVal
