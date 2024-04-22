@@ -1,6 +1,10 @@
+import { Klasy } from "./components/Klasy";
+
 function App() {
   return (
-    <div></div>
+    <div>
+      <Klasy/>
+    </div>
   );
 }
 
