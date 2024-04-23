@@ -9,6 +9,15 @@ export const Klasy = () => {
         }
     }
 
+    class Zwierze {
+        constructor(rodzajVal, rasaVal, wiekVal, imieVal){
+            this.rodzaj = rodzajVal
+            this.rasa= rasaVal
+            this.wiek= wiekVal
+            this.imie= imieVal
+        }
+    }
+
     const kowalski = new Osoba('Jan', 'Kowalski')
     console.log(kowalski)
 
