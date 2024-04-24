@@ -16,11 +16,14 @@ export const Klasy = () => {
             this.wiek = wiekVal
             this.imie = imieVal
         }
-        glodny() {
-            console.log('Tak')
+        czyJestesGlodny() {
+            console.log('Czy jesteś głodny?')
         }
-        najedzony(){
-            console.log('zjadłbym coś')
+        glodny() {
+            console.log('Tak. Zjadłbym coś')
+        }
+        najedzony() {
+            console.log('Nie dziękuję')
         }
     }
 
@@ -31,7 +34,7 @@ export const Klasy = () => {
     console.log(azor)
 
     class Pies extends Zwierze {
-        constructor(rodzajVal, rasaVal, wiekVal, imieVal, kolorVal, wagaVal){
+        constructor(rodzajVal, rasaVal, wiekVal, imieVal, kolorVal, wagaVal) {
             super(rodzajVal, rasaVal, wiekVal, imieVal)
             this.kolor = kolorVal
             this.waga = wagaVal
@@ -40,6 +43,9 @@ export const Klasy = () => {
 
     const reksio = new Pies('pies', 'pudel', 2, 'Reksio', 'bialy', 15)
     console.log(reksio);
+
+    reksio.czyJestesGlodny()
+    reksio.najedzony()
 
     return (
         <div><h3>Klasy</h3>
