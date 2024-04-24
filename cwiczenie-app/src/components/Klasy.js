@@ -16,6 +16,12 @@ export const Klasy = () => {
             this.wiek = wiekVal
             this.imie = imieVal
         }
+        glodny() {
+            console.log('Tak')
+        }
+        najedzony(){
+            console.log('zjadłbym coś')
+        }
     }
 
     const kowalski = new Osoba('Jan', 'Kowalski')
@@ -23,6 +29,17 @@ export const Klasy = () => {
 
     const azor = new Zwierze('pies', 'lablador', 3, 'Azor')
     console.log(azor)
+
+    class Pies extends Zwierze {
+        constructor(rodzajVal, rasaVal, wiekVal, imieVal, kolorVal, wagaVal){
+            super(rodzajVal, rasaVal, wiekVal, imieVal)
+            this.kolor = kolorVal
+            this.waga = wagaVal
+        }
+    }
+
+    const reksio = new Pies('pies', 'pudel', 2, 'Reksio', 'bialy', 15)
+    console.log(reksio);
 
     return (
         <div><h3>Klasy</h3>
