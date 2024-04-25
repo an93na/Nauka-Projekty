@@ -52,6 +52,8 @@ export const Klasy = () => {
             <p>{kowalski.LastName} {kowalski.firstName}</p>
             <p>{reksio.imie}</p>
             <p>{reksio.rodzaj}</p>
+            <p>{reksio.waga}</p>
+            <p>{reksio.wiek}</p>
         </div>
     )
 }
