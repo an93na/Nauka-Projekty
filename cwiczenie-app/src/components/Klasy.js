@@ -50,6 +50,8 @@ export const Klasy = () => {
     return (
         <div><h3>Klasy</h3>
             <p>{kowalski.LastName} {kowalski.firstName}</p>
+            <p>{reksio.imie}</p>
+            <p>{reksio.rodzaj}</p>
         </div>
     )
 }
