@@ -25,10 +25,10 @@ export const Klasy = () => {
         najedzony() {
             console.log('Nie dziękuję')
         }
-        zabawa(){
+        zabawa() {
             console.log('Tak')
         }
-        lenistwo(){
+        lenistwo() {
             console.log('jestem senny')
         }
     }
