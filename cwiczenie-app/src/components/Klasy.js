@@ -25,6 +25,12 @@ export const Klasy = () => {
         najedzony() {
             console.log('Nie dziękuję')
         }
+        zabawa(){
+            console.log('Tak')
+        }
+        lenistwo(){
+            console.log('jestem senny')
+        }
     }
 
     const kowalski = new Osoba('Jan', 'Kowalski')
