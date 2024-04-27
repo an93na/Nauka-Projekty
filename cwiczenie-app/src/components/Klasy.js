@@ -1,5 +1,13 @@
 import React from 'react'
 
+function Konstruktor(owner) {
+    this.name = 'Gacek';
+    this.owner = owner;
+    this.hello = function () {
+        console.log(`Cześć jestem ${this.name} mój właściciel to ${this.owner}`)
+    }
+}
+
 export const Klasy = () => {
 
     class Osoba {
