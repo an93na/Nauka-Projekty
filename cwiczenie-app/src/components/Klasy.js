@@ -1,14 +1,18 @@
 import React from 'react'
 
-function Konstruktor(owner) {
-    this.name = 'Gacek';
-    this.owner = owner;
-    this.hello = function () {
-        console.log(`Cześć jestem ${this.name} mój właściciel to ${this.owner}`)
-    }
-}
+
 
 export const Klasy = () => {
+    function Konstruktor(owner) {
+        this.name = 'Gacek';
+        this.owner = owner;
+        this.hello = function () {
+            console.log(`Cześć jestem ${this.name} mój właściciel to ${this.owner}`)
+        }
+    }
+
+    const GacekAgi = new Konstruktor("Aga")
+    GacekAgi.hello()
 
     class Osoba {
         constructor(firstNameVal, LastNameVal) {
