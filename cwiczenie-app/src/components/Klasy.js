@@ -1,7 +1,5 @@
 import React from 'react'
 
-
-
 export const Klasy = () => {
     function Konstruktor(owner) {
         this.name = 'Gacek';
