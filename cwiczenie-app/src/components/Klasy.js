@@ -63,6 +63,26 @@ export const Klasy = () => {
     reksio.czyJestesGlodny()
     reksio.najedzony()
 
+    class NazwaKlasyZawszeZWielkiejLitery {
+        stala = 100;
+        // metoda klass służy do inicjalizacji instancji klasy, czyli towrzenia obiektów na podstawie klasy
+        constructor(name, type) {
+            this.name = name;
+            this.type = type;
+        }
+        // metody funkcje które są w klasie
+        metoda(){
+            console.log('Hello');
+            this.stala = this.stala - 10
+        }
+    }
+
+    const nowyObiektNaPodstKlasy = new NazwaKlasyZawszeZWielkiejLitery('Imie', 'Typ');
+    console.log(nowyObiektNaPodstKlasy);
+    nowyObiektNaPodstKlasy.metoda()
+    console.log(nowyObiektNaPodstKlasy);
+
+
     return (
         <div><h3>Klasy</h3>
             <p>{kowalski.LastName} {kowalski.firstName}</p>
