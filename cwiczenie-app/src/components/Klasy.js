@@ -83,11 +83,12 @@ export const Klasy = () => {
     console.log(nowyObiektNaPodstKlasy);
 
     class rozszerzenieKlasy extends NazwaKlasyZawszeZWielkiejLitery{
-        constructor(name){
+        constructor(name, parametr){
             super(name, "TypjakiZawszeMaByć")
+            this.parametr = parametr
         }
     }
-    const nowyRozszerzonyObiekt = new rozszerzenieKlasy("Jacek")
+    const nowyRozszerzonyObiekt = new rozszerzenieKlasy("Jacek", true)
 
     console.log(nowyRozszerzonyObiekt)
 
