@@ -82,6 +82,14 @@ export const Klasy = () => {
     nowyObiektNaPodstKlasy.metoda()
     console.log(nowyObiektNaPodstKlasy);
 
+    class rozszerzenieKlasy extends NazwaKlasyZawszeZWielkiejLitery{
+        constructor(name){
+            super(name, "TypjakiZawszeMaByć")
+        }
+    }
+    const nowyRozszerzonyObiekt = new rozszerzenieKlasy("Jacek")
+
+    console.log(nowyRozszerzonyObiekt)
 
     return (
         <div><h3>Klasy</h3>
