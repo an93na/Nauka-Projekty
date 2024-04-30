@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 export const Klasy = () => {
+    const [isOpen, setIsOpen] = useState(false)
     function Konstruktor(owner) {
         this.name = 'Gacek';
         this.owner = owner;
