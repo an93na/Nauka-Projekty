@@ -104,7 +104,7 @@ export const Klasy = () => {
             <p>{reksio.wiek}</p>
             </div>
             <div>
-                <div id='hamburger'>
+                <div id='hamburger' style={{width: '20px', margin: '10px'}}>
                     <div style={{borderBottom: '1px solid red', marginBottom: '5px'}}></div>
                     <div style={{borderBottom: '1px solid red', marginBottom: '5px'}}></div>
                     <div style={{borderBottom: '1px solid red', marginBottom: '5px'}}></div>
