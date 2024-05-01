@@ -105,9 +105,9 @@ export const Klasy = () => {
             </div>
             <div>
                 <div id='hamburger'>
-                    <div></div>
-                    <div></div>
-                    <div></div>
+                    <div style={{borderBottom: '1px solid red', marginBottom: '5px'}}></div>
+                    <div style={{borderBottom: '1px solid red', marginBottom: '5px'}}></div>
+                    <div style={{borderBottom: '1px solid red', marginBottom: '5px'}}></div>
                 </div>
             </div>
 
