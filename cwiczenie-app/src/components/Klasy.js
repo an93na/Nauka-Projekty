@@ -94,8 +94,8 @@ export const Klasy = () => {
     console.log(nowyRozszerzonyObiekt)
 
     const rozwin = {borderBottom: '1px solid red', marginBottom: '5px'}
-    const zwin1 = {top: '15px', transform: 'rotateZ(45deg)', left: '-8px', borderBottom: 'solid 1px red'}
-    const zwin2 = {top: '-6px', transform: 'rotateZ(-45deg)', left: '-8px', borderBottom: 'solid 1px red'}
+    const zwin1 = {margin: '10px', width:'50px', transform: 'rotateZ(45deg)', borderBottom: 'solid 1px red'}
+    const zwin2 = {margin: '10px', width: '50px', transform: 'rotateZ(-45deg)', borderBottom: 'solid 1px red'}
 
     return (
         <div>
