@@ -109,10 +109,10 @@ export const Klasy = () => {
             <p>{reksio.wiek}</p>
             </div>
             <div>
-                <div id='hamburger' style={{width: '20px', margin: '10px'}}>
-                    <div style={{borderBottom: '1px solid red', marginBottom: '5px'}}></div>
-                    <div style={{borderBottom: '1px solid red', marginBottom: '5px'}}></div>
-                    <div style={{borderBottom: '1px solid red', marginBottom: '5px'}}></div>
+                <div id='hamburger' style={{width: '30px', margin: '10px'}}>
+                    <div className={classes.linia}></div>
+                    <div className={classes.linia}></div>
+                    <div className={classes.linia}></div>
                 </div>
                 <div className={classes.krzyzyk}></div>
             </div>
