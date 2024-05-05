@@ -73,7 +73,7 @@ export const Klasy = () => {
             this.type = type;
         }
         // metody funkcje które są w klasie
-        metoda(){
+        metoda() {
             console.log('Hello');
             this.stala = this.stala - 10
         }
@@ -84,8 +84,8 @@ export const Klasy = () => {
     nowyObiektNaPodstKlasy.metoda()
     console.log(nowyObiektNaPodstKlasy);
 
-    class rozszerzenieKlasy extends NazwaKlasyZawszeZWielkiejLitery{
-        constructor(name, parametr){
+    class rozszerzenieKlasy extends NazwaKlasyZawszeZWielkiejLitery {
+        constructor(name, parametr) {
             super(name, "TypjakiZawszeMaByć")
             this.parametr = parametr
         }
@@ -94,27 +94,29 @@ export const Klasy = () => {
 
     console.log(nowyRozszerzonyObiekt)
 
-    const rozwin = {borderBottom: '1px solid red', marginBottom: '5px'}
-    const zwin1 = {margin: '10px', width:'50px', transform: 'rotateZ(45deg)', borderBottom: 'solid 1px red'}
-    const zwin2 = {margin: '10px', width: '50px', transform: 'rotateZ(-45deg)', borderBottom: 'solid 1px red'}
+    const rozwin = { borderBottom: '1px solid red', marginBottom: '5px' }
+    const zwin1 = { margin: '10px', width: '50px', transform: 'rotateZ(45deg)', borderBottom: 'solid 1px red' }
+    const zwin2 = { margin: '10px', width: '50px', transform: 'rotateZ(-45deg)', borderBottom: 'solid 1px red' }
 
+    console.log(isOpen)
     return (
         <div>
             <div>
-            <h3>Klasy</h3>
-            <p>{kowalski.LastName} {kowalski.firstName}</p>
-            <p>{reksio.imie}</p>
-            <p>{reksio.rodzaj}</p>
-            <p>{reksio.waga}</p>
-            <p>{reksio.wiek}</p>
+                <h3>Klasy</h3>
+                <p>{kowalski.LastName} {kowalski.firstName}</p>
+                <p>{reksio.imie}</p>
+                <p>{reksio.rodzaj}</p>
+                <p>{reksio.waga}</p>
+                <p>{reksio.wiek}</p>
             </div>
             <div>
-                <div id='hamburger' className={classes.hamburger}>
+                {isOpen ? <><div id='hamburger' className={classes.hamburger} onClick={() => { setIsOpen(prev => !prev) }}>
                     <div className={classes.linia}></div>
                     <div className={classes.linia}></div>
                     <div className={classes.linia}></div>
-                </div>
-                <div className={classes.krzyzyk}></div>
+                </div></> : <><div className={classes.krzyzyk} onClick={() => { setIsOpen(prev => !prev) }}></div></>}
+
+
             </div>
 
         </div>
