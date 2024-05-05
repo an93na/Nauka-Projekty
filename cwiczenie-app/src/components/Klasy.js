@@ -109,7 +109,7 @@ export const Klasy = () => {
             <p>{reksio.wiek}</p>
             </div>
             <div>
-                <div id='hamburger' style={{width: '30px', margin: '10px'}}>
+                <div id='hamburger' className={classes.hamburger}>
                     <div className={classes.linia}></div>
                     <div className={classes.linia}></div>
                     <div className={classes.linia}></div>
