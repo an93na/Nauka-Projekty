@@ -105,11 +105,12 @@ export const Klasy = () => {
                 <p>{reksio.wiek}</p>
             </div>
             <div>
-                {isOpen ? <><div id='hamburger' className={classes.hamburger} onClick={() => { setIsOpen(prev => !prev) }}>
-                    <div className={classes.linia}></div>
-                    <div className={classes.linia}></div>
-                    <div className={classes.linia}></div>
-                </div></> : <><div className={classes.krzyzyk} onClick={() => { setIsOpen(prev => !prev) }}></div></>}
+                {isOpen ? <div className={classes.krzyzyk} onClick={() => { setIsOpen(prev => !prev) }}></div> :
+                    <div id='hamburger' className={classes.hamburger} onClick={() => { setIsOpen(prev => !prev) }}>
+                        <div className={classes.linia}></div>
+                        <div className={classes.linia}></div>
+                        <div className={classes.linia}></div>
+                    </div>}
             </div>
         </div>
     )
