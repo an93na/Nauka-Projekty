@@ -93,11 +93,6 @@ export const Klasy = () => {
     const nowyRozszerzonyObiekt = new rozszerzenieKlasy("Jacek", true)
 
     console.log(nowyRozszerzonyObiekt)
-
-    const rozwin = { borderBottom: '1px solid red', marginBottom: '5px' }
-    const zwin1 = { margin: '10px', width: '50px', transform: 'rotateZ(45deg)', borderBottom: 'solid 1px red' }
-    const zwin2 = { margin: '10px', width: '50px', transform: 'rotateZ(-45deg)', borderBottom: 'solid 1px red' }
-
     console.log(isOpen)
     return (
         <div>
@@ -115,10 +110,7 @@ export const Klasy = () => {
                     <div className={classes.linia}></div>
                     <div className={classes.linia}></div>
                 </div></> : <><div className={classes.krzyzyk} onClick={() => { setIsOpen(prev => !prev) }}></div></>}
-
-
             </div>
-
         </div>
     )
 }
