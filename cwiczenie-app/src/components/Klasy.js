@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import classes from '../style/Style.module.css'
+import { Krzyzyk } from './Krzyzyk';
+import { Hamburger } from './Hamburger';
 
 export const Klasy = () => {
     const [isOpen, setIsOpen] = useState(false)
@@ -105,12 +107,7 @@ export const Klasy = () => {
                 <p>{reksio.wiek}</p>
             </div>
             <div>
-                {isOpen ? <div className={classes.krzyzyk} onClick={() => { setIsOpen(prev => !prev) }}></div> :
-                    <div id='hamburger' className={classes.hamburger} onClick={() => { setIsOpen(prev => !prev) }}>
-                        <div className={classes.linia}></div>
-                        <div className={classes.linia}></div>
-                        <div className={classes.linia}></div>
-                    </div>}
+                {isOpen ? <Krzyzyk setIsOpen={setIsOpen}/> : <Hamburger setIsOpen={setIsOpen}/>}
             </div>
         </div>
     )
