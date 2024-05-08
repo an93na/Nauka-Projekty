@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import classes from '../style/Style.module.css'
 import { Krzyzyk } from './Krzyzyk';
 import { Hamburger } from './Hamburger';
+import { MenuSzczeg } from './MenuSzczeg';
 
 export const Klasy = () => {
     const [isOpen, setIsOpen] = useState(false)
@@ -107,7 +108,7 @@ export const Klasy = () => {
                 <p>{reksio.wiek}</p>
             </div>
             <div>
-                {isOpen ? <Krzyzyk setIsOpen={setIsOpen}/> : <Hamburger setIsOpen={setIsOpen}/>}
+                {isOpen ? <><Krzyzyk setIsOpen={setIsOpen} /> <MenuSzczeg /></> : <Hamburger setIsOpen={setIsOpen} />}
             </div>
         </div>
     )
