@@ -1,36 +1,41 @@
 .krzyzyk {
-    position: relative;
-    width: 50px;
-    height: 50px;
-    cursor: pointer;
-  }
-  
-  .krzyzyk::before,
-  .krzyzyk::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 70%;
-    height: 2px;
-    background-color: rgb(182, 12, 12);
-  }
-  
-  .krzyzyk::before {
-    transform: translate(-50%, -50%) rotate(45deg);
-  }
-  
-  .krzyzyk::after {
-    transform: translate(-50%, -50%) rotate(-45deg);
-  }
+  position: relative;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
 
-  .linia{
-    border-bottom: 1px solid red;
-    margin-bottom: 5px;
-  }
+.krzyzyk::before,
+.krzyzyk::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 70%;
+  height: 2px;
+  background-color: rgb(182, 12, 12);
+}
 
-  .hamburger{
-    width: 30px;
-    margin: 10px;
-    cursor: pointer;
-  }
+.krzyzyk::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.krzyzyk::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.linia {
+  border-bottom: 1px solid red;
+  margin-bottom: 5px;
+}
+
+.hamburger {
+  width: 30px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.menSzcze {
+  width: 100px;
+  background-color: beige;
+}
