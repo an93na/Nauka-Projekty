@@ -1,6 +1,7 @@
 import React from 'react'
 import classes from '../style/Style.module.css'
 import { Link, Route, Routes } from 'react-router-dom'
+import { Klasy } from './Klasy'
 
 export const MenuSzczeg = () => {
   return (
