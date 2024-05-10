@@ -5,7 +5,11 @@ import { Link, Route, Routes } from 'react-router-dom'
 export const MenuSzczeg = () => {
   return (
     <div className={classes.menuszcze}>
-      <Link></Link>
+      <div>
+        <Link to='/'>Home</Link>
+        <Link to='/Page1'>Page1</Link>
+        <Link to='/Page2'>Page2</Link>
+      </div>
       <Routes>
         <Route></Route>
       </Routes>
