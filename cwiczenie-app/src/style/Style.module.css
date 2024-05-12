@@ -43,3 +43,8 @@
   flex-direction: column;
   gap: 20px;
 }
+.link{
+  display: block;
+  color: red;
+  text-decoration: none;
+}
