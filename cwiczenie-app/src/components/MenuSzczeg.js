@@ -11,17 +11,18 @@ export const MenuSzczeg = () => {
     <div>
       <div className={classes.menuszcze}>
         <div>
-          <Link to='/'>Home</Link>
-          <Link to='/Page1'>Page1</Link>
-          <Link to='/Page2'>Page2</Link>
+          <div><Link to='/'>Home</Link></div>
+          <div> <Link to='/Page1'>Page1</Link></div>
+          <div><Link to='/Page2'>Page2</Link></div>
         </div>
-      </div><div>
+      </div>
+      <div>
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/Page1' element={<Page1 />} />
           <Route path='/Page2' element={<Page2 />} />
         </Routes>
       </div>
-      </div>
+    </div>
   )
 }
