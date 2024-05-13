@@ -8,8 +8,8 @@ import { Page2 } from './Page2'
 export const MenuSzczeg = () => {
   return (
     <div>
-      <div className={classes.menuszcze}>
-        <div>
+      <div >
+        <div className={classes.menuszcze}>
           <Link to='/' className={classes.link}>Home</Link>
           <Link to='/Page1' className={classes.link}>Page1</Link>
           <Link to='/Page2' className={classes.link}>Page2</Link>
