@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import classes from '../style/Style.module.css'
+// import classes from '../style/Style.module.css'
 import { Krzyzyk } from './Krzyzyk';
 import { Hamburger } from './Hamburger';
 import { MenuSzczeg } from './MenuSzczeg';
