@@ -100,14 +100,6 @@ export const Klasy = () => {
     return (
         <div>
             <div>
-                <h3>Klasy</h3>
-                <p>{kowalski.LastName} {kowalski.firstName}</p>
-                <p>{reksio.imie}</p>
-                <p>{reksio.rodzaj}</p>
-                <p>{reksio.waga}</p>
-                <p>{reksio.wiek}</p>
-            </div>
-            <div>
                 {isOpen ? <><Krzyzyk setIsOpen={setIsOpen} /> <MenuSzczeg /></> : <Hamburger setIsOpen={setIsOpen} />}
             </div>
         </div>
