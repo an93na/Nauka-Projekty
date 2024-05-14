@@ -95,8 +95,8 @@ export const Klasy = () => {
     }
     const nowyRozszerzonyObiekt = new rozszerzenieKlasy("Jacek", true)
 
-    console.log(nowyRozszerzonyObiekt)
-    console.log(isOpen)
+    // console.log(nowyRozszerzonyObiekt)
+    // console.log(isOpen)
     return (
         <div>
             <div>
