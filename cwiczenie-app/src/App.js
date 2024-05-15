@@ -1,9 +1,9 @@
-import { Klasy } from "./components/Klasy";
+import { Bill } from "./challengeBill/Bill";
 
 function App() {
   return (
     <div>
-      <Klasy/>
+      <Bill/>
     </div>
   );
 }
