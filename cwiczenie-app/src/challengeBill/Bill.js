@@ -1,7 +1,8 @@
 import React from 'react'
+import classes from '../style/StyleBill.module.css'
 
 export const Bill = () => {
   return (
-    <div>Bill</div>
+    <article className={classes.home}>Bill</article>
   )
 }
