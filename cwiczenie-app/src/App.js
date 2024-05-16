@@ -1,9 +1,9 @@
-import { Bill } from "./challengeBill/Bill";
+import { BillTotal } from "./challengeBill/BillTotal";
 
 function App() {
   return (
     <div>
-      <Bill/>
+      <BillTotal/>
     </div>
   );
 }
