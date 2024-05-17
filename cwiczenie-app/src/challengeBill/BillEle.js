@@ -2,6 +2,12 @@ import React from 'react'
 
 export const BillEle = () => {
   return (
-    <div>BillEle</div>
+    <div>
+      <h4>Bill</h4>
+      <div>
+        <p>$</p>
+        <p>0</p>
+      </div>
+    </div>
   )
 }
