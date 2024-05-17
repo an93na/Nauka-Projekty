@@ -3,7 +3,7 @@ import React from 'react'
 export const BillEle = () => {
   return (
     <div>
-      <h4>Bill</h4>
+      <h6>Bill</h6>
       <div>
         <p>$</p>
         <p>0</p>

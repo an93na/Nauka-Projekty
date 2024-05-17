@@ -5,7 +5,7 @@ export const RightSide = () => {
     <div>
       <div>
         <div>
-          <h5>Tip Amount</h5>
+          <h6>Tip Amount</h6>
           <p>/person</p>
         </div>
         <div>
