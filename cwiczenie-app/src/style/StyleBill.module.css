@@ -1,20 +1,27 @@
-.home{
-    margin: 20px;
+.home {
+  margin: 20px;
 }
 
-.billWhite{
-    background-color: rgb(235, 235, 235);
-    border-radius: 10px;
-    width: 550px;
-    /* height: 450px; */
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+.billWhite {
+  background-color: rgb(235, 235, 235);
+  border-radius: 10px;
+  width: 550px;
+  /* height: 450px; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 
-.rightSide{
-    background-color: rgb(0, 71, 75);
-    border-radius: 10px;
-    padding: 20px;
-    margin: 10px;
+.rightSide {
+  background-color: rgb(0, 71, 75);
+  border-radius: 10px;
+  padding: 20px;
+  margin: 10px;
+}
+
+.buttonRight {
+  background-color: rgb(13, 104, 109);
+  border: none;
+  color: rgb(6, 93, 100);
+  font-weight: bold;
 }

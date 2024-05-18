@@ -22,7 +22,7 @@ export const RightSide = () => {
           <h2>$ 0.00</h2>
         </div>
       </div>
-      <button>RESET</button>
+      <button className={classes.buttonRight}>RESET</button>
     </div>
   )
 }
