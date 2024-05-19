@@ -6,7 +6,7 @@ export const BillEle = () => {
     <div className={classes.billEle}>
       <h6>Bill</h6>
       <div>
-        <input type="text" />
+        <input type="text" className={classes.inputEle}/>
       </div>
     </div>
   )
