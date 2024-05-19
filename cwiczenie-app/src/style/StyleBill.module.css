@@ -25,3 +25,12 @@
   color: rgb(6, 93, 100);
   font-weight: bold;
 }
+
+.billEle{
+  margin: 10px;  
+}
+
+input{
+  background-color: rgb(235, 235, 235);
+  border: 1px solid rgb(204, 198, 198);
+}
