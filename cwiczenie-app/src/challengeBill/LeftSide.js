@@ -6,9 +6,9 @@ import { NumberOfPeople } from './NumberOfPeople'
 export const LeftSide = () => {
   return (
     <div>
-      <BillEle/>
-      <SelectTip/>
-      <NumberOfPeople/>
+      <BillEle />
+      <SelectTip />
+      <NumberOfPeople />
     </div>
   )
 }

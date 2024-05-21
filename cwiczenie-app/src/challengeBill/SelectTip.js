@@ -3,7 +3,7 @@ import classes from '../style/StyleBill.module.css'
 
 export const SelectTip = () => {
   return (
-    <div className={classes.billEle}> 
+    <div className={classes.billEle}>
       <h6>Select Tip %</h6>
       <div className={classes.divSel}>
         <button className={classes.buttonSel}>5%</button>
@@ -15,6 +15,6 @@ export const SelectTip = () => {
         <button className={classes.buttonSel}>50%</button>
         <button className={classes.buttonCus}>Custom</button>
       </div>
-      </div>
+    </div>
   )
 }
