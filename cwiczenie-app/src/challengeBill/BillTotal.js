@@ -9,10 +9,10 @@ export const BillTotal = () => {
   const [numberOfPeople, setNumberOfPeople] = useState(0)
   return (
     <article className={classes.home}>
-        <div className={classes.billWhite}>
-            <div><LeftSide/></div>
-            <div><RightSide/></div>
-        </div>
+      <div className={classes.billWhite}>
+        <div><LeftSide /></div>
+        <div><RightSide /></div>
+      </div>
     </article>
   )
 }

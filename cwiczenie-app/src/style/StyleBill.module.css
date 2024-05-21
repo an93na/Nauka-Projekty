@@ -27,31 +27,31 @@
   font-weight: bold;
 }
 
-.billEle{
-  margin: 10px;  
+.billEle {
+  margin: 10px;
 }
 
-.inputEle{
+.inputEle {
   background-color: rgb(235, 235, 235);
   border: 1px solid rgb(204, 198, 198);
 }
 
-.divSel{
+.divSel {
   display: flex;
   flex-direction: row;
   gap: 10px;
   margin: 5px;
 }
 
-.buttonSel{
+.buttonSel {
   background-color: rgb(13, 104, 109);
   width: 120px;
   font-weight: bold;
 }
 
-.buttonCus{
+.buttonCus {
   background-color: rgb(235, 235, 235);
   border: none;
-  color:  rgb(6, 93, 100);
+  color: rgb(6, 93, 100);
   font-weight: bold;
 }
