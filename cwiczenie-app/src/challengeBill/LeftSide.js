@@ -9,9 +9,9 @@ export const LeftSide = (props) => {
   const { bill, setBill } = props
   return (
     <div>
-      <BillEle bill={bill} setBill={setBill}/>
-      <SelectTip procent={procent} setProcent={setProcent}/>
-      <NumberOfPeople />
+      <BillEle bill={bill} setBill={setBill} />
+      <SelectTip procent={procent} setProcent={setProcent} />
+      <NumberOfPeople numberOfPeople={numberOfPeople} setNumberOfPeople={setNumberOfPeople} />
     </div>
   )
 }
