@@ -14,7 +14,7 @@ export const RightSide = () => {
         </div>
       </div>
       <div>
-        <div>
+        <div className={classes.div}>
           <h6>Total</h6>
           <p>/person</p>
         </div>
