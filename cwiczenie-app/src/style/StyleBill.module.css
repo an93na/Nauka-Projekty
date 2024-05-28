@@ -68,3 +68,14 @@
   margin-bottom: 2px;
   color: white;
 }
+
+.paragraf{
+  color: rgb(74, 170, 138);
+}
+
+.rightKolum{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
