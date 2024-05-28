@@ -6,7 +6,7 @@ export const RightSide = () => {
     <div className={classes.rightSide}>
       <div>
       <div className={classes.divCos}>
-          <h6>Tip Amount</h6>
+          <h6 className={classes.naglowekBezMargin}>Tip Amount</h6>
           <p>/person</p>
         </div>
         <div>
@@ -15,7 +15,7 @@ export const RightSide = () => {
       </div>
       <div>
         <div className={classes.divCos}>
-          <h6>Total</h6>
+          <h6 className={classes.naglowekBezMargin}>Total</h6>
           <p>/person</p>
         </div>
         <div>
