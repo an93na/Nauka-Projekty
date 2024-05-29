@@ -5,12 +5,12 @@ export const RightSide = () => {
   return (
     <div className={classes.rightSide}>
       <div className={classes.rightKolum}>
-      <div className={classes.divCos}>
+        <div className={classes.divCos}>
           <h6 className={classes.naglowekBezMargin}>Tip Amount</h6>
           <p className={classes.paragraf}>/person</p>
         </div>
         <div>
-          <h2>$ 0.00</h2>
+          <h2 style={{ color: 'aquamarine' }}>$ 0.00</h2>
         </div>
       </div>
       <div className={classes.rightKolum}>
@@ -19,7 +19,7 @@ export const RightSide = () => {
           <p className={classes.paragraf}>/person</p>
         </div>
         <div>
-          <h2>$ 0.00</h2>
+          <h2 style={{ color: 'aquamarine' }}>$ 0.00</h2>
         </div>
       </div>
       <button className={classes.buttonRight}>RESET</button>
