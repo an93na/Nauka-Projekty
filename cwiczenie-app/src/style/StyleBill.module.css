@@ -64,18 +64,23 @@
   align-items: flex-start;
 }
 
-.naglowekBezMargin{
+.naglowekBezMargin {
   margin-bottom: 2px;
   color: rgb(229, 218, 218);
 }
 
-.paragraf{
+.paragraf {
   color: rgb(74, 170, 138);
 }
 
-.rightKolum{
+.rightKolum {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+}
+
+.imgPerson {
+  width: 24px;
+  height: 24px;
 }
