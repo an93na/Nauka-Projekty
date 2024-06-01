@@ -47,13 +47,23 @@
   background-color: rgb(13, 104, 109);
   width: 120px;
   font-weight: bold;
+  border: none;
 }
 
 .buttonCus {
   background-color: rgb(235, 235, 235);
+  width: 120px;
   border: none;
   color: rgb(6, 93, 100);
   font-weight: bold;
+}
+
+.buttonSel:hover {
+  background-color: aquamarine;
+}
+
+.buttonCus:hover {
+  background-color: aquamarine;
 }
 
 .divCos {
