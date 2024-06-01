@@ -6,8 +6,8 @@ export const NumberOfPeople = () => {
   return (
     <div>
       <h6>NumberOfPeople</h6>
-      <div>
-        <img src={person} alt="person" className={classes.imgPerson}/>
+      <div className={classes.rightKolum} style={{ padding: '5px' }}>
+        <img src={person} alt="person" className={classes.imgPerson} />
         <p>0</p>
       </div>
     </div>
