@@ -7,7 +7,7 @@ export const NumberOfPeople = (props) => {
   return (
     <div>
       <h6>NumberOfPeople</h6>
-      <div className={classes.rightKolum} style={{ padding: '5px' }}>
+      <div className={classes.kolumnPerson}>
         <img src={person} alt="person" className={classes.imgPerson} />
         <input type="text" className={classes.inputPerson} value={numberOfPeople} onChange={(e) => setNumberOfPeople(e.target.value)} />
       </div>
