@@ -85,20 +85,24 @@
 
 .rightKolum {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
   align-items: center;
+  position: relative;
 }
 
 .imgPerson {
-  width: 24px;
-  height: 24px;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  left: 85px;
 }
 
-.inputPerson{
-  background-color: white; 
+.inputPerson {
+  background-color: white;
   border: 1px solid grey;
-  text-align: end
+  text-align: end;
+  padding-left: 40px;
+  padding-right: 20px;
+  width: 100%;
 }
 
 .kolumnPerson {
