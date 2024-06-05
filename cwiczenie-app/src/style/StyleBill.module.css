@@ -88,6 +88,10 @@
   align-items: center;
   position: relative;
 }
+.rightKolum1 {
+  display: flex;
+  align-items: center;
+}
 
 .imgPerson {
   position: absolute;
