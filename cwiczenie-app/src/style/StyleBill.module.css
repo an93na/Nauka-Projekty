@@ -37,6 +37,10 @@
   color: rgb(48, 45, 45);
 }
 
+.inputEle:hover{
+  color: aquamarine;
+}
+
 .divSel {
   display: flex;
   flex-direction: row;
