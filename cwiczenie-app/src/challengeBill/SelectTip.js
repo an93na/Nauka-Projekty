@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 import classes from '../style/StyleBill.module.css'
 
-export const SelectTip = () => {
+export const SelectTip = (props) => {
+  const { procent, setProcent } = props
+  const [wlasna, setWlasna] = useState('')
   return (
     <div className={classes.billEle}>
       <h6>Select Tip %</h6>
