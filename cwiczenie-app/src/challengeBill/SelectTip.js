@@ -16,7 +16,7 @@ export const SelectTip = (props) => {
       <div className={classes.divSel}>
         <button className={classes.buttonSel} onClick={() => setProcent(0.25)}>25%</button>
         <button className={classes.buttonSel} onClick={() => setProcent(0.5)}>50%</button>
-        {wlasna ? <input type='text' className={classes.inputEle} /> : <button className={classes.buttonCus} onClick={() => setWlasna(true)}>Custom</button>}
+        {wlasna ? <input type='text' className={classes.inputCust} /> : <button className={classes.buttonCus} onClick={() => setWlasna(true)}>Custom</button>}
       </div>
     </div>
   )
