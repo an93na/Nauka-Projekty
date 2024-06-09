@@ -37,7 +37,7 @@
   color: rgb(48, 45, 45);
 }
 
-.inputEle:hover{
+.inputEle:hover {
   color: aquamarine;
 }
 
@@ -119,4 +119,11 @@
   display: flex;
   align-items: center;
   padding: 5px;
+}
+
+.inputCust {
+  background-color: rgb(235, 235, 235);
+  border: 1px solid rgb(204, 198, 198);
+  color: rgb(48, 45, 45);
+  width: 120px;
 }
