@@ -1,7 +1,8 @@
 import React from 'react'
 import classes from '../style/StyleBill.module.css'
 
-export const RightSide = () => {
+export const RightSide = (props) => {
+  const { numberOfPeople, procent, bill } = props
   return (
     <div className={classes.rightSide}>
       <div className={classes.rightKolum1}>

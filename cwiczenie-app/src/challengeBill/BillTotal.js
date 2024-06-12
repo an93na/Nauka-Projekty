@@ -11,7 +11,7 @@ export const BillTotal = () => {
     <article className={classes.home}>
       <div className={classes.billWhite}>
         <div><LeftSide numberOfPeople={numberOfPeople} setNumberOfPeople={setNumberOfPeople} procent={procent} setProcent={setProcent} bill={bill} setBill={setBill} /></div>
-        <div><RightSide /></div>
+        <div><RightSide numberOfPeople={numberOfPeople} procent={procent} bill={bill}/></div>
       </div>
     </article>
   )
