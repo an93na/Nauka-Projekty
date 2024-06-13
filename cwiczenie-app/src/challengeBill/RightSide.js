@@ -3,6 +3,9 @@ import classes from '../style/StyleBill.module.css'
 
 export const RightSide = (props) => {
   const { numberOfPeople, procent, bill } = props
+
+  const totalAmount = bill * procent;
+  console.log(totalAmount);
   return (
     <div className={classes.rightSide}>
       <div className={classes.rightKolum1}>
@@ -11,7 +14,7 @@ export const RightSide = (props) => {
           <p className={classes.paragraf}>/person</p>
         </div>
         <div>
-          <h2 style={{ color: 'aquamarine' }}>$ 0.00</h2>
+          <h2 style={{ color: 'aquamarine' }}>$ {totalAmount}</h2>
         </div>
       </div>
       <div className={classes.rightKolum1}>
