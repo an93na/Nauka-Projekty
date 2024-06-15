@@ -7,6 +7,7 @@ export const RightSide = (props) => {
   const totalAmount = bill * procent;
   const totalBill = bill + totalAmount;
   console.log(totalBill);
+  const people = parseInt(numberOfPeople);
   return (
     <div className={classes.rightSide}>
       <div className={classes.rightKolum1}>
