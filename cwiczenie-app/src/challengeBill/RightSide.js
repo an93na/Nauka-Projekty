@@ -16,8 +16,9 @@ export const RightSide = (props) => {
           <h6 className={classes.naglowekBezMargin}>Tip Amount</h6>
           <p className={classes.paragraf}>/person</p>
         </div>
-        <div>
+        <div className={classes.divCos}>
           <h2 style={{ color: 'aquamarine' }}>$ {totalAmount}</h2>
+          <h6 style={{ color: 'aquamarine' }}>$ {totalAmount}</h6>
         </div>
       </div>
       <div className={classes.rightKolum1}>
@@ -25,9 +26,11 @@ export const RightSide = (props) => {
           <h6 className={classes.naglowekBezMargin}>Total</h6>
           <p className={classes.paragraf}>/person</p>
         </div>
-        <div>
-          <h2 style={{ color: 'aquamarine' }}>$ {totalBillPerson}</h2>
+        <div className={classes.divCos}>
+          <h2 style={{ color: 'aquamarine' }} >$ {totalBill}</h2>
+          <h6 style={{ color: 'aquamarine' }} >$ {totalBill}</h6>
         </div>
+
       </div>
       <button className={classes.buttonRight}>RESET</button>
     </div>
