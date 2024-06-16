@@ -8,6 +8,7 @@ export const RightSide = (props) => {
   const totalBill = bill + totalAmount;
   const people = parseInt(numberOfPeople);
   const totalBillPerson = totalBill / people
+  const totalAmountPerson = totalAmount / people
   console.log(totalBillPerson);
   return (
     <div className={classes.rightSide}>
@@ -18,7 +19,7 @@ export const RightSide = (props) => {
         </div>
         <div className={classes.divCos}>
           <h2 style={{ color: 'aquamarine' }}>$ {totalAmount}</h2>
-          <h6 style={{ color: 'aquamarine' }}>$ {totalAmount}</h6>
+          <h6 style={{ color: 'aquamarine' }}>$ {totalAmountPerson}</h6>
         </div>
       </div>
       <div className={classes.rightKolum1}>
@@ -28,7 +29,7 @@ export const RightSide = (props) => {
         </div>
         <div className={classes.divCos}>
           <h2 style={{ color: 'aquamarine' }} >$ {totalBill}</h2>
-          <h6 style={{ color: 'aquamarine' }} >$ {totalBill}</h6>
+          <h6 style={{ color: 'aquamarine' }} >$ {totalBillPerson}</h6>
         </div>
 
       </div>
