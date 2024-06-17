@@ -7,9 +7,12 @@ export const RightSide = (props) => {
   const totalAmount = bill * procent;
   const totalBill = bill + totalAmount;
   const people = parseInt(numberOfPeople);
-  const totalBillPerson = totalBill / people
-  const totalAmountPerson = totalAmount / people
-  console.log(totalBillPerson);
+  const totalBillPerson = totalBill / people;
+  const totalAmountPerson = totalAmount / people;
+  const resetState = () => {
+    
+  }
+
   return (
     <div className={classes.rightSide}>
       <div className={classes.rightKolum1}>
@@ -33,7 +36,7 @@ export const RightSide = (props) => {
         </div>
 
       </div>
-      <button className={classes.buttonRight}>RESET</button>
+      <button className={classes.buttonRight} onClick={() => {}}>RESET</button>
     </div>
   )
 }
