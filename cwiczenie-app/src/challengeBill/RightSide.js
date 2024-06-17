@@ -2,7 +2,7 @@ import React from 'react'
 import classes from '../style/StyleBill.module.css'
 
 export const RightSide = (props) => {
-  const { numberOfPeople, procent, bill } = props
+  const { numberOfPeople, procent, bill, setBill, setNumberOfPeople, setProcent } = props
 
   const totalAmount = bill * procent;
   const totalBill = bill + totalAmount;
@@ -10,7 +10,9 @@ export const RightSide = (props) => {
   const totalBillPerson = totalBill / people;
   const totalAmountPerson = totalAmount / people;
   const resetState = () => {
-    
+    setBill('');
+    setNumberOfPeople('');
+    setProcent('');
   }
 
   return (
@@ -36,7 +38,7 @@ export const RightSide = (props) => {
         </div>
 
       </div>
-      <button className={classes.buttonRight} onClick={() => {}}>RESET</button>
+      <button className={classes.buttonRight} onClick={() => { resetState() }}>RESET</button>
     </div>
   )
 }
