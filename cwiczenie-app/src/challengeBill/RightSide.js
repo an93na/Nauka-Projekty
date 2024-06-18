@@ -10,9 +10,9 @@ export const RightSide = (props) => {
   const totalBillPerson = totalBill / people;
   const totalAmountPerson = totalAmount / people;
   const resetState = () => {
-    setBill('');
+    setBill(0);
     setNumberOfPeople('');
-    setProcent('');
+    setProcent(0);
   }
 
   return (
