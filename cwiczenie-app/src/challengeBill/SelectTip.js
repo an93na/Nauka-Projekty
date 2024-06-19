@@ -6,6 +6,10 @@ export const SelectTip = (props) => {
   const [wlasna, setWlasna] = useState(false);
   const [custProcent, setCustPocent] = useState(0)
 
+  const procentNew = () => {
+    setProcent(custProcent*0.01)
+  }
+
   return (
     <div className={classes.billEle}>
       <h6>Select Tip %</h6>
