@@ -5,8 +5,8 @@ export const SelectTip = (props) => {
   const { procent, setProcent } = props;
   const [wlasna, setWlasna] = useState(false);
 
-  const zamienWpisanaWartoscNaProcent = () => {
-    
+  const zamienWpisanaWartoscNaProcent = (a) => {
+    return a*0.001
   }
 
   return (
