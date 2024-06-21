@@ -5,6 +5,10 @@ export const SelectTip = (props) => {
   const { procent, setProcent } = props;
   const [wlasna, setWlasna] = useState(false);
 
+  const zamienWpisanaWartoscNaProcent = () => {
+    
+  }
+
   return (
     <div className={classes.billEle}>
       <h6>Select Tip %</h6>
