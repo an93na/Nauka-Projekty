@@ -6,8 +6,15 @@ export const SelectTip = (props) => {
   const [wlasna, setWlasna] = useState(false);
 
   const zamienWpisanaWartoscNaProcent = (a) => {
-    return a*0.001
+    return a*0.01
   }
+
+  const handleCustomInputChange = (e) => {
+    const value = parseFloat(e.target.value);
+    if (!isNaN(value)) {
+      setProcent(zamienWpisanaWartoscNaProcent(value));
+    }
+  };
 
   return (
     <div className={classes.billEle}>
