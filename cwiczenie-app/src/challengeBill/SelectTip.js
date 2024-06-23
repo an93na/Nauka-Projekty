@@ -4,6 +4,7 @@ import classes from '../style/StyleBill.module.css';
 export const SelectTip = (props) => {
   const { procent, setProcent } = props;
   const [wlasna, setWlasna] = useState(false);
+  const [wpisanaWlasna, setWpisanaWlasna] = useState(false)
 
   const zamienWpisanaWartoscNaProcent = (a) => {
     return a*0.01
@@ -15,6 +16,12 @@ export const SelectTip = (props) => {
       setProcent(zamienWpisanaWartoscNaProcent(value));
     }
   };
+
+  const customValueAppear = () => {
+    if (procent > 0) {
+      setWpisanaWlasna(true)
+    }
+  }
 
   return (
     <div className={classes.billEle}>
