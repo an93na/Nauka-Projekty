@@ -7,22 +7,25 @@ export const SelectTip = (props) => {
   const [wpisanaWlasna, setWpisanaWlasna] = useState(false)
 
   const zamienWpisanaWartoscNaProcent = (a) => {
-    return a*0.01
+    return a * 0.01
   }
 
+  const customValueAppear = () => {
+    if (procent !== 0) {
+      setWpisanaWlasna(true)
+    }
+  }
+  
   const handleCustomInputChange = (e) => {
     const value = parseFloat(e.target.value);
     if (!isNaN(value)) {
       setProcent(zamienWpisanaWartoscNaProcent(value));
+      customValueAppear()
     }
   };
 
-  const customValueAppear = () => {
-    if (procent > 0) {
-      setWpisanaWlasna(true)
-    }
-  }
 
+  console.log(wpisanaWlasna)
   return (
     <div className={classes.billEle}>
       <h6>Select Tip %</h6>
