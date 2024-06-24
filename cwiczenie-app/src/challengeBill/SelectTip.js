@@ -17,9 +17,8 @@ export const SelectTip = (props) => {
   }
   
   const handleCustomInputChange = (e) => {
-    const value = parseFloat(e.target.value);
-    if (!isNaN(value)) {
-      setProcent(zamienWpisanaWartoscNaProcent(value));
+    if (!isNaN(e.target.value)) {
+      setProcent(e.target.value);
       customValueAppear()
     }
   };
@@ -42,6 +41,7 @@ export const SelectTip = (props) => {
         ) : (
           <button className={classes.buttonCus} onClick={() => setWlasna(true)}>Custom</button>
         )}
+        {wpisanaWlasna && <button>zatwierdź własną wartość</button>}
       </div>
     </div>
   );
