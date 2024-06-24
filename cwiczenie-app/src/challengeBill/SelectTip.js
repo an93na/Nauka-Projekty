@@ -26,7 +26,7 @@ export const SelectTip = (props) => {
 
   console.log(wpisanaWlasna)
   return (
-    <div className={classes.billEle}>
+    <form className={classes.billEle}>
       <h6>Select Tip %</h6>
       <div className={classes.divSel}>
         <button className={classes.buttonSel} onClick={() => setProcent(0.05)}>5%</button>
@@ -41,8 +41,8 @@ export const SelectTip = (props) => {
         ) : (
           <button className={classes.buttonCus} onClick={() => setWlasna(true)}>Custom</button>
         )}
-        {wpisanaWlasna && <button>zatwierdź własną wartość</button>}
       </div>
-    </div>
+      <button type='submit'>zatwierdź procent</button>
+    </form>
   );
 };
