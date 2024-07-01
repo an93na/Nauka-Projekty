@@ -4,7 +4,8 @@ import classes from '../style/StyleBill.module.css';
 export const SelectTip = (props) => {
   const { procent, setProcent } = props;
   const [wlasna, setWlasna] = useState(false);
-  const [wpisanaWlasna, setWpisanaWlasna] = useState(false)
+  const [wpisanaWlasna, setWpisanaWlasna] = useState(false);
+  const [custmValue, setCustmValue] = useState(0)
 
   const zamienWpisanaWartoscNaProcent = (a) => {
     return a * 0.01
@@ -18,7 +19,7 @@ export const SelectTip = (props) => {
   
   const handleCustomInputChange = (e) => {
     if (!isNaN(e.target.value)) {
-      setProcent(e.target.value);
+      setCustmValue(e.target.value);
       customValueAppear()
     }
   };
@@ -38,7 +39,7 @@ export const SelectTip = (props) => {
         <button className={classes.buttonSel} onClick={() => setProcent(0.5)}>50%</button>
         {wlasna ? (
           <form>
-            <input type='text' style={{ width: '120px', height: '60px', margin: '0px', backgroundColor: 'rgb(235, 235, 235)', border: '1px solid rgb(204, 198, 198)', color: 'rgb(48, 45, 45)' }} value={procent} onChange={handleCustomInputChange} />
+            <input type='text' style={{ width: '120px', height: '60px', margin: '0px', backgroundColor: 'rgb(235, 235, 235)', border: '1px solid rgb(204, 198, 198)', color: 'rgb(48, 45, 45)' }} value={custmValue} onChange={handleCustomInputChange} />
             <button type='submit' style={{width: '120px', height: '60px', margin: '0px'}}>zatwierdź</button>
           </form>
         ) : (
