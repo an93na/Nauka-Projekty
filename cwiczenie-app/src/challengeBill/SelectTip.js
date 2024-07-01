@@ -24,6 +24,11 @@ export const SelectTip = (props) => {
     }
   };
 
+  const submitCustomValue = (e) => {
+    e.preventDefault();
+    setProcent(zamienWpisanaWartoscNaProcent(custmValue));
+  }
+
 
   console.log(wpisanaWlasna)
   return (
@@ -40,7 +45,7 @@ export const SelectTip = (props) => {
         {wlasna ? (
           <form>
             <input type='text' style={{ width: '120px', height: '60px', margin: '0px', backgroundColor: 'rgb(235, 235, 235)', border: '1px solid rgb(204, 198, 198)', color: 'rgb(48, 45, 45)' }} value={custmValue} onChange={handleCustomInputChange} />
-            <button type='submit' style={{width: '120px', height: '60px', margin: '0px'}}>zatwierdź</button>
+            <button type='submit' style={{width: '120px', height: '60px', margin: '0px'}} onClick={submitCustomValue}>zatwierdź</button>
           </form>
         ) : (
           <button className={classes.buttonCus} onClick={() => setWlasna(true)}>Custom</button>
