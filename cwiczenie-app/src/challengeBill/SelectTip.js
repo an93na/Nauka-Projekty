@@ -44,6 +44,7 @@ export const SelectTip = (props) => {
         <button className={classes.buttonSel} onClick={() => setProcent(0.5)}>50%</button> */}
       {wlasna ? (
         <form>
+          <button className={classes.buttonSel}>Wróć</button>
           <input type='text' style={{ width: '120px', height: '60px', margin: '5px', backgroundColor: 'rgb(235, 235, 235)', border: '1px solid rgb(204, 198, 198)', color: 'rgb(48, 45, 45)' }} placeholder="wartość" value={custmValue} onChange={handleCustomInputChange} />
           <button type='submit' className={classes.buttonSel} style={{ width: '150px', height: '60px', margin: '5px', border: 'none' }} onClick={submitCustomValue}>zatwierdź</button>
         </form>
