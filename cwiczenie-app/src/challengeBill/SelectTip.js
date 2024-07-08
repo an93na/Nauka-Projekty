@@ -3,8 +3,7 @@ import classes from '../style/StyleBill.module.css';
 
 export const SelectTip = (props) => {
   const { procent, setProcent } = props;
-  const [wlasna, setWlasna] = useState(false);
-
+  const { wlasna, setWlasna } = props;
   const [custmValue, setCustmValue] = useState('');
 
   const zamienWpisanaWartoscNaProcent = (a) => {

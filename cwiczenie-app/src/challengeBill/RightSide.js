@@ -2,7 +2,7 @@ import React from 'react'
 import classes from '../style/StyleBill.module.css'
 
 export const RightSide = (props) => {
-  const { numberOfPeople, procent, bill, setBill, setNumberOfPeople, setProcent } = props
+  const { numberOfPeople, procent, bill, setBill, setNumberOfPeople, setProcent, wlasna, setWlasna } = props
 
   const totalAmount = bill * procent;
   const totalBill = bill + totalAmount;
@@ -13,6 +13,7 @@ export const RightSide = (props) => {
     setBill(0);
     setNumberOfPeople('');
     setProcent(0);
+    setWlasna(false);
   }
 
   return (
