@@ -4,23 +4,16 @@ import classes from '../style/StyleBill.module.css';
 export const SelectTip = (props) => {
   const { procent, setProcent } = props;
   const [wlasna, setWlasna] = useState(false);
-  const [wpisanaWlasna, setWpisanaWlasna] = useState(false);
+
   const [custmValue, setCustmValue] = useState('');
 
   const zamienWpisanaWartoscNaProcent = (a) => {
     return a * 0.01
   }
 
-  const customValueAppear = () => {
-    if (procent !== 0) {
-      setWpisanaWlasna(true)
-    }
-  }
-
   const handleCustomInputChange = (e) => {
     if (!isNaN(e.target.value)) {
       setCustmValue(e.target.value);
-      customValueAppear()
     }
   };
 
@@ -57,6 +50,5 @@ export const SelectTip = (props) => {
           </div></>
       )}
     </div>
-    // </div>
   );
 };
