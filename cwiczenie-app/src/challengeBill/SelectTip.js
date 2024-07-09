@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import classes from '../style/StyleBill.module.css';
 
 export const SelectTip = (props) => {
-  const { procent, setProcent } = props;
+  const { setProcent } = props;
   const { wlasna, setWlasna } = props;
   const [custmValue, setCustmValue] = useState('');
 
