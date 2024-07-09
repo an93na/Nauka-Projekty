@@ -8,7 +8,7 @@ export const SelectTip = (props) => {
 
   const zamienWpisanaWartoscNaProcent = (a) => {
     return a * 0.01
-  }
+  };
 
   const handleCustomInputChange = (e) => {
     if (!isNaN(e.target.value)) {
@@ -19,12 +19,12 @@ export const SelectTip = (props) => {
   const submitCustomValue = (e) => {
     e.preventDefault();
     setProcent(zamienWpisanaWartoscNaProcent(custmValue));
-  }
+  };
 
   const resetTiphandle = (e) => {
     e.preventDefault()
     setWlasna(false)
-  }
+  };
 
   return (
     <div className={classes.billEle}>

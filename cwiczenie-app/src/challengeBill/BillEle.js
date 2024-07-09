@@ -2,7 +2,7 @@ import React from 'react'
 import classes from '../style/StyleBill.module.css'
 
 export const BillEle = (props) => {
-  const { bill, setBill } = props
+  const { bill, setBill } = props;
   return (
     <div className={classes.billEle}>
       <h6>Bill</h6>

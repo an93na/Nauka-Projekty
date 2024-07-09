@@ -7,7 +7,7 @@ export const BillTotal = () => {
   const [bill, setBill] = useState(0);
   const [procent, setProcent] = useState(0);
   const [numberOfPeople, setNumberOfPeople] = useState("");
-  const [wlasna, setWlasna] = useState(false)
+  const [wlasna, setWlasna] = useState(false);
   return (
     <article className={classes.home}>
       <div className={classes.billWhite}>
