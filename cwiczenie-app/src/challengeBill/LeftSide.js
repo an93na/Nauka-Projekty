@@ -8,6 +8,7 @@ export const LeftSide = (props) => {
   const { procent, setProcent } = props;
   const { bill, setBill } = props;
   const { wlasna, setWlasna } = props;
+  const {custmValue, setCustmValue} = props
   return (
     <div>
       <BillEle bill={bill} setBill={setBill} />
