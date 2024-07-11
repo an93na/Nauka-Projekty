@@ -12,7 +12,7 @@ export const LeftSide = (props) => {
   return (
     <div>
       <BillEle bill={bill} setBill={setBill} />
-      <SelectTip procent={procent} setProcent={setProcent} wlasna={wlasna} setWlasna={setWlasna} />
+      <SelectTip procent={procent} setProcent={setProcent} wlasna={wlasna} setWlasna={setWlasna} custmValue={custmValue} setCustmValue={setCustmValue}/>
       <NumberOfPeople numberOfPeople={numberOfPeople} setNumberOfPeople={setNumberOfPeople} />
     </div>
   )
