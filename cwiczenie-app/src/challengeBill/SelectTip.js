@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import classes from '../style/StyleBill.module.css';
 
 export const SelectTip = (props) => {

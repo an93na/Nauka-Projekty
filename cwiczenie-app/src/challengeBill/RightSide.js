@@ -14,7 +14,7 @@ export const RightSide = (props) => {
     setNumberOfPeople('');
     setProcent(0);
     setWlasna(false);
-    setCustmValue(false)
+    setCustmValue("");
   }
 
   return (
