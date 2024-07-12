@@ -4,7 +4,7 @@ import classes from '../style/StyleBill.module.css';
 export const SelectTip = (props) => {
   const { setProcent } = props;
   const { wlasna, setWlasna } = props;
-  const [custmValue, setCustmValue] = useState('');
+  const { custmValue, setCustmValue } = props;
 
   const zamienWpisanaWartoscNaProcent = (a) => {
     return a * 0.01
