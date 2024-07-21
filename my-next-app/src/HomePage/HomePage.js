@@ -4,11 +4,11 @@ import { Desserts } from '../Desserts/Desserts'
 
 export const HomePage = () => {
   return (
-    <div>
-      <div style={{display: 'flex', flexDirection: 'row'}}>
+    <article>
+      <div style={{display: 'flex', flexDirection: 'row', }}>
         <Desserts/>
         <Basket/>
       </div>
-    </div>
+    </article>
   )
 }
