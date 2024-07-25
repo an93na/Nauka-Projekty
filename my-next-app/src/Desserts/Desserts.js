@@ -1,4 +1,5 @@
 import React from 'react'
+import { Dessert } from './Dessert'
 
 export const Desserts = () => {
   return (
@@ -6,6 +7,9 @@ export const Desserts = () => {
       <h3>
         Desserts
       </h3>
+      <div>
+      <Dessert/>
+      </div>
     </div>
   )
 }
