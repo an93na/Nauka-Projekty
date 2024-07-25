@@ -8,7 +8,11 @@ export const Desserts = () => {
         Desserts
       </h3>
       <div>
-      <Dessert/>
+        <div style={{ display: 'flex' }}>
+          <Dessert />
+          <Dessert />
+          <Dessert />
+        </div>
       </div>
     </div>
   )
