@@ -8,7 +8,7 @@ export const Desserts = () => {
         Desserts
       </h3>
       <div>
-        <div style={{ display: 'flex' }}>
+        <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', padding: '10px' }}>
           <Dessert />
           <Dessert />
           <Dessert />
