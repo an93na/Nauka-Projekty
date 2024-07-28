@@ -10,8 +10,8 @@ export const Desserts = () => {
       <div style={{ display: 'flex', flexDirection: 'column' }}>
         <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', padding: '10px' }}>
           <Dessert tekst={'Waffle'} tekst2={'Waffle with Berries'} cena={'$6.50'} />
-          <Dessert />
-          <Dessert />
+          <Dessert tekst={'Waffle'} tekst2={'Waffle with Berries'} cena={'$6.50'} />
+          <Dessert tekst={'Waffle'} tekst2={'Waffle with Berries'} cena={'$6.50'} />
         </div>
       </div>
     </div>
