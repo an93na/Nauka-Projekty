@@ -1,8 +1,7 @@
 import React from 'react'
-import cake from '../assets/cake.jpg'
 
 export const Dessert = (props) => {
-  const { tekst, tekst2, cena } = props
+  const { tekst, tekst2, cena, cake } = props
   return (
     <div style={{ padding: '10px' }}>
       <img src={cake} alt="cake" />
