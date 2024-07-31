@@ -2,7 +2,7 @@ import { HomePage } from "./HomePage/HomePage";
 
 function App() {
   return (
-    <div>
+    <div style={{padding: '40px'}}>
       <HomePage/>
     </div>
   );
