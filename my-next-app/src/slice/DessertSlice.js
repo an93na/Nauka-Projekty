@@ -1,9 +1,17 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 export const DessertSlice = createSlice({
-    initialState: {},
+    initialState: {
+        basket: 0,
+    },
     name: 'dessert',
-    reducers: {}
+    reducers: {
+        addToBasket: (state, action) => {
+            state.basket = state.basket + action.payload
+        }
+    }
 })
+
+// export const selectDessert = (state) => state.dessert.basket
 
 export default DessertSlice.reducer
