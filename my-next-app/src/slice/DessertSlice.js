@@ -12,6 +12,6 @@ export const DessertSlice = createSlice({
     }
 })
 
-// export const selectDessert = (state) => state.dessert.basket
+export const selectDessert = (state) => state.basketNumberReducer.basket
 
 export default DessertSlice.reducer
