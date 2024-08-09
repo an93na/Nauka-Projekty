@@ -6,8 +6,11 @@ export const DessertSlice = createSlice({
     },
     name: 'dessert',
     reducers: {
-        addToBasket: (state, action) => {
-            state.basket = state.basket + action.payload
+        addToBasket: (state) => {
+            state.basket = state.basket + 1
+        },
+        delateFromBasket: (state) => {
+            state.basket = state.basket - 1
         }
     }
 })
