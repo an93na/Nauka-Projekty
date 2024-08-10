@@ -21,6 +21,6 @@ export const DessertSlice = createSlice({
 
 export const selectDessert = (state) => state.basketNumber.basket
 
-export const {addToBasket, delateFromBasket} = DessertSlice.actions
+export const {addToBasket, delateFromBasket, notEmptyBasket} = DessertSlice.actions
 
 export default DessertSlice.reducer
