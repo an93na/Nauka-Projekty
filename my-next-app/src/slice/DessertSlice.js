@@ -4,6 +4,7 @@ export const DessertSlice = createSlice({
     name: 'dessert',
     initialState: {
         basket: 0,
+        isInBasket: false,
     },
     reducers: {
         addToBasket: (state) => {
@@ -11,6 +12,9 @@ export const DessertSlice = createSlice({
         },
         delateFromBasket: (state) => {
             state.basket -= 1
+        },
+        notEmptyBasket: (state) =>{
+            state.isInBasket = true
         }
     }
 })
