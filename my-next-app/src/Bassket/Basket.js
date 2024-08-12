@@ -11,7 +11,6 @@ export const Basket = () => {
         Basket
       </h3>
       <p>{numberOfProducts}</p>
-      <p>{isAnyInBasket}</p>
     </div>
   )
 }
