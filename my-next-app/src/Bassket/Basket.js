@@ -11,6 +11,7 @@ export const Basket = () => {
         Basket
       </h3>
       <p>{numberOfProducts}</p>
+      {isAnyInBasket ? <p>tak</p>: <></>}
     </div>
   )
 }
