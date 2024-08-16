@@ -1,6 +1,6 @@
 {
   "menu": [
-    { "id": "1", "name": "a title" },
+    { "id": "1", "name": "a title", "price": "3" },
     { "id": "2", "name": "another title" }
   ],
   "comments": [
