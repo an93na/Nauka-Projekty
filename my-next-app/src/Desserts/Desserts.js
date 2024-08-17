@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Dessert } from './Dessert'
 import cake from '../assets/cake.jpg'
 import cake1 from '../assets/cake1.jpg'
@@ -18,6 +18,15 @@ import cake14 from '../assets/cake14.jpg'
 import cake15 from '../assets/cake15.jpg'
 
 export const Desserts = () => {
+  const getMenu = () => {
+    fetch("http://localhost:3010/menu").then((response) => response.json())
+    .then((data) => {
+      console.log(data);
+    });
+  }
+  useEffect(() => {
+    getMenu();
+  }, []);
   return (
     <div>
       <h3>
