@@ -10,8 +10,8 @@ export const Basket = () => {
       <h3>
         Basket
       </h3>
-      <div style={{backgroundColor: 'red', borderRadius: '50%', width: '15px', height: '15px', position: 'absolute'}}>
-      <p>{numberOfProducts}</p>
+      <div style={{backgroundColor: 'red', borderRadius: '50%', width: '15px', height: '15px', position: 'absolute', left: '50%'}}>
+      <p style={{fontSize: '10px', textAlign: 'center', fontWeight: 'bolder'}}>{numberOfProducts}</p>
       </div>
       {isAnyInBasket ? <p>tak</p>: <></>}
     </div>
