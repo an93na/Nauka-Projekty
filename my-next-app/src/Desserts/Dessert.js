@@ -1,5 +1,5 @@
 import React from 'react'
-import shopping from '../assets/shopping.png'
+import shopping from '../assets/basket.png'
 import { addToBasket, notEmptyBasket } from '../slice/DessertSlice'
 import { useDispatch } from 'react-redux'
 

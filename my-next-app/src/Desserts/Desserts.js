@@ -20,10 +20,10 @@ import cake15 from '../assets/cake15.jpg'
 export const Desserts = () => {
   const [menu, SetMenu] = useState([])
   const getMenu = () => {
-    fetch("http://localhost:3010/menu").then((response) => response.json())
-      .then((data) => {
-        SetMenu(data);
-      });
+    // fetch("http://localhost:3010/menu").then((response) => response.json())
+    //   .then((data) => {
+    //     SetMenu(data);
+    //   });
   }
   useEffect(() => {
     getMenu();
