@@ -9,13 +9,12 @@ export const Basket = () => {
   const isAnyInBasket = useSelector(selectIsAnyInBasket)
   return (
     <div>
+      <div style={{position: 'relative'}}>
       <ShoppingCartIcon style={{ color: 'white', margin: '0 10px' }} onClick={()=>{}}/>
-      <button style={{position: 'relative'}}>
-      <img src={basketIcon} alt="koszyk" />
-      <div style={{ backgroundColor: 'red', borderRadius: '50%', width: '15px', height: '15px', position: 'absolute', left: '50%', top: '30%' }}>
+      <div style={{ backgroundColor: 'red', borderRadius: '50%', width: '15px', height: '15px', position: 'absolute', left: '50%', top: '10%' }}>
         <p style={{ fontSize: '10px', textAlign: 'center', fontWeight: 'bolder' }}>{numberOfProducts}</p>
       </div>
-      </button>
+      </div>
       {isAnyInBasket ? <p>tak</p> : <></>}
     </div>
   )
