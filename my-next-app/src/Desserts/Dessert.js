@@ -17,7 +17,7 @@ export const Dessert = (props) => {
       <img src={cake} alt="cake" style={{ width: '100%', height: '80%', borderRadius: '10px' }} />
       <button onClick={addToCardFunkcjon}
         style={{ width: '70%', borderRadius: '50px', color: 'gray', backgroundColor: 'white', fontWeight: 'bold', border: '1px solid gray', position: 'absolute', bottom: '35%' }}>
-        <img src={shopping} alt="icon-basket" style={{ width: '12%', height: '10%', padding: '1px' }} />
+          <ShoppingCartIcon/>
         Add to Card
       </button>
       <p style={{ marginBottom: '0px', marginTop: '45px' }}>{tekst}</p>
