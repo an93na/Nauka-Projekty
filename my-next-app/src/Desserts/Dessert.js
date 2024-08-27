@@ -1,5 +1,4 @@
 import React from 'react'
-import shopping from '../assets/basket.png'
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { addToBasket, notEmptyBasket } from '../slice/DessertSlice'
 import { useDispatch } from 'react-redux'
