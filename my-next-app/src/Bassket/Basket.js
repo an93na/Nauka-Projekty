@@ -4,14 +4,13 @@ import { useDispatch, useSelector } from 'react-redux'
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 
 export const Basket = () => {
-  const numberOfProducts = useSelector(selectDessert)
-  const isAnyInBasket = useSelector(selectIsAnyInBasket)
-  const showNowStateBasket = useSelector(selectShowStateBasket)
-  const dispatch = useDispatch()
+  const numberOfProducts = useSelector(selectDessert);
+  const isAnyInBasket = useSelector(selectIsAnyInBasket);
+  const showNowStateBasket = useSelector(selectShowStateBasket);
+  const dispatch = useDispatch();
 
   const onCliceed = () => {
-    console.log('klik');
-    dispatch(showStateBasket())
+    dispatch(showStateBasket());
     console.log(showNowStateBasket);
   }
   return (
@@ -23,6 +22,7 @@ export const Basket = () => {
         </div>
       </div>
       {isAnyInBasket ? <p>tak</p> : <></>}
+      {showNowStateBasket ? <p>In</p> : <p></p>}
     </div>
   )
 }
