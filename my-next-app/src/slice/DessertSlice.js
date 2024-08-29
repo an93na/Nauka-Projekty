@@ -6,6 +6,7 @@ export const DessertSlice = createSlice({
         basket: 0,
         isInBasket: false,
         showBasket: false,
+        productsInBasket: [],
     },
     reducers: {
         addToBasket: (state) => {
@@ -14,11 +15,14 @@ export const DessertSlice = createSlice({
         delateFromBasket: (state) => {
             state.basket -= 1
         },
-        notEmptyBasket: (state) =>{
+        notEmptyBasket: (state) => {
             state.isInBasket = true
         },
         showStateBasket: (state) => {
             state.showBasket = !state.showBasket
+        },
+        addProductsToBasket: (state, action) => {
+            state.productsInBasket.push(action.payload)
         }
     }
 })
@@ -29,6 +33,6 @@ export const selectIsAnyInBasket = (state) => state.basketNumber.isInBasket
 
 export const selectShowStateBasket = (state) => state.basketNumber.showBasket
 
-export const {addToBasket, delateFromBasket, notEmptyBasket, showStateBasket} = DessertSlice.actions
+export const { addToBasket, delateFromBasket, notEmptyBasket, showStateBasket } = DessertSlice.actions
 
 export default DessertSlice.reducer
