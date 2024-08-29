@@ -33,6 +33,8 @@ export const selectIsAnyInBasket = (state) => state.basketNumber.isInBasket
 
 export const selectShowStateBasket = (state) => state.basketNumber.showBasket
 
-export const { addToBasket, delateFromBasket, notEmptyBasket, showStateBasket } = DessertSlice.actions
+export const selectProductsInBasket = (state) => state.basketNumber.productsInBasket
+
+export const { addToBasket, delateFromBasket, notEmptyBasket, showStateBasket, addProductsToBasket } = DessertSlice.actions
 
 export default DessertSlice.reducer
