@@ -1,10 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { addToBasket, notEmptyBasket } from '../slice/DessertSlice'
 import { useDispatch } from 'react-redux'
 
 export const Dessert = (props) => {
   const { tekst, tekst2, cena, cake } = props
+  const [doKoszyka, setDokoszyka] = useState({})
   const dispatch = useDispatch()
 
   const addToCardFunkcjon = () => {

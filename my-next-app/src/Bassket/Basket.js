@@ -22,7 +22,6 @@ export const Basket = () => {
           <p style={{ fontSize: '10px', textAlign: 'center', fontWeight: 'bolder' }}>{numberOfProducts}</p>
         </div>
       </div>
-      {isAnyInBasket ? <p>tak</p> : <></>}
       {showNowStateBasket ?
         <table>
           <thead>
