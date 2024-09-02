@@ -1,8 +1,8 @@
 {
   "menu": [
-    { "id": "1", "name": "a title", "price": "3" },
-    { "id": "2", "name": "another title", "price": "4" },
-    { "id": "2", "name": "another title", "price": "4" }
+    { "id": "1", "name": "a title1", "price": "3" },
+    { "id": "2", "name": "a title2", "price": "4" },
+    { "id": "3", "name": "a title3", "price": "4" }
   ],
   "comments": [
     { "id": "1", "text": "a comment about post 1", "postId": "1" },
