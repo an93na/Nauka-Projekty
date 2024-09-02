@@ -7,11 +7,15 @@ export const Dessert = (props) => {
   const { tekst, tekst2, cena, cake } = props
   const [doKoszyka, setDokoszyka] = useState({})
   const dispatch = useDispatch()
+  const [id, setId] = useState('');
+  const [nazwa, setNazwa] = useState('');
+  const [price, setPrice] = useState('')
 
   const addToCardFunkcjon = () => {
     dispatch(addToBasket())
     dispatch(notEmptyBasket())
   }
+  
   return (
     <div style={{ padding: '10px', display: 'flex', flexDirection: 'column', alignItems: 'center', position: 'relative' }}>
       <img src={cake} alt="cake" style={{ width: '100%', height: '80%', borderRadius: '10px' }} />
