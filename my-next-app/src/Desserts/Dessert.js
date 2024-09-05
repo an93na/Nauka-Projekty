@@ -19,7 +19,10 @@ export const Dessert = (props) => {
   const addToCardFunkcjon = () => {
     dispatch(addToBasket())
     dispatch(notEmptyBasket())
-    setDokoszyka(prev => ({...prev, obiektDoKoszyka}))
+    obiektDoKoszyka()
+    const lista = { id, nazwa, price }
+    const nowaLista = [...doKoszyka, lista]
+    setDokoszyka(nowaLista)
   }
 
   console.log(doKoszyka)
@@ -28,7 +31,7 @@ export const Dessert = (props) => {
       <img src={cake} alt="cake" style={{ width: '100%', height: '80%', borderRadius: '10px' }} />
       <button onClick={addToCardFunkcjon}
         style={{ width: '75%', borderRadius: '50px', color: 'gray', backgroundColor: 'white', fontWeight: 'bold', border: '1px solid gray', position: 'absolute', bottom: '35%' }}>
-          <ShoppingCartIcon style={{color: 'red', width: '15%'}}/>
+        <ShoppingCartIcon style={{ color: 'red', width: '15%' }} />
         Add to Card
       </button>
       <p style={{ marginBottom: '0px', marginTop: '45px' }}>{tekst}</p>
