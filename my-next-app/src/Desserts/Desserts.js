@@ -44,8 +44,8 @@ export const Desserts = () => {
       </div>
       <div style={{ display: 'flex', flexDirection: 'column' }}>
         <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', padding: '10px' }}>
-          <Dessert tekst={'Waffle'} tekst2={'Waffle with Berries'} cena={'$6.50'} cake={cake} />
-          <Dessert tekst={'Waffle'} tekst2={'Waffle with Berries'} cena={'$6.50'} cake={cake1} />
+          <Dessert tekst={'Cake'} tekst2={'Cake with Cherry'} cena={'$6.50'} cake={cake} />
+          <Dessert tekst={'Pink Cake'} tekst2={'Cake with Pink Cream'} cena={'$6.50'} cake={cake1} />
           <Dessert tekst={'Waffle'} tekst2={'Waffle with Berries'} cena={'$6.50'} cake={cake2} />
         </div>
         <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', padding: '10px' }}>

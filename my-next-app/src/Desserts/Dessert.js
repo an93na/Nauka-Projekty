@@ -21,7 +21,8 @@ export const Dessert = (props) => {
     dispatch(notEmptyBasket())
     obiektDoKoszyka()
     const lista = { id, nazwa, price }
-    const nowaLista = [...doKoszyka, lista]
+    const lista2 = { tekst, tekst2, cena }
+    const nowaLista = [...doKoszyka, lista2]
     setDokoszyka(nowaLista)
   }
 
