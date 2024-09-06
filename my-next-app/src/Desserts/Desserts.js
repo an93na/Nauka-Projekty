@@ -19,6 +19,7 @@ import cake15 from '../assets/cake15.jpg'
 
 export const Desserts = () => {
   const [menu, SetMenu] = useState([])
+  const [doKoszyka, setDokoszyka] = useState([])
   const getMenu = () => {
     // fetch("http://localhost:3010/menu").then((response) => response.json())
     //   .then((data) => {
@@ -28,7 +29,7 @@ export const Desserts = () => {
   useEffect(() => {
     getMenu();
   }, []);
-  console.log(menu)
+  console.log(doKoszyka)
   return (
     <div>
       <h3>
@@ -44,29 +45,29 @@ export const Desserts = () => {
       </div>
       <div style={{ display: 'flex', flexDirection: 'column' }}>
         <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', padding: '10px' }}>
-          <Dessert tekst={'Cake'} tekst2={'Cake with Cherry'} cena={'$6.50'} cake={cake} />
-          <Dessert tekst={'Pink Cake'} tekst2={'Cake with Pink Cream'} cena={'$6.50'} cake={cake1} />
-          <Dessert tekst={'Waffle'} tekst2={'Waffle with Berries'} cena={'$6.50'} cake={cake2} />
+          <Dessert tekst={'Cake'} tekst2={'Cake with Cherry'} cena={'$6.50'} cake={cake} doKoszyka={doKoszyka} setDokoszyka={setDokoszyka}/>
+          <Dessert tekst={'Pink Cake'} tekst2={'Cake with Pink Cream'} cena={'$6.50'} cake={cake1} doKoszyka={doKoszyka} setDokoszyka={setDokoszyka}/>
+          <Dessert tekst={'Waffle'} tekst2={'Waffle with Berries'} cena={'$6.50'} cake={cake2} doKoszyka={doKoszyka} setDokoszyka={setDokoszyka}/>
         </div>
         <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', padding: '10px' }}>
-          <Dessert tekst={'Waffle'} tekst2={'Waffle with Berries'} cena={'$6.50'} cake={cake3} />
-          <Dessert tekst={'Waffle'} tekst2={'Waffle with Berries'} cena={'$6.50'} cake={cake4} />
-          <Dessert tekst={'Waffle'} tekst2={'Waffle with Berries'} cena={'$6.50'} cake={cake5} />
+          <Dessert tekst={'Waffle'} tekst2={'Waffle with Berries'} cena={'$6.50'} cake={cake3} doKoszyka={doKoszyka} setDokoszyka={setDokoszyka}/>
+          <Dessert tekst={'Waffle'} tekst2={'Waffle with Berries'} cena={'$6.50'} cake={cake4} doKoszyka={doKoszyka} setDokoszyka={setDokoszyka}/>
+          <Dessert tekst={'Waffle'} tekst2={'Waffle with Berries'} cena={'$6.50'} cake={cake5} doKoszyka={doKoszyka} setDokoszyka={setDokoszyka}/>
         </div>
         <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', padding: '10px' }}>
-          <Dessert tekst={'Waffle'} tekst2={'Waffle with Berries'} cena={'$6.50'} cake={cake6} />
-          <Dessert tekst={'Waffle'} tekst2={'Waffle with Berries'} cena={'$6.50'} cake={cake7} />
-          <Dessert tekst={'Waffle'} tekst2={'Waffle with Berries'} cena={'$6.50'} cake={cake8} />
+          <Dessert tekst={'Waffle'} tekst2={'Waffle with Berries'} cena={'$6.50'} cake={cake6} doKoszyka={doKoszyka} setDokoszyka={setDokoszyka}/>
+          <Dessert tekst={'Waffle'} tekst2={'Waffle with Berries'} cena={'$6.50'} cake={cake7} doKoszyka={doKoszyka} setDokoszyka={setDokoszyka}/>
+          <Dessert tekst={'Waffle'} tekst2={'Waffle with Berries'} cena={'$6.50'} cake={cake8} doKoszyka={doKoszyka} setDokoszyka={setDokoszyka}/>
         </div>
         <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', padding: '10px' }}>
-          <Dessert tekst={'Waffle'} tekst2={'Waffle with Berries'} cena={'$6.50'} cake={cake9} />
-          <Dessert tekst={'Waffle'} tekst2={'Waffle with Berries'} cena={'$6.50'} cake={cake10} />
-          <Dessert tekst={'Waffle'} tekst2={'Waffle with Berries'} cena={'$6.50'} cake={cake11} />
+          <Dessert tekst={'Waffle'} tekst2={'Waffle with Berries'} cena={'$6.50'} cake={cake9} doKoszyka={doKoszyka} setDokoszyka={setDokoszyka}/>
+          <Dessert tekst={'Waffle'} tekst2={'Waffle with Berries'} cena={'$6.50'} cake={cake10} doKoszyka={doKoszyka} setDokoszyka={setDokoszyka}/>
+          <Dessert tekst={'Waffle'} tekst2={'Waffle with Berries'} cena={'$6.50'} cake={cake11} doKoszyka={doKoszyka} setDokoszyka={setDokoszyka}/>
         </div>
         <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', padding: '10px' }}>
-          <Dessert tekst={'Waffle'} tekst2={'Waffle with Berries'} cena={'$6.50'} cake={cake12} />
-          <Dessert tekst={'Waffle'} tekst2={'Waffle with Berries'} cena={'$6.50'} cake={cake13} />
-          <Dessert tekst={'Waffle'} tekst2={'Waffle with Berries'} cena={'$6.50'} cake={cake14} />
+          <Dessert tekst={'Waffle'} tekst2={'Waffle with Berries'} cena={'$6.50'} cake={cake12} doKoszyka={doKoszyka} setDokoszyka={setDokoszyka}/>
+          <Dessert tekst={'Waffle'} tekst2={'Waffle with Berries'} cena={'$6.50'} cake={cake13} doKoszyka={doKoszyka} setDokoszyka={setDokoszyka}/>
+          <Dessert tekst={'Waffle'} tekst2={'Waffle with Berries'} cena={'$6.50'} cake={cake14} doKoszyka={doKoszyka} setDokoszyka={setDokoszyka}/>
         </div>
       </div>
     </div>

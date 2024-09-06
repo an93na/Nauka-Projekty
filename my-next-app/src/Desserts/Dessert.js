@@ -4,29 +4,17 @@ import { addToBasket, notEmptyBasket } from '../slice/DessertSlice'
 import { useDispatch } from 'react-redux'
 
 export const Dessert = (props) => {
-  const { tekst, tekst2, cena, cake } = props
-  const [doKoszyka, setDokoszyka] = useState([])
+  const { tekst, tekst2, cena, cake, doKoszyka, setDokoszyka } = props
   const dispatch = useDispatch()
-  const [id, setId] = useState('');
-  const [nazwa, setNazwa] = useState('');
-  const [price, setPrice] = useState('')
 
-  const obiektDoKoszyka = () => {
-    setId(tekst)
-    setNazwa(tekst2)
-    setPrice(cena)
-  }
   const addToCardFunkcjon = () => {
     dispatch(addToBasket())
     dispatch(notEmptyBasket())
-    obiektDoKoszyka()
-    const lista = { id, nazwa, price }
     const lista2 = { tekst, tekst2, cena }
     const nowaLista = [...doKoszyka, lista2]
     setDokoszyka(nowaLista)
   }
 
-  console.log(doKoszyka)
   return (
     <div style={{ padding: '10px', display: 'flex', flexDirection: 'column', alignItems: 'center', position: 'relative' }}>
       <img src={cake} alt="cake" style={{ width: '100%', height: '80%', borderRadius: '10px' }} />
