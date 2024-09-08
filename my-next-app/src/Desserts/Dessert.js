@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { addToBasket, notEmptyBasket } from '../slice/DessertSlice'
 import { useDispatch } from 'react-redux'
