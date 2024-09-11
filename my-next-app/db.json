@@ -5,7 +5,10 @@
     { "id": "3", "name": "macaroon cake", "short": "green macaroon cake","price": "5.60" },
     { "id": "4", "name": "donut", "short": "donut wiht cream","price": "7.80" },
     { "id": "5", "name": "cake", "short": "brithday cake","price": "8.00" },
-    { "id": "6", "name": "chocolate cake", "short": "chocolate brithday cake","price": "8.50" }
+    { "id": "6", "name": "chocolate cake", "short": "chocolate brithday cake","price": "8.50" },
+    { "id": "7", "name": "bun", "short": "bun with raisins","price": "4.50" },
+    { "id": "8", "name": "chocolate roulade", "short": "chocolate roulade","price": "9.50" },
+    { "id": "8", "name": "choco cake", "short": "choco cake","price": "7.50" }
   ],
   "comments": [
     { "id": "1", "text": "a comment about post 1", "postId": "1" },
