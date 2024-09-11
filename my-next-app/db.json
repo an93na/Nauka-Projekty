@@ -3,11 +3,13 @@
     { "id": "1", "name": "cake", "short": "cake with cherry","price": "6.50" },
     { "id": "2", "name": "pink cake", "short": "cake with pink cream","price": "6.90" },
     { "id": "3", "name": "macaroon cake", "short": "green macaroon cake","price": "5.60" },
-    { "id": "4", "name": "donut", "short": "donut wiht cream","price": "7.80" }
+    { "id": "4", "name": "donut", "short": "donut wiht cream","price": "7.80" },
+    { "id": "5", "name": "cake", "short": "brithday cake","price": "8.00" },
+    { "id": "6", "name": "chocolate cake", "short": "chocolate brithday cake","price": "8.50" }
   ],
   "comments": [
     { "id": "1", "text": "a comment about post 1", "postId": "1" },
-    { "id": "2", "text": "another comment about post 1", "postId": "1" }
+    { "id": "2", "text": "another comment about post 1", "postId": "2" }
   ],
   "profile": {
     "name": "typicode"
