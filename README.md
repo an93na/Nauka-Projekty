@@ -1,2 +1,2 @@
-Repozytorium z projektami na których sie uczę
+Repozytorium z projektami na których sie uczę.
 
