@@ -11,7 +11,11 @@
     { "id": "9", "name": "choco cake", "short": "choco cake","price": "7.50" },
     { "id": "10", "name": "cake cherry", "short": "brithday cake with cherry","price": "9.50" },
     { "id": "11", "name": "cake chocolat fruit", "short": "brithday chocolat cake with fruit","price": "9.50" },
-    { "id": "12", "name": "waffle", "short": "waffle with ice cream","price": "6.00" }
+    { "id": "12", "name": "waffle", "short": "waffle with ice cream","price": "6.00" },
+    { "id": "13", "name": "croissant", "short": "traditional croissant","price": "6.30" },
+    { "id": "14", "name": "biscuit", "short": "butter biscuit","price": "3.30" },
+    { "id": "14", "name": "choco biscuit", "short": "chocolate biscuit","price": "3.30" }
+
   ],
   "comments": [
     { "id": "1", "text": "a comment about post 1", "postId": "1" },
