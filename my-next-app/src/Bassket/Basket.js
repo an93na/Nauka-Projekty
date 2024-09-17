@@ -34,9 +34,13 @@ export const Basket = () => {
           <tbody>
             {products.map((product) => {
               <tr key={products.id}>
-              <td>{product.image}</td>
+              {/* <td>{product.image}</td>
               <td>{product.name}</td>
-              <td>{product.price}</td>
+              <td>{product.short}</td>
+              <td>{product.price}</td> */}
+              <td>{product.tekst}</td>
+              <td>{product.tekst2}</td>
+              <td>{product.cena}</td>
             </tr>
             })}
           </tbody>

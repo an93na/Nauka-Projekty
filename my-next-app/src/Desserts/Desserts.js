@@ -35,14 +35,6 @@ export const Desserts = () => {
       <h3>
         Desserts
       </h3>
-      <div>
-        {menu.map((d) =>
-          <div>
-            <p>{d.name}</p>
-            <p>{d.price}</p>
-          </div>
-        )}
-      </div>
       <div style={{ display: 'flex', flexDirection: 'column' }}>
         <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', padding: '10px' }}>
           <Dessert tekst={'Cake'} tekst2={'Cake with Cherry'} cena={'$6.50'} cake={cake} doKoszyka={doKoszyka} setDokoszyka={setDokoszyka} />
