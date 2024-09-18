@@ -21,10 +21,10 @@ export const Desserts = () => {
   const [menu, SetMenu] = useState([])
   const [doKoszyka, setDokoszyka] = useState([])
   const getMenu = () => {
-    // fetch("http://localhost:3010/menu").then((response) => response.json())
-    //   .then((data) => {
-    //     SetMenu(data);
-    //   });
+    fetch("http://localhost:3010/menu").then((response) => response.json())
+      .then((data) => {
+        SetMenu(data);
+      });
   }
   useEffect(() => {
     getMenu();
@@ -35,6 +35,22 @@ export const Desserts = () => {
       <h3>
         Desserts
       </h3>
+      <table>
+        <thead>
+          <tr>
+            <th>nazwa</th>
+            <th>opis</th>
+            <th>cena</th>
+          </tr>
+        </thead>
+        <tbody>
+          {menu.map((a) => <tr key={a.id}>
+            <td>{a.name}</td>
+            <td>{a.short}</td>
+            <td>{a.price}</td>
+          </tr>)}
+        </tbody>
+      </table>
       <div style={{ display: 'flex', flexDirection: 'column' }}>
         <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', padding: '10px' }}>
           <Dessert tekst={'Cake'} tekst2={'Cake with Cherry'} cena={'$6.50'} cake={cake} doKoszyka={doKoszyka} setDokoszyka={setDokoszyka} />
