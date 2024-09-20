@@ -48,7 +48,7 @@ export const Desserts = () => {
     15: cake15
   }
   const zdjecie = (a) => {
-
+    return images[a] || cake
   }
   console.log(doKoszyka)
   return (
@@ -67,7 +67,7 @@ export const Desserts = () => {
         </thead>
         <tbody>
           {menu.map((a) => <tr key={a.id}>
-            <td>{a.img}</td>
+            <td><img src={zdjecie(a.img)} alt={a.id} style={{ width: '100%', height: '80%', borderRadius: '10px' }}/></td>
             <td>{a.name}</td>
             <td>{a.short}</td>
             <td>{a.price}</td>
