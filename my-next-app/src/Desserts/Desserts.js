@@ -29,6 +29,27 @@ export const Desserts = () => {
   useEffect(() => {
     getMenu();
   }, []);
+  const images = {
+    0: cake,
+    1: cake1,
+    2: cake2,
+    3: cake3,
+    4: cake4,
+    5: cake5,
+    6: cake6,
+    7: cake7,
+    8: cake8,
+    9: cake9,
+    10: cake10,
+    11: cake11,
+    12: cake12,
+    13: cake13,
+    14: cake14,
+    15: cake15
+  }
+  const zdjecie = (a) => {
+
+  }
   console.log(doKoszyka)
   return (
     <div>
@@ -38,6 +59,7 @@ export const Desserts = () => {
       <table>
         <thead>
           <tr>
+            <th></th>
             <th>nazwa</th>
             <th>opis</th>
             <th>cena</th>
@@ -45,13 +67,14 @@ export const Desserts = () => {
         </thead>
         <tbody>
           {menu.map((a) => <tr key={a.id}>
+            <td>{a.img}</td>
             <td>{a.name}</td>
             <td>{a.short}</td>
             <td>{a.price}</td>
           </tr>)}
         </tbody>
       </table>
-      
+
       <div style={{ display: 'flex', flexDirection: 'column' }}>
         <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', padding: '10px' }}>
           <Dessert tekst={'Cake'} tekst2={'Cake with Cherry'} cena={'$6.50'} cake={cake} doKoszyka={doKoszyka} setDokoszyka={setDokoszyka} />
