@@ -67,14 +67,13 @@ export const Desserts = () => {
         </thead>
         <tbody>
           {menu.map((a) => <tr key={a.id}>
-            <td><img src={zdjecie(a.img)} alt={a.id} style={{ width: '100%', height: '80%', borderRadius: '10px' }}/></td>
+            <td><img src={zdjecie(a.img)} alt={a.id} style={{ width: '100%', height: '80%', borderRadius: '10px' }} /></td>
             <td>{a.name}</td>
             <td>{a.short}</td>
             <td>{a.price}</td>
           </tr>)}
         </tbody>
       </table>
-
       <div style={{ display: 'flex', flexDirection: 'column' }}>
         <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', padding: '10px' }}>
           <Dessert tekst={'Cake'} tekst2={'Cake with Cherry'} cena={'$6.50'} cake={cake} doKoszyka={doKoszyka} setDokoszyka={setDokoszyka} />
