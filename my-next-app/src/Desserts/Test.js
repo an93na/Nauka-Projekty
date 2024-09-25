@@ -48,9 +48,21 @@ export const Test = () => {
     const zdjecie = (a) => {
         return images[a] || cake
     }
+    const ustawWRzedzie = (id, name, short, price, img) => {
+        if (id <= 3) {
+           return <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', padding: '10px' }}>
+                <Dessert tekst={name} tekst2={short} cena={price} cake={zdjecie(img)} id={id} />
+            </div>
+        }
+        else if (id > 3 && id <= 6) {
+            return <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', padding: '10px' }}>
+                <Dessert tekst={name} tekst2={short} cena={price} cake={zdjecie(img)} id={id} />
+            </div>
+        }
+    }
     return (
         <div>
-            {menu.map((deser) => <Dessert tekst={deser.name} tekst2={deser.short} cena={deser.price} cake={zdjecie(deser.img)} id= {deser.id}/>)}
+            {menu.map((deser) => ustawWRzedzie(deser.id, deser.name, deser.short, deser.price, deser.img))}
         </div>
     )
 }
