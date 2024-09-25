@@ -1,6 +1,7 @@
 import React from 'react'
 import { Basket } from '../Bassket/Basket'
 import { Desserts } from '../Desserts/Desserts'
+import { Test } from '../Desserts/Test'
 
 export const HomePage = () => {
   return (
@@ -9,6 +10,7 @@ export const HomePage = () => {
         <Desserts />
         <Basket />
       </div>
+      <Test />
     </article>
   )
 }

@@ -17,6 +17,7 @@ import cake13 from '../assets/cake13.jpg'
 import cake14 from '../assets/cake14.jpg'
 import cake15 from '../assets/cake15.jpg'
 export const Test = () => {
+    const [menu, SetMenu] = useState([])
     const getMenu = () => {
         fetch("http://localhost:3010/menu").then((response) => response.json())
             .then((data) => {
@@ -49,7 +50,7 @@ export const Test = () => {
     }
     return (
         <div>
-
+            {menu.map((deser) => <Dessert tekst={deser.name} tekst2={deser.short} cena={deser.price} cake={deser.img} id= {deser.id}/>)}
         </div>
     )
 }
