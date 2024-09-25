@@ -50,7 +50,7 @@ export const Test = () => {
     }
     return (
         <div>
-            {menu.map((deser) => <Dessert tekst={deser.name} tekst2={deser.short} cena={deser.price} cake={deser.img} id= {deser.id}/>)}
+            {menu.map((deser) => <Dessert tekst={deser.name} tekst2={deser.short} cena={deser.price} cake={zdjecie(deser.img)} id= {deser.id}/>)}
         </div>
     )
 }
