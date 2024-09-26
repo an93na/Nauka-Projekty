@@ -10,7 +10,6 @@ export const HomePage = () => {
         <Desserts />
         <Basket />
       </div>
-      <Test />
     </article>
   )
 }

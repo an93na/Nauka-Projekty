@@ -48,21 +48,23 @@ export const Test = () => {
     const zdjecie = (a) => {
         return images[a] || cake
     }
-    const ustawWRzedzie = (id, name, short, price, img) => {
+    const dodajKomp = (id, name, short, price, img) => {
         if (id <= 3) {
-           return <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', padding: '10px' }}>
-                <Dessert tekst={name} tekst2={short} cena={price} cake={zdjecie(img)} id={id} />
-            </div>
+            return <Dessert tekst={name} tekst2={short} cena={price} cake={zdjecie(img)} id={id} rzad={'1'} />
         }
         else if (id > 3 && id <= 6) {
-            return <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', padding: '10px' }}>
-                <Dessert tekst={name} tekst2={short} cena={price} cake={zdjecie(img)} id={id} />
-            </div>
+            return <Dessert tekst={name} tekst2={short} cena={price} cake={zdjecie(img)} id={id} rzad={'2'} />
+        }
+        else if (id > 6 && id <= 9) {
+            return <Dessert tekst={name} tekst2={short} cena={price} cake={zdjecie(img)} id={id} rzad={'3'} />
         }
     }
+
     return (
-        <div>
-            {menu.map((deser) => ustawWRzedzie(deser.id, deser.name, deser.short, deser.price, deser.img))}
-        </div>
+        <article>
+            <div>
+                {menu.map((deser) => dodajKomp(deser.id, deser.name, deser.short, deser.price, deser.img))}
+            </div>
+        </article>
     )
 }
