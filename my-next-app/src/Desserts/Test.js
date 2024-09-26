@@ -48,22 +48,34 @@ export const Test = () => {
     const zdjecie = (a) => {
         return images[a] || cake
     }
-    const dodajKomp = (id, name, short, price, img) => {
+    const dodajKomp1 = (id, name, short, price, img) => {
         if (id <= 3) {
-            return <Dessert tekst={name} tekst2={short} cena={price} cake={zdjecie(img)} id={id} rzad={'1'} />
+            return <Dessert tekst={name} tekst2={short} cena={price} cake={zdjecie(img)} id={id} />
         }
-        else if (id > 3 && id <= 6) {
-            return <Dessert tekst={name} tekst2={short} cena={price} cake={zdjecie(img)} id={id} rzad={'2'} />
+    }
+    const dodajKomp2 = (id, name, short, price, img) => {
+        if (id > 3 && id <= 6) {
+            return <Dessert tekst={name} tekst2={short} cena={price} cake={zdjecie(img)} id={id} />
         }
-        else if (id > 6 && id <= 9) {
-            return <Dessert tekst={name} tekst2={short} cena={price} cake={zdjecie(img)} id={id} rzad={'3'} />
+    }
+    const dodajKomp3 = (id, name, short, price, img) => {
+        if (id > 6 && id <= 9) {
+            return <Dessert tekst={name} tekst2={short} cena={price} cake={zdjecie(img)} id={id} />
         }
     }
 
     return (
         <article>
-            <div>
-                {menu.map((deser) => dodajKomp(deser.id, deser.name, deser.short, deser.price, deser.img))}
+            <div style={{ display: 'flex', flexDirection: 'column' }}>
+                <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', padding: '10px' }}>
+                    {menu.map((deser) => dodajKomp1(deser.id, deser.name, deser.short, deser.price, deser.img))}
+                </div>
+                <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', padding: '10px' }}>
+                    {menu.map((deser) => dodajKomp2(deser.id, deser.name, deser.short, deser.price, deser.img))}
+                </div>
+                <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', padding: '10px' }}>
+                    {menu.map((deser) => dodajKomp3(deser.id, deser.name, deser.short, deser.price, deser.img))}
+                </div>
             </div>
         </article>
     )
