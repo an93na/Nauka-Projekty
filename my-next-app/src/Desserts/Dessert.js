@@ -4,7 +4,7 @@ import { addToBasket, notEmptyBasket } from '../slice/DessertSlice'
 import { useDispatch } from 'react-redux'
 
 export const Dessert = (props) => {
-  const { tekst, tekst2, cena, cake, doKoszyka, setDokoszyka } = props
+  const { tekst, tekst2, cena, cake, doKoszyka, setDokoszyka,id } = props
   const dispatch = useDispatch()
 
   const addToCardFunkcjon = () => {
@@ -16,7 +16,7 @@ export const Dessert = (props) => {
   }
 
   return (
-    <div style={{ padding: '10px', display: 'flex', flexDirection: 'column', alignItems: 'center', position: 'relative' }}>
+    <div style={{ padding: '10px', display: 'flex', flexDirection: 'column', alignItems: 'center', position: 'relative' }} key={id}>
       <img src={cake} alt="cake" style={{ width: '100%', height: '80%', borderRadius: '10px' }} />
       <button onClick={addToCardFunkcjon}
         style={{ width: '75%', borderRadius: '50px', color: 'gray', backgroundColor: 'white', fontWeight: 'bold', border: '1px solid gray', position: 'absolute', bottom: '35%' }}>
