@@ -5,7 +5,6 @@ function App() {
   return (
     <div style={{padding: '40px'}}>
       <HomePage/>
-      <Test/>
     </div>
   );
 }
