@@ -1,18 +1,17 @@
 import React from 'react';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-import { addToBasket, notEmptyBasket, selectProductsInBasket } from '../slice/DessertSlice'
+import { addProductsToBasket, addToBasket, notEmptyBasket, selectProductsInBasket } from '../slice/DessertSlice'
 import { useDispatch, useSelector } from 'react-redux'
 
 export const Dessert = (props) => {
-  const { tekst, tekst2, cena, cake, doKoszyka, setDokoszyka,id } = props
+  const { tekst, tekst2, cena, cake, id } = props
   const dispatch = useDispatch()
   const productsInBasket = useSelector(selectProductsInBasket)
   const addToCardFunkcjon = () => {
     dispatch(addToBasket())
     dispatch(notEmptyBasket())
-    const lista2 = { tekst, tekst2, cena }
-    const nowaLista = [...doKoszyka, lista2]
-    setDokoszyka(nowaLista)
+    const lista = { tekst, tekst2, cena }
+    dispatch(addProductsToBasket(lista))
   }
   console.log(productsInBasket)
   return (
