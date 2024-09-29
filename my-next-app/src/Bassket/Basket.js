@@ -34,8 +34,8 @@ export const Basket = () => {
           <tbody>
             {products.map((product) =>
               <tr key={product.id}>
+                <td>{product.img}</td>
                 <td>{product.tekst}</td>
-                <td>{product.tekst2}</td>
                 <td>{product.cena}</td>
               </tr>
             )}
