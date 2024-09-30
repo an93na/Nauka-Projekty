@@ -10,7 +10,7 @@ export const Dessert = (props) => {
   const addToCardFunkcjon = () => {
     dispatch(addToBasket())
     dispatch(notEmptyBasket())
-    const lista = { tekst, tekst2, cena }
+    const lista = { tekst, tekst2, cena, cake, id }
     dispatch(addProductsToBasket(lista))
   }
   console.log(productsInBasket)
