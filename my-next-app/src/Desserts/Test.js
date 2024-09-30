@@ -66,7 +66,7 @@ export const Test = () => {
     }
 
     return (
-        <article>
+        <div>
             <div style={{ display: 'flex', flexDirection: 'column' }} >
                 <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', padding: '10px' }} >
                     {menu.map((deser) => dodajKomp1(deser.id, deser.name, deser.short, deser.price, deser.img))}
@@ -78,6 +78,6 @@ export const Test = () => {
                     {menu.map((deser) => dodajKomp3(deser.id, deser.name, deser.short, deser.price, deser.img))}
                 </div>
             </div>
-        </article>
+        </div>
     )
 }
