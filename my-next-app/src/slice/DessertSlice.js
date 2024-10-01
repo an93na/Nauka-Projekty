@@ -23,6 +23,10 @@ export const DessertSlice = createSlice({
         },
         addProductsToBasket: (state, action) => {
             state.productsInBasket.push(action.payload)
+        }, 
+        deleteProductFromBasket: (state, action) => {
+            const idToDelete = action.payload;
+            state.productsInBasket = state.productsInBasket.filter((prod) => prod.id !== idToDelete);
         }
     }
 })
@@ -35,6 +39,6 @@ export const selectShowStateBasket = (state) => state.basketNumber.showBasket
 
 export const selectProductsInBasket = (state) => state.basketNumber.productsInBasket
 
-export const { addToBasket, delateFromBasket, notEmptyBasket, showStateBasket, addProductsToBasket } = DessertSlice.actions
+export const { addToBasket, delateFromBasket, notEmptyBasket, showStateBasket, addProductsToBasket, deleteProductFromBasket } = DessertSlice.actions
 
 export default DessertSlice.reducer

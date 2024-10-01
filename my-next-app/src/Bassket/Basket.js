@@ -1,5 +1,5 @@
 import React from 'react'
-import { selectDessert, selectIsAnyInBasket, selectProductsInBasket, selectShowStateBasket, showStateBasket } from '../slice/DessertSlice'
+import { delateFromBasket, selectDessert, selectIsAnyInBasket, selectProductsInBasket, selectShowStateBasket, showStateBasket } from '../slice/DessertSlice'
 import { useDispatch, useSelector } from 'react-redux'
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 
@@ -14,6 +14,7 @@ export const Basket = () => {
     dispatch(showStateBasket());
     console.log(showNowStateBasket);
   }
+
   console.log(products)
   return (
     <div>
@@ -30,6 +31,7 @@ export const Basket = () => {
               <th></th>
               <th>product name</th>
               <th>price</th>
+              <th></th>
             </tr>
           </thead>
           <tbody>
@@ -38,6 +40,7 @@ export const Basket = () => {
                 <td><img src={product.cake} alt={product.id} style={{ width: '50%', height: '50%', borderRadius: '10px' }} /></td>
                 <td>{product.tekst}</td>
                 <td>{product.cena}</td>
+                <td><button onClick={() => dispatch(delateFromBasket(product.id))}>Usuń</button></td>
               </tr>
             )}
           </tbody>
