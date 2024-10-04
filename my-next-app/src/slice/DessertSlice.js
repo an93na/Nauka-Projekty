@@ -10,7 +10,7 @@ export const DessertSlice = createSlice({
     },
     reducers: {
         addToBasket: (state) => {
-            state.basket += 1
+            state.basket = state.productsInBasket.length
         },
         delateFromBasket: (state) => {
             state.basket -= 1
