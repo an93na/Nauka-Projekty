@@ -22,11 +22,15 @@ export const DessertSlice = createSlice({
             state.showBasket = !state.showBasket
         },
         addProductsToBasket: (state, action) => {
-            state.productsInBasket.push(action.payload)
+            state.productsInBasket.push(action.payload);
+            state.basket = state.productsInBasket.length; 
         },
+        
         removeProduct: (state, action) => {
             const idToDelete = action.payload;
             state.productsInBasket = state.productsInBasket.filter((p) => p.id !== idToDelete);
+            state.basket = state.productsInBasket.length
+            state.isInBasket = state.productsInBasket.length > 0;
         },
     }
 })
