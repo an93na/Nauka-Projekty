@@ -12,7 +12,6 @@ export const Basket = () => {
 
   const onCliceed = () => {
     dispatch(showStateBasket());
-    console.log(showNowStateBasket);
   }
 
   console.log(products)

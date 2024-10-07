@@ -9,12 +9,12 @@ export const DessertSlice = createSlice({
         productsInBasket: [],
     },
     reducers: {
-        addToBasket: (state) => {
-            state.basket = state.productsInBasket.length
-        },
-        delateFromBasket: (state) => {
-            state.basket -= 1
-        },
+        // addToBasket: (state) => {
+        //     state.basket = state.productsInBasket.length
+        // },
+        // delateFromBasket: (state) => {
+        //     state.basket = state.productsInBasket.length
+        // },
         notEmptyBasket: (state) => {
             state.isInBasket = true
         },
