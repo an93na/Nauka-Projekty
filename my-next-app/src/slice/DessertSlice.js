@@ -9,12 +9,6 @@ export const DessertSlice = createSlice({
         productsInBasket: [],
     },
     reducers: {
-        // addToBasket: (state) => {
-        //     state.basket = state.productsInBasket.length
-        // },
-        // delateFromBasket: (state) => {
-        //     state.basket = state.productsInBasket.length
-        // },
         notEmptyBasket: (state) => {
             state.isInBasket = true
         },
@@ -25,7 +19,6 @@ export const DessertSlice = createSlice({
             state.productsInBasket.push(action.payload);
             state.basket = state.productsInBasket.length; 
         },
-        
         removeProduct: (state, action) => {
             const idToDelete = action.payload;
             state.productsInBasket = state.productsInBasket.filter((p) => p.id !== idToDelete);

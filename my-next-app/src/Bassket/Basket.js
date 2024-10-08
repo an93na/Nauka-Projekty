@@ -28,6 +28,7 @@ export const Basket = () => {
           <thead>
             <tr>
               <th></th>
+              <th></th>
               <th>product name</th>
               <th>price</th>
               <th></th>
@@ -36,6 +37,7 @@ export const Basket = () => {
           <tbody>
             {products.map((product) =>
               <tr key={product.id}>
+                <td>{}x</td>
                 <td><img src={product.cake} alt={product.id} style={{ width: '50%', height: '50%', borderRadius: '10px' }} /></td>
                 <td>{product.tekst}</td>
                 <td>{product.cena}</td>
