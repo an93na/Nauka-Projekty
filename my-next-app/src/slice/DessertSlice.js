@@ -16,12 +16,23 @@ export const DessertSlice = createSlice({
             state.showBasket = !state.showBasket
         },
         addProductsToBasket: (state, action) => {
-            state.productsInBasket.push(action.payload);
-            state.basket = state.productsInBasket.length; 
+            const product = action.payload;
+            const existingProduct = state.productsInBasket.find(p => p.id === product.id);
+            if (existingProduct) {
+                existingProduct.quantity += 1;
+            } else {
+                state.productsInBasket.push({ ...product, quantity: 1 });
+            }
+            state.basket = state.productsInBasket.length;
         },
         removeProduct: (state, action) => {
             const idToDelete = action.payload;
-            state.productsInBasket = state.productsInBasket.filter((p) => p.id !== idToDelete);
+            const productToDelete = state.productsInBasket.find(p => p.id === idToDelete);
+            if (productToDelete.quantity > 1) {
+                productToDelete.quantity -= 1;
+            } else {
+                state.productsInBasket = state.productsInBasket.filter((p) => p.id !== idToDelete);
+            }
             state.basket = state.productsInBasket.length
             state.isInBasket = state.productsInBasket.length > 0;
         },
