@@ -13,7 +13,11 @@ export const Basket = () => {
   const onCliceed = () => {
     dispatch(showStateBasket());
   }
-
+  const ileWKoszyku = () => {
+    let suma = 0
+    products.map(pr => suma =+ pr.quantity)
+    return suma
+  }
   console.log(products)
   return (
     <div>
@@ -23,6 +27,7 @@ export const Basket = () => {
           <p style={{ fontSize: '10px', textAlign: 'center', fontWeight: 'bolder' }}>{numberOfProducts}</p>
         </div>
       </div>
+      <p>{ileWKoszyku()}</p>
       {showNowStateBasket ?
         <table>
           <thead>

@@ -4,12 +4,12 @@ import { addProductsToBasket, notEmptyBasket, selectProductsInBasket } from '../
 import { useDispatch, useSelector } from 'react-redux'
 
 export const Dessert = (props) => {
-  const { tekst, tekst2, cena, cake, id } = props
+  const { tekst, tekst2, cena, cake, id, quantity } = props
   const dispatch = useDispatch()
   const productsInBasket = useSelector(selectProductsInBasket)
   const addToCardFunkcjon = () => {
     dispatch(notEmptyBasket())
-    const lista = { tekst, tekst2, cena, cake, id }
+    const lista = { tekst, tekst2, cena, cake, quantity,id }
     dispatch(addProductsToBasket(lista))
   }
   console.log(productsInBasket)
