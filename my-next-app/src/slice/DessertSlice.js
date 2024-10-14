@@ -36,6 +36,9 @@ export const DessertSlice = createSlice({
             state.basket = state.productsInBasket.length
             state.isInBasket = state.productsInBasket.length > 0;
         },
+        sumProductInBasket: (state) => {
+            
+        }
     }
 })
 
