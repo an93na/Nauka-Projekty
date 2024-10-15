@@ -36,11 +36,11 @@ export const DessertSlice = createSlice({
             state.basket = state.productsInBasket.length
             state.isInBasket = state.productsInBasket.length > 0;
         },
-        sumProductInBasket: (state) => {
-            
-        }
+
+
     }
 })
+
 
 export const selectDessert = (state) => state.basketNumber.basket
 
@@ -52,4 +52,7 @@ export const selectProductsInBasket = (state) => state.basketNumber.productsInBa
 
 export const { addToBasket, delateFromBasket, notEmptyBasket, showStateBasket, addProductsToBasket, deleteProductFromBasket, removeProduct } = DessertSlice.actions
 
+export const sumProductInBasket = (state) => {
+    return state.basketNumber.productsInBasket.reduce((total, product) => total + product.quantity, 0);
+};
 export default DessertSlice.reducer

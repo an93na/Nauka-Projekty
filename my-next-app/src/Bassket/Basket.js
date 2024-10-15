@@ -1,5 +1,5 @@
 import React from 'react'
-import { removeProduct, selectDessert, selectIsAnyInBasket, selectProductsInBasket, selectShowStateBasket, showStateBasket } from '../slice/DessertSlice'
+import { removeProduct, selectDessert, selectIsAnyInBasket, selectProductsInBasket, selectShowStateBasket, showStateBasket, sumProductInBasket } from '../slice/DessertSlice'
 import { useDispatch, useSelector } from 'react-redux'
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 
@@ -9,6 +9,7 @@ export const Basket = () => {
   const showNowStateBasket = useSelector(selectShowStateBasket);
   const products = useSelector(selectProductsInBasket);
   const dispatch = useDispatch();
+  const ileWkoszyku = useSelector(sumProductInBasket);
 
   const onCliceed = () => {
     dispatch(showStateBasket());
@@ -19,7 +20,7 @@ export const Basket = () => {
       <div style={{ position: 'relative', display: 'flex', justifyContent: 'flex-end' }}>
         <ShoppingCartIcon style={{ color: 'white', margin: '0 10px', cursor: 'pointer' }} onClick={onCliceed} />
         <div style={{ backgroundColor: 'red', borderRadius: '50%', width: '15px', height: '15px', position: 'absolute', right: '10px' }}>
-          <p style={{ fontSize: '10px', textAlign: 'center', fontWeight: 'bolder' }}>{numberOfProducts}</p>
+          <p style={{ fontSize: '10px', textAlign: 'center', fontWeight: 'bolder' }}>{ileWkoszyku}</p>
         </div>
       </div>
       {showNowStateBasket ?
