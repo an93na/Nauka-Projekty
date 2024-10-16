@@ -1,5 +1,5 @@
 import React from 'react'
-import { removeProduct, selectDessert, selectIsAnyInBasket, selectProductsInBasket, selectShowStateBasket, showStateBasket, sumProductInBasket } from '../slice/DessertSlice'
+import { removeProduct, selectDessert, selectIsAnyInBasket, selectPrice, selectProductsInBasket, selectShowStateBasket, showStateBasket, sumProductInBasket } from '../slice/DessertSlice'
 import { useDispatch, useSelector } from 'react-redux'
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 
@@ -10,11 +10,11 @@ export const Basket = () => {
   const products = useSelector(selectProductsInBasket);
   const dispatch = useDispatch();
   const ileWkoszyku = useSelector(sumProductInBasket);
-
+  const kosztCalkowity = useSelector(selectPrice)
   const onCliceed = () => {
     dispatch(showStateBasket());
   }
-
+  console.log(kosztCalkowity)
   return (
     <div>
       <div style={{ position: 'relative', display: 'flex', justifyContent: 'flex-end' }}>
