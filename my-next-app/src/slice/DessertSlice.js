@@ -56,6 +56,6 @@ export const sumProductInBasket = (state) => {
     return state.basketNumber.productsInBasket.reduce((total, product) => total + product.quantity, 0);
 };
 export const selectPrice = (state) => {
-    return state.basketNumber.productsInBasket.reduce((total, product) => total + Number(product.cena), 0);
+    return state.basketNumber.productsInBasket.reduce((total, product) => total + Number(product.quantity)*(Number(product.cena)), 0);
 };
 export default DessertSlice.reducer
