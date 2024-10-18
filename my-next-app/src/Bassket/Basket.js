@@ -11,10 +11,13 @@ export const Basket = () => {
   const dispatch = useDispatch();
   const ileWkoszyku = useSelector(sumProductInBasket);
   const kosztCalkowity = useSelector(selectPrice)
+  
   const onCliceed = () => {
     dispatch(showStateBasket());
   }
-  console.log(kosztCalkowity)
+
+  const podsumowanieZakupow = Math.round(kosztCalkowity* 100) / 100
+
   return (
     <div>
       <div style={{ position: 'relative', display: 'flex', justifyContent: 'flex-end' }}>
@@ -44,6 +47,13 @@ export const Basket = () => {
                 <td><button onClick={() => dispatch(removeProduct(product.id))}>Usuń</button></td>
               </tr>
             )}
+            <tr>
+              <td></td>
+              <td></td>
+              <td>Suma:</td>
+              <td>{podsumowanieZakupow}zł</td>
+              <td></td>
+              </tr>
           </tbody>
         </table> : <p></p>}
     </div>
