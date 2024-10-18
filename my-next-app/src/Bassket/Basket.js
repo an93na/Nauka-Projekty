@@ -17,7 +17,7 @@ export const Basket = () => {
   }
 
   const podsumowanieZakupow = Math.round(kosztCalkowity* 100) / 100
-
+  const podsumowanieZakupow2 = kosztCalkowity.toFixed(2)
   return (
     <div>
       <div style={{ position: 'relative', display: 'flex', justifyContent: 'flex-end' }}>
@@ -51,7 +51,7 @@ export const Basket = () => {
               <td></td>
               <td></td>
               <td>Suma:</td>
-              <td>{podsumowanieZakupow}zł</td>
+              <td>{podsumowanieZakupow2}zł</td>
               <td></td>
               </tr>
           </tbody>
