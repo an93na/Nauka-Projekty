@@ -16,8 +16,8 @@ export const Basket = () => {
     dispatch(showStateBasket());
   }
 
-  const podsumowanieZakupow = Math.round(kosztCalkowity* 100) / 100
-  const podsumowanieZakupow2 = kosztCalkowity.toFixed(2)
+  // const podsumowanieZakupow = Math.round(kosztCalkowity* 100) / 100
+  const podsumowanieZakupow = kosztCalkowity.toFixed(2)
   return (
     <div>
       <div style={{ position: 'relative', display: 'flex', justifyContent: 'flex-end' }}>
@@ -32,6 +32,7 @@ export const Basket = () => {
             <tr>
               <th></th>
               <th></th>
+              <th></th>
               <th>product name</th>
               <th>price</th>
               <th></th>
@@ -41,6 +42,7 @@ export const Basket = () => {
             {products.map((product) =>
               <tr key={product.id}>
                 <td>{product.quantity}x</td>
+                <td><button style={{borderRadius: '50%', width: '5px', height: '5px', alignItems: 'center'}}>+</button><button style={{borderRadius: '50%', width: '5px', height: '5px', alignItems: 'center'}}>-</button></td>
                 <td><img src={product.cake} alt={product.id} style={{ width: '50%', height: '50%', borderRadius: '10px' }} /></td>
                 <td>{product.tekst}</td>
                 <td>{product.cena}</td>
@@ -49,9 +51,9 @@ export const Basket = () => {
             )}
             <tr>
               <td></td>
-              <td></td>
               <td>Suma:</td>
-              <td>{podsumowanieZakupow2}zł</td>
+              <td></td>
+              <td><h6 style={{margin: 1}}>{podsumowanieZakupow}zł</h6></td>
               <td></td>
               </tr>
           </tbody>
