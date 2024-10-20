@@ -35,18 +35,21 @@ export const Basket = () => {
               <th></th>
               <th>product name</th>
               <th>price</th>
-              <th></th>
+              {/* <th></th> */}
             </tr>
           </thead>
           <tbody>
             {products.map((product) =>
               <tr key={product.id}>
                 <td>{product.quantity}x</td>
-                <td><button style={{borderRadius: '50%', width: '5px', height: '5px', alignItems: 'center'}}>+</button><button style={{borderRadius: '50%', width: '5px', height: '5px', alignItems: 'center'}}>-</button></td>
+                <td><div style={{display: 'flex', flexDirection: 'row', gap: '3px'}}>
+                  <button style={{borderRadius: '50%', width: '5px', height: '5px', alignItems: 'center', backgroundColor: 'green'}}>+</button><button style={{borderRadius: '50%', width: '5px', height: '5px', alignItems: 'center', backgroundColor: 'red'}} onClick={() => dispatch(removeProduct(product.id))}>-</button>
+                </div>
+                  </td>
                 <td><img src={product.cake} alt={product.id} style={{ width: '50%', height: '50%', borderRadius: '10px' }} /></td>
                 <td>{product.tekst}</td>
                 <td>{product.cena}</td>
-                <td><button onClick={() => dispatch(removeProduct(product.id))}>Usuń</button></td>
+                {/* <td><button onClick={() => dispatch(removeProduct(product.id))}>Usuń</button></td> */}
               </tr>
             )}
             <tr>
