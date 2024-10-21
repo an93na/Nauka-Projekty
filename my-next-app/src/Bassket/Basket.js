@@ -1,5 +1,5 @@
 import React from 'react'
-import { removeProduct, selectDessert, selectIsAnyInBasket, selectPrice, selectProductsInBasket, selectShowStateBasket, showStateBasket, sumProductInBasket } from '../slice/DessertSlice'
+import { addProductsToBasket, notEmptyBasket, removeProduct, selectDessert, selectIsAnyInBasket, selectPrice, selectProductsInBasket, selectShowStateBasket, showStateBasket, sumProductInBasket } from '../slice/DessertSlice'
 import { useDispatch, useSelector } from 'react-redux'
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 
@@ -18,6 +18,9 @@ export const Basket = () => {
 
   // const podsumowanieZakupow = Math.round(kosztCalkowity* 100) / 100
   const podsumowanieZakupow = kosztCalkowity.toFixed(2)
+
+  const addProduct = () => {}
+
   return (
     <div>
       <div style={{ position: 'relative', display: 'flex', justifyContent: 'flex-end' }}>
@@ -43,7 +46,8 @@ export const Basket = () => {
               <tr key={product.id}>
                 <td>{product.quantity}x</td>
                 <td><div style={{display: 'flex', flexDirection: 'row', gap: '3px'}}>
-                  <button style={{borderRadius: '50%', width: '5px', height: '5px', alignItems: 'center', backgroundColor: 'green'}}>+</button><button style={{borderRadius: '50%', width: '5px', height: '5px', alignItems: 'center', backgroundColor: 'red'}} onClick={() => dispatch(removeProduct(product.id))}>-</button>
+                  <button style={{borderRadius: '50%', width: '5px', height: '5px', alignItems: 'center', backgroundColor: 'green'}} onClick={() => dispatch(addProductsToBasket(product))}>+</button>
+                  <button style={{borderRadius: '50%', width: '5px', height: '5px', alignItems: 'center', backgroundColor: 'red'}} onClick={() => dispatch(removeProduct(product.id))}>-</button>
                 </div>
                   </td>
                 <td><img src={product.cake} alt={product.id} style={{ width: '50%', height: '50%', borderRadius: '10px' }} /></td>
