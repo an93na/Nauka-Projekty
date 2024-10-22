@@ -45,9 +45,10 @@ export const Basket = () => {
             {products.map((product) =>
               <tr key={product.id}>
                 <td>{product.quantity}x</td>
-                <td><div style={{display: 'flex', flexDirection: 'row', gap: '3px'}}>
-                  <button style={{borderRadius: '50%', width: '5px', height: '5px', alignItems: 'center', backgroundColor: 'green'}} onClick={() => dispatch(addProductsToBasket(product))}>+</button>
-                  <button style={{borderRadius: '50%', width: '5px', height: '5px', alignItems: 'center', backgroundColor: 'red'}} onClick={() => dispatch(removeProduct(product.id))}>-</button>
+                <td>
+                  <div style={{display: 'flex', flexDirection: 'row', gap: '3px'}}>
+                  <button style={{borderRadius: '50%', width: '10px', height: '10px', display: 'flex', justifyContent: 'center', alignItems: 'center', backgroundColor: 'green', color: 'white', fontWeight: 'bold', border: '1px solid green'}} onClick={() => dispatch(addProductsToBasket(product))}>+</button>
+                  <button style={{borderRadius: '50%', width: '10px', height: '10px', display: 'flex', justifyContent: 'center', alignItems: 'center', backgroundColor: 'red', color: 'white', fontWeight: 'bold', border: '1px solid red'}} onClick={() => dispatch(removeProduct(product.id))}>-</button>
                 </div>
                   </td>
                 <td><img src={product.cake} alt={product.id} style={{ width: '50%', height: '50%', borderRadius: '10px' }} /></td>
