@@ -47,7 +47,7 @@ export const Basket = () => {
                 <td>{product.quantity}x</td>
                 <td>
                   <div style={{display: 'flex', flexDirection: 'row', gap: '3px'}}>
-                  <button style={{borderRadius: '50%', width: '10px', height: '10px', display: 'flex', justifyContent: 'center', alignItems: 'center', backgroundColor: 'green', color: 'white', fontWeight: 'bold', border: '1px solid green', lineHeight: '10px', textAlign: 'center'}} onClick={() => dispatch(addProductsToBasket(product))}>+</button>
+                  <button style={{borderRadius: '50%', width: '10px', height: '10px', display: 'flex', justifyContent: 'center', alignItems: 'center', backgroundColor: 'green', fontWeight: 'bold', border: '1px solid green', lineHeight: '10px', textAlign: 'center', color: 'white'}} onClick={() => dispatch(addProductsToBasket(product))}>+</button>
                   <button style={{borderRadius: '50%', width: '10px', height: '10px', display: 'flex', justifyContent: 'center', alignItems: 'center', backgroundColor: 'red', color: 'white', fontWeight: 'bold', border: '1px solid red', lineHeight: '10px', textAlign: 'center'}} onClick={() => dispatch(removeProduct(product.id))}>-</button>
                 </div>
                   </td>
