@@ -1,6 +1,7 @@
 import React from 'react'
 import { selectPrice, selectProductsInBasket } from '../slice/DessertSlice'
-import { useDispatch, useSelector } from 'react-redux'
+import { useSelector } from 'react-redux'
+import { Button } from 'react-bootstrap';
 
 export const Podsumowanie = () => {
   const products = useSelector(selectProductsInBasket);
@@ -10,6 +11,7 @@ export const Podsumowanie = () => {
 
   return (
     <div>
+      <Button variant="danger">Primary Button</Button>
       <table>
         <thead>
           <tr>
