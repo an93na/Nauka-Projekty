@@ -22,8 +22,8 @@ export const Dessert = (props) => {
         Add to Card
       </button>
       <p style={{ marginBottom: '0px', marginTop: '45px' }}>{tekst}</p>
-      <h5 style={{ marginTop: '5px', marginBottom: '0px' }}>{tekst2}</h5>
-      <h5 style={{ color: 'red', marginTop: '5px' }}>{cena}</h5>
+      <h5 style={{ marginTop: '5px', marginBottom: '0px', color: 'gray' }}>{tekst2}</h5>
+      <h5 style={{ color: 'red', marginTop: '5px' }}>{cena}zł</h5>
     </div>
   )
 }

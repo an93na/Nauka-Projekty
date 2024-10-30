@@ -18,6 +18,7 @@ export const Basket = () => {
 
   // const podsumowanieZakupow = Math.round(kosztCalkowity* 100) / 100
   const podsumowanieZakupow = kosztCalkowity.toFixed(2)
+  const produktCena = (a, b) => (a*b).toFixed(2)
 
   const addProduct = () => {}
 
@@ -53,7 +54,7 @@ export const Basket = () => {
                   </td>
                 <td><img src={product.cake} alt={product.id} style={{ width: '50%', height: '50%', borderRadius: '10px' }} /></td>
                 <td>{product.tekst}</td>
-                <td>{product.cena}</td>
+                <td>{produktCena(product.cena, product.quantity)}zł</td>
                 {/* <td><button onClick={() => dispatch(removeProduct(product.id))}>Usuń</button></td> */}
               </tr>
             )}
