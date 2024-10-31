@@ -45,7 +45,7 @@ export const Basket = () => {
           <tbody>
             {products.map((product) =>
               <tr key={product.id}>
-                <td>{product.quantity}x</td>
+                <td>{product.quantity}x <p>{product.cena}zł</p></td>
                 <td>
                   <div style={{display: 'flex', flexDirection: 'row', gap: '3px'}}>
                   <button style={{borderRadius: '50%', width: '10px', height: '10px', display: 'flex', justifyContent: 'center', alignItems: 'center', backgroundColor: 'green', fontWeight: 'bold', border: '1px solid green', lineHeight: '10px', textAlign: 'center', color: 'white'}} onClick={() => dispatch(addProductsToBasket(product))}>+</button>
