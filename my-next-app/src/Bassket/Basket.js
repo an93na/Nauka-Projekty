@@ -2,6 +2,7 @@ import React from 'react'
 import { addProductsToBasket, notEmptyBasket, removeProduct, selectDessert, selectIsAnyInBasket, selectPrice, selectProductsInBasket, selectShowStateBasket, showStateBasket, sumProductInBasket } from '../slice/DessertSlice'
 import { useDispatch, useSelector } from 'react-redux'
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import { Button } from 'react-bootstrap';
 
 export const Basket = () => {
   const numberOfProducts = useSelector(selectDessert);
@@ -11,16 +12,16 @@ export const Basket = () => {
   const dispatch = useDispatch();
   const ileWkoszyku = useSelector(sumProductInBasket);
   const kosztCalkowity = useSelector(selectPrice)
-  
+
   const onCliceed = () => {
     dispatch(showStateBasket());
   }
 
   // const podsumowanieZakupow = Math.round(kosztCalkowity* 100) / 100
   const podsumowanieZakupow = kosztCalkowity.toFixed(2)
-  const produktCena = (a, b) => (a*b).toFixed(2)
+  const produktCena = (a, b) => (a * b).toFixed(2)
 
-  const addProduct = () => {}
+  const addProduct = () => { }
 
   return (
     <div>
@@ -47,11 +48,11 @@ export const Basket = () => {
               <tr key={product.id}>
                 <td>{product.quantity}x <p>{product.cena}zł</p></td>
                 <td>
-                  <div style={{display: 'flex', flexDirection: 'row', gap: '3px'}}>
-                  <button style={{borderRadius: '50%', width: '10px', height: '10px', display: 'flex', justifyContent: 'center', alignItems: 'center', backgroundColor: 'green', fontWeight: 'bold', border: '1px solid green', lineHeight: '10px', textAlign: 'center', color: 'white'}} onClick={() => dispatch(addProductsToBasket(product))}>+</button>
-                  <button style={{borderRadius: '50%', width: '10px', height: '10px', display: 'flex', justifyContent: 'center', alignItems: 'center', backgroundColor: 'red', color: 'white', fontWeight: 'bold', border: '1px solid red', lineHeight: '10px', textAlign: 'center'}} onClick={() => dispatch(removeProduct(product.id))}>-</button>
-                </div>
-                  </td>
+                  <div style={{ display: 'flex', flexDirection: 'row', gap: '3px' }}>
+                    <button style={{ borderRadius: '50%', width: '10px', height: '10px', display: 'flex', justifyContent: 'center', alignItems: 'center', backgroundColor: 'green', fontWeight: 'bold', border: '1px solid green', lineHeight: '10px', textAlign: 'center', color: 'white' }} onClick={() => dispatch(addProductsToBasket(product))}>+</button>
+                    <button style={{ borderRadius: '50%', width: '10px', height: '10px', display: 'flex', justifyContent: 'center', alignItems: 'center', backgroundColor: 'red', color: 'white', fontWeight: 'bold', border: '1px solid red', lineHeight: '10px', textAlign: 'center' }} onClick={() => dispatch(removeProduct(product.id))}>-</button>
+                  </div>
+                </td>
                 <td><img src={product.cake} alt={product.id} style={{ width: '50%', height: '50%', borderRadius: '10px' }} /></td>
                 <td>{product.tekst}</td>
                 <td>{produktCena(product.cena, product.quantity)}zł</td>
@@ -62,9 +63,18 @@ export const Basket = () => {
               <td></td>
               <td>Suma:</td>
               <td></td>
-              <td><h6 style={{margin: 1}}>{podsumowanieZakupow}zł</h6></td>
+              <td><h6 style={{ margin: 1 }}>{podsumowanieZakupow}zł</h6></td>
               <td></td>
-              </tr>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td style={{ display: 'flex', justifyContent: 'center' }}>
+                <Button variant="danger">Złóż zamówienie</Button>
+              </td>
+              <td></td>
+              <td></td>
+            </tr>
           </tbody>
         </table> : <p></p>}
     </div>
