@@ -1,8 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { addProductsToBasket, notEmptyBasket, removeProduct, selectDessert, selectIsAnyInBasket, selectPrice, selectProductsInBasket, selectShowStateBasket, showStateBasket, sumProductInBasket } from '../slice/DessertSlice'
 import { useDispatch, useSelector } from 'react-redux'
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-import { Button } from 'react-bootstrap';
+import { Button, Modal } from 'react-bootstrap';
+import { Podsumowanie } from './Podsumowanie';
 
 export const Basket = () => {
   const numberOfProducts = useSelector(selectDessert);
@@ -12,6 +13,7 @@ export const Basket = () => {
   const dispatch = useDispatch();
   const ileWkoszyku = useSelector(sumProductInBasket);
   const kosztCalkowity = useSelector(selectPrice)
+  const [showSummaryModal, setShowSummaryModal] = useState(false);
 
   const onCliceed = () => {
     dispatch(showStateBasket());
@@ -21,7 +23,8 @@ export const Basket = () => {
   const podsumowanieZakupow = kosztCalkowity.toFixed(2)
   const produktCena = (a, b) => (a * b).toFixed(2)
 
-  const addProduct = () => { }
+  const handleShowSummary = () => setShowSummaryModal(true);
+  const handleCloseSummary = () => setShowSummaryModal(false);
 
   return (
     <div>
@@ -70,13 +73,16 @@ export const Basket = () => {
               <td></td>
               <td></td>
               <td style={{ display: 'flex', justifyContent: 'center' }}>
-                <Button variant="danger">Złóż zamówienie</Button>
+                <Button variant="danger" onClick={handleShowSummary}>Złóż zamówienie</Button>
               </td>
               <td></td>
               <td></td>
             </tr>
           </tbody>
         </table> : <p></p>}
+        <Modal show={showSummaryModal} onHide={handleCloseSummary}>
+            <Podsumowanie />
+        </Modal>
     </div>
   )
 }
