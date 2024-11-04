@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { addProductsToBasket, notEmptyBasket, removeProduct, selectDessert, selectIsAnyInBasket, selectPrice, selectProductsInBasket, selectShowStateBasket, showStateBasket, sumProductInBasket } from '../slice/DessertSlice'
 import { useDispatch, useSelector } from 'react-redux'
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-import { Button, Modal } from 'react-bootstrap';
+import { Button, Modal, ModalBody } from 'react-bootstrap';
 import { Podsumowanie } from './Podsumowanie';
 
 export const Basket = () => {
@@ -81,7 +81,16 @@ export const Basket = () => {
           </tbody>
         </table> : <p></p>}
         <Modal show={showSummaryModal} onHide={handleCloseSummary}>
-            <Podsumowanie />
+            <Modal.Header closeButton>
+            <Modal.Title>Posumowanie zamówienia</Modal.Title>
+            </Modal.Header>
+            <Modal.Body>
+              <p>Liczba produktów: {ileWkoszyku}</p>
+            </Modal.Body>
+            <Modal.Footer>
+              <Button variant='secondary' onClick={handleCloseSummary}>Zamknij</Button>
+              <Button variant='primary' onClick={() => {}}>Potwierdż zamowienie</Button>
+            </Modal.Footer>
         </Modal>
     </div>
   )
