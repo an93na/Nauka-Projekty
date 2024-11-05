@@ -76,7 +76,6 @@ export const Basket = () => {
                 <Button variant="danger" onClick={handleShowSummary}>Złóż zamówienie</Button>
               </td>
               <td></td>
-              <td></td>
             </tr>
           </tbody>
         </table> : <p></p>}
@@ -85,7 +84,23 @@ export const Basket = () => {
             <Modal.Title>Posumowanie zamówienia</Modal.Title>
             </Modal.Header>
             <Modal.Body>
-              <p>Liczba produktów: {ileWkoszyku}</p>
+              <table class="table table-striped">
+              {products.map((product) =>
+              <tr key={product.id}>
+                <td>{product.quantity}x <p>{product.cena}zł</p></td>
+                <td><img src={product.cake} alt={product.id} style={{ width: '50%', height: '50%', borderRadius: '10px' }} /></td>
+                <td>{product.tekst}</td>
+                <td>{produktCena(product.cena, product.quantity)}zł</td>
+                {/* <td><button onClick={() => dispatch(removeProduct(product.id))}>Usuń</button></td> */}
+              </tr>
+            )}
+            <tr>
+              <td>Liczba produktów:</td>
+              <td>{ileWkoszyku}</td>
+              <td>Suma:</td>
+              <td><h6 style={{ margin: 1 }}>{podsumowanieZakupow}zł</h6></td>
+            </tr>
+              </table>
             </Modal.Body>
             <Modal.Footer>
               <Button variant='secondary' onClick={handleCloseSummary}>Zamknij</Button>
