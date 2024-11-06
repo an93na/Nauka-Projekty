@@ -79,34 +79,44 @@ export const Basket = () => {
             </tr>
           </tbody>
         </table> : <p></p>}
-        <Modal show={showSummaryModal} onHide={handleCloseSummary}>
-            <Modal.Header closeButton>
-            <Modal.Title>Posumowanie zamówienia</Modal.Title>
-            </Modal.Header>
-            <Modal.Body>
-              <table class="table table-striped">
-              {products.map((product) =>
-              <tr key={product.id}>
-                <td>{product.quantity}x <p>{product.cena}zł</p></td>
-                <td><img src={product.cake} alt={product.id} style={{ width: '50%', height: '50%', borderRadius: '10px' }} /></td>
-                <td>{product.tekst}</td>
-                <td>{produktCena(product.cena, product.quantity)}zł</td>
-                {/* <td><button onClick={() => dispatch(removeProduct(product.id))}>Usuń</button></td> */}
+      <Modal show={showSummaryModal} onHide={handleCloseSummary}>
+        <Modal.Header closeButton>
+          <Modal.Title>Posumowanie zamówienia</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <table class="table">
+            <thead>
+              <tr>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
               </tr>
-            )}
-            <tr>
-              <td>Liczba produktów:</td>
-              <td>{ileWkoszyku}</td>
-              <td>Suma:</td>
-              <td><h6 style={{ margin: 1 }}>{podsumowanieZakupow}zł</h6></td>
-            </tr>
-              </table>
-            </Modal.Body>
-            <Modal.Footer>
-              <Button variant='secondary' onClick={handleCloseSummary}>Zamknij</Button>
-              <Button variant='primary' onClick={() => {}}>Potwierdż zamowienie</Button>
-            </Modal.Footer>
-        </Modal>
+            </thead>
+            <tbody>
+              {products.map((product) =>
+                <tr key={product.id}>
+                  <td>{product.quantity}x <p>{product.cena}zł</p></td>
+                  <td><img src={product.cake} alt={product.id} style={{ width: '50%', height: '50%', borderRadius: '10px' }} /></td>
+                  <td>{product.tekst}</td>
+                  <td>{produktCena(product.cena, product.quantity)}zł</td>
+                  {/* <td><button onClick={() => dispatch(removeProduct(product.id))}>Usuń</button></td> */}
+                </tr>
+              )}
+              <tr>
+                <td>Liczba produktów:</td>
+                <td>{ileWkoszyku}</td>
+                <td>Suma:</td>
+                <td><h6 style={{ margin: 1 }}>{podsumowanieZakupow}zł</h6></td>
+              </tr>
+            </tbody>
+          </table>
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant='secondary' onClick={handleCloseSummary}>Zamknij</Button>
+          <Button variant='primary' onClick={() => { }}>Potwierdż zamowienie</Button>
+        </Modal.Footer>
+      </Modal>
     </div>
   )
 }
