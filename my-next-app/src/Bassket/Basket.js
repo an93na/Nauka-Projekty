@@ -86,12 +86,6 @@ export const Basket = () => {
         <Modal.Body>
           <table class="table">
             <thead>
-              <tr>
-                <th></th>
-                <th></th>
-                <th></th>
-                <th></th>
-              </tr>
             </thead>
             <tbody>
               {products.map((product) =>
@@ -111,11 +105,13 @@ export const Basket = () => {
               </tr>
             </tbody>
           </table>
+          <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+            <Button variant='secondary' onClick={handleCloseSummary}>Zamknij</Button>
+            <Button variant='primary' onClick={() => { }}>Potwierdż</Button>
+          </div>
         </Modal.Body>
-        <Modal.Footer>
-          <Button variant='secondary' onClick={handleCloseSummary}>Zamknij</Button>
-          <Button variant='primary' onClick={() => { }}>Potwierdż zamowienie</Button>
-        </Modal.Footer>
+        {/* <Modal.Footer>
+        </Modal.Footer> */}
       </Modal>
     </div>
   )
