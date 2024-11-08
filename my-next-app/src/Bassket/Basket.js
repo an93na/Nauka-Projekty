@@ -90,8 +90,8 @@ export const Basket = () => {
             <tbody>
               {products.map((product) =>
                 <tr key={product.id}>
-                  <td>{product.quantity}x <p>{product.cena}zł</p></td>
                   <td><img src={product.cake} alt={product.id} style={{ width: '50%', height: '50%', borderRadius: '10px' }} /></td>
+                  <td>{product.quantity}x <p>{product.cena}zł</p></td>
                   <td>{product.tekst}</td>
                   <td>{produktCena(product.cena, product.quantity)}zł</td>
                   {/* <td><button onClick={() => dispatch(removeProduct(product.id))}>Usuń</button></td> */}
@@ -105,7 +105,7 @@ export const Basket = () => {
               </tr>
             </tbody>
           </table>
-          <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+          <div style={{ display: 'flex', justifyContent: 'space-evenly' }}>
             <Button variant='secondary' onClick={handleCloseSummary}>Zamknij</Button>
             <Button variant='primary' onClick={() => { }}>Potwierdż</Button>
           </div>
