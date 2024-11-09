@@ -72,9 +72,10 @@ export const Basket = () => {
             <tr>
               <td></td>
               <td></td>
-              <td style={{ display: 'flex', justifyContent: 'center' }}>
-                <Button variant="danger" onClick={handleShowSummary}>Złóż zamówienie</Button>
+              <td style={{ display: 'flex', justifyContent: 'center' }}>{isAnyInBasket ?  
+                <Button variant="danger" onClick={handleShowSummary}>Złóż zamówienie</Button> : <p></p>}
               </td>
+              <td></td>
               <td></td>
             </tr>
           </tbody>
