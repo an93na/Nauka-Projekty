@@ -3,7 +3,6 @@ import { addProductsToBasket, notEmptyBasket, removeProduct, selectDessert, sele
 import { useDispatch, useSelector } from 'react-redux'
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { Button, Modal, ModalBody } from 'react-bootstrap';
-import { Podsumowanie } from './Podsumowanie';
 
 export const Basket = () => {
   const numberOfProducts = useSelector(selectDessert);
