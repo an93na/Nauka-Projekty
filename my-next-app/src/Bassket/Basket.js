@@ -1,11 +1,10 @@
 import React, { useState } from 'react'
-import { addProductsToBasket, notEmptyBasket, removeProduct, selectDessert, selectIsAnyInBasket, selectPrice, selectProductsInBasket, selectShowStateBasket, showStateBasket, sumProductInBasket } from '../slice/DessertSlice'
+import { addProductsToBasket, removeProduct, selectIsAnyInBasket, selectPrice, selectProductsInBasket, selectShowStateBasket, showStateBasket, sumProductInBasket } from '../slice/DessertSlice'
 import { useDispatch, useSelector } from 'react-redux'
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-import { Button, Modal, ModalBody } from 'react-bootstrap';
+import { Button, Modal } from 'react-bootstrap';
 
 export const Basket = () => {
-  const numberOfProducts = useSelector(selectDessert);
   const isAnyInBasket = useSelector(selectIsAnyInBasket);
   const showNowStateBasket = useSelector(selectShowStateBasket);
   const products = useSelector(selectProductsInBasket);
@@ -71,7 +70,7 @@ export const Basket = () => {
             <tr>
               <td></td>
               <td></td>
-              <td style={{ display: 'flex', justifyContent: 'center' }}>{isAnyInBasket ?  
+              <td style={{ display: 'flex', justifyContent: 'center' }}>{isAnyInBasket ?
                 <Button variant="danger" onClick={handleShowSummary}>Złóż zamówienie</Button> : <p></p>}
               </td>
               <td></td>
