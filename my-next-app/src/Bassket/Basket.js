@@ -12,6 +12,7 @@ export const Basket = () => {
   const ileWkoszyku = useSelector(sumProductInBasket);
   const kosztCalkowity = useSelector(selectPrice)
   const [showSummaryModal, setShowSummaryModal] = useState(false);
+  const [inProgress, setInProgres] = useState(false)
 
   const onCliceed = () => {
     dispatch(showStateBasket());
@@ -23,6 +24,10 @@ export const Basket = () => {
 
   const handleShowSummary = () => setShowSummaryModal(true);
   const handleCloseSummary = () => setShowSummaryModal(false);
+
+  const handleShowInProgress = () => setInProgres(true);
+  const handleCloseInProgress = () => setInProgres(false);
+
 
   return (
     <div>
