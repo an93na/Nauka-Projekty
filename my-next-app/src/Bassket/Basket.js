@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { addProductsToBasket, removeProduct, selectIsAnyInBasket, selectPrice, selectProductsInBasket, selectShowStateBasket, showStateBasket, sumProductInBasket } from '../slice/DessertSlice'
 import { useDispatch, useSelector } from 'react-redux'
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-import { Button, Modal } from 'react-bootstrap';
+import { Button, Modal, ModalBody } from 'react-bootstrap';
 
 export const Basket = () => {
   const isAnyInBasket = useSelector(selectIsAnyInBasket);
@@ -27,6 +27,11 @@ export const Basket = () => {
 
   const handleShowInProgress = () => setInProgres(true);
   const handleCloseInProgress = () => setInProgres(false);
+
+  const acceptOrder = () => {
+    setShowSummaryModal(false);
+    setInProgres(true);
+  }
 
 
   return (
@@ -111,11 +116,19 @@ export const Basket = () => {
           </table>
           <div style={{ display: 'flex', justifyContent: 'space-evenly' }}>
             <Button variant='secondary' onClick={handleCloseSummary}>Zamknij</Button>
-            <Button variant='primary' onClick={() => { }}>Potwierdż</Button>
+            <Button variant='primary' onClick={acceptOrder}>Potwierdż</Button>
           </div>
         </Modal.Body>
         {/* <Modal.Footer>
         </Modal.Footer> */}
+      </Modal>
+      <Modal show={inProgress} onHide={handleCloseInProgress}>
+        <Modal.Header closeButton>
+          <Modal.Title>Złożono zamówienie</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+        <Button variant='secondary' onClick={handleCloseInProgress}>Zamknij</Button>
+        </Modal.Body>
       </Modal>
     </div>
   )
