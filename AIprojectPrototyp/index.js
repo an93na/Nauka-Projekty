@@ -1,65 +1,62 @@
-import dotenv from 'dotenv'; // Ładowanie zmiennych środowiskowych
-dotenv.config(); // Inicjalizacja dotenv
+// Importowanie wymaganych bibliotek
+const fs = require('fs');
+const { OpenAI } = require('openai');
 
-import { readFileSync, writeFileSync } from 'fs'; // Moduł do obsługi plików
-import { OpenAI } from 'openai'; // Importowanie instancji OpenAI
-
-console.log(process.env.OPENAI_API_KEY);
-
-// Inicjalizacja klienta OpenAI
+// Ustawienie klucza API
 const openai = new OpenAI({
-    apiKey: process.env.OPENAI_API_KEY,
+  apiKey: process.env.OPENAI_API_KEY, // Podaj swój klucz API OpenAI
 });
 
-// Funkcja do wczytywania pliku tekstowego
-function readFile(filePath) {
-    try {
-        return readFileSync(filePath, 'utf-8');
-    } catch (error) {
-        console.error('Błąd odczytu pliku:', error);
-        process.exit(1);
-    }
+// Funkcja do odczytania pliku tekstowego
+function readArticle(filePath) {
+  return fs.readFileSync(filePath, 'utf-8');
 }
 
-// Funkcja do zapisu pliku
-function writeFile(filePath, content) {
-    try {
-        writeFileSync(filePath, content, 'utf-8');
-        console.log(`Plik zapisany jako ${filePath}`);
-    } catch (error) {
-        console.error('Błąd zapisu pliku:', error);
-    }
+// Funkcja do generowania HTML
+async function generateHTML(articleText) {
+  const prompt = `
+  Przekształć poniższy artykuł do kodu HTML. Struktura ma zawierać:
+  - Użycie odpowiednich tagów HTML dla nagłówków, akapitów, list itp.
+  - Dodanie tagów <img> w miejscach, gdzie warto dodać grafiki, z atrybutem src="image_placeholder.jpg" i alt="Opis grafiki, który może być użyty do generowania obrazu".
+  - Dodanie podpisów pod grafikami w tagach <figcaption>.
+  - Nie używaj CSS ani JavaScript w kodzie.
+  Artykuł: ${articleText}
+  `;
+
+  try {
+    // Wysłanie zapytania do OpenAI
+    const response = await openai.chat.completions.create({
+      model: 'gpt-3.5-turbo', // Użyj modelu, który masz dostępny
+      messages: [{ role: 'user', content: prompt }],
+    });    
+
+    return response.choices[0].message.content.trim();
+  } catch (error) {
+    console.error('Błąd podczas generowania HTML:', error);
+  }
 }
 
-// Główna funkcja aplikacji
+// Funkcja do zapisania wygenerowanego HTML do pliku
+function saveHTML(content, filePath) {
+  fs.writeFileSync(filePath, content, 'utf-8');
+}
+
+// Główna funkcja
 async function processArticle() {
-    const inputFile = 'artykul.txt'; // Nazwa pliku wejściowego
-    const outputFile = 'artykul.html'; // Nazwa pliku wyjściowego
-
-    // Odczyt pliku
-    const articleContent = readFile(inputFile);
-
-    // Tworzenie promptu
-    const prompt = `Stwórz stronę HTML, która zawiera treść tego artykułu w czytelnej formie. Treść artykułu:\n\n${articleContent}`;
-
-    try {
-        // Wysłanie zapytania do OpenAI (zmienione na wersję 4.x API)
-        const response = await openai.chat.completions.create({
-            model: 'gpt-3.5-turbo',  // Użyj modelu odpowiedniego do Twojej aplikacji
-            messages: [{ role: 'user', content: prompt }],
-            max_tokens: 1500,
-            temperature: 0.7,
-        });
-
-        // Pobranie kodu HTML z odpowiedzi
-        const htmlCode = response.choices[0].message.content.trim();
-
-        // Zapisanie kodu do pliku
-        writeFile(outputFile, htmlCode);
-    } catch (error) {
-        console.error('Błąd API OpenAI:', error);
-    }
+  try {
+    // Wczytanie artykułu z pliku
+    const articleText = readArticle('artykul.txt');
+    
+    // Wygenerowanie kodu HTML
+    const htmlContent = await generateHTML(articleText);
+    
+    // Zapisanie wygenerowanego HTML do pliku
+    saveHTML(htmlContent, 'artykul.html');
+    console.log('HTML został zapisany w pliku artykul.html');
+  } catch (error) {
+    console.error('Błąd:', error);
+  }
 }
 
-// Uruchomienie aplikacji
+// Uruchomienie głównej funkcji
 processArticle();
