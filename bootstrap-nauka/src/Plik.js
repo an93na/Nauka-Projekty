@@ -2,6 +2,8 @@ import React from 'react'
 
 export const Plik = () => {
   return (
-    <div>Plik</div>
+    <div>
+      <h3>Bootstrap nauka</h3>
+    </div>
   )
 }
